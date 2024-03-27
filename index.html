@@ -970,12 +970,51 @@
           </div>
         </div>
 
+         <!-- intrests -->
+        <div class="intrestForm">
+          <label for>Intrest</label>
+            <textarea
+              class="form-control intrestField"
+              placeholder="Enter here"
+              rows="1"
+            ></textarea>
+
+            <div class="container text-center mt-2" id="intrestAddButton">
+              <button
+                onclick="addNewIntrestField()"
+                class="btn btn-primary btn-sm"
+              >
+                Add
+              </button>
+            </div>
+        </div>
+        <!-- Hobbies -->
+        <div class="hobbyForm">
+          <label for>Hobbies</label>
+            <textarea
+              class="form-control hobbyField"
+              placeholder="Enter here"
+              rows="1"
+            ></textarea>
+
+            <div class="container text-center mt-2" id="hobbyAddButton">
+              <button
+                onclick="addNewHobbyField()"
+                class="btn btn-primary btn-sm"
+              >
+                Add
+              </button>
+            </div>
+        </div>
+
         <!-- Generating CV -->
         <div class="container text-center mt-3">
           <button onclick="generateCV()" class="btn btn-primary">
             Generate Cv
           </button>
         </div>
+
+       
       </div>
 
       <section class="colorSelection-Hero">
@@ -1085,6 +1124,20 @@
                   <div class="fluid">
                     <h5 id="fontColor" class="fontColorChange">Language</h5>
                     <ul id="languages">
+                      <li id="fontColor" class="fontColorChange"></li>
+                    </ul>
+                  </div>
+                  <!-- INtrests -->
+                  <div class="fluid">
+                    <h5 id="fontColor" class="fontColorChange">Intrest</h5>
+                    <ul id="intrests">
+                      <li id="fontColor" class="fontColorChange"></li>
+                    </ul>
+                  </div>
+                  <!-- Hobbu -->
+                  <div class="fluid">
+                    <h5 id="fontColor" class="fontColorChange">Hobbies</h5>
+                    <ul id="hobbys">
                       <li id="fontColor" class="fontColorChange"></li>
                     </ul>
                   </div>
