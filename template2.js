@@ -246,86 +246,143 @@ function addNewWeField() {
   // for template color
   function dark() {
     const dark = document.getElementById("spanCol6").innerHTML;
-    document.getElementById("templateColourChange").style.background = dark;
+    document.getElementById("leftheadingdiv").style.background = dark;
+    document.getElementById("rightHeadingDiv").style.background = dark;
+    document.getElementById("fontClrHobby").style.color = dark;
+    document.getElementById("fontClrLang").style.color = dark;
+    document.getElementById("fontClrIntrst").style.color = dark;
+    document.getElementById("fontClrLinks").style.color = dark;
+    document.getElementById("fontClrSkills").style.color = dark;
+    document.getElementById("fontClrContact").style.color = dark;
+    document.getElementById("fontClrEdu").style.color = dark;
+    document.getElementById("fontClrExp").style.color = dark;
+    document.getElementById("fontClrObjective").style.color = dark;
   }
   function LightBlue() {
     const blue = document.getElementById("spanCol5").innerHTML;
-    document.getElementById("templateColourChange").style.background = blue;
+    document.getElementById("leftheadingdiv").style.background = blue;
+    document.getElementById("rightHeadingDiv").style.background = blue;
+    document.getElementById("fontClrHobby").style.color = blue;
+    document.getElementById("fontClrLang").style.color = blue;
+    document.getElementById("fontClrIntrst").style.color = blue;
+    document.getElementById("fontClrLinks").style.color = blue;
+    document.getElementById("fontClrSkills").style.color = blue;
+    document.getElementById("fontClrContact").style.color = blue;
+    document.getElementById("fontClrEdu").style.color = blue;
+    document.getElementById("fontClrExp").style.color = blue;
+    document.getElementById("fontClrObjective").style.color = blue;
   }
   function Eucalyptus() {
     const eucalyptus = document.getElementById("spanCol4").innerHTML;
-    document.getElementById("templateColourChange").style.background = eucalyptus;
+    document.getElementById("leftheadingdiv").style.background  = eucalyptus;
+    document.getElementById("rightHeadingDiv").style.background = eucalyptus;
+    document.getElementById("fontClrHobby").style.color = eucalyptus;
+    document.getElementById("fontClrLang").style.color = eucalyptus;
+    document.getElementById("fontClrIntrst").style.color = eucalyptus;
+    document.getElementById("fontClrLinks").style.color = eucalyptus;
+    document.getElementById("fontClrSkills").style.color = eucalyptus;
+    document.getElementById("fontClrContact").style.color = eucalyptus;
+    document.getElementById("fontClrEdu").style.color = eucalyptus;
+    document.getElementById("fontClrExp").style.color = eucalyptus;
+    document.getElementById("fontClrObjective").style.color = eucalyptus;
   }
   function light3() {
     const colo3r = document.getElementById("spanCol3").innerHTML;
-    document.getElementById("templateColourChange").style.background = colo3r;
+    document.getElementById("leftheadingdiv").style.background = colo3r;
+    document.getElementById("rightHeadingDiv").style.background= colo3r;
+    document.getElementById("fontClrHobby").style.color = colo3r;
+    document.getElementById("fontClrLang").style.color = colo3r;
+    document.getElementById("fontClrIntrst").style.color = colo3r;
+    document.getElementById("fontClrLinks").style.color = colo3r;
+    document.getElementById("fontClrSkills").style.color = colo3r;
+    document.getElementById("fontClrContact").style.color = colo3r;
+    document.getElementById("fontClrEdu").style.color = colo3r;
+    document.getElementById("fontClrExp").style.color = colo3r;
+    document.getElementById("fontClrObjective").style.color = colo3r;
   }
   function light2() {
     const color4 = document.getElementById("spanCol2").innerHTML;
-    document.getElementById("templateColourChange").style.background = color4;
+    document.getElementById("leftheadingdiv").style.background  = color4;
+    document.getElementById("rightHeadingDiv").style.background = color4;
+    document.getElementById("fontClrHobby").style.color = color4;
+    document.getElementById("fontClrLang").style.color = color4;
+    document.getElementById("fontClrIntrst").style.color = color4;
+    document.getElementById("fontClrLinks").style.color = color4;
+    document.getElementById("fontClrSkills").style.color = color4;
+    document.getElementById("fontClrContact").style.color = color4;
+    document.getElementById("fontClrEdu").style.color = color4;
+    document.getElementById("fontClrExp").style.color = color4;
+    document.getElementById("fontClrObjective").style.color = color4;
   }
   function light1() {
     const color5 = document.getElementById("spanCol1").innerHTML;
-    document.getElementById("templateColourChange").style.background = color5;
+    document.getElementById("leftheadingdiv").style.background  = color5;
+    document.getElementById("rightHeadingDiv").style.background = color5;
+    document.getElementById("fontClrHobby").style.color = color5;
+    document.getElementById("fontClrLang").style.color = color5;
+    document.getElementById("fontClrIntrst").style.color = color5;
+    document.getElementById("fontClrLinks").style.color = color5;
+    document.getElementById("fontClrSkills").style.color = color5;
+    document.getElementById("fontClrContact").style.color = color5;
+    document.getElementById("fontClrEdu").style.color = color5;
+    document.getElementById("fontClrExp").style.color = color5;
+    document.getElementById("fontClrObjective").style.color = color5;
   }
   
   function changeBackgroundColor() {
     let input = document.getElementById("favcolor").value;
-    const res = document.getElementById("templateColourChange");
+    const res =  document.getElementById("leftheadingdiv");
+    const res2 =  document.getElementById("rightHeadingDiv");
     res.style.backgroundColor = input;
+    res2.style.backgroundColor = input;
+    document.getElementById("fontClrHobby").style.color = input;
+    document.getElementById("fontClrLang").style.color = input;
+    document.getElementById("fontClrIntrst").style.color = input;
+    document.getElementById("fontClrLinks").style.color = input;
+    document.getElementById("fontClrSkills").style.color = input;
+    document.getElementById("fontClrContact").style.color = input;
+    document.getElementById("fontClrEdu").style.color = input;
+    document.getElementById("fontClrExp").style.color = input;
+    document.getElementById("fontClrObjective").style.color = input;
   }
   function resetBackgroundColor() {
-    const res = document.getElementById("templateColourChange");
-    res.style.backgroundColor = "#3492E4";
-  
-    document.getElementById("templateColourChange").style.color = "#030303";
-    document.getElementById("githubT").style.color = "#030303";
-    document.getElementById("twitterT").style.color = "#030303";
-    document.getElementById("linkedinT").style.color = "#030303";
+    document.getElementById("leftheadingdiv").style.background  = "#ADD8E6";
+    document.getElementById("rightHeadingDiv").style.background = "#ADD8E6";
+    document.getElementById("fontClrHobby").style.color ="#03031C";
+    document.getElementById("fontClrLang").style.color = "#03031C";
+    document.getElementById("fontClrIntrst").style.color = "#03031C";
+    document.getElementById("fontClrLinks").style.color = "#03031C";
+    document.getElementById("fontClrSkills").style.color = "#03031C";
+    document.getElementById("fontClrContact").style.color = "#03031C";
+    document.getElementById("fontClrEdu").style.color = "#03031C";
+    document.getElementById("fontClrExp").style.color = "#03031C";
+    document.getElementById("fontClrObjective").style.color = "#03031C";
   }
   
   // for template fontC colour
   function fontdark() {
     const dark = document.getElementById("fontSpanCol6").innerHTML;
-    document.getElementById("templateColourChange").style.color = dark;
-    document.getElementById("githubT").style.color = dark;
-    document.getElementById("twitterT").style.color = dark;
-    document.getElementById("linkedinT").style.color = dark;
+    document.getElementById("nameT2").style.color= dark;
   }
   function fontLightBlue() {
     const blue = document.getElementById("fontSpanCol5").innerHTML;
-    document.getElementById("templateColourChange").style.color = blue;
-    document.getElementById("githubT").style.color = blue;
-    document.getElementById("twitterT").style.color = blue;
-    document.getElementById("linkedinT").style.color = blue;
+    document.getElementById("nameT2").style.color= blue;
   }
   function fontEucalyptus() {
     const eucalyptus = document.getElementById("fontSpanCol4").innerHTML;
-    document.getElementById("templateColourChange").style.color = eucalyptus;
-    document.getElementById("githubT").style.color = eucalyptus;
-    document.getElementById("twitterT").style.color = eucalyptus;
-    document.getElementById("linkedinT").style.color = eucalyptus;
+    document.getElementById("nameT2").style.color= eucalyptus;
   }
   function fontLight3() {
     const colo3r = document.getElementById("fontSpanCol3").innerHTML;
-    document.getElementById("templateColourChange").style.color = colo3r;
-    document.getElementById("githubT").style.color = colo3r;
-    document.getElementById("twitterT").style.color = colo3r;
-    document.getElementById("linkedinT").style.color = colo3r;
+    document.getElementById("nameT2").style.color= colo3r;
   }
   function fontLight2() {
     const color4 = document.getElementById("fontSpanCol2").innerHTML;
-    document.getElementById("templateColourChange").style.color = color4;
-    document.getElementById("githubT").style.color = color4;
-    document.getElementById("twitterT").style.color = color4;
-    document.getElementById("linkedinT").style.color = color4;
+    document.getElementById("nameT2").style.color= color4;
   }
   function fontLight1() {
     const color5 = document.getElementById("fontSpanCol1").innerHTML;
-    document.getElementById("templateColourChange").style.color = color5;
-    document.getElementById("githubT").style.color = color5;
-    document.getElementById("twitterT").style.color = color5;
-    document.getElementById("linkedinT").style.color = color5;
+    document.getElementById("nameT2").style.color= color5;
   }
   // --------------------------------------------------------------------------------------------
   

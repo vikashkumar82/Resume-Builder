@@ -258,6 +258,25 @@ button.btnApply {
 .template2-experiences {
     padding-right: 24px;
 }
+
+p#jobTitleT {
+    line-height: 5px;
+    margin-left: 40px;
+}
+h1#nameT2 {
+    font-size: xxx-large;
+    margin-left: 26px;
+}
+
+.template2-heading {
+    padding: 36px 0 36px 0;
+    background: lightblue;
+}
+
+.leftSection-heading{
+    background-color: lightblue;
+}
+
 /* Template 2 ends */
 
 
