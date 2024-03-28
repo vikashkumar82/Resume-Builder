@@ -245,13 +245,19 @@ button.btnApply {
     margin-top: 131px !important;
 }
 
-div#cvTemplate {
+/* div#cvTemplate {
     height: 1521px !important;
     border-bottom: 15px solid lightblue;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+} */
+.asideBar-section {
+    margin-left: 26px;
 }
 
+.template2-experiences {
+    padding-right: 24px;
+}
 /* Template 2 ends */
 
 
