@@ -229,30 +229,9 @@ span#emailT {
 }
 /* Template 1 ends */
 
-
-/* Template 2  */
-
-
-.leftSection-heading {
-    height: 158px;
+.experienceH5 {
+    line-height: 0px;
+    margin-top: 38px !important;
 }
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-    margin-top: 39px;
-}
-
-.template2-details.px-5.mt-5 {
-    margin-top: 131px !important;
-}
-
-div#cvTemplate {
-    height: 1521px !important;
-   
-}
-
-/* Template 2 ends */
-
 
 

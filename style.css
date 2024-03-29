@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* slider css start */
+.leftSection-slider .carousel-item img {
+    /* object-fit: cover; */
+}
+
+
+.leftSection-slider .carousel {
+    position: relative;
+    width: 50%;
+    left: 37px;
+    bottom: 313px;
+}
+
+.leftSection-slider button.carousel-control-prev {
+background: rgb(119, 118, 118);
+top: 50%;
+width: 40px;
+height: 40px;
+}
+
+
+.leftSection-slider button.carousel-control-next {
+background: rgb(119, 118, 118);
+top: 50%;
+width: 40px;
+height: 40px;
+}
+
+.background-crousel img {
+    width: 309px;
+}
+
+.btncreateResume {
+    background: #5633CF;
+    color: white;
+    text-decoration: none;
+    padding: 13px 50px 13px 50px;
+    border-radius: 12px;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.btncreateResume:hover{
+    background: aliceblue;
+    text-decoration: none;
+}
