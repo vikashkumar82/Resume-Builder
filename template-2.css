@@ -276,7 +276,9 @@ h1#nameT2 {
 .leftSection-heading{
     background-color: lightblue;
 }
-
+span#emailT {
+    position: absolute;
+}
 /* Template 2 ends */
 
 

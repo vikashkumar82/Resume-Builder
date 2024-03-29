@@ -224,7 +224,9 @@ button.btnApply {
     border: 1px solid white;
     border-radius: 5px;
 }
-
+span#emailT {
+    position: absolute;
+}
 /* Template 1 ends */
 
 
