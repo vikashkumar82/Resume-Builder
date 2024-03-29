@@ -247,9 +247,7 @@ button.btnApply {
 
 div#cvTemplate {
     height: 1521px !important;
-    border-bottom: 15px solid lightblue;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
+   
 }
 
 /* Template 2 ends */
