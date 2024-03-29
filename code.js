@@ -187,7 +187,6 @@ function generateCV() {
   // Set The Image To Template
   reader.onloadend = function () {
     document.getElementById("imgTemplate").src = reader.result;
-    document.getElementById("imgTemplate2").src = reader.result;
   };
 }
 
