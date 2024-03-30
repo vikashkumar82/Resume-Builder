@@ -49,3 +49,22 @@ height: 40px;
     background: aliceblue;
     text-decoration: none;
 }
+
+/* animation */
+.template {
+    perspective: 1000px; /* Adds depth to the 3D effect */
+}
+
+.template-card {
+    transition: transform 0.5s; /* Smooth transition effect */
+    display: inline-block; /* Ensures the card can be transformed */
+}
+
+.template:hover .template-card {
+    transform: rotateY(360deg); /* Completes a full 360-degree rotation */
+}
+
+.template-card, .template-card * {
+    backface-visibility: hidden; /* Prevents flickering or mirrored content from being visible */
+}
+
