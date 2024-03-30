@@ -7,11 +7,11 @@
     width: 200px;
 }
 .img-fluid {
-    max-width: 100%;
+    width: 250px !important;
     height: auto;
     position: absolute;
-    left: 91px;
-    bottom: -9px;
+    left: 75px;
+    bottom: -34px;
     border: 2px solid blue;
 }
 .background {
@@ -33,7 +33,6 @@
 .card-header {
     padding: 7px 0px 2px 35px !important;
 }
-
 .heading-cv-template {
     line-height: 0.7;
 }
@@ -56,9 +55,8 @@ span#addressT {
 }
 
 
-
 p#objectiveT {
-    text-align: justify;
+    text-align: center;
 }
 
 /* manually Colour Change */
@@ -228,9 +226,22 @@ button.btnApply {
     border: 1px solid white;
     border-radius: 5px;
 }
-span#emailT {
-    position: absolute;
+.inner-contact {
+    padding: 0 0 20px 0;
 }
+span.cont-icon {
+    background: #007bff;
+    padding: 5px 7px;
+    border-radius: 50px;
+}
+
+span.cont-iconn {
+    background: #007bff;
+    padding: 5px 9px;
+    border-radius: 50px;
+}
+
+
 /* Template 1 ends */
 
 .experienceH5 {
@@ -254,9 +265,49 @@ div#cvTemplate {
 
 .blueSection {
     background: blue;
-    margin-top: 90px;
     height: 180px;
-    position: relative;
-    right: 355px;
+    top: 95px;
+    position: absolute;
+    left: -48%;
+    display: grid;
     width: 1081px;
+    bottom: 1222px;
+}
+
+.aside-aboutMe.p-4 {
+    position: absolute;
+    top: 22%;
+    text-align: center;
+}
+
+.contact-details {
+    position: absolute;
+    top: 35%;
+}
+.template3-main {
+    position: relative;
+}
+
+.templatte2-languages.px-5.mt-4 {
+    position: absolute;
+    top: 695px;
+}
+
+.langHeading {
+    border: 2px solid blue;
+    padding: 2px 76px 0 71px;
+    margin-left: -15px;
+    border-radius: 50px;
+}
+
+.template2-skills.px-5.mt-4 {
+    position: absolute;
+    top: 797px;
+}
+
+.skillLoop {
+    border: 2px solid blue;
+    padding: 4px 64px 0px 71px;
+    border-radius: 50px;
+    margin: 0px -13px 0 -12px;
 }

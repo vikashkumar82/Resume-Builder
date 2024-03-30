@@ -96,25 +96,63 @@ function addNewHobbyField() {
 
 // generating CV
 function generateCV() {
+
+
+  // Code For Setting Image
+  let file = document.getElementById("imgField").files[0];
+
+  console.log(file);
+
+  let reader = new FileReader();
+  reader.readAsDataURL(file);
+  console.log(reader.result);
+
+  // Set The Image To Template
+  reader.onloadend = function () {
+    document.getElementById("imgTemplate3").src = reader.result;
+  };
+
   // name
   let nameField = document.getElementById("nameField").value;
-  let nameT1 = document.getElementById("nameT1");
-  nameT1.innerHTML = nameField;
   document.getElementById("nameT2").innerHTML = nameField;
-
   // Email
   document.getElementById("emailT").innerHTML =
     document.getElementById("emailField").value;
-
+  
   // contact
-  document.getElementById("countryContactT").innerHTML =
-    document.getElementById("countryCode").value;
   document.getElementById("contactT").innerHTML =
     document.getElementById("contactField").value;
-
+    //  document.getElementById("countryContactT").innerHTML =
+    // document.getElementById("countryCode").value;
+  
   // Address
   document.getElementById("addressT").innerHTML =
     document.getElementById("addressField").value;
+   
+      // Objective
+  document.getElementById("objectiveT").innerHTML =
+  document.getElementById("ObjectiveField").value;
+
+   //Expertise
+   let skills = document.getElementsByClassName("TechField");
+   let techSkills = "";
+   for (let e of skills) {
+     techSkills = techSkills + `<li>${e.value}</li>`;
+   }
+   document.getElementById("keySkills").innerHTML = techSkills;
+  
+  //Language
+  let language = document.getElementsByClassName("languageField");
+  let lang = "";
+  for (let e of language) {
+    lang = lang + `<li>${e.value}</li>`;
+  }
+  document.getElementById("languages").innerHTML = lang;
+
+
+    //  Job Title
+  document.getElementById("jobTitleT").innerHTML =
+  document.getElementById("jobTitle").value;
 
   //  Social media Links
   document.getElementById("githubT").innerHTML =
@@ -124,29 +162,10 @@ function generateCV() {
   document.getElementById("linkedinT").innerHTML =
     document.getElementById("linkedinField").value;
 
-  //  Job Title
-  document.getElementById("jobTitleT").innerHTML =
-    document.getElementById("jobTitle").value;
+  
+   
 
-  // Objective
-  document.getElementById("objectiveT").innerHTML =
-    document.getElementById("ObjectiveField").value;
 
-  //Expertise
-  let skills = document.getElementsByClassName("TechField");
-  let techSkills = "";
-  for (let e of skills) {
-    techSkills = techSkills + `<li>${e.value}</li>`;
-  }
-  document.getElementById("keySkills").innerHTML = techSkills;
-
-  //Language
-  let language = document.getElementsByClassName("languageField");
-  let lang = "";
-  for (let e of language) {
-    lang = lang + `<li>${e.value}</li>`;
-  }
-  document.getElementById("languages").innerHTML = lang;
 
   // Qe (QUALIFICATION)
   let aqs = document.getElementsByClassName("eqField");
@@ -175,19 +194,8 @@ function generateCV() {
     }
     document.getElementById("hobbys").innerHTML = hobby;
 
-  // Code For Setting Image
-  let file = document.getElementById("imgField").files[0];
 
-  console.log(file);
-
-  let reader = new FileReader();
-  reader.readAsDataURL(file);
-  console.log(reader.result);
-
-  // Set The Image To Template
-  reader.onloadend = function () {
-    document.getElementById("imgTemplate3").src = reader.result;
-  };
+  
 }
 
 // --------------------------------------------------------------------------------------------
