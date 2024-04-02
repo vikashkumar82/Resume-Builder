@@ -281,5 +281,8 @@ span#emailT {
 }
 /* Template 2 ends */
 
-
+.resumeForm {
+    border: 1px solid gray;
+    /* padding: 5px; */
+}
 

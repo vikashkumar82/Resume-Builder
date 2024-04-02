@@ -122,8 +122,8 @@ function generateCV() {
   // contact
   document.getElementById("contactT").innerHTML =
     document.getElementById("contactField").value;
-    //  document.getElementById("countryContactT").innerHTML =
-    // document.getElementById("countryCode").value;
+     document.getElementById("countryContactT").innerHTML =
+    document.getElementById("countryCode").value;
   
   // Address
   document.getElementById("addressT").innerHTML =
