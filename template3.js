@@ -46,6 +46,7 @@ function addNewTechField() {
   techOb.insertBefore(newNode, techAddButtonOb);
 }
 
+
 // dynamically Language skills textaea
 function addNewLanguageField() {
   let newNode = document.createElement("textarea");
@@ -60,6 +61,7 @@ function addNewLanguageField() {
   let languageAddButtonOb = document.getElementById("languageAddButton");
 
   languageOb.insertBefore(newNode, languageAddButtonOb);
+
 }
 
 // dynamically Intrests
@@ -98,6 +100,7 @@ function addNewHobbyField() {
 function generateCV() {
 
 
+
   // Code For Setting Image
   let file = document.getElementById("imgField").files[0];
 
@@ -122,8 +125,8 @@ function generateCV() {
   // contact
   document.getElementById("contactT").innerHTML =
     document.getElementById("contactField").value;
-     document.getElementById("countryContactT").innerHTML =
-    document.getElementById("countryCode").value;
+    //  document.getElementById("countryContactT").innerHTML =
+    // document.getElementById("countryCode").value;
   
   // Address
   document.getElementById("addressT").innerHTML =
@@ -132,6 +135,11 @@ function generateCV() {
       // Objective
   document.getElementById("objectiveT").innerHTML =
   document.getElementById("ObjectiveField").value;
+
+  //  Job Title
+  document.getElementById("jobTitleT").innerHTML =
+  document.getElementById("jobTitle").value;
+
 
    //Expertise
    let skills = document.getElementsByClassName("TechField");
@@ -149,11 +157,6 @@ function generateCV() {
   }
   document.getElementById("languages").innerHTML = lang;
 
-
-    //  Job Title
-  document.getElementById("jobTitleT").innerHTML =
-  document.getElementById("jobTitle").value;
-
   //  Social media Links
   document.getElementById("githubT").innerHTML =
     document.getElementById("fbField").value;
@@ -161,11 +164,6 @@ function generateCV() {
     document.getElementById("twitterField").value;
   document.getElementById("linkedinT").innerHTML =
     document.getElementById("linkedinField").value;
-
-  
-   
-
-
 
   // Qe (QUALIFICATION)
   let aqs = document.getElementsByClassName("eqField");
@@ -194,9 +192,9 @@ function generateCV() {
     }
     document.getElementById("hobbys").innerHTML = hobby;
 
-
-  
 }
+
+// ------------------------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------------------------
 
