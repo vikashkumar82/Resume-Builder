@@ -173,12 +173,11 @@ function generateCV() {
 
 
   //  Social media Links
-  document.getElementById("githubT").innerHTML =
-    document.getElementById("fbField").value;
-  document.getElementById("twitterT").innerHTML =
-    document.getElementById("twitterField").value;
-  document.getElementById("linkedinT").innerHTML =
-    document.getElementById("linkedinField").value;
+  document.getElementById("githubT").href =
+    document.getElementById("gitField").value;
+    document.getElementById("githubT").innerText =
+    document.getElementById("gitField").value;
+  
 
   //Expertise
   let skills = document.getElementsByClassName("TechField");
@@ -264,16 +263,6 @@ function showData() {
   });
 }
 
-
-
-
-
-
-
-
-
-
-
 // PROJECT ADDING
 
 function duplicateProjectForm() {
@@ -293,6 +282,7 @@ function showProjectData() {
     const toProField = projectForm.querySelector(".toProField");
     const projectField = projectForm.querySelector(".projectField");
     const descriptionProField = projectForm.querySelector(".proDesc");
+    const proPositionField = projectForm.querySelector(".projectPositionField");
 
     console.log("fromProField:", fromProField);
     console.log("toProField:", toProField);
@@ -300,19 +290,20 @@ function showProjectData() {
     console.log("descriptionProField:", descriptionProField);
 
     // Check if all required fields exist
-    if (fromProField && toProField && projectField && descriptionProField) {
+    if (fromProField && toProField && projectField && descriptionProField && proPositionField) {
       const proFrom = fromProField.value;
       const proTo = toProField.value;
       const projectName = projectField.value;
       const proDescription = descriptionProField.value;
+      const proPosition = proPositionField.value;
 
       // Create result structure
       const resultProDiv = document.createElement("div");
-      resultProDiv.className = "card mt-4";
+      resultProDiv.className = "projectResultSection mt-4";
       resultProDiv.innerHTML = `
-      <p><strong>${projectName}</strong></p>
+      <h4>${projectName}</h4>
       <div style="dislay:flex;">
-      <span><strong> name</strong></span><span style="color: rgb(82, 82, 82); font-size: x-small;"> &nbsp;<em><span>${proFrom}</span> - <span>${proTo}</span></em> </span>
+      <span><strong>${proPosition}</strong></span><span style="color: rgb(82, 82, 82); font-size: x-small;"> &nbsp;<i><span>${proFrom}</span> - <span>${proTo}</span></i> </span>
       </div>
       <p>${proDescription}</p>
               `;
@@ -323,23 +314,6 @@ function showProjectData() {
     }
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // --------------------------------------------------------------------------------------------
 

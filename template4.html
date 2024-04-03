@@ -929,13 +929,17 @@
               class="form-control projectField mt-2"
             ></textarea>
             <textarea
+              id="positionName"
+              rows="1"
+              placeholder="Ex: Sr Software Engineer"
+              class="form-control projectPositionField mt-2"
+            ></textarea>
+            <textarea
               class="form-control proDesc mt-2"
               placeholder="Description"
               rows="2"
             ></textarea>
           </div>
-
-
           <!-- button showing adding for Project -->
           <label>Add Project</label><br />
           <button class="btn btn-primary" onclick="duplicateProjectForm()">
@@ -1006,21 +1010,13 @@
           <h3>Important links</h3>
           <div class="form-group mt-2">
             <label for="fbField">GitHub</label>
-            <input type="text" id="fbField" class="form-control" />
-          </div>
-          <div class="form-group mt-2">
-            <label for="twitterField">Twitter</label>
-            <input type="text" id="twitterField" class="form-control" />
-          </div>
-          <div class="form-group mt-2">
-            <label for="linkedinField">LinkedIn</label>
-            <input type="text" id="linkedinField" class="form-control" />
+            <input type="text" id="gitField" class="form-control" />
           </div>
         </div>
 
         <!-- intrests -->
         <div class="intrestForm">
-          <label for>Intrest</label>
+          <label for>Acchivements</label>
           <textarea
             class="form-control intrestField"
             placeholder="Enter here"
@@ -1184,6 +1180,15 @@
                       >
                     </p>
                   </div>
+                  <div>
+                    <p id="hello" class="fontColorChange">
+                      <i class="fa-brands fa-github"></i>&nbsp;<span
+                        ><a href="#1" id="githubT" class="fontColorChange"
+                          >https://www.youtube.com/</a
+                        ></span
+                      >
+                    </p>
+                  </div>
                 </div>
               </div>
               <div class="row">
@@ -1243,13 +1248,71 @@
                         </div>
                         <div class="heading-title"><h4>PROJECT</h4></div>
                       </div>
-                      <div id="ProjectResult" class="mt-4">
+                      <div id="ProjectResult" class="mt-4"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="template4-rightSection p-4">
+                    <!-- Skills section -->
+                    <div class="skills-section">
+                      <div class="heading-section">
+                        <div class="iconSection">
+                          <h4><i class="fa-solid fa-rocket"></i></h4>
+                        </div>
+                        <div class="heading-title"><h4>MY SKILLS</h4></div>
+                      </div>
+                      <div class="skills-content">
+                        <ul id="keySkills" class="fontColorChange">
+                          <li id="fontColor"></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Language Section -->
+                    <div class="language-section">
+                      <div class="heading-section">
+                        <div class="iconSection">
+                          <h4><i class="fa-solid fa-earth-americas"></i></h4>
+                        </div>
+                        <div class="heading-title"><h4>LANGUAGE</h4></div>
+                      </div>
+                      <div class="language-section">
+                        <ul id="languages">
+                          <li id="fontColor" class="fontColorChange"></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Hobbies -->
+                    <div class="hobbies-section">
+                      <div class="heading-section">
+                        <div class="iconSection">
+                          <h4><i class="fa-brands fa-playstation"></i></h4>
+                        </div>
+                        <div class="heading-title"><h4>HOBBIES</h4></div>
+                      </div>
+                      <div class="hobbies-content">
                         
+                        <ul id="intrests">
+                          <li id="fontColor" class="fontColorChange"></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- acchivements -->
+                    <div class="achivements-section">
+                      <div class="heading-section">
+                        <div class="iconSection">
+                          <h4><i class="fa-solid fa-trophy"></i></h4>
+                        </div>
+                        <div class="heading-title"><h4>ACHIVEMENTS</h4></div>
+                      </div>
+                      <div class="achivements-content">
+                        <ul id="hobbys">
+                          <li id="fontColor" class="fontColorChange"></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4"></div>
               </div>
             </div>
           </div>
