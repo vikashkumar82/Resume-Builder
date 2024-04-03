@@ -888,7 +888,7 @@
             ></textarea>
           </div>
 
-          <!-- button showing adding -->
+          <!-- button showing adding for work Experience -->
           <label>Add Work Experience</label><br />
           <button class="btn btn-primary" onclick="duplicateForm()">
             Duplicate Form
@@ -897,6 +897,54 @@
             Show Data
           </button>
           <div id="formClone"></div>
+
+          <!-- Project -->
+          <div class="form-group mt-2" id="proTemplate" style="display: none">
+            <label>Project</label>
+            <div class="row">
+              <div class="col-md-6">
+                <textarea
+                  name
+                  id
+                  rows="1"
+                  placeholder="From"
+                  class="form-control fromProField"
+                ></textarea>
+              </div>
+              <div class="col-md-6">
+                <textarea
+                  name
+                  id
+                  rows="1"
+                  placeholder="To"
+                  class="form-control toProField"
+                ></textarea>
+              </div>
+            </div>
+            <textarea
+              name
+              id="expCompany"
+              rows="1"
+              placeholder="project name"
+              class="form-control projectField mt-2"
+            ></textarea>
+            <textarea
+              class="form-control proDesc mt-2"
+              placeholder="Description"
+              rows="2"
+            ></textarea>
+          </div>
+
+
+          <!-- button showing adding for Project -->
+          <label>Add Project</label><br />
+          <button class="btn btn-primary" onclick="duplicateProjectForm()">
+            Duplicate Form
+          </button>
+          <button class="btn btn-success mt-2" onclick="showProjectData()">
+            Show Data
+          </button>
+          <div id="formProjectClone"></div>
 
           <!-- Academic Qualification -->
           <div class="form-group mt-2" id="eq">
@@ -1012,6 +1060,7 @@
         </div>
       </div>
 
+      <!-- color section -->
       <section class="colorSelection-Hero mt-3">
         <div class="colorSelection-Section">
           <div id="color1" onclick="light1()">
@@ -1070,37 +1119,46 @@
           </div>
         </div>
       </section>
-   
+
       <!-- Resume CV Template -->
       <section>
         <div class="container template2-cv mt-5" id="cv-template">
           <div class="template2-hero" id="cvTemplate">
-            <div class="template4-main">
-              <div class="template4-content p-3"style="border: 1px solid red;">
-                <div class="pro-pic p-2" style="border: 1px solid gray;">
+            <div class="template4-main" style="border: 1px solid">
+              <div
+                class="template4-content p-3"
+                style="border: 1px solid red; padding-bottom: 0px !important"
+              >
+                <div class="pro-pic p-2" style="border: 1px solid gray">
                   <div class="row">
                     <div class="col-md-3">
+                      <!-- profile pic -->
                       <div class="imageSection">
                         <img
-                            src="./images/altImage.png"
-                            class="img-fluid myimg"
-                            id="imgTemplate2"
-                          /> 
+                          src="./images/altImage.png"
+                          class="img-fluid myimg"
+                          id="imgTemplate2"
+                        />
                       </div>
                     </div>
+                    <!-- name & title -->
                     <div class="col-md-9">
                       <h1 style="font-weight: 700" id="nameT2">Vikash Kumar</h1>
                       <p
-                      class="titleJob"
-                      id="jobTitleT"
-                      style="font-size: 25px; color: #666666"
-                    >
-                      Software Engineer
-                    </p>
+                        class="titleJob"
+                        id="jobTitleT"
+                        style="font-size: 25px; color: #666666"
+                      >
+                        Software Engineer
+                      </p>
                     </div>
                   </div>
                 </div>
-                <div class="contact-section" style="display: flex;">
+                <!-- contact -->
+                <div
+                  class="contact-section"
+                  style="display: flex; justify-content: center; gap: 44px"
+                >
                   <div>
                     <p class="fontColorChange">
                       <i class="fa-regular fa-envelope"></i>&nbsp;<span
@@ -1110,14 +1168,13 @@
                     </p>
                   </div>
                   <div>
-                    <i
-                            class="fa-solid fa-phone"
-                            class="fontColorChange"
-                          ></i
-                          >&nbsp;<span id="countryContactT" class="fontColorChange"
-                          >+91</span><span id="contactT" class="fontColorChange"
-                          >9430722766</span
-                        >
+                    <i class="fa-solid fa-phone" class="fontColorChange"></i
+                    >&nbsp;<span id="countryContactT" class="fontColorChange"
+                      >+91</span
+                    ><span>&nbsp;-&nbsp;</span
+                    ><span id="contactT" class="fontColorChange"
+                      >9430722766</span
+                    >
                   </div>
                   <div>
                     <p id="hello" class="fontColorChange">
@@ -1128,6 +1185,71 @@
                     </p>
                   </div>
                 </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="template4-leftSection p-4">
+                    <!-- about me section -->
+                    <div class="aboutme-section">
+                      <div class="heading-section">
+                        <div class="iconSection">
+                          <h4><i class="fa-regular fa-user"></i></h4>
+                        </div>
+                        <div class="heading-title"><h4>SUMMARY</h4></div>
+                      </div>
+                      <div class="template2-aboutme mt-1">
+                        <p id="objectiveT">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Quia esse, tempore, placeat consequatur
+                          voluptatum, repellendus tenetur excepturi doloremque
+                          aliquid temporibus odit! Possimus qui ad repudiandae
+                          atque tempore, incidunt quo et. Distinctio recusandae
+                          dolores adipisci maiores dolore.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- experience Section -->
+                    <div class="experience-section">
+                      <div class="heading-section">
+                        <div class="iconSection">
+                          <h4><i class="fa-solid fa-briefcase"></i></h4>
+                        </div>
+                        <div class="heading-title"><h4>EXPERIENCE</h4></div>
+                      </div>
+                      <div id="resultSection" class="mt-4"></div>
+                    </div>
+                    <!-- Education Section -->
+                    <div class="education-section">
+                      <div class="heading-section">
+                        <div class="iconSection">
+                          <h4><i class="fa-solid fa-graduation-cap"></i></h4>
+                        </div>
+                        <div class="heading-title"><h4>EDUCATION</h4></div>
+                      </div>
+                      <div id="educationResult" class="mt-1">
+                        <ul id="aqT">
+                          <li>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Provident, neque.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Project Section -->
+                    <div class="education-section">
+                      <div class="heading-section">
+                        <div class="iconSection">
+                          <h4><i class="fa-solid fa-file-invoice"></i></h4>
+                        </div>
+                        <div class="heading-title"><h4>PROJECT</h4></div>
+                      </div>
+                      <div id="ProjectResult" class="mt-4">
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4"></div>
               </div>
             </div>
           </div>
