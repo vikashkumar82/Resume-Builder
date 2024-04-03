@@ -1,43 +1,3 @@
-// // dynamically workExperience textaea
-// function addNewWeField() {
-//   // Description
-//   let newNode = document.createElement("textarea");
-//   newNode.classList.add("form-control");
-//   newNode.classList.add("weField");
-//   newNode.classList.add("mt-3");
-//   // newNode.setAttribute("rows" , 3);
-//   newNode.setAttribute("placeholder", "Enter here");
-
-//   let weOb = document.getElementById("we");
-//   let weAddButtonOb = document.getElementById("weAddButton");
-
-//   weOb.insertBefore(newNode, weAddButtonOb);
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // dynamically Qualification textaea
 function addNewEqField() {
@@ -320,117 +280,100 @@ function showProjectData() {
 // for template color
 function dark() {
   const dark = document.getElementById("spanCol6").innerHTML;
-  document.getElementById("leftheadingdiv").style.background = dark;
-  document.getElementById("rightHeadingDiv").style.background = dark;
-  document.getElementById("fontClrHobby").style.color = dark;
-  document.getElementById("fontClrLang").style.color = dark;
-  document.getElementById("fontClrIntrst").style.color = dark;
-  document.getElementById("fontClrLinks").style.color = dark;
-  document.getElementById("fontClrSkills").style.color = dark;
-  document.getElementById("fontClrContact").style.color = dark;
-  document.getElementById("fontClrEdu").style.color = dark;
-  document.getElementById("fontClrExp").style.color = dark;
-  document.getElementById("fontClrObjective").style.color = dark;
-}
+  document.getElementById("headingColourChange").style.background = dark;
+  document.getElementById("iconSummaryColor").style.background=dark;
+  document.getElementById("iconProjectColor").style.background=dark;
+  document.getElementById("iconEducationColor").style.background=dark;
+  document.getElementById("iconSkillsColor").style.background=dark;
+  document.getElementById("iconLanguageColor").style.background=dark;
+  document.getElementById("iconHobbiesColor").style.background=dark;
+  document.getElementById("iconAchivementsColor").style.background=dark;
+  document.getElementById("iconExperienceColor").style.background=dark;
+ }
 function LightBlue() {
   const blue = document.getElementById("spanCol5").innerHTML;
-  document.getElementById("leftheadingdiv").style.background = blue;
-  document.getElementById("rightHeadingDiv").style.background = blue;
-  document.getElementById("fontClrHobby").style.color = blue;
-  document.getElementById("fontClrLang").style.color = blue;
-  document.getElementById("fontClrIntrst").style.color = blue;
-  document.getElementById("fontClrLinks").style.color = blue;
-  document.getElementById("fontClrSkills").style.color = blue;
-  document.getElementById("fontClrContact").style.color = blue;
-  document.getElementById("fontClrEdu").style.color = blue;
-  document.getElementById("fontClrExp").style.color = blue;
-  document.getElementById("fontClrObjective").style.color = blue;
+  document.getElementById("headingColourChange").style.background = blue;
+  document.getElementById("iconSummaryColor").style.background=blue;
+  document.getElementById("iconProjectColor").style.background=blue;
+  document.getElementById("iconEducationColor").style.background=blue;
+  document.getElementById("iconSkillsColor").style.background=blue;
+  document.getElementById("iconLanguageColor").style.background=blue;
+  document.getElementById("iconHobbiesColor").style.background=blue;
+  document.getElementById("iconAchivementsColor").style.background=blue;
+  document.getElementById("iconExperienceColor").style.background=blue;
 }
 function Eucalyptus() {
   const eucalyptus = document.getElementById("spanCol4").innerHTML;
-  document.getElementById("leftheadingdiv").style.background = eucalyptus;
-  document.getElementById("rightHeadingDiv").style.background = eucalyptus;
-  document.getElementById("fontClrHobby").style.color = eucalyptus;
-  document.getElementById("fontClrLang").style.color = eucalyptus;
-  document.getElementById("fontClrIntrst").style.color = eucalyptus;
-  document.getElementById("fontClrLinks").style.color = eucalyptus;
-  document.getElementById("fontClrSkills").style.color = eucalyptus;
-  document.getElementById("fontClrContact").style.color = eucalyptus;
-  document.getElementById("fontClrEdu").style.color = eucalyptus;
-  document.getElementById("fontClrExp").style.color = eucalyptus;
-  document.getElementById("fontClrObjective").style.color = eucalyptus;
+  document.getElementById("headingColourChange").style.background = eucalyptus;
+  document.getElementById("iconSummaryColor").style.background=eucalyptus;
+  document.getElementById("iconProjectColor").style.background=eucalyptus;
+  document.getElementById("iconEducationColor").style.background=eucalyptus;
+  document.getElementById("iconSkillsColor").style.background=eucalyptus;
+  document.getElementById("iconLanguageColor").style.background=eucalyptus;
+  document.getElementById("iconHobbiesColor").style.background=eucalyptus;
+  document.getElementById("iconAchivementsColor").style.background=eucalyptus;
+  document.getElementById("iconExperienceColor").style.background=eucalyptus;
 }
 function light3() {
   const colo3r = document.getElementById("spanCol3").innerHTML;
-  document.getElementById("leftheadingdiv").style.background = colo3r;
-  document.getElementById("rightHeadingDiv").style.background = colo3r;
-  document.getElementById("fontClrHobby").style.color = colo3r;
-  document.getElementById("fontClrLang").style.color = colo3r;
-  document.getElementById("fontClrIntrst").style.color = colo3r;
-  document.getElementById("fontClrLinks").style.color = colo3r;
-  document.getElementById("fontClrSkills").style.color = colo3r;
-  document.getElementById("fontClrContact").style.color = colo3r;
-  document.getElementById("fontClrEdu").style.color = colo3r;
-  document.getElementById("fontClrExp").style.color = colo3r;
-  document.getElementById("fontClrObjective").style.color = colo3r;
+  document.getElementById("headingColourChange").style.background = colo3r;
+  document.getElementById("iconSummaryColor").style.background=colo3r;
+  document.getElementById("iconProjectColor").style.background=colo3r;
+  document.getElementById("iconEducationColor").style.background=colo3r;
+  document.getElementById("iconSkillsColor").style.background=colo3r;
+  document.getElementById("iconLanguageColor").style.background=colo3r;
+  document.getElementById("iconHobbiesColor").style.background=colo3r;
+  document.getElementById("iconAchivementsColor").style.background=colo3r;
+  document.getElementById("iconExperienceColor").style.background=colo3r;
 }
 function light2() {
   const color4 = document.getElementById("spanCol2").innerHTML;
-  document.getElementById("leftheadingdiv").style.background = color4;
-  document.getElementById("rightHeadingDiv").style.background = color4;
-  document.getElementById("fontClrHobby").style.color = color4;
-  document.getElementById("fontClrLang").style.color = color4;
-  document.getElementById("fontClrIntrst").style.color = color4;
-  document.getElementById("fontClrLinks").style.color = color4;
-  document.getElementById("fontClrSkills").style.color = color4;
-  document.getElementById("fontClrContact").style.color = color4;
-  document.getElementById("fontClrEdu").style.color = color4;
-  document.getElementById("fontClrExp").style.color = color4;
-  document.getElementById("fontClrObjective").style.color = color4;
+  document.getElementById("headingColourChange").style.background = color4;
+  document.getElementById("iconSummaryColor").style.background=color4;
+  document.getElementById("iconProjectColor").style.background=color4;
+  document.getElementById("iconEducationColor").style.background=color4;
+  document.getElementById("iconSkillsColor").style.background=color4;
+  document.getElementById("iconLanguageColor").style.background=color4;
+  document.getElementById("iconHobbiesColor").style.background=color4;
+  document.getElementById("iconAchivementsColor").style.background=color4;
+  document.getElementById("iconExperienceColor").style.background=color4;
 }
 function light1() {
   const color5 = document.getElementById("spanCol1").innerHTML;
-  document.getElementById("leftheadingdiv").style.background = color5;
-  document.getElementById("rightHeadingDiv").style.background = color5;
-  document.getElementById("fontClrHobby").style.color = color5;
-  document.getElementById("fontClrLang").style.color = color5;
-  document.getElementById("fontClrIntrst").style.color = color5;
-  document.getElementById("fontClrLinks").style.color = color5;
-  document.getElementById("fontClrSkills").style.color = color5;
-  document.getElementById("fontClrContact").style.color = color5;
-  document.getElementById("fontClrEdu").style.color = color5;
-  document.getElementById("fontClrExp").style.color = color5;
-  document.getElementById("fontClrObjective").style.color = color5;
+  document.getElementById("headingColourChange").style.background = color5;
+  document.getElementById("iconSummaryColor").style.background=color5;
+  document.getElementById("iconProjectColor").style.background=color5;
+  document.getElementById("iconEducationColor").style.background=color5;
+  document.getElementById("iconSkillsColor").style.background=color5;
+  document.getElementById("iconLanguageColor").style.background=color5;
+  document.getElementById("iconHobbiesColor").style.background=color5;
+  document.getElementById("iconAchivementsColor").style.background=color5;
+  document.getElementById("iconExperienceColor").style.background=color5;
 }
 
 function changeBackgroundColor() {
   let input = document.getElementById("favcolor").value;
-  const res = document.getElementById("leftheadingdiv");
-  const res2 = document.getElementById("rightHeadingDiv");
-  res.style.backgroundColor = input;
-  res2.style.backgroundColor = input;
-  document.getElementById("fontClrHobby").style.color = input;
-  document.getElementById("fontClrLang").style.color = input;
-  document.getElementById("fontClrIntrst").style.color = input;
-  document.getElementById("fontClrLinks").style.color = input;
-  document.getElementById("fontClrSkills").style.color = input;
-  document.getElementById("fontClrContact").style.color = input;
-  document.getElementById("fontClrEdu").style.color = input;
-  document.getElementById("fontClrExp").style.color = input;
-  document.getElementById("fontClrObjective").style.color = input;
+ 
+  document.getElementById("headingColourChange").style.background = input;
+  document.getElementById("iconSummaryColor").style.background=input;
+  document.getElementById("iconProjectColor").style.background=input;
+  document.getElementById("iconEducationColor").style.background=input;
+  document.getElementById("iconSkillsColor").style.background=input;
+  document.getElementById("iconLanguageColor").style.background=input;
+  document.getElementById("iconHobbiesColor").style.background=input;
+  document.getElementById("iconAchivementsColor").style.background=input;
+  document.getElementById("iconExperienceColor").style.background=input;
 }
 function resetBackgroundColor() {
-  document.getElementById("leftheadingdiv").style.background = "#ADD8E6";
-  document.getElementById("rightHeadingDiv").style.background = "#ADD8E6";
-  document.getElementById("fontClrHobby").style.color = "#03031C";
-  document.getElementById("fontClrLang").style.color = "#03031C";
-  document.getElementById("fontClrIntrst").style.color = "#03031C";
-  document.getElementById("fontClrLinks").style.color = "#03031C";
-  document.getElementById("fontClrSkills").style.color = "#03031C";
-  document.getElementById("fontClrContact").style.color = "#03031C";
-  document.getElementById("fontClrEdu").style.color = "#03031C";
-  document.getElementById("fontClrExp").style.color = "#03031C";
-  document.getElementById("fontClrObjective").style.color = "#03031C";
+  document.getElementById("headingColourChange").style.background = dark;
+  document.getElementById("iconSummaryColor").style.background=dark;
+  document.getElementById("iconProjectColor").style.background=dark;
+  document.getElementById("iconEducationColor").style.background=dark;
+  document.getElementById("iconSkillsColor").style.background=dark;
+  document.getElementById("iconLanguageColor").style.background=dark;
+  document.getElementById("iconHobbiesColor").style.background=dark;
+  document.getElementById("iconAchivementsColor").style.background=dark;
+  document.getElementById("iconExperienceColor").style.background=dark;
 }
 
 // for template fontC colour

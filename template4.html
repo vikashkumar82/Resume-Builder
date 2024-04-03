@@ -1121,11 +1121,8 @@
         <div class="container template2-cv mt-5" id="cv-template">
           <div class="template2-hero" id="cvTemplate">
             <div class="template4-main" style="border: 1px solid">
-              <div
-                class="template4-content p-3"
-                style="border: 1px solid red; padding-bottom: 0px !important"
-              >
-                <div class="pro-pic p-2" style="border: 1px solid gray">
+              <div class="template4-content p-3" id="headingColourChange">
+                <div class="pro-pic p-2">
                   <div class="row">
                     <div class="col-md-3">
                       <!-- profile pic -->
@@ -1150,54 +1147,54 @@
                     </div>
                   </div>
                 </div>
-                <!-- contact -->
-                <div
-                  class="contact-section"
-                  style="display: flex; justify-content: center; gap: 44px"
-                >
-                  <div>
-                    <p class="fontColorChange">
-                      <i class="fa-regular fa-envelope"></i>&nbsp;<span
-                        id="emailT"
-                        >avikashkumar82@gmail.com</span
-                      >
-                    </p>
-                  </div>
-                  <div>
-                    <i class="fa-solid fa-phone" class="fontColorChange"></i
-                    >&nbsp;<span id="countryContactT" class="fontColorChange"
-                      >+91</span
-                    ><span>&nbsp;-&nbsp;</span
-                    ><span id="contactT" class="fontColorChange"
-                      >9430722766</span
-                    >
-                  </div>
-                  <div>
-                    <p id="hello" class="fontColorChange">
-                      <i class="fa-solid fa-location-dot"></i>&nbsp;<span
-                        id="addressT"
-                        >Bokaro steel city</span
-                      >
-                    </p>
-                  </div>
-                  <div>
-                    <p id="hello" class="fontColorChange">
-                      <i class="fa-brands fa-github"></i>&nbsp;<span
-                        ><a href="#1" id="githubT" class="fontColorChange"
-                          >https://www.youtube.com/</a
-                        ></span
-                      >
-                    </p>
-                  </div>
-                </div>
               </div>
+              <!-- contact -->
+              <div
+              class="contact-section"
+              style="display: flex; justify-content: center; gap: 44px"
+            >
+              <div>
+                <p class="fontColorChange">
+                  <i class="fa-regular fa-envelope"></i>&nbsp;<span
+                    id="emailT"
+                    >avikashkumar82@gmail.com</span
+                  >
+                </p>
+              </div>
+              <div>
+                <i class="fa-solid fa-phone" class="fontColorChange"></i
+                >&nbsp;<span id="countryContactT" class="fontColorChange"
+                  >+91</span
+                ><span>&nbsp;-&nbsp;</span
+                ><span id="contactT" class="fontColorChange"
+                  >9430722766</span
+                >
+              </div>
+              <div>
+                <p id="hello" class="fontColorChange">
+                  <i class="fa-solid fa-location-dot"></i>&nbsp;<span
+                    id="addressT"
+                    >Bokaro steel city</span
+                  >
+                </p>
+              </div>
+              <div>
+                <p id="hello" class="fontColorChange">
+                  <i class="fa-brands fa-github"></i>&nbsp;<span
+                    ><a href="#1" id="githubT" class="fontColorChange"
+                      >https://www.youtube.com/</a
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
               <div class="row">
                 <div class="col-md-8">
                   <div class="template4-leftSection p-4">
                     <!-- about me section -->
                     <div class="aboutme-section">
                       <div class="heading-section">
-                        <div class="iconSection">
+                        <div class="iconSection" id="iconSummaryColor">
                           <h4><i class="fa-regular fa-user"></i></h4>
                         </div>
                         <div class="heading-title"><h4>SUMMARY</h4></div>
@@ -1216,17 +1213,31 @@
                     <!-- experience Section -->
                     <div class="experience-section">
                       <div class="heading-section">
-                        <div class="iconSection">
+                        <div class="iconSection" id="iconExperienceColor">
                           <h4><i class="fa-solid fa-briefcase"></i></h4>
                         </div>
                         <div class="heading-title"><h4>EXPERIENCE</h4></div>
                       </div>
                       <div id="resultSection" class="mt-4"></div>
                     </div>
-                    <!-- Education Section -->
+                    <!-- Project Section -->
                     <div class="education-section">
                       <div class="heading-section">
-                        <div class="iconSection">
+                        <div class="iconSection" id="iconProjectColor">
+                          <h4><i class="fa-solid fa-file-invoice"></i></h4>
+                        </div>
+                        <div class="heading-title"><h4>PROJECT</h4></div>
+                      </div>
+                      <div id="ProjectResult" class="mt-4"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="template4-rightSection p-4">
+                    <!-- Education Section -->
+                    <div class="education-section mt-2">
+                      <div class="heading-section">
+                        <div class="iconSection" id="iconEducationColor">
                           <h4><i class="fa-solid fa-graduation-cap"></i></h4>
                         </div>
                         <div class="heading-title"><h4>EDUCATION</h4></div>
@@ -1240,24 +1251,10 @@
                         </ul>
                       </div>
                     </div>
-                    <!-- Project Section -->
-                    <div class="education-section">
-                      <div class="heading-section">
-                        <div class="iconSection">
-                          <h4><i class="fa-solid fa-file-invoice"></i></h4>
-                        </div>
-                        <div class="heading-title"><h4>PROJECT</h4></div>
-                      </div>
-                      <div id="ProjectResult" class="mt-4"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="template4-rightSection p-4">
                     <!-- Skills section -->
                     <div class="skills-section">
                       <div class="heading-section">
-                        <div class="iconSection">
+                        <div class="iconSection" id="iconSkillsColor">
                           <h4><i class="fa-solid fa-rocket"></i></h4>
                         </div>
                         <div class="heading-title"><h4>MY SKILLS</h4></div>
@@ -1271,7 +1268,7 @@
                     <!-- Language Section -->
                     <div class="language-section">
                       <div class="heading-section">
-                        <div class="iconSection">
+                        <div class="iconSection" id="iconLanguageColor">
                           <h4><i class="fa-solid fa-earth-americas"></i></h4>
                         </div>
                         <div class="heading-title"><h4>LANGUAGE</h4></div>
@@ -1285,7 +1282,7 @@
                     <!-- Hobbies -->
                     <div class="hobbies-section">
                       <div class="heading-section">
-                        <div class="iconSection">
+                        <div class="iconSection" id="iconHobbiesColor">
                           <h4><i class="fa-brands fa-playstation"></i></h4>
                         </div>
                         <div class="heading-title"><h4>HOBBIES</h4></div>
@@ -1300,7 +1297,7 @@
                     <!-- acchivements -->
                     <div class="achivements-section">
                       <div class="heading-section">
-                        <div class="iconSection">
+                        <div class="iconSection" id="iconAchivementsColor">
                           <h4><i class="fa-solid fa-trophy"></i></h4>
                         </div>
                         <div class="heading-title"><h4>ACHIVEMENTS</h4></div>

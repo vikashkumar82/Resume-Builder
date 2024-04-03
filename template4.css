@@ -291,7 +291,7 @@ h1#nameT2 {
     display: flex;
     justify-content: center;
     gap: 44px;
-    margin-bottom: -11px;
+    background: #d3cece;
 }
 
 .heading-section {
@@ -313,4 +313,11 @@ h1#nameT2 {
 
 .template2-aboutme.mt-1 {
     text-align: justify;
+}
+
+.template4-content.p-3 {
+    background: #c200ff;
+}
+.contact-section div p {
+    margin-bottom: 6px;
 }
