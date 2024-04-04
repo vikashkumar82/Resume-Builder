@@ -5,6 +5,7 @@
     max-width: 100%;
     height: 168px !important;
     background: aliceblue;
+    border-radius: 12px;
 }
 
 .imageSection {

@@ -365,15 +365,17 @@ function changeBackgroundColor() {
   document.getElementById("iconExperienceColor").style.background=input;
 }
 function resetBackgroundColor() {
-  document.getElementById("headingColourChange").style.background = dark;
-  document.getElementById("iconSummaryColor").style.background=dark;
-  document.getElementById("iconProjectColor").style.background=dark;
-  document.getElementById("iconEducationColor").style.background=dark;
-  document.getElementById("iconSkillsColor").style.background=dark;
-  document.getElementById("iconLanguageColor").style.background=dark;
-  document.getElementById("iconHobbiesColor").style.background=dark;
-  document.getElementById("iconAchivementsColor").style.background=dark;
-  document.getElementById("iconExperienceColor").style.background=dark;
+  document.getElementById("headingColourChange").style.background = "#C200FF";
+  document.getElementById("iconSummaryColor").style.background="#C200FF";
+  document.getElementById("iconProjectColor").style.background="#C200FF";
+  document.getElementById("iconEducationColor").style.background="#C200FF";
+  document.getElementById("iconSkillsColor").style.background="#C200FF";
+  document.getElementById("iconLanguageColor").style.background="#C200FF";
+  document.getElementById("iconHobbiesColor").style.background="#C200FF";
+  document.getElementById("iconAchivementsColor").style.background="#C200FF";
+  document.getElementById("iconExperienceColor").style.background="#C200FF";
+  document.getElementById("nameT2").style.color = "#c0c0c0";
+  document.getElementById("jobTitleT").style.color ="#c0c0c0";
 }
 
 // for template fontC colour
