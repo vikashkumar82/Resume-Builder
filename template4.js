@@ -265,7 +265,7 @@ function showProjectData() {
       <div style="dislay:flex;">
       <span><strong>${proPosition}</strong></span><span style="color: rgb(82, 82, 82); font-size: x-small;"> &nbsp;<i><span>${proFrom}</span> - <span>${proTo}</span></i> </span>
       </div>
-      <p>${proDescription}</p>
+      <p style="text-align:justify;">${proDescription}</p>
               `;
 
       resultProjectSection.appendChild(resultProDiv);
@@ -380,26 +380,32 @@ function resetBackgroundColor() {
 function fontdark() {
   const dark = document.getElementById("fontSpanCol6").innerHTML;
   document.getElementById("nameT2").style.color = dark;
+  document.getElementById("jobTitleT").style.color = dark;
 }
 function fontLightBlue() {
   const blue = document.getElementById("fontSpanCol5").innerHTML;
   document.getElementById("nameT2").style.color = blue;
+  document.getElementById("jobTitleT").style.color = blue;
 }
 function fontEucalyptus() {
   const eucalyptus = document.getElementById("fontSpanCol4").innerHTML;
   document.getElementById("nameT2").style.color = eucalyptus;
+  document.getElementById("jobTitleT").style.color = eucalyptus;
 }
 function fontLight3() {
   const colo3r = document.getElementById("fontSpanCol3").innerHTML;
   document.getElementById("nameT2").style.color = colo3r;
+  document.getElementById("jobTitleT").style.color = colo3r;
 }
 function fontLight2() {
   const color4 = document.getElementById("fontSpanCol2").innerHTML;
   document.getElementById("nameT2").style.color = color4;
+  document.getElementById("jobTitleT").style.color = color4;
 }
 function fontLight1() {
   const color5 = document.getElementById("fontSpanCol1").innerHTML;
   document.getElementById("nameT2").style.color = color5;
+  document.getElementById("jobTitleT").style.color = color5;
 }
 // --------------------------------------------------------------------------------------------
 
