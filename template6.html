@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="template4.css" />
+    <link rel="stylesheet" href="template6.css" />
     <link rel="stylesheet" href="responsive.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -46,7 +47,10 @@
               <!-- name -->
               <div class="form-group mt-2">
                 <label for="nameField">Your Name</label>
-                <input type="text" id="nameField" class="form-control" />
+                <div style="display: flex; gap:10px">
+                <input type="text" id="firstNameField" class="form-control" placeholder="first name"/>
+                <input type="text" id="lastNameField" class="form-control" placeholder="last name"/>
+              </div>
               </div>
               <!-- Contact -->
               <div class="form-group mt-2">
@@ -1120,126 +1124,163 @@
       <section>
         <div class="container template2-cv mt-5" id="cv-template">
           <div class="template2-hero" id="cvTemplate">
-            <div class="template4-main" >
-              <div class="template4-content p-3" id="headingColourChange">
-                <div class="pro-pic p-2">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <!-- profile pic -->
-                      <div class="imageSection">
-                        <img
-                          src="./images/altImage.png"
-                          class="img-fluid myimg"
-                          id="imgTemplate2"
-                        />
-                      </div>
-                    </div>
-                    <!-- name & title -->
-                    <div class="col-md-9">
-                      <h1 style="font-weight: 700 ; color: #c0c0c0;" id="nameT2">Vikash Kumar</h1>
-                      <p
-                        class="titleJob"
-                        id="jobTitleT"
-                        style="font-size: 25px; color: #c0c0c0"
-                      >
-                        Software Engineer
-                      </p>
-                    </div>
+            <div class="template6-main">
+              <!-- profile name and photo -->
+              <div
+                class="template6-profileName"
+                style="display: flex; gap: 36px"
+              >
+                <div>
+                  <!-- profile pic -->
+                  <div class="imageSection">
+                    <img
+                      src="./images/altImage.png"
+                      class="img-fluid myimg"
+                      id="imgTemplate2"
+                    />
                   </div>
                 </div>
-              </div>
-              <!-- contact -->
-              <div class="contact-section" style="display: flex; justify-content: center; gap: 44px">
-              <div>
-                <p class="fontColorChange">
-                  <i class="fa-regular fa-envelope"></i>&nbsp;<span
-                    id="emailT"
-                    >avikashkumar82@gmail.com</span
+                <div>
+                  <h1
+                    style="
+                      font-weight: 400;
+                      color: #c0c0c0;
+                      font-size: xxx-large;
+                    "
+                    id="nameT2"
                   >
-                </p>
+                    <span id="firstName">Vikash</span &nbsp;
+                    ><span id="lastName" style="color: yellow;">Kumar</span>
+                  </h1>
+                  <p
+                    class="titleJob"
+                    id="jobTitleT"
+                    style="
+                      font-size: 25px;
+                      color: #c0c0c0;
+                      text-align: center;
+                      line-height: 6px;
+                    "
+                  >
+                    Software Engineer
+                  </p>
+                </div>
               </div>
-              <div>
-                <i class="fa-solid fa-phone" class="fontColorChange"></i
-                >&nbsp;<span id="countryContactT" class="fontColorChange"
-                  >+91</span
-                ><span>&nbsp;-&nbsp;</span
-                ><span id="contactT" class="fontColorChange"
-                  >9430722766</span
+              <!-- profile details -->
+              <div
+                class="template6-profileContacts mt-2"
+                style="background: gray"
+              >
+                <!-- contact -->
+                <div
+                  class="contact-section"
+                  style="display: flex; justify-content: center; gap: 44px"
                 >
-              </div>
-              <div>
-                <p id="hello" class="fontColorChange">
-                  <i class="fa-solid fa-location-dot"></i>&nbsp;<span
-                    id="addressT"
-                    >Bokaro steel city</span
-                  >
-                </p>
-              </div>
-              <div>
-                <p id="hello" class="fontColorChange">
-                  <i class="fa-brands fa-github"></i>&nbsp;<span
-                    ><a href="#1" id="githubT" class="fontColorChange"
-                      >https://www.youtube.com/</a
-                    ></span
-                  >
-                </p>
-              </div>
-            </div>
-              <div class="row">
-                <div class="col-md-8">
-                  <div class="template4-leftSection p-4">
-                    <!-- about me section -->
-                    <div class="aboutme-section">
-                      <div class="heading-section" id="summaryHeading">
-                        <div class="iconSection" id="iconSummaryColor">
-                          <h4><i class="fa-regular fa-user"></i></h4>
-                        </div>
-                        <div class="heading-title"><h4>SUMMARY</h4></div>
-                      </div>
-                      <div class="template2-aboutme mt-1">
-                        <p id="objectiveT">
-                          Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit. Quia esse, tempore, placeat consequatur
-                          voluptatum, repellendus tenetur excepturi doloremque
-                          aliquid temporibus odit! Possimus qui ad repudiandae
-                          atque tempore, incidunt quo et. Distinctio recusandae
-                          dolores adipisci maiores dolore.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- experience Section -->
-                    <div class="experience-section">
-                      <div class="heading-section" id="experienceHeading">
-                        <div class="iconSection" id="iconExperienceColor">
-                          <h4><i class="fa-solid fa-briefcase"></i></h4>
-                        </div>
-                        <div class="heading-title"><h4>EXPERIENCE</h4></div>
-                      </div>
-                      <div id="resultSection" class="mt-4"></div>
-                    </div>
-                    <!-- Project Section -->
-                    <div class="education-section">
-                      <div class="heading-section" id="projectHeading">
-                        <div class="iconSection" id="iconProjectColor">
-                          <h4><i class="fa-solid fa-file-invoice"></i></h4>
-                        </div>
-                        <div class="heading-title"><h4>PROJECT</h4></div>
-                      </div>
-                      <div id="ProjectResult" class="mt-4"></div>
-                    </div>
+                  <div class="contact-section-tabs">
+                    <p class="fontColorChange">
+                      <i class="fa-regular fa-envelope"></i>&nbsp;<span
+                        id="emailT"
+                        >avikashkumar82@gmail.com</span
+                      >
+                    </p>
+                  </div>
+                  <div class="contact-section-tabs">
+                    <p>
+                      <i class="fa-solid fa-phone" class="fontColorChange"></i
+                      >&nbsp;<span id="countryContactT" class="fontColorChange"
+                        >+91</span
+                      ><span>&nbsp;-&nbsp;</span
+                      ><span id="contactT" class="fontColorChange"
+                        >9430722766</span
+                      >
+                    </p>
+                  </div>
+                  <div class="contact-section-tabs">
+                    <p id="hello" class="fontColorChange">
+                      <i class="fa-solid fa-location-dot"></i>&nbsp;<span
+                        id="addressT"
+                        >Bokaro steel city</span
+                      >
+                    </p>
+                  </div>
+                  <div class="contact-section-tabs">
+                    <p id="hello" class="fontColorChange">
+                      <i class="fa-brands fa-github"></i>&nbsp;<span
+                        ><a href="#1" id="githubT" class="fontColorChange"
+                          >https://www.youtube.com/</a
+                        ></span
+                      >
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="template4-rightSection p-4">
-                    <!-- Education Section -->
-                    <div class="education-section mt-2">
-                      <div class="heading-section" id="educationHeading">
-                        <div class="iconSection" id="iconEducationColor">
-                          <h4><i class="fa-solid fa-graduation-cap"></i></h4>
+              </div>
+              <div class="template6-content">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="template6-content-leftSection">
+                      <!-- Summary -->
+                      <div class="template6-content-Summary mt-3 p-3">
+                        <div style="display: flex">
+                          <div class="content-heading-icon" id="summaryExperience">
+                            <p>
+                              <i class="fa-regular fa-user"></i>
+                            </p>
+                          </div>
+                          <div class="content-headingName px-5" id="summaryBar">
+                            <h3>SUMMARY</h3>
+                          </div>
                         </div>
-                        <div class="heading-title"><h4>EDUCATION</h4></div>
+                        <div
+                          style="
+                            margin-left: 46px;
+                            margin-top: 8px;
+                            text-align: justify;
+                          "
+                        >
+                          <p id="objectiveT">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Eveniet ullam at modi, facilis ratione, cumque
+                            tempore quo illum error blanditiis et labore commodi
+                            repudiandae nulla.
+                          </p>
+                        </div>
                       </div>
-                      <div id="educationResult" class="mt-1">
+                      <!-- Experience -->
+                      <div class="template6-content-Summary p-3">
+                        <div style="display: flex">
+                          <div class="content-heading-icon" id="experienceIcon"> 
+                            <p>
+                              <i class="fa-solid fa-briefcase"></i>
+                            </p>
+                          </div>
+                          <div class="content-headingName px-5" id="experienceBar">
+                            <h3>EXPERIENCE</h3>
+                          </div>
+                        </div>
+
+                        <div
+                          id="resultSection"
+                          class="mt-4"
+                          style="
+                            margin-left: 46px;
+                            margin-top: 8px;
+                            text-align: justify;
+                          "
+                        ></div>
+                      </div>
+                      <!-- Education -->
+                      <div class="template6-content-Summary mt-3 p-3">
+                      <div style="display: flex">
+                        <div class="content-heading-icon" id="educationIcon">
+                          <p>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                          </p>
+                        </div>
+                        <div class="content-headingName px-5" id="educationBar">
+                          <h3>EDUCATION</h3>
+                        </div>
+                      </div>
+                      <div style="margin-left: 46px;margin-top: 8px;text-align: justify;">
                         <ul id="aqT">
                           <li>
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -1247,62 +1288,123 @@
                           </li>
                         </ul>
                       </div>
-                    </div>
-                    <!-- Skills section -->
-                    <div class="skills-section">
-                      <div class="heading-section" id="skillsHeading">
-                        <div class="iconSection" id="iconSkillsColor">
-                          <h4><i class="fa-solid fa-rocket"></i></h4>
-                        </div>
-                        <div class="heading-title"><h4>MY SKILLS</h4></div>
                       </div>
-                      <div class="skills-content">
+                      <!-- Project -->
+                      <div class="template6-content-Summary mt-3 p-3">
+                        <div  style="display: flex">
+                        <div class="content-heading-icon" id="projectIcon">
+                          <p>
+                            <i class="fa-solid fa-file-invoice"></i>
+                          </p>
+                        </div>
+                        <div class="content-headingName px-5" id="projectBar">
+                          <h3>PROJECT</h3>
+                        </div>
+                      </div>
+                      <div style="margin-left: 46px;margin-top: 8px;text-align: justify;">
+                        <div id="ProjectResult"></div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="template6-content-rightSection">
+                      <!-- Skills -->
+                      <div class="template6-content-Summary mt-3">
+                        <div style="display: flex">
+                          <div class="content-heading-icon" id="skillsIcon">
+                            <p>
+                              <i class="fa-solid fa-rocket"></i>
+                            </p>
+                          </div>
+                          <div class="content-headingName px-5" id="skillsBar">
+                            <h3>MY SKILLS</h3>
+                          </div>
+                        </div>
+                        <div
+                          style="
+                            margin-left: 46px;
+                            margin-top: 8px;
+                            text-align: justify;
+                          "
+                        >
                         <ul id="keySkills" class="fontColorChange">
                           <li id="fontColor"></li>
                         </ul>
-                      </div>
-                    </div>
-                    <!-- Language Section -->
-                    <div class="language-section">
-                      <div class="heading-section" id="languageHeading">
-                        <div class="iconSection" id="iconLanguageColor">
-                          <h4><i class="fa-solid fa-earth-americas"></i></h4>
                         </div>
-                        <div class="heading-title"><h4>LANGUAGE</h4></div>
                       </div>
-                      <div class="language-section">
+                      <!-- Languages -->
+                      <div class="template6-content-Summary mt-3">
+                        <div style="display: flex">
+                          <div class="content-heading-icon" id="languageIcon">
+                            <p>
+                              <i class="fa-solid fa-earth-americas"></i>
+                            </p>
+                          </div>
+                          <div class="content-headingName px-5" id="languageBar">
+                            <h3>LANGUAGE</h3>
+                          </div>
+                        </div>
+                        <div
+                          style="
+                            margin-left: 46px;
+                            margin-top: 8px;
+                            text-align: justify;
+                          "
+                        >
                         <ul id="languages">
                           <li id="fontColor" class="fontColorChange"></li>
                         </ul>
-                      </div>
-                    </div>
-                    <!-- Hobbies -->
-                    <div class="hobbies-section">
-                      <div class="heading-section" id="hobbiesHeading">
-                        <div class="iconSection" id="iconHobbiesColor">
-                          <h4><i class="fa-brands fa-playstation"></i></h4>
                         </div>
-                        <div class="heading-title"><h4>HOBBIES</h4></div>
                       </div>
-                      <div class="hobbies-content">
-                        
-                        <ul id="intrests">
-                          <li id="fontColor" class="fontColorChange"></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <!-- acchivements -->
-                    <div class="achivements-section">
-                      <div class="heading-section" id="achivementsHeading">
-                        <div class="iconSection" id="iconAchivementsColor">
-                          <h4><i class="fa-solid fa-trophy"></i></h4>
+                      <!-- HOBBIES -->
+                      <div class="template6-content-Summary mt-3">
+                        <div style="display: flex">
+                          <div class="content-heading-icon" id="hobbyIcon">
+                            <p>
+                              <i class="fa-brands fa-playstation"></i>
+                            </p>
+                          </div>
+                          <div class="content-headingName px-5" id="hobbyBar">
+                            <h3>HOBBIES</h3>
+                          </div>
                         </div>
-                        <div class="heading-title"><h4>ACHIVEMENTS</h4></div>
-                      </div>
-                      <div class="achivements-content">
+                        <div
+                          style="
+                            margin-left: 46px;
+                            margin-top: 8px;
+                            text-align: justify;
+                          "
+                        >
                         <ul id="hobbys">
                           <li id="fontColor" class="fontColorChange"></li>
                         </ul>
+                        
+                        </div>
+                      </div>
+                      <!-- acchivements -->
+                      <div class="template6-content-Summary mt-3">
+                        <div style="display: flex">
+                          <div class="content-heading-icon" id="acchivementIcon">
+                            <p>
+                              <i class="fa-solid fa-trophy"></i>
+                            </p>
+                          </div>
+                          <div class="content-headingName px-5" id="achivementBar">
+                            <h3>ACHIVEMENTS</h3>
+                          </div>
+                        </div>
+                        <div
+                          style="
+                            margin-left: 46px;
+                            margin-top: 8px;
+                            text-align: justify;
+                          "
+                        >
+                        <ul id="intrests">
+                          <li id="fontColor" class="fontColorChange"></li>
+                        </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1324,7 +1426,7 @@
       </button>
     </div>
 
-    <script src="./template4.js"></script>
+    <script src="./template6.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

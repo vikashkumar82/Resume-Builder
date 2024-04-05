@@ -1,4 +1,3 @@
-
 // dynamically Qualification textaea
 function addNewEqField() {
   let newNode = document.createElement("textarea");
@@ -96,8 +95,8 @@ function generateCV() {
   };
 
   // name
-  let nameField = document.getElementById("nameField").value;
-  document.getElementById("nameT2").innerText = nameField;
+  document.getElementById("firstName").innerText=document.getElementById("firstNameField").value;
+  document.getElementById("lastName").innerText=document.getElementById("lastNameField").value;
 
   //  Job Title
   document.getElementById("jobTitleT").innerHTML =
@@ -131,13 +130,11 @@ function generateCV() {
 
   document.getElementById("aqT").innerHTML = str1;
 
-
   //  Social media Links
   document.getElementById("githubT").href =
     document.getElementById("gitField").value;
-    document.getElementById("githubT").innerText =
+  document.getElementById("githubT").innerText =
     document.getElementById("gitField").value;
-  
 
   //Expertise
   let skills = document.getElementsByClassName("TechField");
@@ -155,6 +152,13 @@ function generateCV() {
   }
   document.getElementById("languages").innerHTML = lang;
 
+  //hobby
+  let hobbies = document.getElementsByClassName("hobbyField");
+  let hobby = "";
+  for (let e of hobbies) {
+    hobby = hobby + `<li>${e.value}</li>`;
+  }
+  document.getElementById("hobbys").innerHTML = hobby;
 
   //Intrest
   let intrest = document.getElementsByClassName("intrestField");
@@ -164,15 +168,9 @@ function generateCV() {
   }
   document.getElementById("intrests").innerHTML = intrst;
 
-  //hobby
-  let hobbies = document.getElementsByClassName("hobbyField");
-  let hobby = "";
-  for (let e of hobbies) {
-    hobby = hobby + `<li>${e.value}</li>`;
-  }
-  document.getElementById("hobbys").innerHTML = hobby;
 }
 
+  
 // --------------------------------------------------------------------------------------------
 // WORK EXPERIENCE
 function duplicateForm() {
@@ -204,16 +202,8 @@ function showData() {
       const resultDiv = document.createElement("div");
       resultDiv.className = "card mt-4";
       resultDiv.innerHTML = `
-                  <div class="card-header">
-                      <h6 id="workExpLabel">${company}</h6>
-                      <div class="dateSection" style="display: flex; gap:5px">
-                          <div><span>${from}</span></div> -
-                          <div><span>${to}</span></div>
-                      </div>
-                  </div>
-                  <div class="card-body">
-                      <p style="text-align:justify;">${description}</p>
-                  </div>
+      <p><strong><span style="font-size: 19px;">${company}</span> </strong><span style="color: gray; font-size: 12px;">(<em><span>${from}</span> - <span>${to}</span></em>)</span></p>
+      <p>${description}</p>
               `;
 
       resultSection.appendChild(resultDiv);
@@ -250,7 +240,13 @@ function showProjectData() {
     console.log("descriptionProField:", descriptionProField);
 
     // Check if all required fields exist
-    if (fromProField && toProField && projectField && descriptionProField && proPositionField) {
+    if (
+      fromProField &&
+      toProField &&
+      projectField &&
+      descriptionProField &&
+      proPositionField
+    ) {
       const proFrom = fromProField.value;
       const proTo = toProField.value;
       const projectName = projectField.value;
@@ -280,174 +276,113 @@ function showProjectData() {
 // for template color
 function dark() {
   const dark = document.getElementById("spanCol6").innerHTML;
-  document.getElementById("headingColourChange").style.background = dark;
-  document.getElementById("iconSummaryColor").style.background=dark;
-  document.getElementById("iconProjectColor").style.background=dark;
-  document.getElementById("iconEducationColor").style.background=dark;
-  document.getElementById("iconSkillsColor").style.background=dark;
-  document.getElementById("iconLanguageColor").style.background=dark;
-  document.getElementById("iconHobbiesColor").style.background=dark;
-  document.getElementById("iconAchivementsColor").style.background=dark;
-  document.getElementById("iconExperienceColor").style.background=dark;
-
-  document.getElementById("achivementsHeading").style.borderBottomColor = dark;
-  document.getElementById("hobbiesHeading").style.borderBottomColor = dark;
-  document.getElementById("languageHeading").style.borderBottomColor = dark;
-  document.getElementById("skillsHeading").style.borderBottomColor = dark;
-  document.getElementById("educationHeading").style.borderBottomColor = dark;
-  document.getElementById("projectHeading").style.borderBottomColor = dark;
-  document.getElementById("experienceHeading").style.borderBottomColor = dark;
-  document.getElementById("summaryHeading").style.borderBottomColor = dark;
- }
+  document.getElementById("lastName").style.color=dark;
+  document.getElementById("experienceIcon").style.background = dark;
+  document.getElementById("summaryExperience").style.background = dark;
+  document.getElementById("educationIcon").style.background = dark;
+  document.getElementById("projectIcon").style.background = dark;
+  document.getElementById("languageIcon").style.background = dark;
+  document.getElementById("acchivementIcon").style.background= dark;
+  document.getElementById("skillsIcon").style.background= dark;
+  document.getElementById("hobbyIcon").style.background= dark;
+}
 function LightBlue() {
   const blue = document.getElementById("spanCol5").innerHTML;
-  document.getElementById("headingColourChange").style.background = blue;
-  document.getElementById("iconSummaryColor").style.background=blue;
-  document.getElementById("iconProjectColor").style.background=blue;
-  document.getElementById("iconEducationColor").style.background=blue;
-  document.getElementById("iconSkillsColor").style.background=blue;
-  document.getElementById("iconLanguageColor").style.background=blue;
-  document.getElementById("iconHobbiesColor").style.background=blue;
-  document.getElementById("iconAchivementsColor").style.background=blue;
-  document.getElementById("iconExperienceColor").style.background=blue;
-
-  document.getElementById("achivementsHeading").style.borderBottomColor = blue;
-  document.getElementById("hobbiesHeading").style.borderBottomColor = blue;
-  document.getElementById("languageHeading").style.borderBottomColor = blue;
-  document.getElementById("skillsHeading").style.borderBottomColor = blue;
-  document.getElementById("educationHeading").style.borderBottomColor = blue;
-  document.getElementById("projectHeading").style.borderBottomColor = blue;
-  document.getElementById("experienceHeading").style.borderBottomColor = blue;
-  document.getElementById("summaryHeading").style.borderBottomColor = blue;
+  document.getElementById("lastName").style.color=blue;
+  document.getElementById("experienceIcon").style.background = blue;
+  document.getElementById("summaryExperience").style.background = blue;
+  document.getElementById("educationIcon").style.background = blue;
+  document.getElementById("projectIcon").style.background = blue;
+  document.getElementById("languageIcon").style.background = blue;
+  document.getElementById("acchivementIcon").style.background= blue;
+  document.getElementById("skillsIcon").style.background= blue;
+  document.getElementById("hobbyIcon").style.background= blue;
 }
 function Eucalyptus() {
   const eucalyptus = document.getElementById("spanCol4").innerHTML;
-  document.getElementById("headingColourChange").style.background = eucalyptus;
-  document.getElementById("iconSummaryColor").style.background=eucalyptus;
-  document.getElementById("iconProjectColor").style.background=eucalyptus;
-  document.getElementById("iconEducationColor").style.background=eucalyptus;
-  document.getElementById("iconSkillsColor").style.background=eucalyptus;
-  document.getElementById("iconLanguageColor").style.background=eucalyptus;
-  document.getElementById("iconHobbiesColor").style.background=eucalyptus;
-  document.getElementById("iconAchivementsColor").style.background=eucalyptus;
-  document.getElementById("iconExperienceColor").style.background=eucalyptus;
-
-  document.getElementById("achivementsHeading").style.borderBottomColor = eucalyptus;
-  document.getElementById("hobbiesHeading").style.borderBottomColor = eucalyptus;
-  document.getElementById("languageHeading").style.borderBottomColor = eucalyptus;
-  document.getElementById("skillsHeading").style.borderBottomColor = eucalyptus;
-  document.getElementById("educationHeading").style.borderBottomColor = eucalyptus;
-  document.getElementById("projectHeading").style.borderBottomColor = eucalyptus;
-  document.getElementById("experienceHeading").style.borderBottomColor = eucalyptus;
-  document.getElementById("summaryHeading").style.borderBottomColor = eucalyptus;
+  document.getElementById("lastName").style.color=eucalyptus;
+  document.getElementById("experienceIcon").style.background = eucalyptus;
+  document.getElementById("summaryExperience").style.background = eucalyptus;
+  document.getElementById("educationIcon").style.background = eucalyptus;
+  document.getElementById("projectIcon").style.background = eucalyptus;
+  document.getElementById("languageIcon").style.background = eucalyptus;
+  document.getElementById("acchivementIcon").style.background= eucalyptus;
+  document.getElementById("skillsIcon").style.background= eucalyptus;
+  document.getElementById("hobbyIcon").style.background= eucalyptus;
 }
 function light3() {
   const colo3r = document.getElementById("spanCol3").innerHTML;
-  document.getElementById("headingColourChange").style.background = colo3r;
-  document.getElementById("iconSummaryColor").style.background=colo3r;
-  document.getElementById("iconProjectColor").style.background=colo3r;
-  document.getElementById("iconEducationColor").style.background=colo3r;
-  document.getElementById("iconSkillsColor").style.background=colo3r;
-  document.getElementById("iconLanguageColor").style.background=colo3r;
-  document.getElementById("iconHobbiesColor").style.background=colo3r;
-  document.getElementById("iconAchivementsColor").style.background=colo3r;
-  document.getElementById("iconExperienceColor").style.background=colo3r;
-
-  document.getElementById("achivementsHeading").style.borderBottomColor = colo3r;
-  document.getElementById("hobbiesHeading").style.borderBottomColor = colo3r;
-  document.getElementById("languageHeading").style.borderBottomColor = colo3r;
-  document.getElementById("skillsHeading").style.borderBottomColor = colo3r;
-  document.getElementById("educationHeading").style.borderBottomColor = colo3r;
-  document.getElementById("projectHeading").style.borderBottomColor = colo3r;
-  document.getElementById("experienceHeading").style.borderBottomColor =colo3r;
-  document.getElementById("summaryHeading").style.borderBottomColor = colo3r;
+  document.getElementById("lastName").style.color=colo3r;
+  document.getElementById("experienceIcon").style.background = colo3r;
+  document.getElementById("summaryExperience").style.background = colo3r;
+  document.getElementById("educationIcon").style.background = colo3r;
+  document.getElementById("projectIcon").style.background = colo3r;
+  document.getElementById("languageIcon").style.background = colo3r;
+  document.getElementById("acchivementIcon").style.background= colo3r;
+  document.getElementById("skillsIcon").style.background= colo3r;
+  document.getElementById("hobbyIcon").style.background= colo3r;
 }
 function light2() {
   const color4 = document.getElementById("spanCol2").innerHTML;
-  document.getElementById("headingColourChange").style.background = color4;
-  document.getElementById("iconSummaryColor").style.background=color4;
-  document.getElementById("iconProjectColor").style.background=color4;
-  document.getElementById("iconEducationColor").style.background=color4;
-  document.getElementById("iconSkillsColor").style.background=color4;
-  document.getElementById("iconLanguageColor").style.background=color4;
-  document.getElementById("iconHobbiesColor").style.background=color4;
-  document.getElementById("iconAchivementsColor").style.background=color4;
-  document.getElementById("iconExperienceColor").style.background=color4;
-
-  document.getElementById("achivementsHeading").style.borderBottomColor = color4;
-  document.getElementById("hobbiesHeading").style.borderBottomColor = color4;
-  document.getElementById("languageHeading").style.borderBottomColor = color4;
-  document.getElementById("skillsHeading").style.borderBottomColor = color4;
-  document.getElementById("educationHeading").style.borderBottomColor = color4;
-  document.getElementById("projectHeading").style.borderBottomColor = color4;
-  document.getElementById("experienceHeading").style.borderBottomColor = color4;
-  document.getElementById("summaryHeading").style.borderBottomColor = color4;
+  document.getElementById("lastName").style.color=color4;
+  document.getElementById("experienceIcon").style.background = color4;
+  document.getElementById("summaryExperience").style.background = color4;
+  document.getElementById("educationIcon").style.background = color4;
+  document.getElementById("projectIcon").style.background = color4;
+  document.getElementById("languageIcon").style.background = color4;
+  document.getElementById("acchivementIcon").style.background= color4;
+  document.getElementById("skillsIcon").style.background= color4;
+  document.getElementById("hobbyIcon").style.background= color4;
 }
 function light1() {
   const color5 = document.getElementById("spanCol1").innerHTML;
-  document.getElementById("headingColourChange").style.background = color5;
-  document.getElementById("iconSummaryColor").style.background=color5;
-  document.getElementById("iconProjectColor").style.background=color5;
-  document.getElementById("iconEducationColor").style.background=color5;
-  document.getElementById("iconSkillsColor").style.background=color5;
-  document.getElementById("iconLanguageColor").style.background=color5;
-  document.getElementById("iconHobbiesColor").style.background=color5;
-  document.getElementById("iconAchivementsColor").style.background=color5;
-  document.getElementById("iconExperienceColor").style.background=color5;
 
-  document.getElementById("achivementsHeading").style.borderBottomColor = color5;
-  document.getElementById("hobbiesHeading").style.borderBottomColor = color5;
-  document.getElementById("languageHeading").style.borderBottomColor = color5;
-  document.getElementById("skillsHeading").style.borderBottomColor = color5;
-  document.getElementById("educationHeading").style.borderBottomColor = color5;
-  document.getElementById("projectHeading").style.borderBottomColor = color5;
-  document.getElementById("experienceHeading").style.borderBottomColor = color5;
-  document.getElementById("summaryHeading").style.borderBottomColor = color5;
+  document.getElementById("lastName").style.color=color5;
+  document.getElementById("experienceIcon").style.background = color5;
+  document.getElementById("summaryExperience").style.background = color5;
+  document.getElementById("educationIcon").style.background = color5;
+  document.getElementById("projectIcon").style.background = color5;
+  document.getElementById("languageIcon").style.background = color5;
+  document.getElementById("acchivementIcon").style.background= color5;
+  document.getElementById("skillsIcon").style.background= color5;
+  document.getElementById("hobbyIcon").style.background= color5;
 }
 
 function changeBackgroundColor() {
   let input = document.getElementById("favcolor").value;
- 
-  document.getElementById("headingColourChange").style.background = input;
-  document.getElementById("iconSummaryColor").style.background=input;
-  document.getElementById("iconProjectColor").style.background=input;
-  document.getElementById("iconEducationColor").style.background=input;
-  document.getElementById("iconSkillsColor").style.background=input;
-  document.getElementById("iconLanguageColor").style.background=input;
-  document.getElementById("iconHobbiesColor").style.background=input;
-  document.getElementById("iconAchivementsColor").style.background=input;
-  document.getElementById("iconExperienceColor").style.background=input;
 
-  document.getElementById("achivementsHeading").style.borderBottomColor = input;
-  document.getElementById("hobbiesHeading").style.borderBottomColor = input;
-  document.getElementById("languageHeading").style.borderBottomColor = input;
-  document.getElementById("skillsHeading").style.borderBottomColor = input;
-  document.getElementById("educationHeading").style.borderBottomColor = input;
-  document.getElementById("projectHeading").style.borderBottomColor = input;
-  document.getElementById("experienceHeading").style.borderBottomColor = input;
-  document.getElementById("summaryHeading").style.borderBottomColor = input;
+  document.getElementById("lastName").style.color=input;
+  document.getElementById("experienceIcon").style.background = input;
+  document.getElementById("summaryExperience").style.background = input;
+  document.getElementById("educationIcon").style.background = input;
+  document.getElementById("projectIcon").style.background = input;
+  document.getElementById("languageIcon").style.background = input;
+  document.getElementById("acchivementIcon").style.background= input;
+  document.getElementById("skillsIcon").style.background= input;
+  document.getElementById("hobbyIcon").style.background= input;
 }
 function resetBackgroundColor() {
-  document.getElementById("headingColourChange").style.background = "#C200FF";
-  document.getElementById("iconSummaryColor").style.background="#C200FF";
-  document.getElementById("iconProjectColor").style.background="#C200FF";
-  document.getElementById("iconEducationColor").style.background="#C200FF";
-  document.getElementById("iconSkillsColor").style.background="#C200FF";
-  document.getElementById("iconLanguageColor").style.background="#C200FF";
-  document.getElementById("iconHobbiesColor").style.background="#C200FF";
-  document.getElementById("iconAchivementsColor").style.background="#C200FF";
-  document.getElementById("iconExperienceColor").style.background="#C200FF";
-  document.getElementById("nameT2").style.color = "#c0c0c0";
-  document.getElementById("jobTitleT").style.color ="#c0c0c0";
+  document.getElementById("lastName").style.color="#FFFF00";
+  document.getElementById("experienceIcon").style.background = "#FFFF00";
+  document.getElementById("summaryExperience").style.background = "#FFFF00";
+  document.getElementById("educationIcon").style.background = "#FFFF00";
+  document.getElementById("projectIcon").style.background = "#FFFF00";
+  document.getElementById("languageIcon").style.background = "#FFFF00";
+  document.getElementById("acchivementIcon").style.background= "#FFFF00";
+  document.getElementById("skillsIcon").style.background= "#FFFF00";
+  document.getElementById("hobbyIcon").style.background= "#FFFF00";
 
-  document.getElementById("achivementsHeading").style.borderBottomColor = "#C200FF";
-  document.getElementById("hobbiesHeading").style.borderBottomColor = "#C200FF";
-  document.getElementById("languageHeading").style.borderBottomColor = "#C200FF";
-  document.getElementById("skillsHeading").style.borderBottomColor = "#C200FF";
-  document.getElementById("educationHeading").style.borderBottomColor = "#C200FF";
-  document.getElementById("projectHeading").style.borderBottomColor = "#C200FF";
-  document.getElementById("experienceHeading").style.borderBottomColor = "#C200FF";
-  document.getElementById("summaryHeading").style.borderBottomColor = "#C200FF";
+  document.getElementById("nameT2").style.color = "#C0C0C0";
+  document.getElementById("jobTitleT").style.color = "#C0C0C0";
+  document.getElementById("summaryBar").style.background="#C0C0C0";
+  document.getElementById("experienceBar").style.background="#C0C0C0";
+  document.getElementById("educationBar").style.background="#C0C0C0";
+  document.getElementById("skillsBar").style.background="#C0C0C0";
+  document.getElementById("languageBar").style.background="#C0C0C0";
+  document.getElementById("hobbyBar").style.background="#C0C0C0";
+  document.getElementById("achivementBar").style.background="#C0C0C0";
+  document.getElementById("projectBar").style.background="#C0C0C0";
+  
 }
 
 // for template fontC colour
@@ -455,31 +390,85 @@ function fontdark() {
   const dark = document.getElementById("fontSpanCol6").innerHTML;
   document.getElementById("nameT2").style.color = dark;
   document.getElementById("jobTitleT").style.color = dark;
+
+  document.getElementById("summaryBar").style.background=dark;
+  document.getElementById("experienceBar").style.background=dark;
+  document.getElementById("educationBar").style.background=dark;
+  document.getElementById("skillsBar").style.background=dark;
+  document.getElementById("languageBar").style.background=dark;
+  document.getElementById("hobbyBar").style.background=dark;
+  document.getElementById("achivementBar").style.background=dark;
+  document.getElementById("projectBar").style.background=dark;
 }
 function fontLightBlue() {
   const blue = document.getElementById("fontSpanCol5").innerHTML;
   document.getElementById("nameT2").style.color = blue;
   document.getElementById("jobTitleT").style.color = blue;
+
+  document.getElementById("summaryBar").style.background=blue;
+  document.getElementById("experienceBar").style.background=blue;
+  document.getElementById("educationBar").style.background=blue;
+  document.getElementById("skillsBar").style.background=blue;
+  document.getElementById("languageBar").style.background=blue;
+  document.getElementById("hobbyBar").style.background=blue;
+  document.getElementById("achivementBar").style.background=blue;
+  document.getElementById("projectBar").style.background=blue;
 }
 function fontEucalyptus() {
   const eucalyptus = document.getElementById("fontSpanCol4").innerHTML;
   document.getElementById("nameT2").style.color = eucalyptus;
   document.getElementById("jobTitleT").style.color = eucalyptus;
+
+  document.getElementById("summaryBar").style.background=eucalyptus;
+  document.getElementById("experienceBar").style.background=eucalyptus;
+  document.getElementById("educationBar").style.background=eucalyptus;
+  document.getElementById("skillsBar").style.background=eucalyptus;
+  document.getElementById("languageBar").style.background=eucalyptus;
+  document.getElementById("hobbyBar").style.background=eucalyptus;
+  document.getElementById("achivementBar").style.background=eucalyptus;
+  document.getElementById("projectBar").style.background=eucalyptus;
 }
 function fontLight3() {
   const colo3r = document.getElementById("fontSpanCol3").innerHTML;
   document.getElementById("nameT2").style.color = colo3r;
   document.getElementById("jobTitleT").style.color = colo3r;
+
+  document.getElementById("summaryBar").style.background=colo3r;
+  document.getElementById("experienceBar").style.background=colo3r;
+  document.getElementById("educationBar").style.background=colo3r;
+  document.getElementById("skillsBar").style.background=colo3r;
+  document.getElementById("languageBar").style.background=colo3r;
+  document.getElementById("hobbyBar").style.background=colo3r;
+  document.getElementById("achivementBar").style.background=colo3r;
+  document.getElementById("projectBar").style.background=colo3r;
 }
 function fontLight2() {
   const color4 = document.getElementById("fontSpanCol2").innerHTML;
   document.getElementById("nameT2").style.color = color4;
   document.getElementById("jobTitleT").style.color = color4;
+
+  document.getElementById("summaryBar").style.background=color4;
+  document.getElementById("experienceBar").style.background=color4;
+  document.getElementById("educationBar").style.background=color4;
+  document.getElementById("skillsBar").style.background=color4;
+  document.getElementById("languageBar").style.background=color4;
+  document.getElementById("hobbyBar").style.background=color4;
+  document.getElementById("achivementBar").style.background=color4;
+  document.getElementById("projectBar").style.background=color4;
 }
 function fontLight1() {
   const color5 = document.getElementById("fontSpanCol1").innerHTML;
   document.getElementById("nameT2").style.color = color5;
   document.getElementById("jobTitleT").style.color = color5;
+
+  document.getElementById("summaryBar").style.background=color5;
+  document.getElementById("experienceBar").style.background=color5;
+  document.getElementById("educationBar").style.background=color5;
+  document.getElementById("skillsBar").style.background=color5;
+  document.getElementById("languageBar").style.background=color5;
+  document.getElementById("hobbyBar").style.background=color5;
+  document.getElementById("achivementBar").style.background=color5;
+  document.getElementById("projectBar").style.background=color5;
 }
 // --------------------------------------------------------------------------------------------
 
