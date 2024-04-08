@@ -253,7 +253,7 @@ h1#nameT2 {
 }
 
 .content-heading-icon {
-    background: yellow;
+    background: #0d6efd;
     padding: 7px 16px 21px 15px;
     border-radius: 50%;
     height: 48px;
@@ -261,13 +261,12 @@ h1#nameT2 {
     position: relative;
     left: 21px;
 }
-
 .content-heading-icon p {
     font-size: 22px;
 }
 
 .content-headingName {
-    background-color: #c0c0c0;
+    background-color: #f0f8ff;
     width: 100%;
     border-radius: 15px 15px;
     height: 37px;
@@ -292,4 +291,12 @@ h1#nameT2 {
 .template6-profileName {
     padding-left: 58px;
     padding-top: 21px;
+}
+
+.contact-section-tabs p {
+    color: white;
+}
+
+.contact-section-tabs a {
+    color: white;
 }
