@@ -188,6 +188,8 @@ function addNewWeField() {
     reader.onloadend = function () {
       document.getElementById("imgTemplate2").src = reader.result;
     };
+
+   
   }
   
   // --------------------------------------------------------------------------------------------

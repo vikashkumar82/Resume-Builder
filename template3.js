@@ -1,3 +1,4 @@
+
 // dynamically workExperience textaea
 function addNewWeField() {
   // Description
@@ -192,9 +193,17 @@ function generateCV() {
     }
     document.getElementById("hobbys").innerHTML = hobby;
 
-}
+     // label update
+     const designRange=document.getElementById("designRange").value;
+     document.getElementById("designProgress").style.width=abc+"%";
+     document.getElementById("designProgress").innerHTML=abc+"%";
 
-// ------------------------------------------------------------------------------------------
+     const projectRange=document.getElementById("projectManagementRange").value;
+     document.getElementById("projectProgress").style.width=abc+"%";
+     document.getElementById("projectProgress").innerHTML=abc+"%";
+
+
+}
 
 // --------------------------------------------------------------------------------------------
 

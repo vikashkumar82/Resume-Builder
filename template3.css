@@ -274,23 +274,8 @@ div#cvTemplate {
     bottom: 1222px;
 }
 
-.aside-aboutMe.p-4 {
-    position: absolute;
-    top: 22%;
-    text-align: center;
-}
-
-.contact-details {
-    position: absolute;
-    top: 35%;
-}
 .template3-main {
     position: relative;
-}
-
-.templatte2-languages.px-5.mt-4 {
-    position: absolute;
-    top: 797px;
 }
 
 .langHeading {
@@ -300,10 +285,7 @@ div#cvTemplate {
     border-radius: 50px;
 }
 
-.template2-skills.px-5.mt-4 {
-    position: absolute;
-    top: 695px;
-}
+
 
 .skillLoop {
     border: 2px solid blue;
@@ -322,4 +304,34 @@ h1#nameT2 {
 p#jobTitleT {
     margin-bottom: 47px;
     line-height: 0px;
+}
+
+.skillsLanguage {
+    position: absolute;
+    top: 693px;
+}
+
+.aside-content-info {
+    position: absolute;
+    top: 319px;
+}
+
+.right-main-content-details {
+    position: absolute;
+    top: 281px;
+}
+
+.rightHeading {
+    background: blue;
+    width: fit-content;
+    border-radius: 50px;
+    color: white;
+}
+
+.designProgress {
+    gap: 86px;
+}
+
+.projectManagement{
+    gap: 53px;
 }

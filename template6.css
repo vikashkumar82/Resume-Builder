@@ -254,15 +254,22 @@ h1#nameT2 {
 
 .content-heading-icon {
     background: #0d6efd;
-    padding: 7px 16px 21px 15px;
+    /* padding: 7px 16px 21px 15px; */
     border-radius: 50%;
-    height: 48px;
+    height: 50px;
+    width: 56px;
     margin-top: -5px;
     position: relative;
     left: 21px;
 }
 .content-heading-icon p {
     font-size: 22px;
+    text-align: center;
+}
+
+.content-heading-icon i {
+    position: relative;
+    top: 8px;
 }
 
 .content-headingName {
