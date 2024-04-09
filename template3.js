@@ -141,16 +141,15 @@ function generateCV() {
   document.getElementById("jobTitleT").innerHTML =
   document.getElementById("jobTitle").value;
 
+     //Expertise
+     let skills = document.getElementsByClassName("TechField");
+     let techSkills = "";
+     for (let e of skills) {
+       techSkills = techSkills + `<li>${e.value}</li>`;
+     }
+     document.getElementById("keySkills").innerHTML = techSkills;
 
-   //Expertise
-   let skills = document.getElementsByClassName("TechField");
-   let techSkills = "";
-   for (let e of skills) {
-     techSkills = techSkills + `<li>${e.value}</li>`;
-   }
-   document.getElementById("keySkills").innerHTML = techSkills;
-  
-  //Language
+       //Language
   let language = document.getElementsByClassName("languageField");
   let lang = "";
   for (let e of language) {
@@ -158,25 +157,17 @@ function generateCV() {
   }
   document.getElementById("languages").innerHTML = lang;
 
-  //  Social media Links
-  document.getElementById("githubT").innerHTML =
-    document.getElementById("fbField").value;
-  document.getElementById("twitterT").innerHTML =
-    document.getElementById("twitterField").value;
-  document.getElementById("linkedinT").innerHTML =
-    document.getElementById("linkedinField").value;
+    // Qe (QUALIFICATION)
+    let aqs = document.getElementsByClassName("eqField");
+    let str1 = "";
+  
+    for (let e of aqs) {
+      str1 = str1 + `<li>${e.value}</li>`;
+    }
+  
+    document.getElementById("aqT").innerHTML = str1;
 
-  // Qe (QUALIFICATION)
-  let aqs = document.getElementsByClassName("eqField");
-  let str1 = "";
-
-  for (let e of aqs) {
-    str1 = str1 + `<li>${e.value}</li>`;
-  }
-
-  document.getElementById("aqT").innerHTML = str1;
-
-  //Intrest
+    //Intrest
   let intrest = document.getElementsByClassName("intrestField");
   let intrst = "";
   for (let e of intrest) {
@@ -193,14 +184,30 @@ function generateCV() {
     }
     document.getElementById("hobbys").innerHTML = hobby;
 
+
      // label update
      const designRange=document.getElementById("designRange").value;
-     document.getElementById("designProgress").style.width=abc+"%";
-     document.getElementById("designProgress").innerHTML=abc+"%";
+     document.getElementById("designProgress").style.width=designRange+"%";
+     document.getElementById("designProgress").innerHTML=designRange+"%";
 
      const projectRange=document.getElementById("projectManagementRange").value;
-     document.getElementById("projectProgress").style.width=abc+"%";
-     document.getElementById("projectProgress").innerHTML=abc+"%";
+     document.getElementById("projectProgress").style.width=projectRange+"%";
+     document.getElementById("projectProgress").innerHTML=projectRange+"%";
+
+
+  //  Social media Links
+  // document.getElementById("githubT").innerHTML =
+  //   document.getElementById("fbField").value;
+  // document.getElementById("twitterT").innerHTML =
+  //   document.getElementById("twitterField").value;
+  // document.getElementById("linkedinT").innerHTML =
+  //   document.getElementById("linkedinField").value;
+
+
+
+  
+
+    
 
 
 }
@@ -259,88 +266,181 @@ function showData() {
 
 // for template color
 function dark() {
-  const dark = document.getElementById("spanCol6").innerHTML;
-  document.getElementById("templateColourChange").style.background = dark;
+
+
+  document.getElementById("changeBlueColor").style.backgroundImage = "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+
+  document.getElementById("imgTemplate3").style.borderColor  = "#297FF7";
+  document.getElementById("experiencecolorChange").style.background = "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("educationColorChange").style.background = "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("skillsColorChange").style.background = "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("designProgress").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("projectProgress").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("tabSkillColor").style.borderColor= "#297FF7";
+  document.getElementById("tabLanguageColor").style.borderColor= "#297FF7";
+  document.getElementById("tabIntrestColor").style.borderColor= "#297FF7";
+  document.getElementById("tabHobbiesColor").style.borderColor= "#297FF7";
+  document.getElementById("iconAddress").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("iconEmail").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("iconContact").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
 }
 function LightBlue() {
-  const blue = document.getElementById("spanCol5").innerHTML;
-  document.getElementById("templateColourChange").style.background = blue;
+  
+  document.getElementById("changeBlueColor").style.background = "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("imgTemplate3").style.borderColor  = "#611446";
+  document.getElementById("experiencecolorChange").style.background = "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("educationColorChange").style.background = "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("skillsColorChange").style.background = "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("designProgress").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("projectProgress").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("tabSkillColor").style.borderColor= "#611446";
+  document.getElementById("tabLanguageColor").style.borderColor= "#611446";
+  document.getElementById("tabIntrestColor").style.borderColor= "#611446";
+  document.getElementById("tabHobbiesColor").style.borderColor= "#611446";
+  document.getElementById("iconAddress").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("iconEmail").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("iconContact").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
 }
 function Eucalyptus() {
-  const eucalyptus = document.getElementById("spanCol4").innerHTML;
-  document.getElementById("templateColourChange").style.background = eucalyptus;
+  
+  document.getElementById("changeBlueColor").style.background = "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("imgTemplate3").style.borderColor  = "#51297A";
+  document.getElementById("experiencecolorChange").style.background = "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("educationColorChange").style.background = "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("skillsColorChange").style.background = "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("designProgress").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("projectProgress").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("tabSkillColor").style.borderColor= "#51297A";
+  document.getElementById("tabLanguageColor").style.borderColor= "#51297A";
+  document.getElementById("tabIntrestColor").style.borderColor= "#51297A";
+  document.getElementById("tabHobbiesColor").style.borderColor= "#51297A";
+  document.getElementById("iconAddress").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("iconEmail").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("iconContact").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
 }
 function light3() {
-  const colo3r = document.getElementById("spanCol3").innerHTML;
-  document.getElementById("templateColourChange").style.background = colo3r;
+  document.getElementById("changeBlueColor").style.background = "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("imgTemplate3").style.borderColor  = "#980707";
+  document.getElementById("experiencecolorChange").style.background = "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("educationColorChange").style.background = "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("skillsColorChange").style.background = "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("designProgress").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("projectProgress").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("tabSkillColor").style.borderColor= "#980707";
+  document.getElementById("tabLanguageColor").style.borderColor= "#980707";
+  document.getElementById("tabIntrestColor").style.borderColor= "#980707";
+  document.getElementById("tabHobbiesColor").style.borderColor= "#980707";
+  document.getElementById("iconAddress").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("iconEmail").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("iconContact").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
 }
 function light2() {
-  const color4 = document.getElementById("spanCol2").innerHTML;
-  document.getElementById("templateColourChange").style.background = color4;
+  document.getElementById("changeBlueColor").style.background = "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("imgTemplate3").style.borderColor  = "#A3E6FF";
+  document.getElementById("experiencecolorChange").style.background = "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("educationColorChange").style.background = "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("skillsColorChange").style.background = "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("designProgress").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("projectProgress").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("tabSkillColor").style.borderColor= "#A3E6FF";
+  document.getElementById("tabLanguageColor").style.borderColor= "#A3E6FF";
+  document.getElementById("tabIntrestColor").style.borderColor= "#A3E6FF";
+  document.getElementById("tabHobbiesColor").style.borderColor= "#A3E6FF";
+  document.getElementById("iconAddress").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("iconEmail").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("iconContact").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
 }
 function light1() {
-  const color5 = document.getElementById("spanCol1").innerHTML;
-  document.getElementById("templateColourChange").style.background = color5;
+  document.getElementById("changeBlueColor").style.background ="linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("imgTemplate3").style.borderColor  ="#DAE4E9";
+  document.getElementById("experiencecolorChange").style.background = "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("educationColorChange").style.background = "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("skillsColorChange").style.background ="linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("designProgress").style.background= "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("projectProgress").style.background="linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("tabSkillColor").style.borderColor= "#DAE4E9";
+  document.getElementById("tabLanguageColor").style.borderColor= "#DAE4E9";
+  document.getElementById("tabIntrestColor").style.borderColor= "#DAE4E9";
+  document.getElementById("tabHobbiesColor").style.borderColor= "#DAE4E9";
+  document.getElementById("iconAddress").style.background= "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("iconEmail").style.background="linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("iconContact").style.background="linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
 }
 
 function changeBackgroundColor() {
   let input = document.getElementById("favcolor").value;
-  const res = document.getElementById("templateColourChange");
-  res.style.backgroundColor = input;
+  document.getElementById("changeBlueColor").style.background = input;
+  document.getElementById("imgTemplate3").style.borderColor  = input;
+  document.getElementById("experiencecolorChange").style.background = input;
+  document.getElementById("educationColorChange").style.background = input;
+  document.getElementById("skillsColorChange").style.background = input;
+  document.getElementById("designProgress").style.background= input;
+  document.getElementById("projectProgress").style.background= input;
+  document.getElementById("tabSkillColor").style.borderColor= input;
+  document.getElementById("tabLanguageColor").style.borderColor=input;
+  document.getElementById("tabIntrestColor").style.borderColor= input;
+  document.getElementById("tabHobbiesColor").style.borderColor= input;
+  document.getElementById("iconAddress").style.background= input;
+  document.getElementById("iconEmail").style.background= input;
+  document.getElementById("iconContact").style.background= input;
 }
 function resetBackgroundColor() {
-  const res = document.getElementById("templateColourChange");
-  res.style.backgroundColor = "#3492E4";
 
-  document.getElementById("templateColourChange").style.color = "#030303";
-  document.getElementById("githubT").style.color = "#030303";
-  document.getElementById("twitterT").style.color = "#030303";
-  document.getElementById("linkedinT").style.color = "#030303";
+  document.getElementById("changeBlueColor").style.background ="linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("imgTemplate3").style.borderColor  ="#0000FF";
+  document.getElementById("experiencecolorChange").style.background = "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("educationColorChange").style.background = "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("skillsColorChange").style.background ="linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("designProgress").style.background= "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("projectProgress").style.background="linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("tabSkillColor").style.borderColor= "#0000FF";
+  document.getElementById("tabLanguageColor").style.borderColor= "#0000FF";
+  document.getElementById("tabIntrestColor").style.borderColor= "#0000FF";
+  document.getElementById("tabHobbiesColor").style.borderColor= "#0000FF";
+  document.getElementById("iconAddress").style.background= "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("iconEmail").style.background="linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("iconContact").style.background="linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("iconAddress").style.color = "white";
+  document.getElementById("iconEmail").style.color = "white";
+  document.getElementById("iconContact").style.color = "white";
+  document.getElementById("jobTitleT").style.color = "white";
+  document.getElementById("nameT2").style.color = "white";
+  document.getElementById("projectProgress").style.color = "white";
+  document.getElementById("skillsColorChange").style.color = "white";
+  document.getElementById("experiencecolorChange").style.color = "white";
+  document.getElementById("educationColorChange").style.color = "white";
+  document.getElementById("designProgress").style.color = "white";
 }
 
 // for template fontC colour
-function fontdark() {
-  const dark = document.getElementById("fontSpanCol6").innerHTML;
-  document.getElementById("templateColourChange").style.color = dark;
-  document.getElementById("githubT").style.color = dark;
-  document.getElementById("twitterT").style.color = dark;
-  document.getElementById("linkedinT").style.color = dark;
-}
-function fontLightBlue() {
-  const blue = document.getElementById("fontSpanCol5").innerHTML;
-  document.getElementById("templateColourChange").style.color = blue;
-  document.getElementById("githubT").style.color = blue;
-  document.getElementById("twitterT").style.color = blue;
-  document.getElementById("linkedinT").style.color = blue;
-}
-function fontEucalyptus() {
-  const eucalyptus = document.getElementById("fontSpanCol4").innerHTML;
-  document.getElementById("templateColourChange").style.color = eucalyptus;
-  document.getElementById("githubT").style.color = eucalyptus;
-  document.getElementById("twitterT").style.color = eucalyptus;
-  document.getElementById("linkedinT").style.color = eucalyptus;
-}
-function fontLight3() {
-  const colo3r = document.getElementById("fontSpanCol3").innerHTML;
-  document.getElementById("templateColourChange").style.color = colo3r;
-  document.getElementById("githubT").style.color = colo3r;
-  document.getElementById("twitterT").style.color = colo3r;
-  document.getElementById("linkedinT").style.color = colo3r;
-}
+
 function fontLight2() {
-  const color4 = document.getElementById("fontSpanCol2").innerHTML;
-  document.getElementById("templateColourChange").style.color = color4;
-  document.getElementById("githubT").style.color = color4;
-  document.getElementById("twitterT").style.color = color4;
-  document.getElementById("linkedinT").style.color = color4;
+  
+  document.getElementById("iconAddress").style.color = "white";
+  document.getElementById("iconEmail").style.color = "white";
+  document.getElementById("iconContact").style.color = "white";
+  document.getElementById("jobTitleT").style.color = "white";
+  document.getElementById("nameT2").style.color = "white";
+  document.getElementById("projectProgress").style.color = "white";
+  document.getElementById("skillsColorChange").style.color = "white";
+  document.getElementById("experiencecolorChange").style.color = "white";
+  document.getElementById("educationColorChange").style.color = "white";
+  document.getElementById("designProgress").style.color = "white";
 }
 function fontLight1() {
-  const color5 = document.getElementById("fontSpanCol1").innerHTML;
-  document.getElementById("templateColourChange").style.color = color5;
-  document.getElementById("githubT").style.color = color5;
-  document.getElementById("twitterT").style.color = color5;
-  document.getElementById("linkedinT").style.color = color5;
+ 
+  document.getElementById("iconAddress").style.color = "black";
+  document.getElementById("iconEmail").style.color = "black";
+  document.getElementById("iconContact").style.color = "black";
+  document.getElementById("jobTitleT").style.color = "black";
+  document.getElementById("nameT2").style.color = "black";
+  document.getElementById("projectProgress").style.color = "black";
+  document.getElementById("skillsColorChange").style.color = "black";
+  document.getElementById("experiencecolorChange").style.color = "black";
+  document.getElementById("educationColorChange").style.color = "black";
+  document.getElementById("designProgress").style.color = "black";
 }
+
 // --------------------------------------------------------------------------------------------
 
 async function captureDivAndDownloadPdf() {

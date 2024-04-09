@@ -1071,23 +1071,12 @@
 
         <div class="colorSelection-Section">
           <div id="Fcolor1" onclick="fontLight1()">
-            <span id="fontSpanCol1" style="visibility: hidden">#b9bdb9</span>
+            
           </div>
           <div id="Fcolor2" onclick="fontLight2()">
-            <span id="fontSpanCol2" style="visibility: hidden">#FFF8F4</span>
+            
           </div>
-          <div id="Fcolor3" onclick="fontLight3()">
-            <span id="fontSpanCol3" style="visibility: hidden">#D9E6EB</span>
-          </div>
-          <div id="Fcolor4" onclick="fontEucalyptus()">
-            <span id="fontSpanCol4" style="visibility: hidden">#8B3DFF</span>
-          </div>
-          <div id="Fcolor5" onclick="fontLightBlue()">
-            <span id="fontSpanCol5" style="visibility: hidden">#6B9999</span>
-          </div>
-          <div id="Fcolor6" onclick="fontdark()">
-            <span id="fontSpanCol6" style="visibility: hidden">#414143</span>
-          </div>
+          
         </div>
       </section>
 
@@ -1117,7 +1106,7 @@
                       <div class="contact-details p-4">
                         <div class="contacts">
                           <div class="inner-contact">
-                           <span class="cont-icon"><i class="fa-solid fa-phone"></i></span> 
+                           <span class="cont-icon" id="iconContact"><i class="fa-solid fa-phone"></i></span> 
                             <span id="countryContactT" class="fontColorChange">
                               <span id="countryContactT"> +91</span>
                               <span id="contactT" class="fontColorChange">
@@ -1127,13 +1116,13 @@
                         </div>
                         <div class="contacts">
                           <div class="inner-contact">
-                           <span class="cont-icon"> <i class="fa-solid fa-envelope"></i></span>
+                           <span class="cont-icon" id="iconEmail"> <i class="fa-solid fa-envelope"></i></span>
                             <span id="emailT">  avikashkumar82@gmail.com</span>
                           </div>
                         </div>
                         <div class="contacts">
                           <div class="inner-contact">
-                           <span class="cont-iconn"> <i class="fa-solid fa-location-dot"></i></span>
+                           <span class="cont-iconn" id="iconAddress"> <i class="fa-solid fa-location-dot"></i></span>
                             <span id="addressT" > Bokaro steel city</span>
                           </div>
                         </div>
@@ -1141,7 +1130,7 @@
                       
                       <!-- skills -->
                     <div class="template2-skills px-5 mt-4" id="skillsDiv">
-                      <div class="skillLoop"><h5 id="fontClrSkills" class="fontColorChange">
+                      <div class="skillLoop" id="tabSkillColor"><h5 id="fontClrSkills" class="fontColorChange">
                         Hard Skills
                       </h5></div>
                       <ul id="keySkills" class="fontColorChange">
@@ -1150,20 +1139,36 @@
                     </div>
                     <!-- Language -->
                     <div class="templatte2-languages px-5 mt-4" id="languageDiv">
-                      <div class="langHeading"><h5 id="fontClrLang" >Language</h5></div>
+                      <div class="langHeading" id="tabLanguageColor"><h5 id="fontClrLang" >Language</h5></div>
                       <ul id="languages">
                         <li id="fontColor" class="fontColorChange"></li>
                       </ul>
                     </div>
                     <!-- Intrests -->
-                    <div class="template2-intrests px-5 mt-4" id=""></div>
+                    <div class="template2-intrests px-5 mt-4" id="">
+                      <div class="langHeading" id="tabIntrestColor"><h5 id="fontClrLang" >Intrests</h5></div>
+                      <div class="intrests-content">
+                        <ul id="intrests">
+                          <li id="fontColor" class="fontColorChange"></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Hobby -->
+                    <div class="template2-hobbies px-5 mt-4">
+                      <div class="langHeading" id="tabHobbiesColor"><h5 id="fontClrLang" >Hobbies</h5></div>
+                      <div class="achivements-content">
+                        <ul id="hobbys">
+                          <li id="fontColor" class="fontColorChange"></li>
+                        </ul>
+                      </div>
+                    </div>
                     </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-8 p-0">
                   <div class="rightSection-contentTemplate3">
-                    <div class="blueSection">
+                    <div class="blueSection" id="changeBlueColor">
                       <!-- image -->
                       <div class="template-img text-center">
                         <img
@@ -1172,18 +1177,18 @@
                           id="imgTemplate3"
                         />
                       </div>
-                      <h1 class="text-center" id="nameT2">Vikash Kumar</h1>
-                      <p class="titleJob text-center" id="jobTitleT" style="font-size: 25px; color: #666666">Software Engineer</p>
+                      <h1 class="text-center" id="nameT2" style="color: white;">Vikash Kumar</h1>
+                      <p class="titleJob text-center" id="jobTitleT" style="font-size: 25px; color: white">Software Engineer</p>
                     </div>
                     <div class="right-main-content-details">
                       <!-- Work Experiencce -->
                   <div class="template2-experiences px-5 mt-3">
-                    <div class="rightHeading" style="padding: 2px 78px 2px 69px;"><h5 id="fontClrEdu">Experience</h5></div>
+                    <div class="rightHeading" style="padding: 2px 78px 2px 69px;" id="experiencecolorChange"><h5 id="fontClrEdu">Experience</h5></div>
                     <div id="resultSection" class="mt-4"></div>
                   </div>
                    <!-- Education -->
                    <div class="template2-education px-5 mt-4">
-                    <div class="rightHeading" style="padding: 2px 80px 2px 80px;"><h5 id="fontClrEdu">Education</h5></div>
+                    <div class="rightHeading" style="padding: 2px 80px 2px 80px;" id="educationColorChange"><h5 id="fontClrEdu">Education</h5></div>
                     <ul id="aqT">
                       <li>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -1193,7 +1198,7 @@
                   </div>
                   <!-- skills summary -->
                   <div class="template2-skillsSummary px-5 mt-4">
-                    <div class="rightHeading" style="padding: 2px 56px 2px 56px;"><h5 id="fontClrEdu">Skills Summary</h5></div>
+                    <div class="rightHeading" style="padding: 2px 56px 2px 56px;" id="skillsColorChange"><h5 id="fontClrEdu">Skills Summary</h5></div>
                     <div style="display: flex;" class="designProgress mt-3">
                       <div>
                         <p>Design Progress</p>
