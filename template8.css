@@ -2,15 +2,12 @@
 
 
 .img-fluid {
-    max-width: 140px !important;
-    height: 139px !important;
+    max-width: 354px !important;
+    height: 343px !important;
     background: aliceblue;
     object-fit: cover;
-    border-radius: 7px;
-}
-
-.imageSection {
-    margin-left: 27px;
+    border-radius: 50%;
+    margin: 28px 0px 12px 2px;
 }
 
 .background {
@@ -179,17 +176,64 @@ button.btnApply {
 /* Template 1 ends */
 
 
-/* templatte 7 */
-.picHeading-section {
-    gap: 71px;
-    border-bottom: 1px solid;
+/* templatte 8 */
+
+.template8-profilePic-section {
+    text-align: center;
+    border-radius: 50%;
+    height: 398px;
+    width: 398px;
+    display: inline-grid;
+    position: absolute;
+    top: 25px;
+    /* bottom: -85px; */
+    left: 32px;
 }
 
-
-.template7-contact-section.mt-3 {
-    border-bottom: 3px solid;
+.educationContent {
+    border: 1px solid white;
+    width: 216px;
+    border-radius: 0px 28px 28px 0px;
+    background: white;
+    text-align: center;
+}
+.educationContent h4 {
+    font-weight: 700;
 }
 
-.blue{
-    color: #0081CF;
+.contact-details.p-3 {
+    line-height: 0px;
+}
+
+p {
+    font-size: large;
+    font-weight: 500;
+}
+
+ul {
+    font-size: large;
+    font-weight: 500;
+}
+
+.template8-rightSection.p-3.mt-5 {
+    margin-left: -38px;
+}
+.tab-experience {
+    background: gray;
+    width: 428px;
+    border-radius: 0px 18px 18px 0px;
+    margin-left: -25px;
+    text-align: center;
+    padding: 1px;
+}
+.tab-experience h4 {
+    font-weight: 800;
+    color: white;
+}
+
+.template8-rightSection-main {
+    border: 1px solid;
+    margin-top: 194px;
+    background: gray;
+    min-height: 1082px;
 }

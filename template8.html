@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="template7.css" />
+    <link rel="stylesheet" href="template8.css" />
     <link rel="stylesheet" href="responsive.css" />
 
     <link
@@ -999,7 +999,24 @@
             <input type="text" id="gitField" class="form-control" />
           </div>
         </div>
+        <!-- intrests -->
+        <div class="intrestForm">
+          <label for>Acchivements</label>
+          <textarea
+            class="form-control intrestField"
+            placeholder="Enter here"
+            rows="1"
+          ></textarea>
 
+          <div class="container text-center mt-2" id="intrestAddButton">
+            <button
+              onclick="addNewIntrestField()"
+              class="btn btn-primary btn-sm"
+            >
+              Add
+            </button>
+          </div>
+        </div>
         
         <!-- Hobbies -->
         <div class="hobbyForm">
@@ -1068,127 +1085,170 @@
       <section>
         <div class="container template2-cv mt-5" id="cv-template">
           <div class="template2-hero" id="cvTemplate">
-            <div class="template7-main p-2 px-4" >
-              <!-- profile pic + Name -->
-              <div class="picHeading-section p-2" style="display: flex;">
-                <div>
-                  <!-- profile pic -->
-                  <div class="imageSection">
-                    <img
-                      src="./images/altImage.png"
-                      class="img-fluid myimg"
-                      id="imgTemplate2"
-                    />
-                  </div>
-                </div>
-                <div class="mt-4">
-                  <h1 style="font-weight: 600; color: #c0c0c0; font-size: xxx-large;" id="nameT2">
-                  <span id="firstName" style="color: black;">Vikash</span> <span id="lastName" class="blue" >Kumar</span>
-                </h1>
-                <p class="titleJob" id="jobTitleT" style="font-size: 25px; color: #0d6efd; text-align: center; line-height: 6px;">
-                  Software Engineer
-                </p>
-                </div>
-              </div>
-              <!-- contact Section -->
-              <div class="template7-contact-section mt-3">
-                <!-- contact -->
-                <div
-                  class="contact-section"
-                  style="display: flex; justify-content: center; gap: 44px"
-                >
-                  <div class="contact-section-tabs">
-                    <p class="fontColorChange">
-                      <i class="fa-solid fa-envelope blue" id="colorMail"></i>&nbsp;<span
-                        id="emailT"
-                        >avikashkumar82@gmail.com</span
-                      >
-                    </p>
-                  </div>
-                  <div class="contact-section-tabs">
-                    <p>
-                      <i class="fa-solid fa-phone blue" id="colorContact"></i
-                      >&nbsp;<span id="countryContactT" class="fontColorChange"
-                        >+91</span
-                      ><span>&nbsp;-&nbsp;</span
-                      ><span id="contactT" class="fontColorChange"
-                        >9430722766</span
-                      >
-                    </p>
-                  </div>
-                  <div class="contact-section-tabs">
-                    <p id="hello" class="fontColorChange">
-                      <i class="fa-solid fa-location-dot blue" id="colorLocation"></i>&nbsp;<span
-                        id="addressT"
-                        >Bokaro steel city</span
-                      >
-                    </p>
-                  </div>
-                  <div class="contact-section-tabs">
-                    <p id="hello" class="fontColorChange">
-                      <i class="fa-brands fa-github blue" id="colorLink"></i>&nbsp;<span
-                        ><a href="#1" id="githubT" class="fontColorChange"
-                          >https://www.youtube.com/</a
-                        ></span
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-             <!-- Summary -->
-              <div class="template7-summary-section mt-3">
-                <div style="border-bottom: 1px solid ;" class="blue" id="colorSummary"><h5>SUMMARY</h5></div>
-                <div style="margin-top: 8px;text-align: justify;">
-                  <p id="objectiveT">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum necessitatibus excepturi officia? Minima, in. Temporibus cumque eius eos. Nisi dignissimos culpa neque mollitia earum officiis minus consequuntur, perferendis nostrum tempora?
-                  </p>
-                </div>
-              </div>
-              <!-- Skills -->
-              <div class="template7-skills-section mt-3">
-                <div style="border-bottom: 1px solid ;" class="blue" id="colorSkills"><h5>MY SKILLS</h5></div>
-                <div style="margin-top: 8px;text-align: justify;">
-                  <ul id="keySkills" class="fontColorChange">
-                    <li id="fontColor"></li>
-                  </ul>
-                </div>
-              </div>
-              <!-- Experience -->
-              <div class="template7-experience-section mt-3">
-                <div style="border-bottom: 1px solid ;" class="blue" id="colorExperience"><h5>EXPERIENCE</h5></div>
-                <div style="margin-top: 8px;text-align: justify;">
-                  <div id="resultSection" class="mt-4"></div>
-                </div>
-              </div>
-              <!-- Projects -->
-              <div class="template7-project-section mt-3">
-                <div style="border-bottom: 1px solid ;" class="blue" id="colorProject"><h5>PROJECT</h5></div>
-                <div style="margin-top: 8px;text-align: justify;">
-                  <div id="ProjectResult"></div>
-                </div>
-              </div>
-              <!-- Education -->
-              <div class="template7-education-section mt-3">
-                <div style="border-bottom: 1px solid ;" class="blue" id="colorEducation"><h5>EDUCATION</h5></div>
-                <div style="margin-top: 8px;text-align: justify;">
-                  <ul id="aqT">
-                    <li>
-                      Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Provident, neque.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- Hobbies -->
-              <div class="template7-hobbies-section mt-3">
-                <div style="border-bottom: 1px solid ;" class="blue" id="colorHobbies"><h5>HOBBIES</h5></div>
-                <div style="margin-top: 8px;text-align: justify;">
-                  <ul id="hobbys">
-                    <li id="fontColor" class="fontColorChange"></li>
-                  </ul>
-                </div>
-              </div>
+            <div class="template8-main" style="border: 1px solid lightslategray;">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="template8-leftSection  p-3">
+                    <div class="template8-rightSection-main" >
+                      <div class="template8-profilePic-section" style="background: gray;">
+                        <!-- profile pic -->
+                        <div class="imageSection">
+                          <img
+                            src="./images/altImage.png"
+                            class="img-fluid myimg"
+                            id="imgTemplate2"
+                          />
+                        </div>
+                        
+                      </div>
+                      <div class="template8-rightSection-main" style="margin-top:215px">
+                        <!-- Education Center -->
+                        <div class="education-tab">
+                          <div class="educationContent"><h4>EDUCATION</h4></div>
+                          <div style="margin-top: 8px;text-align: justify;" class="p-2">
+                            <ul id="aqT">
+                              <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Provident, neque.
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- Contact Center -->
+                        <div class="contact-tab">
+                          <div class="educationContent"><h4>CONTACT</h4></div>
+                          <div class="contact-details p-3">
+                            <div class="contact-section-tabs">
+                              <p class="fontColorChange">
+                                <i class="fa-solid fa-envelope blue" id="colorMail"></i>&nbsp;<span
+                                  id="emailT"
+                                  >avikashkumar82@gmail.com</span
+                                >
+                              </p>
+                            </div>
+                            <div class="contact-section-tabs">
+                              <p>
+                                <i class="fa-solid fa-phone blue" id="colorContact"></i
+                                >&nbsp;<span id="countryContactT" class="fontColorChange"
+                                  >+91</span
+                                ><span>&nbsp;-&nbsp;</span
+                                ><span id="contactT" class="fontColorChange"
+                                  >9430722766</span
+                                >
+                              </p>
+                            </div>
+                            <div class="contact-section-tabs">
+                              <p id="hello" class="fontColorChange">
+                                <i class="fa-solid fa-location-dot blue" id="colorLocation"></i>&nbsp;<span
+                                  id="addressT"
+                                  >Bokaro steel city</span
+                                >
+                              </p>
+                            </div>
 
+                          </div>
+                        </div>
+                        <!-- Skills -->
+                        <div class="Skills-tab">
+                          <div class="educationContent"><h4>SKILLS</h4></div>
+                          <div style="margin-top: 8px;text-align: justify;" class="p-2">
+                            <ul id="keySkills" class="fontColorChange">
+                              <li id="fontColor"></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- Achivements Center -->
+                        <div class="achivements-tab">
+                          <div class="educationContent"><h4>ACHIVEMENTS</h4></div>
+                          <div style="margin-top: 8px;text-align: justify;" class="p-2">
+                            <ul id="intrests">
+                              <li id="fontColor" class="fontColorChange">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis iure sed, assumenda vel excepturi libero.</li>
+                            </ul>
+                          </div>
+                        </div>
+                         <!-- Hobbies Center -->
+                         <div class="hobbies-tab">
+                          <div class="educationContent"><h4>HOBBY</h4></div>
+                          <div style="margin-top: 8px;text-align: justify;" class="p-2">
+                            <ul id="hobbys">
+                              <li id="fontColor" class="fontColorChange">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quidem distinctio autem officiis dicta quod perferendis aliquam consectetur. Commodi quos id repellat ipsa vitae ex quo temporibus eveniet laboriosam veniam?</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="template8-rightSection p-3 mt-5">
+                    <!-- name-title Centre -->
+                    <div class="name-heading">
+                      <h1
+                        style="
+                          font-weight: 700;
+                          color: #c0c0c0;
+                          font-size: 65px;
+                          text-align: center;
+                        "
+                        id="nameT2"
+                      >
+                        <span id="firstName" style="color: black;">Vikash</span
+                        > <span id="lastName" style="color: #808080">Kumar</span>
+                      </h1>
+                      <p
+                        class="titleJob"
+                        id="jobTitleT"
+                        style="
+                          font-size: 25px;
+                          color: #808080;
+                          text-align: center;
+                          line-height: 6px;
+                        "
+                      ><em>
+                        Software Engineer</em>
+                      </p>
+                    </div>
+                    <!-- Summary -->
+                    <div class="template8-content-Summary mt-3 p-3">
+                      <div
+                        style="
+                          
+                          margin-top: 8px;
+                          text-align: justify;
+                        "
+                      >
+                        <p id="objectiveT">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Eveniet ullam at modi, facilis ratione, cumque
+                          tempore quo illum error blanditiis et labore commodi
+                          repudiandae nulla.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Experience -->
+                    <div class="template8-experiences">
+                      <div class="tab-experience"><h4>PROFESSIONAL EXPERIENCE</h4></div>
+                      <div
+                          id="resultSection"
+                          class="mt-4"
+                          style="
+                            
+                            margin-top: 8px;
+                            text-align: justify;
+                          "
+                        ></div>
+                    </div>
+                    <!-- Projects -->
+                    <div class="template8-projects">
+                      <div class="tab-experience"><h4>PROJECTS</h4></div>
+                      <div style="margin-left: 46px;margin-top: 8px;text-align: justify;">
+                        <div id="ProjectResult"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1205,7 +1265,7 @@
       </button>
     </div>
 
-    <script src="./template7.js"></script>
+    <script src="./template8.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
