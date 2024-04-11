@@ -53,8 +53,8 @@ span#addressT {
 
 p#objectiveT {
     text-align: justify;
+    margin-left: -15px;
 }
-
 /* manually Colour Change */
 
 #color1 {
@@ -254,4 +254,8 @@ ul {
     background: gray;
     min-height: 1082px;
     padding-right: 13px;
+}
+
+div#ProjectResult {
+    margin-left: -38px;
 }
