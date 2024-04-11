@@ -1045,9 +1045,9 @@
       <!-- color section -->
       <section class="colorSelection-Hero mt-3">
         <div class="colorSelection-Section">
-          <div id="color1" onclick="light1()">
+          <!-- <div id="color1" onclick="light1()">
             <span id="spanCol1" style="visibility: hidden">#b9bdb9</span>
-          </div>
+          </div> -->
           <div id="color2" onclick="light2()">
             <span id="spanCol2" style="visibility: hidden">#FFF8F4</span>
           </div>
@@ -1079,6 +1079,15 @@
             </button>
           </div>
         </div>
+        <div class="colorSelection-Section">
+          <div id="Fcolor1" onclick="fontLight1()">
+            
+          </div>
+          <div id="Fcolor2" onclick="fontLight2()">
+            
+          </div>
+          
+        </div>
       </section>
 
       <!-- Resume CV Template -->
@@ -1089,8 +1098,8 @@
               <div class="row">
                 <div class="col-md-5">
                   <div class="template8-leftSection  p-3">
-                    <div class="template8-rightSection-main" >
-                      <div class="template8-profilePic-section" style="background: gray;">
+                    <div class="template8-rightSection-main" id="rightColorContent">
+                      <div class="template8-profilePic-section" style="background: gray;" id="proPicOutline">
                         <!-- profile pic -->
                         <div class="imageSection">
                           <img
@@ -1101,7 +1110,7 @@
                         </div>
                         
                       </div>
-                      <div class="template8-rightSection-main" style="margin-top:215px">
+                      <div class="template8-rightSection-main" style="margin-top:215px"  id="colorChangeAside">
                         <!-- Education Center -->
                         <div class="education-tab">
                           <div class="educationContent"><h4>EDUCATION</h4></div>
@@ -1119,16 +1128,16 @@
                           <div class="educationContent"><h4>CONTACT</h4></div>
                           <div class="contact-details p-3">
                             <div class="contact-section-tabs">
-                              <p class="fontColorChange">
-                                <i class="fa-solid fa-envelope blue" id="colorMail"></i>&nbsp;<span
+                              <p class="fontColorChange" id="colorMail">
+                                <i class="fa-solid fa-envelope blue" ></i>&nbsp;<span
                                   id="emailT"
                                   >avikashkumar82@gmail.com</span
                                 >
                               </p>
                             </div>
                             <div class="contact-section-tabs">
-                              <p>
-                                <i class="fa-solid fa-phone blue" id="colorContact"></i
+                              <p  id="colorContact">
+                                <i class="fa-solid fa-phone blue"></i
                                 >&nbsp;<span id="countryContactT" class="fontColorChange"
                                   >+91</span
                                 ><span>&nbsp;-&nbsp;</span
@@ -1137,9 +1146,9 @@
                                 >
                               </p>
                             </div>
-                            <div class="contact-section-tabs">
+                            <div class="contact-section-tabs" id="colorLocation">
                               <p id="hello" class="fontColorChange">
-                                <i class="fa-solid fa-location-dot blue" id="colorLocation"></i>&nbsp;<span
+                                <i class="fa-solid fa-location-dot blue" ></i>&nbsp;<span
                                   id="addressT"
                                   >Bokaro steel city</span
                                 >
@@ -1228,7 +1237,7 @@
                     </div>
                     <!-- Experience -->
                     <div class="template8-experiences">
-                      <div class="tab-experience"><h4>PROFESSIONAL EXPERIENCE</h4></div>
+                      <div class="tab-experience" id="changeColorExperience"><h4>PROFESSIONAL EXPERIENCE</h4></div>
                       <div
                           id="resultSection"
                           class="mt-4"
@@ -1241,7 +1250,7 @@
                     </div>
                     <!-- Projects -->
                     <div class="template8-projects">
-                      <div class="tab-experience"><h4>PROJECTS</h4></div>
+                      <div class="tab-experience" id="changeColorProject"><h4>PROJECTS</h4></div>
                       <div style="margin-left: 46px;margin-top: 8px;text-align: justify;">
                         <div id="ProjectResult"></div>
                       </div>

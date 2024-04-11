@@ -195,19 +195,7 @@ function generateCV() {
      document.getElementById("projectProgress").innerHTML=projectRange+"%";
 
 
-  //  Social media Links
-  // document.getElementById("githubT").innerHTML =
-  //   document.getElementById("fbField").value;
-  // document.getElementById("twitterT").innerHTML =
-  //   document.getElementById("twitterField").value;
-  // document.getElementById("linkedinT").innerHTML =
-  //   document.getElementById("linkedinField").value;
-
-
-
   
-
-    
 
 
 }

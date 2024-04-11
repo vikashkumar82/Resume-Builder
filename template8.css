@@ -23,9 +23,6 @@
     line-height: 1;
 }
 
-/* .template-leftSection.background.py-5 {
-    width: max-content;
-} */
 
 .card-header {
     padding: 7px 0px 2px 35px !important;
@@ -122,6 +119,27 @@ p#objectiveT {
 /* for font */
 
 
+/* for font */
+#Fcolor1{
+
+    background: black;
+    border: 1px solid black;
+    border-radius: 59%;
+    padding: 17px;
+    height:30px;
+    width:30px;
+}
+
+#Fcolor2 {
+
+    background: white;
+    border: 1px solid rgb(113, 111, 111);
+    border-radius: 59%;
+    padding: 17px;
+    height:30px;
+    width:30px;
+}
+
 .colorSelection-Section {
     display: flex;
     gap: 10px;
@@ -186,7 +204,6 @@ button.btnApply {
     display: inline-grid;
     position: absolute;
     top: 25px;
-    /* bottom: -85px; */
     left: 32px;
 }
 
@@ -232,8 +249,9 @@ ul {
 }
 
 .template8-rightSection-main {
-    border: 1px solid;
+    border: 1px solid gray;
     margin-top: 194px;
     background: gray;
     min-height: 1082px;
+    padding-right: 13px;
 }

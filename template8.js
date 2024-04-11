@@ -46,9 +46,6 @@ function addNewIntrestField() {
   intrestOb.insertBefore(newNode2, intrestAddButtonOb);
 }
 
-
-
-
 // Hobby
 function addNewHobbyField() {
   const newNode3 = document.createElement("textarea");
@@ -116,8 +113,6 @@ function generateCV() {
   }
 
   document.getElementById("aqT").innerHTML = str1;
-
-
 
   //Expertise
   let skills = document.getElementsByClassName("TechField");
@@ -252,79 +247,72 @@ function showProjectData() {
 // for template color
 function dark() {
   const dark = document.getElementById("spanCol6").innerHTML;
-  document.getElementById("lastName").style.color=dark;
   document.getElementById("jobTitleT").style.color=dark;
-  document.getElementById("colorSummary").style.color=dark;
-  document.getElementById("colorSkills").style.color=dark;
-  document.getElementById("colorProject").style.color=dark;
-  document.getElementById("colorExperience").style.color=dark;
-  document.getElementById("colorHobbies").style.color=dark;
-  document.getElementById("colorEducation").style.color=dark;
-  document.getElementById("colorLink").style.color=dark;
-  document.getElementById("colorContact").style.color=dark;
-  document.getElementById("colorMail").style.color=dark;
-  document.getElementById("colorLocation").style.color=dark;
+  document.getElementById("lastName").style.color=dark;
+ 
+  document.getElementById("rightColorContent").style.background=dark;
+  document.getElementById("proPicOutline").style.background=dark;
+  document.getElementById("colorChangeAside").style.background=dark;
+  document.getElementById("colorChangeAside").style.borderColor=dark;
+  document.getElementById("rightColorContent").style.borderColor=dark;
+  document.getElementById("changeColorExperience").style.background=dark;
+  document.getElementById("changeColorProject").style.background=dark;
+ 
  
 }
 function LightBlue() {
   const blue = document.getElementById("spanCol5").innerHTML;
   document.getElementById("lastName").style.color=blue;
   document.getElementById("jobTitleT").style.color=blue;
-  document.getElementById("colorSummary").style.color=blue;
-  document.getElementById("colorSkills").style.color=blue;
-  document.getElementById("colorProject").style.color=blue;
-  document.getElementById("colorExperience").style.color=blue;
-  document.getElementById("colorHobbies").style.color=blue;
-  document.getElementById("colorEducation").style.color=blue;
-  document.getElementById("colorLink").style.color=blue;
-  document.getElementById("colorContact").style.color=blue;
-  document.getElementById("colorMail").style.color=blue;
-  document.getElementById("colorLocation").style.color=blue;
+  
+  document.getElementById("rightColorContent").style.background=blue;
+  document.getElementById("proPicOutline").style.background=blue;
+  document.getElementById("colorChangeAside").style.background=blue;
+  document.getElementById("colorChangeAside").style.borderColor=blue;
+  document.getElementById("rightColorContent").style.borderColor=blue;
+  document.getElementById("changeColorExperience").style.background=blue;
+  document.getElementById("changeColorProject").style.background=blue;
 }
 function Eucalyptus() {
   const eucalyptus = document.getElementById("spanCol4").innerHTML;
   document.getElementById("lastName").style.color=eucalyptus;
   document.getElementById("jobTitleT").style.color=eucalyptus;
-  document.getElementById("colorSummary").style.color=eucalyptus;
-  document.getElementById("colorSkills").style.color=eucalyptus;
-  document.getElementById("colorProject").style.color=eucalyptus;
-  document.getElementById("colorExperience").style.color=eucalyptus;
-  document.getElementById("colorHobbies").style.color=eucalyptus;
-  document.getElementById("colorEducation").style.color=eucalyptus;
-  document.getElementById("colorLink").style.color=eucalyptus;
-  document.getElementById("colorContact").style.color=eucalyptus;
-  document.getElementById("colorMail").style.color=eucalyptus;
-  document.getElementById("colorLocation").style.color=eucalyptus;
+  
+  document.getElementById("rightColorContent").style.background=eucalyptus;
+  document.getElementById("proPicOutline").style.background=eucalyptus;
+  document.getElementById("colorChangeAside").style.background=eucalyptus;
+  document.getElementById("colorChangeAside").style.borderColor=eucalyptus;
+  document.getElementById("rightColorContent").style.borderColor=eucalyptus;
+  document.getElementById("changeColorExperience").style.background=eucalyptus;
+  document.getElementById("changeColorProject").style.background=eucalyptus;
+  
 }
 function light3() {
   const colo3r = document.getElementById("spanCol3").innerHTML;
-  document.getElementById("lastName").style.color=colo3r;
-  document.getElementById("jobTitleT").style.color=colo3r;
-  document.getElementById("colorSummary").style.color=colo3r;
-  document.getElementById("colorSkills").style.color=colo3r;
-  document.getElementById("colorProject").style.color=colo3r;
-  document.getElementById("colorExperience").style.color=colo3r;
-  document.getElementById("colorHobbies").style.color=colo3r;
-  document.getElementById("colorEducation").style.color=colo3r;
-  document.getElementById("colorLink").style.color=colo3r;
-  document.getElementById("colorContact").style.color=colo3r;
-  document.getElementById("colorMail").style.color=colo3r;
-  document.getElementById("colorLocation").style.color=colo3r;
+  document.getElementById("lastName").style.color=colo3r
+  document.getElementById("jobTitleT").style.color=colo3r
+ 
+  document.getElementById("rightColorContent").style.background=colo3r
+  document.getElementById("proPicOutline").style.background=colo3r
+  document.getElementById("colorChangeAside").style.background=colo3r
+  document.getElementById("colorChangeAside").style.borderColor=colo3r
+  document.getElementById("rightColorContent").style.borderColor=colo3r
+  document.getElementById("changeColorExperience").style.background=colo3r
+  document.getElementById("changeColorProject").style.background=colo3r
 }
 function light2() {
   const color4 = document.getElementById("spanCol2").innerHTML;
   document.getElementById("lastName").style.color=color4;
   document.getElementById("jobTitleT").style.color=color4;
-  document.getElementById("colorSummary").style.color=color4;
-  document.getElementById("colorSkills").style.color=color4;
-  document.getElementById("colorProject").style.color=color4;
-  document.getElementById("colorExperience").style.color=color4;
-  document.getElementById("colorHobbies").style.color=color4;
-  document.getElementById("colorEducation").style.color=color4;
-  document.getElementById("colorLink").style.color=color4;
-  document.getElementById("colorContact").style.color=color4;
-  document.getElementById("colorMail").style.color=color4;
-  document.getElementById("colorLocation").style.color=color4;
+  
+  document.getElementById("rightColorContent").style.background=color4;
+  document.getElementById("proPicOutline").style.background=color4;
+  document.getElementById("colorChangeAside").style.background=color4;
+  document.getElementById("colorChangeAside").style.borderColor=color4;
+  document.getElementById("rightColorContent").style.borderColor=color4;
+  document.getElementById("changeColorExperience").style.background=color4;
+  document.getElementById("changeColorProject").style.background=color4;
+  
 }
 
 function changeBackgroundColor() {
@@ -332,31 +320,63 @@ function changeBackgroundColor() {
 
   document.getElementById("lastName").style.color=input;
   document.getElementById("jobTitleT").style.color=input;
-  document.getElementById("colorSummary").style.color=input;
-  document.getElementById("colorSkills").style.color=input;
-  document.getElementById("colorProject").style.color=input;
-  document.getElementById("colorExperience").style.color=input;
-  document.getElementById("colorHobbies").style.color=input;
-  document.getElementById("colorEducation").style.color=input;
-  document.getElementById("colorLink").style.color=input;
-  document.getElementById("colorContact").style.color=input;
-  document.getElementById("colorMail").style.color=input;
-  document.getElementById("colorLocation").style.color=input;
+  document.getElementById("jobTitleT").style.color=input;
+  document.getElementById("rightColorContent").style.background=input;
+  document.getElementById("proPicOutline").style.background=input;
+  document.getElementById("colorChangeAside").style.background=input;
+  document.getElementById("colorChangeAside").style.borderColor=input;
+  document.getElementById("rightColorContent").style.borderColor=input;
+  document.getElementById("changeColorExperience").style.background=input;
+  document.getElementById("changeColorProject").style.background=input;
 }
 function resetBackgroundColor() {
   document.getElementById("lastName").style.color="#0081CF";
   document.getElementById("jobTitleT").style.color="#0081CF";
-  document.getElementById("colorSummary").style.color="#0081CF";
-  document.getElementById("colorSkills").style.color="#0081CF";
-  document.getElementById("colorProject").style.color="#0081CF";
-  document.getElementById("colorExperience").style.color="#0081CF";
-  document.getElementById("colorHobbies").style.color="#0081CF";
-  document.getElementById("colorEducation").style.color="#0081CF";
-  document.getElementById("colorLink").style.color="#0081CF";
-  document.getElementById("colorContact").style.color="#0081CF";
-  document.getElementById("colorMail").style.color="#0081CF";
-  document.getElementById("colorLocation").style.color="#0081CF";
+
+  document.getElementById("lastName").style.color="#808080";
+  document.getElementById("jobTitleT").style.color="#808080";
   
+  document.getElementById("rightColorContent").style.background="#808080";
+  document.getElementById("proPicOutline").style.background="#808080";
+  document.getElementById("colorChangeAside").style.background="#808080";
+  document.getElementById("colorChangeAside").style.borderColor="#808080";
+  document.getElementById("rightColorContent").style.borderColor="#808080";
+  document.getElementById("changeColorExperience").style.background="#808080";
+  document.getElementById("changeColorProject").style.background="#808080";
+
+  document.getElementById("aqT").style.color = "black";
+  document.getElementById("keySkills").style.color = "black";
+  document.getElementById("intrests").style.color = "black";
+  document.getElementById("hobbys").style.color = "black";
+  document.getElementById("colorMail").style.color = "black";
+  document.getElementById("colorContact").style.color = "black";
+  document.getElementById("colorLocation").style.color = "black";
+}
+
+// For Font
+
+// for template fontC colour
+
+function fontLight1() {
+  
+  document.getElementById("aqT").style.color = "black";
+  document.getElementById("keySkills").style.color = "black";
+  document.getElementById("intrests").style.color = "black";
+  document.getElementById("hobbys").style.color = "black";
+  document.getElementById("colorMail").style.color = "black";
+  document.getElementById("colorContact").style.color = "black";
+  document.getElementById("colorLocation").style.color = "black";
+  
+}
+function fontLight2() {
+ 
+  document.getElementById("aqT").style.color = "white";
+  document.getElementById("keySkills").style.color = "white";
+  document.getElementById("intrests").style.color = "white";
+  document.getElementById("hobbys").style.color = "white";
+  document.getElementById("colorMail").style.color = "white";
+  document.getElementById("colorContact").style.color = "white";
+  document.getElementById("colorLocation").style.color = "white";
 }
 
 
