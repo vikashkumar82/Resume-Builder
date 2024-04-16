@@ -209,3 +209,11 @@ button.btnApply {
 .showSummary-section {
     border-bottom: 5px solid orange;
 }
+
+.right-section-show {
+    padding: 20px 20px 20px 20px !important;
+}
+
+.showExperience .projectResultSection p {
+    font-size: small;
+}

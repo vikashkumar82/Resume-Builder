@@ -30,10 +30,6 @@ function addNewTechField() {
   techOb.insertBefore(newNode, techAddButtonOb);
 }
 
-
-
-
-
 // Hobby
 function addNewHobbyField() {
   const newNode3 = document.createElement("textarea");
@@ -55,42 +51,68 @@ function generateCV() {
  
   // Code For Setting Image
   let file = document.getElementById("imgField").files[0];
-
+  let file2 = document.getElementById("imgField").files[0];
+  
   console.log(file);
+  console.log(file2);
 
   let reader = new FileReader();
   reader.readAsDataURL(file);
   console.log(reader.result);
 
+  let reader2 = new FileReader();
+  reader2.readAsDataURL(file2);
+  console.log(reader2.result);
+
   // Set The Image To Template
   reader.onloadend = function () {
     document.getElementById("imgTemplate2").src = reader.result;
   };
+  // Set The Image To Template
+  reader2.onloadend = function () {
+    document.getElementById("showImgTemplate2").src = reader2.result;
+  };
+
 
   // name
   document.getElementById("firstName").innerText=document.getElementById("firstNameField").value;
+  document.getElementById("showFirstName").innerText=document.getElementById("firstNameField").value;
   document.getElementById("lastName").innerText=document.getElementById("lastNameField").value;
+  document.getElementById("showlastName").innerText=document.getElementById("lastNameField").value;
 
   //  Job Title
   document.getElementById("jobTitleT").innerHTML =
+    document.getElementById("jobTitle").value;
+  document.getElementById("showTitle").innerHTML =
     document.getElementById("jobTitle").value;
 
   // Email
   document.getElementById("emailT").innerHTML =
     document.getElementById("emailField").value;
+  document.getElementById("showEmailT").innerHTML =
+    document.getElementById("emailField").value;
 
   // contact
   document.getElementById("countryContactT").innerHTML =
     document.getElementById("countryCode").value;
+  document.getElementById("showCountryContactT").innerHTML =
+    document.getElementById("countryCode").value;
+
   document.getElementById("contactT").innerHTML =
+    document.getElementById("contactField").value;
+  document.getElementById("showContactT").innerHTML =
     document.getElementById("contactField").value;
 
   // Address
   document.getElementById("addressT").innerHTML =
     document.getElementById("addressField").value;
+  document.getElementById("showAddressT").innerHTML =
+    document.getElementById("addressField").value;
 
   // Objective
   document.getElementById("objectiveT").innerHTML =
+    document.getElementById("ObjectiveField").value;
+  document.getElementById("showSummary").innerHTML =
     document.getElementById("ObjectiveField").value;
 
   // Qe (QUALIFICATION)
@@ -102,6 +124,7 @@ function generateCV() {
   }
 
   document.getElementById("aqT").innerHTML = str1;
+  document.getElementById("showAqT").innerHTML = str1;
 
   //Expertise
   let skills = document.getElementsByClassName("TechField");
@@ -110,6 +133,7 @@ function generateCV() {
     techSkills = techSkills + `<li>${e.value}</li>`;
   }
   document.getElementById("keySkills").innerHTML = techSkills;
+  document.getElementById("showKeySkills").innerHTML = techSkills;
 
   
 
@@ -120,6 +144,7 @@ function generateCV() {
     hobby = hobby + `<li>${e.value}</li>`;
   }
   document.getElementById("hobbys").innerHTML = hobby;
+  document.getElementById("showHobbys").innerHTML = hobby;
 
   
 
@@ -140,9 +165,11 @@ function duplicateProjectForm() {
 }
 
 function showProjectData() {
-  document.getElementById("dummyExperienceData").style.display="none";
+  // document.getElementById("dummyExperienceData").style.display="none";
+  // document.getElementById("showDummyExperienceData").style.display="none";
   const proForms = document.querySelectorAll(".form-group:not(#proTemplate)"); // Exclude the template
   const resultProjectSection = document.getElementById("ProjectResult");
+  const ShowResultProjectSection = document.getElementById("showProjectResult");
 
   proForms.forEach((projectForm, index) => {
     const fromProField = projectForm.querySelector(".fromProField");
@@ -190,6 +217,7 @@ function showProjectData() {
               `;
 
       resultProjectSection.appendChild(resultProDiv);
+      // ShowResultProjectSection.appendChild(resultProDiv);
     } else {
       console.error("One or more fields are missing in the form.");
     }
