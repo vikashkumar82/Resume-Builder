@@ -52,7 +52,6 @@ function addNewHobbyField() {
 
 // generating CV
 function generateCV() {
- 
   // Code For Setting Image
   let file = document.getElementById("imgField").files[0];
 
@@ -285,13 +284,10 @@ function resetBackgroundColor() {
 // --------------------------------------------------------------------------------------------
 
 async function captureDivAndDownloadPdf() {
-  document.getElementById("cv-template").style.display="block";
   const content = document.getElementById("cvTemplate");
   if (!content) {
     console.error("Content element not found");
-    document.getElementById("cv-template").style.display="none";
     return;
-   
   }
 
   try {
@@ -360,9 +356,7 @@ async function captureDivAndDownloadPdf() {
 
     // Save the PDF
     pdf.save("cv_template.pdf");
-    document.getElementById("cv-template").style.display="none";
   } catch (error) {
-    document.getElementById("cv-template").style.display="none";
     console.error("Error capturing content or generating PDF:", error);
   }
 }
