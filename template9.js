@@ -166,7 +166,7 @@ function duplicateProjectForm() {
 
 function showProjectData() {
   // document.getElementById("dummyExperienceData").style.display="none";
-  // document.getElementById("showDummyExperienceData").style.display="none";
+  document.getElementById("showDummyExperienceData").style.display="none";
   const proForms = document.querySelectorAll(".form-group:not(#proTemplate)"); // Exclude the template
   const resultProjectSection = document.getElementById("ProjectResult");
   const ShowResultProjectSection = document.getElementById("showProjectResult");
@@ -183,14 +183,7 @@ function showProjectData() {
     console.log("projectField:", projectField);
     console.log("descriptionProField:", descriptionProField);
 
-    // Check if all required fields exist
-    if (
-      fromProField &&
-      toProField &&
-      projectField &&
-      descriptionProField &&
-      proPositionField
-    ) {
+    if (fromProField && toProField && projectField && descriptionProField && proPositionField) {
       const proFrom = fromProField.value;
       const proTo = toProField.value;
       const projectName = projectField.value;
@@ -199,30 +192,96 @@ function showProjectData() {
 
       // Create result structure
       const resultProDiv = document.createElement("div");
-      resultProDiv.className = "projectResultSection mt-2";
+      resultProDiv.className = "projectResultSection mt-1";
       resultProDiv.innerHTML = `
-      <div class="row" style="align-items: center !important;">
-                <div class="col-md-4">
-                  <div class="title-section mt-2" style="line-height: 4px;">
-                    <p style="font-size: 22px;">${projectName}</p>
-                    <p style="font-size: 14px;color: darkgrey;">${proPosition}</p>
-                    <p style="font-size: 14px;color: darkgrey;"><span>${proFrom}</span> - <span>${proTo}</span></p>
-                  </div>
-                </div>
-                <div class="col-md-8">
-                  <p style="text-align: justify;">${proDescription}</p>
-                </div>
-              </div>
+        <div class="row" style="align-items: center !important;">
+          <div class="col-md-4">
+            <div class="title-section mt-2" style="line-height: 5px;">
+              <p style="font-size: 30px; margin-bottom: 23px;" class="nameProject">${projectName}</p>
+              <p style="font-size: 15px; color: #565555;">${proPosition}</p>
+              <p style="font-size: 15px; color: #565555;"><span>${proFrom}</span> - <span>${proTo}</span></p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <p style="text-align: justify; font-size: larger;">${proDescription}</p>
+          </div>
+        </div>
+      `;
 
-              `;
-
+      // Append a clone of the resultProDiv to ShowResultProjectSection
+      ShowResultProjectSection.appendChild(resultProDiv.cloneNode(true));
+      // Append the original resultProDiv to resultProjectSection
       resultProjectSection.appendChild(resultProDiv);
-      // ShowResultProjectSection.appendChild(resultProDiv);
+
     } else {
       console.error("One or more fields are missing in the form.");
     }
   });
 }
+
+
+
+
+// function showProjectData() {
+//   // document.getElementById("dummyExperienceData").style.display="none";
+//   // document.getElementById("showDummyExperienceData").style.display="none";
+//   const proForms = document.querySelectorAll(".form-group:not(#proTemplate)"); // Exclude the template
+//   const resultProjectSection = document.getElementById("ProjectResult");
+//   const ShowResultProjectSection = document.getElementById("showProjectResult");
+
+//   proForms.forEach((projectForm, index) => {
+//     const fromProField = projectForm.querySelector(".fromProField");
+//     const toProField = projectForm.querySelector(".toProField");
+//     const projectField = projectForm.querySelector(".projectField");
+//     const descriptionProField = projectForm.querySelector(".proDesc");
+//     const proPositionField = projectForm.querySelector(".projectPositionField");
+
+//     console.log("fromProField:", fromProField);
+//     console.log("toProField:", toProField);
+//     console.log("projectField:", projectField);
+//     console.log("descriptionProField:", descriptionProField);
+
+//     // Check if all required fields exist
+//     if (
+//       fromProField &&
+//       toProField &&
+//       projectField &&
+//       descriptionProField &&
+//       proPositionField
+//     ) {
+//       const proFrom = fromProField.value;
+//       const proTo = toProField.value;
+//       const projectName = projectField.value;
+//       const proDescription = descriptionProField.value;
+//       const proPosition = proPositionField.value;
+
+//       // Create result structure
+//       const resultProDiv = document.createElement("div");
+//       resultProDiv.className = "projectResultSection mt-2";
+//       resultProDiv.innerHTML = `
+//       <div class="row" style="align-items: center !important;">
+//                 <div class="col-md-4">
+//                   <div class="title-section mt-2" style="line-height: 4px;">
+//                     <p style="font-size: 22px;">${projectName}</p>
+//                     <p style="font-size: 14px;color: darkgrey;">${proPosition}</p>
+//                     <p style="font-size: 14px;color: darkgrey;"><span>${proFrom}</span> - <span>${proTo}</span></p>
+//                   </div>
+//                 </div>
+//                 <div class="col-md-8">
+//                   <p style="text-align: justify;">${proDescription}</p>
+//                 </div>
+//               </div>
+
+//               `;
+
+//       ShowResultProjectSection.appendChild(resultProDiv);
+//       resultProjectSection.appendChild(resultProDiv);
+
+//     } else {
+//       console.error("One or more fields are missing in the form.");
+//     }
+//   });
+// }
 
 // --------------------------------------------------------------------------------------------
 

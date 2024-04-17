@@ -35,13 +35,13 @@
       <div class="row p-2" style="border: 1px solid lightslategray;">
         <div class="col-md-6">
           <!-- Resume FORM -->
-          <div class="resumeForm p-3">
+          <div class="resumeForm ">
             <!-- PRESONAL INFORMATION -->
-            <div class="presonalInfo">
+            <div class="presonalInfo p-3">
               <h3>Presonal Information</h3>
               <div class="row">
                 <!-- image upload -->
-                <div class="form-group mt-3">
+                <div class="form-group mt-2">
                   <label for>Select your profile picture</label>
                   <input type="file" id="imgField" class="form-control" />
                 </div>
@@ -848,7 +848,7 @@
             </div>
 
             <!-- PROFESSIONAL INFORMATION -->
-            <div class="professionalInfo">
+            <div class="professionalInfo p-3 mt-3">
               <h3>Professional Information</h3>
               <!-- Job Title -->
               <div class="Professional-jobtitle">
@@ -918,37 +918,40 @@
                 ></textarea>
               </div>
               <!-- button showing adding for Project -->
-              <label>Add Experience</label><br />
-              <button class="btn btn-primary" onclick="duplicateProjectForm()">
-                Duplicate Form
-              </button>
-              <button class="btn btn-success mt-2" onclick="showProjectData()">
-                Show Data
-              </button>
+              <h6 style="text-align: center;" class="mt-2">ADD EXPERIENCE</h6>
+              <div style="text-align: center;">
+                <button class="btn btn-primary btn_addExperience" onclick="duplicateProjectForm()">
+                  ADD EXPERIENCE
+                </button>
+                <button class="btn btn-success btn_showExperiene" onclick="showProjectData()">
+                  SHOW EXPERIENCE
+                </button>
+              </div>
+              
               <div id="formProjectClone"></div>
 
               <!-- Academic Qualification -->
-              <div class="form-group mt-2" id="eq">
-                <label for>Academic Qualification</label>
+              <div class="form-group mt-3" id="eq">
+                <h6 style="text-align: center;">ACADEMIC QUALIFICATION</h6>
                 <textarea
                   class="form-control eqField"
                   placeholder="Enter here"
                   rows="1"
                 ></textarea>
 
-                <div class="container text-center mt-2" id="eqAddButton">
+                <div class="container text-center mt-3" id="eqAddButton">
                   <button
                     class="btn btn-primary btn-sm"
                     onclick="addNewEqField()"
                   >
-                    Add
+                    ADD EDUCATION
                   </button>
                 </div>
               </div>
 
               <!-- Technical Skills -->
               <div class="form-group mt-2" id="techSkills">
-                <label for>Expertise</label>
+                <h6 style="text-align: center;">KEY SKILLS</h6>
                 <textarea
                   class="form-control TechField"
                   placeholder="Enter here"
@@ -959,24 +962,16 @@
                     onclick="addNewTechField()"
                     class="btn btn-primary btn-sm"
                   >
-                    Add
+                    Add SKILLS
                   </button>
                 </div>
               </div>
             </div>
-            <hr />
-
-            <!-- SOCIAL MEDIA LINKS -->
-            <div class="socialMediaLinks">
-              <h3>Important links</h3>
-              <div class="form-group mt-2">
-                <label for="fbField">GitHub</label>
-                <input type="text" id="gitField" class="form-control" />
-              </div>
-            </div>
+           
 
             <!-- Hobbies -->
-            <div class="hobbyForm">
+            <div class="hobbyForm p-3 mt-4">
+              <h3 style="text-align: center;">INTRESTS</h3>
               <label for>Hobbies</label>
               <textarea
                 class="form-control hobbyField"
@@ -989,23 +984,18 @@
                   onclick="addNewHobbyField()"
                   class="btn btn-primary btn-sm"
                 >
-                  Add
+                  ADD HOBBIES
                 </button>
               </div>
             </div>
 
-            <!-- Generating CV -->
-            <div class="container text-center mt-3">
-              <button onclick="generateCV()" class="btn btn-primary">
-                Generate Cv
-              </button>
-            </div>
+            
           </div>
         </div>
         <div class="col-md-6">
           <!-- Resume CV show Template -->
           <section>
-            <div class="right-section-show mt-5" style="border: 1px solid rgb(153, 149, 149);box-shadow: 0px 0px 7px 5px #f5ebeb;border-radius: 7px;">
+            <div class="right-section-show" style="border: 1px solid rgb(153, 149, 149);box-shadow: 0px 0px 7px 5px #f5ebeb;border-radius: 7px;">
               <!-- heading Section -->
               <div class="showHeaderSection">
                 <div class="row">
@@ -1237,6 +1227,19 @@
 
           </section>
         </div>
+        <!-- Generating CV -->
+        <div class="container text-center mt-4" >
+          <button onclick="generateCV()" class="btn btn-success btn_Generate">
+            GENERATE-CV
+          </button>
+          <button
+        id="downloadButton"
+        onclick="captureDivAndDownloadPdf()"
+        class="btn btn-warning btn_Generate"
+      >
+        PRINT-CV
+      </button>
+        </div>
       </div>
 
       <!-- color section -->
@@ -1284,9 +1287,9 @@
         <div
           class="container template2-cv mt-5"
           id="cv-template"
-          
+        style="display: none;"
         >
-          <div class="template2-hero" id="cvTemplate" style="border: 1px">
+          <div class="template2-hero" id="cvTemplate" style="border: 1px; padding: 0 10px 0 10px;">
             <div class="template9-main p-3">
               <!-- headder section -->
               <div class="headder-section-about" id="colorHeader">
@@ -1358,7 +1361,7 @@
               <!-- Summary sction -->
               <div class="template9-summary-section" id="colorSummary">
                 <div style="margin-top: 8px; text-align: justify">
-                  <p id="objectiveT">
+                  <p id="objectiveT" style=" font-size: larger;">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Magnam nisi sint praesentium perspiciatis iusto ab esse rem,
                     iure vitae eum quam tempore cupiditate unde natus in
@@ -1380,132 +1383,7 @@
                 <h4>Professional Experience</h4>
                 <div style="margin-top: 8px; text-align: justify">
                   <div id="ProjectResult">
-                    <!-- <div id="dummyExperienceData">
-                      <div class="row" style="align-items: center !important">
-                        <div class="col-md-4">
-                          <div
-                            class="title-section mt-2"
-                            style="line-height: 4px"
-                          >
-                            <p style="font-size: 22px">Air Tickting</p>
-                            <p style="font-size: 14px; color: darkgrey">
-                              Human Resource
-                            </p>
-                            <p style="font-size: 14px; color: darkgrey">
-                              <span>23 July 2021</span> -
-                              <span>1 September 2023</span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="col-md-8">
-                          <p style="text-align: justify">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Maiores quis iusto deleniti suscipit voluptas
-                            quo repellat repellendus corrupti quae aperiam quam
-                            illo doloremque amet modi optio, consequatur
-                            laboriosam odit sequi obcaecati autem. Nisi dolores
-                            dicta facere ducimus necessitatibus placeat
-                            repudiandae autem provident temporibus, sunt magnam
-                            sit consectetur debitis earum voluptas adipisci
-                            voluptatibus at soluta voluptatum ipsam ipsum! Id,
-                            error quis.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="row" style="align-items: center !important">
-                        <div class="col-md-4">
-                          <div
-                            class="title-section mt-2"
-                            style="line-height: 4px"
-                          >
-                            <p style="font-size: 22px">Ranknoote Book</p>
-                            <p style="font-size: 14px; color: darkgrey">
-                              Human Resource Manager
-                            </p>
-                            <p style="font-size: 14px; color: darkgrey">
-                              <span>23 July 2021</span> -
-                              <span>1 September 2023</span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="col-md-8">
-                          <p style="text-align: justify">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Maiores quis iusto deleniti suscipit voluptas
-                            quo repellat repellendus corrupti quae aperiam quam
-                            illo doloremque amet modi optio, consequatur
-                            laboriosam odit sequi obcaecati autem. Nisi dolores
-                            dicta facere ducimus necessitatibus placeat
-                            repudiandae autem provident temporibus, sunt magnam
-                            sit consectetur debitis earum voluptas adipisci
-                            voluptatibus at soluta voluptatum ipsam ipsum! Id,
-                            error quis.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="row" style="align-items: center !important">
-                        <div class="col-md-4">
-                          <div
-                            class="title-section mt-2"
-                            style="line-height: 4px"
-                          >
-                            <p style="font-size: 22px">Air Tickting</p>
-                            <p style="font-size: 14px; color: darkgrey">
-                              Human Resource
-                            </p>
-                            <p style="font-size: 14px; color: darkgrey">
-                              <span>23 July 2021</span> -
-                              <span>1 September 2023</span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="col-md-8">
-                          <p style="text-align: justify">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Maiores quis iusto deleniti suscipit voluptas
-                            quo repellat repellendus corrupti quae aperiam quam
-                            illo doloremque amet modi optio, consequatur
-                            laboriosam odit sequi obcaecati autem. Nisi dolores
-                            dicta facere ducimus necessitatibus placeat
-                            repudiandae autem provident temporibus, sunt magnam
-                            sit consectetur debitis earum voluptas adipisci
-                            voluptatibus at soluta voluptatum ipsam ipsum! Id,
-                            error quis.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="row" style="align-items: center !important">
-                        <div class="col-md-4">
-                          <div
-                            class="title-section mt-2"
-                            style="line-height: 4px"
-                          >
-                            <p style="font-size: 22px">Ranknoote Book</p>
-                            <p style="font-size: 14px; color: darkgrey">
-                              Human Resource Manager
-                            </p>
-                            <p style="font-size: 14px; color: darkgrey">
-                              <span>23 July 2021</span> -
-                              <span>1 September 2023</span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="col-md-8">
-                          <p style="text-align: justify">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Maiores quis iusto deleniti suscipit voluptas
-                            quo repellat repellendus corrupti quae aperiam quam
-                            illo doloremque amet modi optio, consequatur
-                            laboriosam odit sequi obcaecati autem. Nisi dolores
-                            dicta facere ducimus necessitatibus placeat
-                            repudiandae autem provident temporibus, sunt magnam
-                            sit consectetur debitis earum voluptas adipisci
-                            voluptatibus at soluta voluptatum ipsam ipsum! Id,
-                            error quis.
-                          </p>
-                        </div>
-                      </div>
-                    </div> -->
+                    
                   </div>
                 </div>
               </div>
@@ -1516,7 +1394,7 @@
               >
                 <h4>Education</h4>
                 <div style="margin-top: 8px; text-align: justify">
-                  <ul id="aqT">
+                  <ul id="aqT" style="font-size: larger;">
                     <li>Human Resource Management - Bits Pilani (2021)</li>
                     <li>Bachelor Of Arts (2019)</li>
                   </ul>
@@ -1526,7 +1404,7 @@
               <div class="template9-experience-section mt-2" id="colorSkills">
                 <h4>Key Skills</h4>
                 <div style="margin-top: 8px; text-align: justify">
-                  <ul id="keySkills">
+                  <ul id="keySkills" style="font-size: larger;">
                     <li>PHR certification</li>
                     <li>ATS (workday,Jobvite)</li>
                     <li>Compensation & Benifites payroll</li>
@@ -1538,7 +1416,7 @@
               <div class="template-hobbies-section mt-3" id="colorHobbies">
                 <div class="blue" id="colorHobbies"><h5>HOBBIES</h5></div>
                 <div style="margin-top: 8px; text-align: justify">
-                  <ul id="hobbys">
+                  <ul id="hobbys" style="font-size: larger;">
                     <li id="fontColor" class="fontColorChange"></li>
                   </ul>
                 </div>
@@ -1550,13 +1428,7 @@
     </div>
     <!-- button print section -->
     <div class="container mt-3 text-center">
-      <button
-        id="downloadButton"
-        onclick="captureDivAndDownloadPdf()"
-        class="btn background"
-      >
-        Print CV
-      </button>
+      
     </div>
 
     <script src="./template9.js"></script>

@@ -215,5 +215,54 @@ button.btnApply {
 }
 
 .showExperience .projectResultSection p {
-    font-size: small;
+    font-size: small !important;
 }
+
+.presonalInfo h3 {
+    text-align: center;
+}
+
+.presonalInfo.p-3 {
+    border: 1px solid rgb(153, 149, 149);
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+    border-radius: 7px;
+}
+
+.professionalInfo h3 {
+    text-align: center;
+}
+
+.professionalInfo {
+    border: 1px solid rgb(153, 149, 149);
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+    border-radius: 7px;
+}
+
+.btn_showExperiene {
+    width: 300px;
+}
+
+.btn_addExperience {
+    width: 300px;
+}
+
+.btn-sm {
+    width: 245px;
+    padding: 8px;
+}
+
+.hobbyForm {
+    border: 1px solid rgb(153, 149, 149);
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+    border-radius: 7px;
+}
+
+.btn_Generate {
+    width: 456px;
+    padding: 10px;
+}
+
+.showExperience .projectResultSection .nameProject{
+    font-size: 19px !important;
+}
+
