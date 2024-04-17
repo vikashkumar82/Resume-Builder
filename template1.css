@@ -5,11 +5,10 @@
 .myimg{
     border-radius: 50%;
     width: 200px;
-}
-.img-fluid {
     max-width: 100%;
     height: 210px !important;
 }
+
 .background {
     background: #3492e4;
 }
@@ -20,8 +19,8 @@
 }
 .template-about {
     line-height: 1;
+    font-size: larger;
 }
-
 /* .template-leftSection.background.py-5 {
     width: max-content;
 } */
@@ -43,7 +42,7 @@
 }
 
 .template-asidebar {
-    padding: 20px 40px 0 40px;
+    padding: 19px 40px 0 24px;
     height: 1219px;
 }
 
@@ -237,4 +236,22 @@ span#emailT {
 
 .resumeForm {
     border: 1px solid gray;
+}
+
+/* ------------------- */
+.showMyImage{
+    background-color: aliceblue; 
+    width: 65%; 
+    height: 152px; 
+    border-radius: 50%;
+}
+
+.showImageSection {
+    text-align: center;
+    padding: 23px;
+}
+
+.showTemplate-asidebar {
+    padding: 0px 2px 5px 15px;
+    margin-top: -9px;
 }

@@ -101,9 +101,14 @@ function generateCV() {
   let nameT1 = document.getElementById("nameT1");
   nameT1.innerHTML = nameField;
   document.getElementById("nameT2").innerHTML = nameField;
+  document.getElementById("showNameT1").innerHTML = nameField;
+  document.getElementById("showNameT2").innerHTML = nameField;
+  
 
   // Email
   document.getElementById("emailT").innerHTML =
+    document.getElementById("emailField").value;
+  document.getElementById("showEmailT").innerHTML =
     document.getElementById("emailField").value;
 
   // contact
@@ -111,25 +116,44 @@ function generateCV() {
     document.getElementById("countryCode").value;
   document.getElementById("contactT").innerHTML =
     document.getElementById("contactField").value;
+  document.getElementById("showCountryContactT").innerHTML =
+    document.getElementById("countryCode").value;
+  document.getElementById("showContactT").innerHTML =
+    document.getElementById("contactField").value;
 
   // Address
   document.getElementById("addressT").innerHTML =
+    document.getElementById("addressField").value;
+  document.getElementById("showAddressT").innerHTML =
     document.getElementById("addressField").value;
 
   //  Social media Links
   document.getElementById("githubT").innerHTML =
     document.getElementById("fbField").value;
+  document.getElementById("showGithubT").innerHTML =
+    document.getElementById("fbField").value;
+
   document.getElementById("twitterT").innerHTML =
     document.getElementById("twitterField").value;
+  document.getElementById("showTwitterT").innerHTML =
+    document.getElementById("twitterField").value;
+
   document.getElementById("linkedinT").innerHTML =
+    document.getElementById("linkedinField").value;
+  document.getElementById("showLinkedinT").innerHTML =
     document.getElementById("linkedinField").value;
 
   //  Job Title
   document.getElementById("jobTitleT").innerHTML =
     document.getElementById("jobTitle").value;
+  document.getElementById("showjobTitleT").innerHTML =
+    document.getElementById("jobTitle").value;
+  
 
   // Objective
   document.getElementById("objectiveT").innerHTML =
+    document.getElementById("ObjectiveField").value;
+  document.getElementById("showObjectiveT").innerHTML =
     document.getElementById("ObjectiveField").value;
 
   //Expertise
@@ -139,6 +163,7 @@ function generateCV() {
     techSkills = techSkills + `<li>${e.value}</li>`;
   }
   document.getElementById("keySkills").innerHTML = techSkills;
+  document.getElementById("showKeySkills").innerHTML = techSkills;
 
   //Language
   let language = document.getElementsByClassName("languageField");
@@ -147,6 +172,7 @@ function generateCV() {
     lang = lang + `<li>${e.value}</li>`;
   }
   document.getElementById("languages").innerHTML = lang;
+  document.getElementById("showLanguages").innerHTML = lang;
 
   // Qe (QUALIFICATION)
   let aqs = document.getElementsByClassName("eqField");
@@ -157,6 +183,8 @@ function generateCV() {
   }
 
   document.getElementById("aqT").innerHTML = str1;
+  document.getElementById("showAqT").innerHTML = str1;
+ 
 
   //Intrest
   let intrest = document.getElementsByClassName("intrestField");
@@ -165,6 +193,7 @@ function generateCV() {
     intrst = intrst + `<li>${e.value}</li>`;
   }
   document.getElementById("intrests").innerHTML = intrst;
+  document.getElementById("showIntrests").innerHTML = intrst;
 
 
     //hobby
@@ -174,19 +203,30 @@ function generateCV() {
         hobby = hobby + `<li>${e.value}</li>`;
     }
     document.getElementById("hobbys").innerHTML = hobby;
+    document.getElementById("showHobbys").innerHTML = hobby;
 
   // Code For Setting Image
   let file = document.getElementById("imgField").files[0];
+  let file2 = document.getElementById("imgField").files[0];
 
   console.log(file);
+  console.log(file2);
 
   let reader = new FileReader();
   reader.readAsDataURL(file);
   console.log(reader.result);
 
+  let reader2 = new FileReader();
+  reader2.readAsDataURL(file2);
+  console.log(reader2.result);
+
   // Set The Image To Template
   reader.onloadend = function () {
     document.getElementById("imgTemplate").src = reader.result;
+  };
+
+  reader2.onloadend = function () {
+    document.getElementById("showImgTemplate2").src = reader.result;
   };
 }
 
