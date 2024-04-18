@@ -243,6 +243,7 @@ function duplicateForm() {
 function showData() {
   const forms = document.querySelectorAll(".form-group:not(#weTemplate)"); // Exclude the template
   const resultSection = document.getElementById("resultSection");
+  const resultSection2 = document.getElementById("showResultSection");
 
   forms.forEach((form, index) => {
     const fromField = form.querySelector(".fromWorkField");
@@ -261,24 +262,30 @@ function showData() {
       const resultDiv = document.createElement("div");
       resultDiv.className = "card mt-4";
       resultDiv.innerHTML = `
-                <div class="card-header">
-                    <h6 id="workExpLabel">${company}</h6>
-                    <div class="dateSection" style="display: flex; gap:5px">
-                        <div><span>${from}</span></div> -
-                        <div><span>${to}</span></div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p style="text-align:justify;">${description}</p>
-                </div>
-            `;
+        <div class="card-header">
+          <h6 id="workExpLabel">${company}</h6>
+          <div class="dateSection" style="display: flex; gap:5px">
+            <div><span>${from}</span></div> -
+            <div><span>${to}</span></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <p style="text-align:justify;">${description}</p>
+        </div>
+      `;
 
+      // Append to first result section
       resultSection.appendChild(resultDiv);
+
+      // Clone the result div and append to the second result section
+      const resultDivClone = resultDiv.cloneNode(true); // true means deep clone, including all child elements
+      resultSection2.appendChild(resultDivClone);
     } else {
       console.error("One or more fields are missing in the form.");
     }
   });
 }
+
 
 // --------------------------------------------------------------------------------------------
 
@@ -286,92 +293,140 @@ function showData() {
 function dark() {
   const dark = document.getElementById("spanCol6").innerHTML;
   document.getElementById("templateColourChange").style.background = dark;
+  document.getElementById("showTemplateColorChange").style.background = dark;
 }
 function LightBlue() {
   const blue = document.getElementById("spanCol5").innerHTML;
   document.getElementById("templateColourChange").style.background = blue;
+  document.getElementById("showTemplateColorChange").style.background = blue;
 }
 function Eucalyptus() {
   const eucalyptus = document.getElementById("spanCol4").innerHTML;
   document.getElementById("templateColourChange").style.background = eucalyptus;
+  document.getElementById("showTemplateColorChange").style.background = eucalyptus;
 }
 function light3() {
   const colo3r = document.getElementById("spanCol3").innerHTML;
   document.getElementById("templateColourChange").style.background = colo3r;
+  document.getElementById("showTemplateColorChange").style.background = colo3r;
 }
 function light2() {
   const color4 = document.getElementById("spanCol2").innerHTML;
   document.getElementById("templateColourChange").style.background = color4;
+  document.getElementById("showTemplateColorChange").style.background = color4;
 }
 function light1() {
   const color5 = document.getElementById("spanCol1").innerHTML;
   document.getElementById("templateColourChange").style.background = color5;
+  document.getElementById("showTemplateColorChange").style.background = color5;
 }
 
 function changeBackgroundColor() {
   let input = document.getElementById("favcolor").value;
   const res = document.getElementById("templateColourChange");
+  const res2 = document.getElementById("showTemplateColorChange");
   res.style.backgroundColor = input;
+  res2.style.backgroundColor = input;
 }
 function resetBackgroundColor() {
   const res = document.getElementById("templateColourChange");
+  const res2 = document.getElementById("showTemplateColorChange");
   res.style.backgroundColor = "#3492E4";
+  res2.style.backgroundColor = "#3492E4";
 
   document.getElementById("templateColourChange").style.color = "#030303";
   document.getElementById("githubT").style.color = "#030303";
   document.getElementById("twitterT").style.color = "#030303";
   document.getElementById("linkedinT").style.color = "#030303";
+
+  
+  document.getElementById("showHobbys").style.color = "black";
+  document.getElementById("showIntrests").style.color = "black";
+  document.getElementById("showLanguages").style.color = "black";
+  document.getElementById("showlinkedChange").style.color = "black";
+  document.getElementById("showTwitterChange").style.color = "black";
+  document.getElementById("hello").style.color = "black";
+  document.getElementById("showContactT").style.color = "black";
+  document.getElementById("showCountryContactT").style.color = "black";
+  document.getElementById("showCountryIconChange").style.color = "black";
+  document.getElementById("showMailChange").style.color = "black";
+  document.getElementById("showNameChange").style.color = "black";
+  document.getElementById("fontColor").style.color = "black";
+  document.getElementById("showTechnicalChange").style.color = "black";
+  document.getElementById("showGitChange").style.color = "black";
+  document.getElementById("showGithubT").style.color = "black";
+  document.getElementById("showTwitterT").style.color = "black";
+  document.getElementById("showLinkedinT").style.color = "black";
+  document.getElementById("showLanguageFontColor").style.color = "black";
+  document.getElementById("showIntrestFontColor").style.color = "black";
+  document.getElementById("showHobbyesFontColor").style.color = "black";
 }
 
 // for template fontC colour
-function fontdark() {
-  const dark = document.getElementById("fontSpanCol6").innerHTML;
-  document.getElementById("templateColourChange").style.color = dark;
-  document.getElementById("githubT").style.color = dark;
-  document.getElementById("twitterT").style.color = dark;
-  document.getElementById("linkedinT").style.color = dark;
-}
-function fontLightBlue() {
-  const blue = document.getElementById("fontSpanCol5").innerHTML;
-  document.getElementById("templateColourChange").style.color = blue;
-  document.getElementById("githubT").style.color = blue;
-  document.getElementById("twitterT").style.color = blue;
-  document.getElementById("linkedinT").style.color = blue;
-}
-function fontEucalyptus() {
-  const eucalyptus = document.getElementById("fontSpanCol4").innerHTML;
-  document.getElementById("templateColourChange").style.color = eucalyptus;
-  document.getElementById("githubT").style.color = eucalyptus;
-  document.getElementById("twitterT").style.color = eucalyptus;
-  document.getElementById("linkedinT").style.color = eucalyptus;
-}
-function fontLight3() {
-  const colo3r = document.getElementById("fontSpanCol3").innerHTML;
-  document.getElementById("templateColourChange").style.color = colo3r;
-  document.getElementById("githubT").style.color = colo3r;
-  document.getElementById("twitterT").style.color = colo3r;
-  document.getElementById("linkedinT").style.color = colo3r;
-}
-function fontLight2() {
-  const color4 = document.getElementById("fontSpanCol2").innerHTML;
-  document.getElementById("templateColourChange").style.color = color4;
-  document.getElementById("githubT").style.color = color4;
-  document.getElementById("twitterT").style.color = color4;
-  document.getElementById("linkedinT").style.color = color4;
-}
 function fontLight1() {
-  const color5 = document.getElementById("fontSpanCol1").innerHTML;
-  document.getElementById("templateColourChange").style.color = color5;
-  document.getElementById("githubT").style.color = color5;
-  document.getElementById("twitterT").style.color = color5;
-  document.getElementById("linkedinT").style.color = color5;
+  document.getElementById("templateColourChange").style.color = "white";
+  document.getElementById("githubT").style.color = "white";
+  document.getElementById("twitterT").style.color = "white";
+  document.getElementById("linkedinT").style.color = "white";
+
+  document.getElementById("showHobbys").style.color = "white";
+  document.getElementById("showIntrests").style.color = "white";
+  document.getElementById("showLanguages").style.color = "white";
+  document.getElementById("showlinkedChange").style.color = "white";
+  document.getElementById("showTwitterChange").style.color = "white";
+  document.getElementById("hello").style.color = "white";
+  document.getElementById("showContactT").style.color = "white";
+  document.getElementById("showCountryContactT").style.color = "white";
+  document.getElementById("showCountryIconChange").style.color = "white";
+  document.getElementById("showMailChange").style.color = "white";
+  document.getElementById("showNameChange").style.color = "white";
+  document.getElementById("fontColor").style.color = "white";
+  document.getElementById("showTechnicalChange").style.color = "white";
+  document.getElementById("showGitChange").style.color = "white";
+  document.getElementById("showGithubT").style.color = "white";
+  document.getElementById("showTwitterT").style.color = "white";
+  document.getElementById("showLinkedinT").style.color = "white";
+  document.getElementById("showLanguageFontColor").style.color = "white";
+  document.getElementById("showIntrestFontColor").style.color = "white";
+  document.getElementById("showHobbyesFontColor").style.color = "white";
 }
+function fontDark() {
+  document.getElementById("templateColourChange").style.color = "black";
+  document.getElementById("githubT").style.color = "black";
+  document.getElementById("twitterT").style.color = "black";
+  document.getElementById("linkedinT").style.color = "black";
+
+  document.getElementById("showHobbys").style.color = "black";
+  document.getElementById("showIntrests").style.color = "black";
+  document.getElementById("showLanguages").style.color = "black";
+  document.getElementById("showlinkedChange").style.color = "black";
+  document.getElementById("showTwitterChange").style.color = "black";
+  document.getElementById("hello").style.color = "black";
+  document.getElementById("showContactT").style.color = "black";
+  document.getElementById("showCountryContactT").style.color = "black";
+  document.getElementById("showCountryIconChange").style.color = "black";
+  document.getElementById("showMailChange").style.color = "black";
+  document.getElementById("showNameChange").style.color = "black";
+  document.getElementById("fontColor").style.color = "black";
+  document.getElementById("showTechnicalChange").style.color = "black";
+  document.getElementById("showGitChange").style.color = "black";
+  document.getElementById("showGithubT").style.color = "black";
+  document.getElementById("showTwitterT").style.color = "black";
+  document.getElementById("showLinkedinT").style.color = "black";
+  document.getElementById("showLanguageFontColor").style.color = "black";
+  document.getElementById("showIntrestFontColor").style.color = "black";
+  document.getElementById("showHobbyesFontColor").style.color = "black";
+  
+}
+
 // --------------------------------------------------------------------------------------------
 
 async function captureDivAndDownloadPdf() {
+  document.getElementById("cv-template").style.display="block";
   const content = document.getElementById("cvTemplate");
   if (!content) {
     console.error("Content element not found");
+    document.getElementById("cv-template").style.display="none";
     return;
   }
 
@@ -441,8 +496,10 @@ async function captureDivAndDownloadPdf() {
 
     // Save the PDF
     pdf.save("cv_template.pdf");
+    document.getElementById("cv-template").style.display="none";
   } catch (error) {
     console.error("Error capturing content or generating PDF:", error);
+    document.getElementById("cv-template").style.display="none";
   }
 }
 
