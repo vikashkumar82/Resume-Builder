@@ -9,21 +9,21 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <script
       src="https://kit.fontawesome.com/8e1d3b8195.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <!-- resources -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
     <title>Resume-Builder</title>
   </head>
@@ -31,11 +31,58 @@
     <div class="container-fluid" id="cv-form">
       <h1 class="text-center">Resume Generator</h1>
       <div class="resumeGenerator-main">
+        
+      <section class="colorSelection-Hero justify-content-center mb-3" style="display: flex;">
+        <div class="colorSelection-Section">
+          <div id="color1" onclick="light1()">
+            <span id="spanCol1" style="visibility: hidden">#b9bdb9</span>
+          </div>
+          <div id="color2" onclick="light2()">
+            <span id="spanCol2" style="visibility: hidden">#FFF8F4</span>
+          </div>
+          <div id="color3" onclick="light3()">
+            <span id="spanCol3" style="visibility: hidden">#D9E6EB</span>
+          </div>
+          <div id="color4" onclick="Eucalyptus()">
+            <span id="spanCol4" style="visibility: hidden">#8B3DFF</span>
+          </div>
+          <div id="color5" onclick="LightBlue()">
+            <span id="spanCol5" style="visibility: hidden">#6B9999</span>
+          </div>
+          <div id="color6" onclick="dark()">
+            <span id="spanCol6" style="visibility: hidden">#414143</span>
+          </div>
+        </div>
+        <div class="multiColour mt-3">
+          <div>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+          </div>
+          <div>
+            <button onclick="changeBackgroundColor()" class="btnApply">
+              Apply
+            </button>
+          </div>
+          <div>
+            <button onclick="resetBackgroundColor()" class="btnRemove">
+              Reset
+            </button>
+          </div>
+        </div>
+
+        <div class="fontSelection-Section" style="display: flex; gap:5px">
+          <div id="Fcolor1" onclick="fontLight1()">
+          </div>
+          <div id="Fcolor2" onclick="fontDark()">
+          </div>
+        </div>
+      </section>
+
         <div class="row">
+          <!-- Resume FORM -->
           <div class="col-md-6">
-            <div class="resumeForm p-3">
+            <div class="resumeForm">
               <!-- PRESONAL INFORMATION -->
-              <div class="presonalInfo">
+              <div class="presonalInfo p-3">
                 <h3>Presonal Information</h3>
                 <div class="row">
                   <!-- image upload -->
@@ -47,7 +94,7 @@
                     <!-- name -->
                     <div class="form-group mt-2">
                       <label for="nameField">Your Name</label>
-                      <input type="text" id="nameField" class="form-control" />
+                      <input type="text" id="nameField" class="form-control" placeholder="ex- John Smith"/>
                     </div>
                     <!-- Contact -->
                     <div class="form-group mt-2">
@@ -57,8 +104,7 @@
                           <select
                             name="countrycode"
                             id="countryCode"
-                            class="form-control"
-                          >
+                            class="form-control">
                             <option data-countryCode="AF" value="+93">
                               +93 - Afghanistan
                             </option>
@@ -362,8 +408,7 @@
                             <option
                               data-countryCode="IN"
                               value="+91"
-                              selected="selected"
-                            >
+                              selected="selected">
                               +91 - India
                             </option>
                             <option data-countryCode="ID" value="+62">
@@ -409,7 +454,8 @@
                               +686 - Kiribati
                             </option>
                             <option data-countryCode="KP" value="+850">
-                              +850 - Korea, Democratic People's Republic of Korea
+                              +850 - Korea, Democratic People's Republic of
+                              Korea
                             </option>
                             <option data-countryCode="KR" value="+82">
                               +82 - Korea, Republic of South Korea
@@ -619,7 +665,8 @@
                               +590 - Saint Barthelemy
                             </option>
                             <option data-countryCode="SH" value="+290">
-                              +290 - Saint Helena, Ascension and Tristan Da Cunha
+                              +290 - Saint Helena, Ascension and Tristan Da
+                              Cunha
                             </option>
                             <option data-countryCode="KN" value="+1869">
                               +1869 - Saint Kitts and Nevis
@@ -682,7 +729,8 @@
                               +211 - South Sudan
                             </option>
                             <option data-countryCode="GS" value="+500">
-                              +500 - South Georgia and the South Sandwich Islands
+                              +500 - South Georgia and the South Sandwich
+                              Islands
                             </option>
                             <option data-countryCode="ES" value="+34">
                               +34 - Spain
@@ -804,7 +852,8 @@
                           </select>
                         </div>
                         <div class="col-md-8">
-                          <input type="text" id="contactField" class="form-control" />
+                          <input type="text" id="contactField"
+                            class="form-control" />
                         </div>
                       </div>
                     </div>
@@ -813,7 +862,7 @@
                     <!-- email -->
                     <div class="form-group mt-2">
                       <label for>Email</label>
-                      <input type="text" id="emailField" class="form-control" />
+                      <input type="text" id="emailField" class="form-control" placeholder="ex- example@yahoo.com" />
                     </div>
                     <!-- Address -->
                     <div class="form-group mt-2">
@@ -821,15 +870,14 @@
                       <textarea
                         id="addressField"
                         class="form-control"
-                        rows="1"
-                      ></textarea>
+                        rows="1" placeholder="ex- berlin , Germany"></textarea>
                     </div>
                   </div>
                 </div>
               </div>
-      
+
               <!-- PROFESSIONAL INFORMATION -->
-              <div class="professionalInfo">
+              <div class="professionalInfo p-3 mt-3">
                 <h3>Professional Information</h3>
                 <!-- Job Title -->
                 <div class="Professional-jobtitle">
@@ -837,23 +885,22 @@
                   <input
                     type="text"
                     id="jobTitle"
-                    placeholder="Enter Job-Title"
-                    class="form-control"
-                  />
+                    placeholder="ex- Human Resource"
+                    class="form-control" />
                 </div>
                 <!-- Objective -->
                 <div class="form-group mt-2">
                   <label for>Objective</label>
                   <textarea
                     class="form-control"
-                    placeholder="Enter here"
+                    placeholder="ex- About us"
                     rows="3"
-                    id="ObjectiveField"
-                  ></textarea>
+                    id="ObjectiveField"></textarea>
                 </div>
-      
+
                 <!-- Work experience -->
-                <div class="form-group mt-2" id="weTemplate" style="display: none">
+                <div class="form-group mt-2" id="weTemplate"
+                  style="display: none">
                   <label>Work Experience</label>
                   <div class="row">
                     <div class="col-md-6">
@@ -862,8 +909,7 @@
                         id
                         rows="1"
                         placeholder="From"
-                        class="form-control fromWorkField"
-                      ></textarea>
+                        class="form-control fromWorkField"></textarea>
                     </div>
                     <div class="col-md-6">
                       <textarea
@@ -871,8 +917,7 @@
                         id
                         rows="1"
                         placeholder="To"
-                        class="form-control toWorkField"
-                      ></textarea>
+                        class="form-control toWorkField"></textarea>
                     </div>
                   </div>
                   <textarea
@@ -880,131 +925,126 @@
                     id="expCompany"
                     rows="1"
                     placeholder="Company name"
-                    class="form-control workExpField mt-2"
-                  ></textarea>
+                    class="form-control workExpField mt-2"></textarea>
                   <textarea
                     class="form-control weField mt-2"
                     placeholder="Description"
-                    rows="2"
-                  ></textarea>
+                    rows="2"></textarea>
                 </div>
-      
+
                 <!-- button showing adding -->
-                <label>Add Work Experience</label><br />
-                <button class="btn btn-primary" onclick="duplicateForm()">
-                  Duplicate Form
+                <h6 style="text-align: center;" class="mt-2">ADD EXPERIENCE</h6>
+                <button class="btn btn-primary btn_addExperience" onclick="duplicateForm()">
+                  ADD EXPERIENCE
                 </button>
-                <button class="btn btn-success mt-2" onclick="showData()">
-                  Show Data
+                <button class="btn btn-success btn_showExperiene mt-2" onclick="showData()">
+                  SHOW EXPERIENCE
                 </button>
                 <div id="formClone"></div>
-      
+
                 <!-- Academic Qualification -->
                 <div class="form-group mt-2" id="eq">
-                  <label for>Academic Qualification</label>
+                  <h6 style="text-align: center;">ACADEMIC QUALIFICATION</h6>
                   <textarea
                     class="form-control eqField"
                     placeholder="Enter here"
-                    rows="1"
-                  ></textarea>
-      
+                    rows="1"></textarea>
+
                   <div class="container text-center mt-2" id="eqAddButton">
-                    <button class="btn btn-primary btn-sm" onclick="addNewEqField()">
+                    <button class="btn btn-primary btn-sm"
+                      onclick="addNewEqField()">
                       Add
                     </button>
                   </div>
                 </div>
-      
+
                 <!-- Technical Skills -->
                 <div class="form-group mt-2" id="techSkills">
-                  <label for>Expertise</label>
+                  <h6 style="text-align: center;">Expertise</h6>
                   <textarea
                     class="form-control TechField"
                     placeholder="Enter here"
-                    rows="1"
-                  ></textarea>
+                    rows="1"></textarea>
                   <div class="container text-center mt-2" id="techAddButton">
                     <button
                       onclick="addNewTechField()"
-                      class="btn btn-primary btn-sm"
-                    >
+                      class="btn btn-primary btn-sm">
                       Add
                     </button>
                   </div>
                 </div>
-      
+
                 <!-- Language -->
                 <div class="form-group mt-2" id="language">
-                  <label for>Language</label>
+                  <h6 style="text-align: center;">LANGUAGES</h6>
                   <textarea
                     class="form-control languageField"
-                    placeholder="Enter here"
-                    rows="1"
-                  ></textarea>
-      
-                  <div class="container text-center mt-2" id="languageAddButton">
+                    placeholder="English/Hindi"
+                    rows="1"></textarea>
+
+                  <div class="container text-center mt-2"
+                    id="languageAddButton">
                     <button
                       onclick="addNewLanguageField()"
-                      class="btn btn-primary btn-sm"
-                    >
+                      class="btn btn-primary btn-sm">
                       Add
                     </button>
                   </div>
                 </div>
               </div>
-              <hr />
-      
+
               <!-- SOCIAL MEDIA LINKS -->
-              <div class="socialMediaLinks">
-                <h3>Important links</h3>
+              <div class="socialMediaLinks p-3 mt-3">
+                <h3 style="text-align: center;">Important Links</h3>
                 <div class="form-group mt-2">
-                  <label for="fbField">GitHub</label>
-                  <input type="text" id="fbField" class="form-control" />
+                  <h6 style="text-align: center;">GITHUB</h6>
+                  <input type="text" id="fbField" class="form-control" placeholder="www.github.in"/>
                 </div>
                 <div class="form-group mt-2">
-                  <label for="twitterField">Twitter</label>
-                  <input type="text" id="twitterField" class="form-control" />
+                  <h6 style="text-align: center;">TWITTER</h6>
+                  <input type="text" id="twitterField" class="form-control" placeholder="www.Twitter.in" />
                 </div>
                 <div class="form-group mt-2">
-                  <label for="linkedinField">LinkedIn</label>
-                  <input type="text" id="linkedinField" class="form-control" />
+                  <h6 style="text-align: center;">LINKEDIN</h6>
+                  <input type="text" id="linkedinField" class="form-control" placeholder="www.LinkedIn.in"/>
                 </div>
               </div>
-      
+              <!-- INTRESTS  -->
+              <div class="show-intrestSection p-3 mt-3">
+                <h3>Interests</h3>
               <!-- intrests -->
-              <div class="intrestForm">
-                <label for>Intrest</label>
+              <div class="intrestForm mt-2">
+                <h6 style="text-align: center;">INTERESTS</h6>
                 <textarea
                   class="form-control intrestField"
                   placeholder="Enter here"
-                  rows="1"
-                ></textarea>
-      
+                  rows="1"></textarea>
+
                 <div class="container text-center mt-2" id="intrestAddButton">
                   <button
                     onclick="addNewIntrestField()"
-                    class="btn btn-primary btn-sm"
-                  >
+                    class="btn btn-primary btn-sm">
                     Add
                   </button>
                 </div>
               </div>
               <!-- Hobbies -->
-              <div class="hobbyForm">
-                <label for>Hobbies</label>
+              <div class="hobbyForm mt-3">
+                <h6 style="text-align: center;">HOBBIES</h6>
                 <textarea
                   class="form-control hobbyField"
-                  placeholder="Enter here"
-                  rows="1"
-                ></textarea>
-      
+                  placeholder="ex - Cooking"
+                  rows="1"></textarea>
+
                 <div class="container text-center mt-2" id="hobbyAddButton">
-                  <button onclick="addNewHobbyField()" class="btn btn-primary btn-sm">
+                  <button onclick="addNewHobbyField()"
+                    class="btn btn-primary btn-sm">
                     Add
                   </button>
                 </div>
               </div>
-      
+            </div>
+
               <!-- Generating CV -->
               <div class="container text-center mt-3">
                 <button onclick="generateCV()" class="btn btn-primary">
@@ -1013,89 +1053,189 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6"></div>
+          <div class="col-md-6">
+            <!-- Display Resume Section -->
+            <div class="displayResumeTemplate">
+              <div class="displayResumeTemplate-main"
+                style="border: 1px solid #add8e6;; background: #add8e6; padding: 19px;" id="displayTemplate">
+                <!-- Heading -->
+                <div class="displayResume-header">
+                  <div class="heading-cv-template mt-3">
+                    <h2 class="text-center" style="font-weight: 800"
+                      id="showNameT2">
+                      Vikash Kumar
+                    </h2>
+                    <p
+                      class="text-center titleJob"
+                      id="showjobTitleT"
+                      style="font-size: 20px; color: #666666">
+                      Software Engineer
+                    </p>
+                  </div>
+                  <!-- profile pic -->
+                  <div class="showImageSection">
+                    <img
+                      src="./images/altImage.png"
+                      class="img-fluid showMyImage"
+                      id="showImgTemplate2" />
+                  </div>
+                </div>
+              </div>
+             <div class="showResume-contentSection">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="showresume-asideBarSection p-3" style="width: 245px;margin-left: 8px;">
+                    <!-- Details -->
+                    <div class="template2-details">
+                      <h5 id="fontClrContact">My Contact</h5>
+                      <div class="template-about mt-3">
+                        <p class="fontColorChange">
+                          <i class="fa-solid fa-user"></i>&nbsp;<span
+                            id="shownameT1">vikash kumar</span>
+                        </p>
+                        <p class="fontColorChange">
+                          <i class="fa-solid fa-envelope"></i>&nbsp;<span
+                            id="showEmailT">avikashkumar82@gmail.com</span>
+                        </p>
+                        <div style="display: flex">
+                          <i
+                            class="fa-solid fa-phone"
+                            class="fontColorChange"></i>&nbsp;
+                          <div>
+                            <span id="showCountryContactT"
+                              class="fontColorChange" style="font-size: small;">+91</span>
+                          </div>
+                          -
+                          <div>
+                            <span id="showContactT"
+                              class="fontColorChange" style="font-size: small;">9430722766</span>
+                          </div>
+                        </div>
+                        <br />
+                        <p id="hello" class="fontColorChange">
+                          <i class="fa-solid fa-location-dot"></i>&nbsp;<span
+                            id="showAddressT">Bokaro steel city</span>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Technical Skills -->
+                  <div class="fluid mt-2">
+                    <h5 id="fontColor" class="fontColorChange">Expertise</h5>
+                    <ul id="showKeySkills" class="fontColorChange">
+                      <li id="fontColor"></li>
+                    </ul>
+                  </div>
+                  <hr />
+                  <!-- important links -->
+                  <div class="impLinks">
+                    <p class="fontColorChange">
+                      <span style="font-weight: 600">GIT-HUB</span>&nbsp;
+                      <i class="fa-brands fa-github"></i>&nbsp;
+                      <a href="#1" id="showGithubT"
+                        class="fontColorChange">https://www.youtube.com/</a>
+                    </p>
+                    <p class="fontColorChange">
+                      <span style="font-weight: 600">TWITTER</span>&nbsp;
+                      <i
+                        class="fa-brands fa-x-twitter fontColorChange"></i>&nbsp;
+                      <a href="#1" id="showTwitterT"
+                        class="fontColorChange">https://www.youtube.com/</a>
+                    </p>
+                    <p class="fontColorChange">
+                      <span style="font-weight: 600">LINKEDIN</span>&nbsp;
+                      <i
+                        class="fa-brands fa-linkedin fontColorChange"></i>&nbsp;
+                      <a href="#1" id="showLinkedinT"
+                        class="fontColorChange">https://www.youtube.com/</a>
+                    </p>
+                  </div>
+                  <hr />
+                  <!-- Language section -->
+                  <div class="fluid">
+                    <h5 id="fontColor" class="fontColorChange">Language</h5>
+                    <ul id="showLanguages">
+                      <li id="fontColor" class="fontColorChange"></li>
+                    </ul>
+                  </div>
+                  <!-- INtrests -->
+                  <div class="fluid">
+                    <h5 id="fontColor" class="fontColorChange">Interest</h5>
+                    <ul id="showIntrests">
+                      <li id="fontColor" class="fontColorChange"></li>
+                    </ul>
+                  </div>
+                  <!-- Hobbu -->
+                  <div class="fluid">
+                    <h5 id="fontColor" class="fontColorChange">Hobbies</h5>
+                    <ul id="showHobbys">
+                      <li id="fontColor" class="fontColorChange"></li>
+                    </ul>
+                  </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="showResume-rightSideMainSection">
+                    <!-- objective -->
+                <div class="card mt-4">
+                  <div class="card-header">
+                    <h5>Objective</h5>
+                  </div>
+                  <div class="card-body p-2">
+                    <p id="showObjectiveT">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Quia esse, tempore, placeat consequatur voluptatum,
+                      repellendus tenetur excepturi doloremque aliquid
+                      temporibus odit! Possimus qui ad repudiandae atque
+                      tempore, incidunt quo et. Distinctio recusandae dolores
+                      adipisci maiores dolore.
+                    </p>
+                  </div>
+                </div>
+                  <!-- work Experience -->
+                <h5 class="experienceH5 px-2 mt-3">Professional Experience</h5>
+                <div id="showResultSection"></div>
+                <!-- Academic Qualification -->
+                <div class="card mt-4">
+                  <div class="card-header">
+                    <h5>Academic Qualification</h5>
+                  </div>
+                  <div class="card-body p-2">
+                    <ul id="showAqT">
+                      <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Provident, neque.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                  </div>
+                </div>
+              </div>
+             </div>
+            </div>
+            <!-- content Center -->
+          </div>
         </div>
       </div>
-      <!-- Resume FORM -->
-     
 
-      <section class="colorSelection-Hero mt-3">
-        <div class="colorSelection-Section">
-          <div id="color1" onclick="light1()">
-            <span id="spanCol1" style="visibility: hidden">#b9bdb9</span>
-          </div>
-          <div id="color2" onclick="light2()">
-            <span id="spanCol2" style="visibility: hidden">#FFF8F4</span>
-          </div>
-          <div id="color3" onclick="light3()">
-            <span id="spanCol3" style="visibility: hidden">#D9E6EB</span>
-          </div>
-          <div id="color4" onclick="Eucalyptus()">
-            <span id="spanCol4" style="visibility: hidden">#8B3DFF</span>
-          </div>
-          <div id="color5" onclick="LightBlue()">
-            <span id="spanCol5" style="visibility: hidden">#6B9999</span>
-          </div>
-          <div id="color6" onclick="dark()">
-            <span id="spanCol6" style="visibility: hidden">#414143</span>
-          </div>
-        </div>
-        <div class="multiColour mt-3">
-          <div>
-            <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
-          </div>
-          <div>
-            <button onclick="changeBackgroundColor()" class="btnApply">
-              Apply
-            </button>
-          </div>
-          <div>
-            <button onclick="resetBackgroundColor()" class="btnRemove">
-              Reset
-            </button>
-          </div>
-        </div>
 
-        <div class="colorSelection-Section">
-          <div id="Fcolor1" onclick="fontLight1()">
-            <span id="fontSpanCol1" style="visibility: hidden">#b9bdb9</span>
-          </div>
-          <div id="Fcolor2" onclick="fontLight2()">
-            <span id="fontSpanCol2" style="visibility: hidden">#FFF8F4</span>
-          </div>
-          <div id="Fcolor3" onclick="fontLight3()">
-            <span id="fontSpanCol3" style="visibility: hidden">#D9E6EB</span>
-          </div>
-          <div id="Fcolor4" onclick="fontEucalyptus()">
-            <span id="fontSpanCol4" style="visibility: hidden">#8B3DFF</span>
-          </div>
-          <div id="Fcolor5" onclick="fontLightBlue()">
-            <span id="fontSpanCol5" style="visibility: hidden">#6B9999</span>
-          </div>
-          <div id="Fcolor6" onclick="fontdark()">
-            <span id="fontSpanCol6" style="visibility: hidden">#414143</span>
-          </div>
-        </div>
-      </section>
-   
       <!-- Resume CV Template -->
       <section>
-        <div class="container template2-cv mt-5" id="cv-template">
+        <div class="container template2-cv mt-5" id="cv-template" >
           <div class="template2-hero" id="cvTemplate">
             <div class="row">
               <div class="col-md-4 p-0">
                 <div class="leftSection-details">
                   <div
                     class="leftSection-heading"
-                    id="leftheadingdiv"
-                  >
+                    id="leftheadingdiv">
                     <!-- image -->
                     <div class="template-img text-center">
                       <img
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/768px-Windows_10_Default_Profile_Picture.svg.png?20221210150350"
                         class="img-fluid myimg"
-                        id="imgTemplate2"
-                      /> 
+                        id="imgTemplate2" />
                     </div>
                   </div>
                   <div class="asideBar-section">
@@ -1105,40 +1245,30 @@
                       <div class="template-about mt-3">
                         <p class="fontColorChange">
                           <i class="fa-regular fa-user"></i>&nbsp;<span
-                            id="nameT1"
-                            >vikash kumar</span
-                          >
+                            id="nameT1">vikash kumar</span>
                         </p>
                         <p class="fontColorChange">
                           <i class="fa-regular fa-envelope"></i>&nbsp;<span
-                            id="emailT"
-                            >avikashkumar82@gmail.com</span
-                          >
+                            id="emailT">avikashkumar82@gmail.com</span>
                         </p>
                         <div style="display: flex">
                           <i
                             class="fa-solid fa-phone"
-                            class="fontColorChange"
-                          ></i
-                          >&nbsp;
+                            class="fontColorChange"></i>&nbsp;
                           <div>
-                            <span id="countryContactT" class="fontColorChange"
-                              >+91</span
-                            >
+                            <span id="countryContactT"
+                              class="fontColorChange">+91</span>
                           </div>
                           -
                           <div>
-                            <span id="contactT" class="fontColorChange"
-                              >9430722766</span
-                            >
+                            <span id="contactT"
+                              class="fontColorChange">9430722766</span>
                           </div>
                         </div>
                         <br />
                         <p id="hello" class="fontColorChange">
                           <i class="fa-solid fa-location-dot"></i>&nbsp;<span
-                            id="addressT"
-                            >Bokaro steel city</span
-                          >
+                            id="addressT">Bokaro steel city</span>
                         </p>
                       </div>
                     </div>
@@ -1157,25 +1287,22 @@
                       <p class="fontColorChange">
                         <span style="font-weight: 600">GIT-HUB</span>&nbsp;
                         <i class="fa-brands fa-github"></i>&nbsp;
-                        <a href="#1" id="githubT" class="fontColorChange"
-                          >https://www.youtube.com/</a
-                        >
+                        <a href="#1" id="githubT"
+                          class="fontColorChange">https://www.youtube.com/</a>
                       </p>
                       <p class="fontColorChange">
                         <span style="font-weight: 600">TWITTER</span>&nbsp;
-                        <i class="fa-brands fa-x-twitter fontColorChange"></i
-                        >&nbsp;
-                        <a href="#1" id="twitterT" class="fontColorChange"
-                          >https://www.youtube.com/</a
-                        >
+                        <i
+                          class="fa-brands fa-x-twitter fontColorChange"></i>&nbsp;
+                        <a href="#1" id="twitterT"
+                          class="fontColorChange">https://www.youtube.com/</a>
                       </p>
                       <p class="fontColorChange">
                         <span style="font-weight: 600">LINKEDIN</span>&nbsp;
-                        <i class="fa-brands fa-linkedin fontColorChange"></i
-                        >&nbsp;
-                        <a href="#1" id="linkedinT" class="fontColorChange"
-                          >https://www.youtube.com/</a
-                        >
+                        <i
+                          class="fa-brands fa-linkedin fontColorChange"></i>&nbsp;
+                        <a href="#1" id="linkedinT"
+                          class="fontColorChange">https://www.youtube.com/</a>
                       </p>
                     </div>
 
@@ -1188,7 +1315,8 @@
                     </div>
                     <!-- intrests -->
                     <div class="template2-intrests px-5 mt-4">
-                      <h5 id="fontClrIntrst" class="fontColorChange">Intrest</h5>
+                      <h5 id="fontClrIntrst"
+                        class="fontColorChange">Intrest</h5>
                       <ul id="intrests">
                         <li id="fontColor" class="fontColorChange"></li>
                       </ul>
@@ -1208,14 +1336,12 @@
                   <!-- name title heading -->
                   <div
                     class="template2-heading"
-                    id="rightHeadingDiv"
-                  >
-                    <h1 style="font-weight: 700" id="nameT2">Vikash Kumar</h1>
+                    id="rightHeadingDiv">
+                    <h2 style="font-weight: 700" id="nameT2">Vikash Kumar</h2>
                     <p
                       class="titleJob"
                       id="jobTitleT"
-                      style="font-size: 25px; color: #666666"
-                    >
+                      style="font-size: 25px; color: #666666">
                       Software Engineer
                     </p>
                   </div>
@@ -1258,8 +1384,7 @@
       <button
         id="downloadButton"
         onclick="captureDivAndDownloadPdf()"
-        class="btn background"
-      >
+        class="btn background">
         Print CV
       </button>
     </div>
@@ -1268,7 +1393,6 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </body>
 </html>

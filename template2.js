@@ -101,9 +101,14 @@ function addNewWeField() {
     let nameT1 = document.getElementById("nameT1");
     nameT1.innerHTML = nameField;
     document.getElementById("nameT2").innerHTML = nameField;
+    document.getElementById("shownameT1").innerHTML = nameField;
+    document.getElementById("showNameT2").innerHTML = nameField;
+
   
     // Email
     document.getElementById("emailT").innerHTML =
+      document.getElementById("emailField").value;
+    document.getElementById("showEmailT").innerHTML =
       document.getElementById("emailField").value;
   
     // contact
@@ -111,9 +116,15 @@ function addNewWeField() {
       document.getElementById("countryCode").value;
     document.getElementById("contactT").innerHTML =
       document.getElementById("contactField").value;
+    document.getElementById("showCountryContactT").innerHTML =
+      document.getElementById("countryCode").value;
+    document.getElementById("showContactT").innerHTML =
+      document.getElementById("contactField").value;
   
     // Address
     document.getElementById("addressT").innerHTML =
+      document.getElementById("addressField").value;
+    document.getElementById("showAddressT").innerHTML =
       document.getElementById("addressField").value;
   
     //  Social media Links
@@ -123,13 +134,24 @@ function addNewWeField() {
       document.getElementById("twitterField").value;
     document.getElementById("linkedinT").innerHTML =
       document.getElementById("linkedinField").value;
+
+    document.getElementById("showGithubT").innerHTML =
+      document.getElementById("fbField").value;
+    document.getElementById("showTwitterT").innerHTML =
+      document.getElementById("twitterField").value;
+    document.getElementById("showLinkedinT").innerHTML =
+      document.getElementById("linkedinField").value;
   
     //  Job Title
     document.getElementById("jobTitleT").innerHTML =
       document.getElementById("jobTitle").value;
+    document.getElementById("showjobTitleT").innerHTML =
+      document.getElementById("jobTitle").value;
   
     // Objective
     document.getElementById("objectiveT").innerHTML =
+      document.getElementById("ObjectiveField").value;
+    document.getElementById("showObjectiveT").innerHTML =
       document.getElementById("ObjectiveField").value;
   
     //Expertise
@@ -139,6 +161,7 @@ function addNewWeField() {
       techSkills = techSkills + `<li>${e.value}</li>`;
     }
     document.getElementById("keySkills").innerHTML = techSkills;
+    document.getElementById("showKeySkills").innerHTML = techSkills;
   
     //Language
     let language = document.getElementsByClassName("languageField");
@@ -147,6 +170,7 @@ function addNewWeField() {
       lang = lang + `<li>${e.value}</li>`;
     }
     document.getElementById("languages").innerHTML = lang;
+    document.getElementById("showLanguages").innerHTML = lang;
   
     // Qe (QUALIFICATION)
     let aqs = document.getElementsByClassName("eqField");
@@ -155,8 +179,8 @@ function addNewWeField() {
     for (let e of aqs) {
       str1 = str1 + `<li>${e.value}</li>`;
     }
-  
     document.getElementById("aqT").innerHTML = str1;
+    document.getElementById("showAqT").innerHTML = str1;
   
     //Intrest
     let intrest = document.getElementsByClassName("intrestField");
@@ -165,6 +189,7 @@ function addNewWeField() {
       intrst = intrst + `<li>${e.value}</li>`;
     }
     document.getElementById("intrests").innerHTML = intrst;
+    document.getElementById("showIntrests").innerHTML = intrst;
   
   
       //hobby
@@ -174,19 +199,30 @@ function addNewWeField() {
           hobby = hobby + `<li>${e.value}</li>`;
       }
       document.getElementById("hobbys").innerHTML = hobby;
+      document.getElementById("showHobbys").innerHTML = hobby;
   
     // Code For Setting Image
     let file = document.getElementById("imgField").files[0];
+    let file2 = document.getElementById("imgField").files[0];
   
     console.log(file);
+    console.log(file2);
   
     let reader = new FileReader();
     reader.readAsDataURL(file);
     console.log(reader.result);
+
+    let reader2 = new FileReader();
+    reader2.readAsDataURL(file2);
+    console.log(reader2.result);
   
     // Set The Image To Template
     reader.onloadend = function () {
       document.getElementById("imgTemplate2").src = reader.result;
+    };
+    // Set The Image To Template
+    reader2.onloadend = function () {
+      document.getElementById("showImgTemplate2").src = reader2.result;
     };
 
    
@@ -205,42 +241,47 @@ function addNewWeField() {
   function showData() {
     const forms = document.querySelectorAll(".form-group:not(#weTemplate)"); // Exclude the template
     const resultSection = document.getElementById("resultSection");
-  
+    const resultSection2 = document.getElementById("showResultSection");
+
     forms.forEach((form, index) => {
-      const fromField = form.querySelector(".fromWorkField");
-      const toField = form.querySelector(".toWorkField");
-      const companyField = form.querySelector(".workExpField");
-      const descriptionField = form.querySelector(".weField");
-  
-      // Check if all required fields exist
-      if (fromField && toField && companyField && descriptionField) {
-        const from = fromField.value;
-        const to = toField.value;
-        const company = companyField.value;
-        const description = descriptionField.value;
-  
-        // Create result structure
-        const resultDiv = document.createElement("div");
-        resultDiv.className = "card mt-4";
-        resultDiv.innerHTML = `
-                  <div class="card-header">
-                      <h6 id="workExpLabel">${company}</h6>
-                      <div class="dateSection" style="display: flex; gap:5px">
-                          <div><span>${from}</span></div> -
-                          <div><span>${to}</span></div>
-                      </div>
-                  </div>
-                  <div class="card-body">
-                      <p style="text-align:justify;">${description}</p>
-                  </div>
-              `;
-  
-        resultSection.appendChild(resultDiv);
-      } else {
-        console.error("One or more fields are missing in the form.");
-      }
+        const fromField = form.querySelector(".fromWorkField");
+        const toField = form.querySelector(".toWorkField");
+        const companyField = form.querySelector(".workExpField");
+        const descriptionField = form.querySelector(".weField");
+
+        // Check if all required fields exist
+        if (fromField && toField && companyField && descriptionField) {
+            const from = fromField.value;
+            const to = toField.value;
+            const company = companyField.value;
+            const description = descriptionField.value;
+
+            // Create result structure for resultSection
+            const resultDiv = document.createElement("div");
+            resultDiv.className = "card mt-4";
+            resultDiv.innerHTML = `
+                <div class="card-header">
+                    <h6 id="workExpLabel">${company}</h6>
+                    <div class="dateSection" style="display: flex; gap:5px">
+                        <div><span>${from}</span></div> -
+                        <div><span>${to}</span></div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p style="text-align:justify;">${description}</p>
+                </div>
+            `;
+            resultSection.appendChild(resultDiv);
+
+            // Create result structure for resultSection2
+            const resultDiv2 = resultDiv.cloneNode(true); // Clone the resultDiv
+            resultSection2.appendChild(resultDiv2);
+        } else {
+            console.error("One or more fields are missing in the form.");
+        }
     });
-  }
+}
+
   
   // --------------------------------------------------------------------------------------------
   
@@ -361,29 +402,19 @@ function addNewWeField() {
   }
   
   // for template fontC colour
-  function fontdark() {
-    const dark = document.getElementById("fontSpanCol6").innerHTML;
-    document.getElementById("nameT2").style.color= dark;
-  }
-  function fontLightBlue() {
-    const blue = document.getElementById("fontSpanCol5").innerHTML;
-    document.getElementById("nameT2").style.color= blue;
-  }
-  function fontEucalyptus() {
-    const eucalyptus = document.getElementById("fontSpanCol4").innerHTML;
-    document.getElementById("nameT2").style.color= eucalyptus;
-  }
-  function fontLight3() {
-    const colo3r = document.getElementById("fontSpanCol3").innerHTML;
-    document.getElementById("nameT2").style.color= colo3r;
-  }
-  function fontLight2() {
-    const color4 = document.getElementById("fontSpanCol2").innerHTML;
-    document.getElementById("nameT2").style.color= color4;
+  function fontDark() {
+    
+    document.getElementById("nameT2").style.color= "black";
+    document.getElementById("jobTitleT").style.color= "black";
+    document.getElementById("showjobTitleT").style.color= "black";
+    document.getElementById("showNameT2").style.color= "black";
   }
   function fontLight1() {
-    const color5 = document.getElementById("fontSpanCol1").innerHTML;
-    document.getElementById("nameT2").style.color= color5;
+    
+    document.getElementById("nameT2").style.color= "white";
+    document.getElementById("jobTitleT").style.color= "white";
+    document.getElementById("showjobTitleT").style.color= "white";
+    document.getElementById("showNameT2").style.color= "white";
   }
   // --------------------------------------------------------------------------------------------
   

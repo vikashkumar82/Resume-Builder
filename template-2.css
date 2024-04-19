@@ -61,126 +61,87 @@ p#objectiveT {
 
 #color1{
 
-        background: #b9bdb9;
-        border: 1px solid #b9bdb9;
-        border-radius: 59%;
-        padding: 17px;
-        height:30px;
-        width:30px;
+    background: #b9bdb9;
+    border: 1px solid #b9bdb9;
+    border-radius: 59%;
+    padding: 9px;
+    height: 25px;
+    width: 26px;
 }
 
 #color2 {
- 
-        background: #FFF8F4;
-        border: 1px solid #FFF8F4;
-        border-radius: 59%;
-        padding: 17px;
-        height:30px;
-        width:30px;
+
+    background: #FFF8F4;
+    border: 1px solid #FFF8F4;
+    border-radius: 59%;
+    padding: 9px;
+    height: 25px;
+    width: 26px;
 }
 
 #color3 {
-  
-        background: #D9E6EB;
-        border: 1px solid #D9E6EB;
-        border-radius: 59%;
-        padding: 17px;
-        height:30px;
-        width:30px;
+
+    background: #D9E6EB;
+    border: 1px solid #D9E6EB;
+    border-radius: 59%;
+    padding: 9px;
+    height: 25px;
+    width: 26px;
 }
 
 #color4{
-  
-        background: #8B3DFF;
-        border: 1px solid #8B3DFF;
-        border-radius: 59%;
-        padding: 17px;
-        height:30px;
-        width:30px;
-    
+
+    background: #8B3DFF;
+    border: 1px solid #8B3DFF;
+    border-radius: 59%;
+    padding: 9px;
+    height: 25px;
+    width: 26px;
+
 }
 
 #color5{
-    background: #6B9999;
-    border: 1px solid #6B9999;
-    border-radius: 59%;
-    padding: 17px;
-    height:30px;
-    width:30px;
+background: #6B9999;
+border: 1px solid #6B9999;
+border-radius: 59%;
+padding: 9px;
+height: 25px;
+width: 26px;
 }
 
 #color6{
-    background: #414143;
-    border: 1px solid #414143;
-    border-radius: 59%;
-    padding: 17px;
-    height:30px;
-    width:30px;
+background: #414143;
+border: 1px solid #414143;
+border-radius: 59%;
+padding: 9px;
+height: 25px;
+width: 26px;
 }
 
 /* for font */
 #Fcolor1{
 
-    background: #b9bdb9;
+    background: white;
     border: 1px solid #b9bdb9;
     border-radius: 59%;
-    padding: 17px;
-    height:30px;
-    width:30px;
+    padding: 9px;
+    height: 25px;
+    width: 26px;
 }
 
 #Fcolor2 {
 
-    background: #FFF8F4;
-    border: 1px solid #FFF8F4;
+    background: #0B0B0D;
     border-radius: 59%;
-    padding: 17px;
-    height:30px;
-    width:30px;
+    padding: 9px;
+    height: 25px;
+    width: 26px;
 }
 
-#Fcolor3 {
-
-    background: #D9E6EB;
-    border: 1px solid #D9E6EB;
-    border-radius: 59%;
-    padding: 17px;
-    height:30px;
-    width:30px;
-}
-
-#Fcolor4{
-
-    background: #8B3DFF;
-    border: 1px solid #8B3DFF;
-    border-radius: 59%;
-    padding: 17px;
-    height:30px;
-    width:30px;
-
-}
-
-#Fcolor5{
-background: #6B9999;
-border: 1px solid #6B9999;
-border-radius: 59%;
-padding: 17px;
-height:30px;
-width:30px;
-}
-
-#Fcolor6{
-background: #414143;
-border: 1px solid #414143;
-border-radius: 59%;
-padding: 17px;
-height:30px;
-width:30px;
-}
 
 .colorSelection-Section {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 /* colorpicker */
 body {
@@ -208,6 +169,13 @@ body {
 .multiColour.mt-3 {
     display: flex;
     gap: 5px;
+    align-items: center;
+    border: 1px solid #999595;
+    margin-top: -15px !important;
+    padding: 7px 9px 4px 9px;
+    align-items: center;
+    border-left: none;
+    border-right: none;
 }
 
 button.btnRemove {
@@ -278,11 +246,157 @@ h1#nameT2 {
 }
 span#emailT {
     position: absolute;
+    line-break: anywhere;
 }
 /* Template 2 ends */
 
-.resumeForm {
-    border: 1px solid gray;
-    /* padding: 5px; */
+
+img#showImgTemplate2 {
+    width: 16%;
+    height: 117px !important;
+    background: #c9c5c5;
+    border-radius: 50%;
+    position: absolute;
+    top: 23px;
+    left: 70px;
 }
+
+.resumeGenerator-main {
+    border: 1px solid grey;
+    padding: 14px;
+    position: relative;
+}
+.showresume-asideBarSection {
+    margin-top: 42px;
+}
+
+.displayResumeTemplate {
+    border: 1px solid gray;
+}
+
+.showresume-asideBarSection p {
+    font-size: small;
+}
+
+.displayResumeTemplate {
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+    position: sticky;
+    top: 10px;
+}
+.displayResumeTemplate-main {
+    border-radius: 7px;
+}
+
+.presonalInfo {
+    border: 1px solid #999595;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+}
+
+.presonalInfo h3{
+    text-align: center;
+}
+.professionalInfo {
+    border: 1px solid #999595;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+}
+.professionalInfo h3{
+    text-align: center;
+}
+
+.socialMediaLinks {
+    border: 1px solid #999595;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+}
+.socialMediaLinks h3 {
+text-align: center;
+}
+
+.show-intrestSection{
+    border: 1px solid #999595;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+}
+
+.show-intrestSection{
+    text-align: center;
+}
+
+p#showObjectiveT {
+    font-size: 14px;
+    text-align: justify;
+}
+
+ul#showAqT {
+    font-size: 14px;
+    text-align: justify;
+}
+
+h2#nameT2 {
+    font-size: xxx-large;
+}
+
+.btn_showExperiene {
+    width: 300px;
+}
+
+.btn_addExperience {
+    width: 300px;
+}
+
+.btn-sm {
+    width: 245px;
+    padding: 8px;
+}
+
+.colorSelection-Section {
+    border: 1px solid #999595;
+    padding: 0px 13px 0px 13px;
+    border-radius: 0px 0px 0px 26px;
+    margin-top: -15px;
+    align-items: center;
+}
+
+.fontSelection-Section {
+    border: 1px solid #999595;
+    padding: 0px 13px 0px 13px;
+    border-radius: 0px 0px 26px 0px;
+    margin-top: -15px;
+    align-items: center;
+}
+
+.showResume-rightSideMainSection {
+    padding: 0 18px 0 0;
+    margin-left: -11px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
