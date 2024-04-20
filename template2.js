@@ -288,87 +288,166 @@ function addNewWeField() {
   // for template color
   function dark() {
     const dark = document.getElementById("spanCol6").innerHTML;
-    document.getElementById("leftheadingdiv").style.background = dark;
-    document.getElementById("rightHeadingDiv").style.background = dark;
-    document.getElementById("fontClrHobby").style.color = dark;
-    document.getElementById("fontClrLang").style.color = dark;
-    document.getElementById("fontClrIntrst").style.color = dark;
-    document.getElementById("fontClrLinks").style.color = dark;
-    document.getElementById("fontClrSkills").style.color = dark;
-    document.getElementById("fontClrContact").style.color = dark;
-    document.getElementById("fontClrEdu").style.color = dark;
-    document.getElementById("fontClrExp").style.color = dark;
-    document.getElementById("fontClrObjective").style.color = dark;
+    document.getElementById("fontClrContact").style.color=dark;
+    document.getElementById("fontColorExpertise").style.color=dark;
+    document.getElementById("fontColorLanguage").style.color=dark;
+    document.getElementById("fontColorIntrests").style.color=dark;
+    document.getElementById("fontColorHobbies").style.color=dark;
+    document.getElementById("fontClrObjective").style.color=dark;
+    document.getElementById("fontcolorExperience").style.color=dark;
+    document.getElementById("fontClrEdu").style.color=dark;
+    document.getElementById("fontColorImpLinks").style.color=dark;
+   //  main
+    document.getElementById("fontClrContactMain").style.color=dark;
+    document.getElementById("fontClrSkillsMain").style.color=dark;
+    document.getElementById("fontClrLinksMain").style.color=dark;
+    document.getElementById("fontClrHobbyMain").style.color=dark;
+    document.getElementById("fontClrIntrstMain").style.color=dark;
+    document.getElementById("fontClrLangMain").style.color=dark;
+    document.getElementById("fontClrObjectiveMain").style.color=dark;
+    document.getElementById("fontClrEduMain").style.color=dark;
+    document.getElementById("fontClrExpMain").style.color=dark;
+    document.getElementById("fontClrExpMain").style.color=dark;
+
+    document.getElementById("displayTemplate").style.background=dark;
+    document.getElementById("rightHeadingDiv").style.background=dark;
+    document.getElementById("leftheadingdiv").style.background=dark;
+   
   }
   function LightBlue() {
     const blue = document.getElementById("spanCol5").innerHTML;
-    document.getElementById("leftheadingdiv").style.background = blue;
-    document.getElementById("rightHeadingDiv").style.background = blue;
-    document.getElementById("fontClrHobby").style.color = blue;
-    document.getElementById("fontClrLang").style.color = blue;
-    document.getElementById("fontClrIntrst").style.color = blue;
-    document.getElementById("fontClrLinks").style.color = blue;
-    document.getElementById("fontClrSkills").style.color = blue;
-    document.getElementById("fontClrContact").style.color = blue;
-    document.getElementById("fontClrEdu").style.color = blue;
-    document.getElementById("fontClrExp").style.color = blue;
-    document.getElementById("fontClrObjective").style.color = blue;
+   document.getElementById("fontClrContact").style.color=blue;
+   document.getElementById("fontColorExpertise").style.color=blue;
+   document.getElementById("fontColorLanguage").style.color=blue;
+   document.getElementById("fontColorIntrests").style.color=blue;
+   document.getElementById("fontColorHobbies").style.color=blue;
+   document.getElementById("fontClrObjective").style.color=blue;
+   document.getElementById("fontcolorExperience").style.color=blue;
+   document.getElementById("fontClrEdu").style.color=blue;
+   document.getElementById("fontColorImpLinks").style.color=blue;
+  //  main
+   document.getElementById("fontClrContactMain").style.color=blue;
+   document.getElementById("fontClrSkillsMain").style.color=blue;
+   document.getElementById("fontClrLinksMain").style.color=blue;
+   document.getElementById("fontClrHobbyMain").style.color=blue;
+   document.getElementById("fontClrIntrstMain").style.color=blue;
+   document.getElementById("fontClrLangMain").style.color=blue;
+   document.getElementById("fontClrObjectiveMain").style.color=blue;
+   document.getElementById("fontClrEduMain").style.color=blue;
+   document.getElementById("fontClrExpMain").style.color=blue;
+   document.getElementById("fontClrExpMain").style.color=blue;
+
+   document.getElementById("displayTemplate").style.background=blue;
+    document.getElementById("rightHeadingDiv").style.background=blue;
+    document.getElementById("leftheadingdiv").style.background=blue;
   }
   function Eucalyptus() {
-    const eucalyptus = document.getElementById("spanCol4").innerHTML;
-    document.getElementById("leftheadingdiv").style.background  = eucalyptus;
-    document.getElementById("rightHeadingDiv").style.background = eucalyptus;
-    document.getElementById("fontClrHobby").style.color = eucalyptus;
-    document.getElementById("fontClrLang").style.color = eucalyptus;
-    document.getElementById("fontClrIntrst").style.color = eucalyptus;
-    document.getElementById("fontClrLinks").style.color = eucalyptus;
-    document.getElementById("fontClrSkills").style.color = eucalyptus;
-    document.getElementById("fontClrContact").style.color = eucalyptus;
-    document.getElementById("fontClrEdu").style.color = eucalyptus;
-    document.getElementById("fontClrExp").style.color = eucalyptus;
-    document.getElementById("fontClrObjective").style.color = eucalyptus;
+    
+    document.getElementById("fontClrContact").style.color="#8B3DFF";
+    document.getElementById("fontColorExpertise").style.color="#8B3DFF";
+    document.getElementById("fontColorLanguage").style.color="#8B3DFF";
+    document.getElementById("fontColorIntrests").style.color="#8B3DFF";
+    document.getElementById("fontColorHobbies").style.color="#8B3DFF";
+    document.getElementById("fontClrObjective").style.color="#8B3DFF";
+    document.getElementById("fontcolorExperience").style.color="#8B3DFF";
+    document.getElementById("fontClrEdu").style.color="#8B3DFF";
+    document.getElementById("fontColorImpLinks").style.color="#8B3DFF";
+   //  main
+    document.getElementById("fontClrContactMain").style.color="#8B3DFF";
+    document.getElementById("fontClrSkillsMain").style.color="#8B3DFF";
+    document.getElementById("fontClrLinksMain").style.color="#8B3DFF";
+    document.getElementById("fontClrHobbyMain").style.color="#8B3DFF";
+    document.getElementById("fontClrIntrstMain").style.color="#8B3DFF";
+    document.getElementById("fontClrLangMain").style.color="#8B3DFF";
+    document.getElementById("fontClrObjectiveMain").style.color="#8B3DFF";
+    document.getElementById("fontClrEduMain").style.color="#8B3DFF";
+    document.getElementById("fontClrExpMain").style.color="#8B3DFF";
+    document.getElementById("fontClrExpMain").style.color="#8B3DFF";
+
+    document.getElementById("displayTemplate").style.background="#8B3DFF";
+    document.getElementById("rightHeadingDiv").style.background="#8B3DFF";
+    document.getElementById("leftheadingdiv").style.background="#8B3DFF";
+    
   }
   function light3() {
     const colo3r = document.getElementById("spanCol3").innerHTML;
-    document.getElementById("leftheadingdiv").style.background = colo3r;
-    document.getElementById("rightHeadingDiv").style.background= colo3r;
-    document.getElementById("fontClrHobby").style.color = colo3r;
-    document.getElementById("fontClrLang").style.color = colo3r;
-    document.getElementById("fontClrIntrst").style.color = colo3r;
-    document.getElementById("fontClrLinks").style.color = colo3r;
-    document.getElementById("fontClrSkills").style.color = colo3r;
-    document.getElementById("fontClrContact").style.color = colo3r;
-    document.getElementById("fontClrEdu").style.color = colo3r;
-    document.getElementById("fontClrExp").style.color = colo3r;
-    document.getElementById("fontClrObjective").style.color = colo3r;
+    document.getElementById("fontClrContact").style.color=colo3r;
+    document.getElementById("fontColorExpertise").style.color=colo3r;
+    document.getElementById("fontColorLanguage").style.color=colo3r;
+    document.getElementById("fontColorIntrests").style.color=colo3r;
+    document.getElementById("fontColorHobbies").style.color=colo3r;
+    document.getElementById("fontClrObjective").style.color=colo3r;
+    document.getElementById("fontcolorExperience").style.color=colo3r;
+    document.getElementById("fontClrEdu").style.color=colo3r;
+    document.getElementById("fontColorImpLinks").style.color=colo3r;
+   //  main
+    document.getElementById("fontClrContactMain").style.color=colo3r;
+    document.getElementById("fontClrSkillsMain").style.color=colo3r;
+    document.getElementById("fontClrLinksMain").style.color=colo3r;
+    document.getElementById("fontClrHobbyMain").style.color=colo3r;
+    document.getElementById("fontClrIntrstMain").style.color=colo3r;
+    document.getElementById("fontClrLangMain").style.color=colo3r;
+    document.getElementById("fontClrObjectiveMain").style.color=colo3r;
+    document.getElementById("fontClrEduMain").style.color=colo3r;
+    document.getElementById("fontClrExpMain").style.color=colo3r;
+    document.getElementById("fontClrExpMain").style.color=colo3r;
+
+    document.getElementById("displayTemplate").style.background=colo3r;
+    document.getElementById("rightHeadingDiv").style.background=colo3r;
+    document.getElementById("leftheadingdiv").style.background=colo3r;
+    
   }
   function light2() {
     const color4 = document.getElementById("spanCol2").innerHTML;
-    document.getElementById("leftheadingdiv").style.background  = color4;
-    document.getElementById("rightHeadingDiv").style.background = color4;
-    document.getElementById("fontClrHobby").style.color = color4;
-    document.getElementById("fontClrLang").style.color = color4;
-    document.getElementById("fontClrIntrst").style.color = color4;
-    document.getElementById("fontClrLinks").style.color = color4;
-    document.getElementById("fontClrSkills").style.color = color4;
-    document.getElementById("fontClrContact").style.color = color4;
-    document.getElementById("fontClrEdu").style.color = color4;
-    document.getElementById("fontClrExp").style.color = color4;
-    document.getElementById("fontClrObjective").style.color = color4;
+    document.getElementById("fontClrContact").style.color=color4;
+    document.getElementById("fontColorExpertise").style.color=color4;
+    document.getElementById("fontColorLanguage").style.color=color4;
+    document.getElementById("fontColorIntrests").style.color=color4;
+    document.getElementById("fontColorHobbies").style.color=color4;
+    document.getElementById("fontClrObjective").style.color=color4;
+    document.getElementById("fontcolorExperience").style.color=color4;
+    document.getElementById("fontClrEdu").style.color=color4;
+    document.getElementById("fontColorImpLinks").style.color=color4;
+   //  main
+    document.getElementById("fontClrContactMain").style.color=color4;
+    document.getElementById("fontClrSkillsMain").style.color=color4;
+    document.getElementById("fontClrLinksMain").style.color=color4;
+    document.getElementById("fontClrHobbyMain").style.color=color4;
+    document.getElementById("fontClrIntrstMain").style.color=color4;
+    document.getElementById("fontClrLangMain").style.color=color4;
+    document.getElementById("fontClrObjectiveMain").style.color=color4;
+    document.getElementById("fontClrEduMain").style.color=color4;
+    document.getElementById("fontClrExpMain").style.color=color4;
+    document.getElementById("fontClrExpMain").style.color=color4;
+    document.getElementById("displayTemplate").style.background=color4;
+    document.getElementById("rightHeadingDiv").style.background=color4;
+    document.getElementById("leftheadingdiv").style.background=color4;
   }
   function light1() {
     const color5 = document.getElementById("spanCol1").innerHTML;
-    document.getElementById("leftheadingdiv").style.background  = color5;
-    document.getElementById("rightHeadingDiv").style.background = color5;
-    document.getElementById("fontClrHobby").style.color = color5;
-    document.getElementById("fontClrLang").style.color = color5;
-    document.getElementById("fontClrIntrst").style.color = color5;
-    document.getElementById("fontClrLinks").style.color = color5;
-    document.getElementById("fontClrSkills").style.color = color5;
-    document.getElementById("fontClrContact").style.color = color5;
-    document.getElementById("fontClrEdu").style.color = color5;
-    document.getElementById("fontClrExp").style.color = color5;
-    document.getElementById("fontClrObjective").style.color = color5;
+    document.getElementById("fontClrContact").style.color=color5;
+    document.getElementById("fontColorExpertise").style.color=color5;
+    document.getElementById("fontColorLanguage").style.color=color5;
+    document.getElementById("fontColorIntrests").style.color=color5;
+    document.getElementById("fontColorHobbies").style.color=color5;
+    document.getElementById("fontClrObjective").style.color=color5;
+    document.getElementById("fontcolorExperience").style.color=color5;
+    document.getElementById("fontClrEdu").style.color=color5;
+    document.getElementById("fontColorImpLinks").style.color=color5;
+   //  main
+    document.getElementById("fontClrContactMain").style.color=color5;
+    document.getElementById("fontClrSkillsMain").style.color=color5;
+    document.getElementById("fontClrLinksMain").style.color=color5;
+    document.getElementById("fontClrHobbyMain").style.color=color5;
+    document.getElementById("fontClrIntrstMain").style.color=color5;
+    document.getElementById("fontClrLangMain").style.color=color5;
+    document.getElementById("fontClrObjectiveMain").style.color=color5;
+    document.getElementById("fontClrEduMain").style.color=color5;
+    document.getElementById("fontClrExpMain").style.color=color5;
+    document.getElementById("fontClrExpMain").style.color=color5;
+    document.getElementById("displayTemplate").style.background=color5;
+    document.getElementById("rightHeadingDiv").style.background=color5;
+    document.getElementById("leftheadingdiv").style.background=color5;
   }
   
   function changeBackgroundColor() {
@@ -377,28 +456,55 @@ function addNewWeField() {
     const res2 =  document.getElementById("rightHeadingDiv");
     res.style.backgroundColor = input;
     res2.style.backgroundColor = input;
-    document.getElementById("fontClrHobby").style.color = input;
-    document.getElementById("fontClrLang").style.color = input;
-    document.getElementById("fontClrIntrst").style.color = input;
-    document.getElementById("fontClrLinks").style.color = input;
-    document.getElementById("fontClrSkills").style.color = input;
-    document.getElementById("fontClrContact").style.color = input;
-    document.getElementById("fontClrEdu").style.color = input;
-    document.getElementById("fontClrExp").style.color = input;
-    document.getElementById("fontClrObjective").style.color = input;
+    document.getElementById("fontClrContact").style.color=input;
+    document.getElementById("fontColorExpertise").style.color=input;
+    document.getElementById("fontColorLanguage").style.color=input;
+    document.getElementById("fontColorIntrests").style.color=input;
+    document.getElementById("fontColorHobbies").style.color=input;
+    document.getElementById("fontClrObjective").style.color=input;
+    document.getElementById("fontcolorExperience").style.color=input;
+    document.getElementById("fontClrEdu").style.color=input;
+    document.getElementById("fontColorImpLinks").style.color=input;
+   //  main
+    document.getElementById("fontClrContactMain").style.color=input;
+    document.getElementById("fontClrSkillsMain").style.color=input;
+    document.getElementById("fontClrLinksMain").style.color=input;
+    document.getElementById("fontClrHobbyMain").style.color=input;
+    document.getElementById("fontClrIntrstMain").style.color=input;
+    document.getElementById("fontClrLangMain").style.color=input;
+    document.getElementById("fontClrObjectiveMain").style.color=input;
+    document.getElementById("fontClrEduMain").style.color=input;
+    document.getElementById("fontClrExpMain").style.color=input;
+    document.getElementById("fontClrExpMain").style.color=input;
+    document.getElementById("displayTemplate").style.background=input;
+    
   }
   function resetBackgroundColor() {
     document.getElementById("leftheadingdiv").style.background  = "#ADD8E6";
     document.getElementById("rightHeadingDiv").style.background = "#ADD8E6";
-    document.getElementById("fontClrHobby").style.color ="#03031C";
-    document.getElementById("fontClrLang").style.color = "#03031C";
-    document.getElementById("fontClrIntrst").style.color = "#03031C";
-    document.getElementById("fontClrLinks").style.color = "#03031C";
-    document.getElementById("fontClrSkills").style.color = "#03031C";
-    document.getElementById("fontClrContact").style.color = "#03031C";
-    document.getElementById("fontClrEdu").style.color = "#03031C";
-    document.getElementById("fontClrExp").style.color = "#03031C";
-    document.getElementById("fontClrObjective").style.color = "#03031C";
+    document.getElementById("fontClrContact").style.color="black";
+    document.getElementById("fontColorExpertise").style.color="black";
+    document.getElementById("fontColorLanguage").style.color="black";
+    document.getElementById("fontColorIntrests").style.color="black";
+    document.getElementById("fontColorHobbies").style.color="black";
+    document.getElementById("fontClrObjective").style.color="black";
+    document.getElementById("fontcolorExperience").style.color="black";
+    document.getElementById("fontClrEdu").style.color="black";
+    document.getElementById("fontColorImpLinks").style.color="black";
+   //  main
+    document.getElementById("fontClrContactMain").style.color="black";
+    document.getElementById("fontClrSkillsMain").style.color="black";
+    document.getElementById("fontClrLinksMain").style.color="black";
+    document.getElementById("fontClrHobbyMain").style.color="black";
+    document.getElementById("fontClrIntrstMain").style.color="black";
+    document.getElementById("fontClrLangMain").style.color="black";
+    document.getElementById("fontClrObjectiveMain").style.color="black";
+    document.getElementById("fontClrEduMain").style.color="black";
+    document.getElementById("fontClrExpMain").style.color="black";
+    document.getElementById("fontClrExpMain").style.color="black";
+    document.getElementById("displayTemplate").style.background="#ADD8E6";
+
+
   }
   
   // for template fontC colour
@@ -408,6 +514,7 @@ function addNewWeField() {
     document.getElementById("jobTitleT").style.color= "black";
     document.getElementById("showjobTitleT").style.color= "black";
     document.getElementById("showNameT2").style.color= "black";
+    
   }
   function fontLight1() {
     
@@ -415,13 +522,22 @@ function addNewWeField() {
     document.getElementById("jobTitleT").style.color= "white";
     document.getElementById("showjobTitleT").style.color= "white";
     document.getElementById("showNameT2").style.color= "white";
+    document.getElementById("fontcolorExperience").style.color= "black";
+    document.getElementById("fontClrObjective").style.color= "black";
+    document.getElementById("fontColorHobbies").style.color= "black";
+    document.getElementById("fontColorIntrests").style.color= "black";
+    document.getElementById("fontColorLanguage").style.color= "black";
+    document.getElementById("fontColorExpertise").style.color= "black";
   }
   // --------------------------------------------------------------------------------------------
   
   async function captureDivAndDownloadPdf() {
+    document.getElementById("cv-template").style.display="block";
     const content = document.getElementById("cvTemplate");
     if (!content) {
       console.error("Content element not found");
+      document.getElementById("cv-template").style.display="none";
+
       return;
     }
   
@@ -491,8 +607,12 @@ function addNewWeField() {
   
       // Save the PDF
       pdf.save("cv_template.pdf");
+      document.getElementById("cv-template").style.display="none";
+
     } catch (error) {
       console.error("Error capturing content or generating PDF:", error);
+      document.getElementById("cv-template").style.display="none";
+
     }
   }
   

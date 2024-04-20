@@ -373,13 +373,61 @@ h2#nameT2 {
     margin-left: -11px;
 }
 
+.btn_Generate {
+    width: 456px;
+    padding: 10px;
+}
 
+.downloadFont p {
+    font-size: 19px;
+}
+h5#fontClrContactMain {
+    font-size: 32px;
+}
 
+h5#fontClrSkillsMain {
+    font-size: 32px;
+}
 
-
-
-
-
+h5#fontClrLinksMain {
+    font-size: 32px;
+}
+h5#fontClrHobbyMain {
+    font-size: 32px;
+}
+h5#fontClrIntrstMain {
+    font-size: 32px;
+}
+h5#fontClrLangMain {
+    font-size: 32px;
+}
+h5#fontClrObjectiveMain {
+    font-size: 32px;
+}
+h5#fontClrExpMain {
+    font-size: 32px;
+}
+h5#fontClrEduMain {
+    font-size: 32px;
+}
+ul#keySkills {
+    font-size: 19px;
+}
+ul#hobbys {
+    font-size: 19px;
+}
+ul#intrests {
+    font-size: 19px;
+}
+ul#languages {
+    font-size: 19px;
+}
+p#objectiveT {
+    font-size: 18px;
+}
+ul#aqT {
+    font-size: 18px;
+}
 
 
 

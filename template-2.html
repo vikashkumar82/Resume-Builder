@@ -1045,12 +1045,7 @@
               </div>
             </div>
 
-              <!-- Generating CV -->
-              <div class="container text-center mt-3">
-                <button onclick="generateCV()" class="btn btn-primary">
-                  Generate Cv
-                </button>
-              </div>
+              
             </div>
           </div>
           <div class="col-md-6">
@@ -1120,7 +1115,7 @@
                     </div>
                     <!-- Technical Skills -->
                   <div class="fluid mt-2">
-                    <h5 id="fontColor" class="fontColorChange">Expertise</h5>
+                    <h5 id="fontColorExpertise" class="fontColorChange">Expertise</h5>
                     <ul id="showKeySkills" class="fontColorChange">
                       <li id="fontColor"></li>
                     </ul>
@@ -1128,6 +1123,7 @@
                   <hr />
                   <!-- important links -->
                   <div class="impLinks">
+                    <h5 id="fontColorImpLinks" class="fontColorChange">Important-Links</h5>
                     <p class="fontColorChange">
                       <span style="font-weight: 600">GIT-HUB</span>&nbsp;
                       <i class="fa-brands fa-github"></i>&nbsp;
@@ -1152,21 +1148,21 @@
                   <hr />
                   <!-- Language section -->
                   <div class="fluid">
-                    <h5 id="fontColor" class="fontColorChange">Language</h5>
+                    <h5 id="fontColorLanguage" class="fontColorChange">Language</h5>
                     <ul id="showLanguages">
                       <li id="fontColor" class="fontColorChange"></li>
                     </ul>
                   </div>
                   <!-- INtrests -->
                   <div class="fluid">
-                    <h5 id="fontColor" class="fontColorChange">Interest</h5>
+                    <h5 id="fontColorIntrests" class="fontColorChange">Interest</h5>
                     <ul id="showIntrests">
                       <li id="fontColor" class="fontColorChange"></li>
                     </ul>
                   </div>
                   <!-- Hobbu -->
                   <div class="fluid">
-                    <h5 id="fontColor" class="fontColorChange">Hobbies</h5>
+                    <h5 id="fontColorHobbies" class="fontColorChange">Hobbies</h5>
                     <ul id="showHobbys">
                       <li id="fontColor" class="fontColorChange"></li>
                     </ul>
@@ -1188,7 +1184,7 @@
                       </p>
                     </div>
                   <!-- work Experience -->
-                <h5 class="experienceH5 mt-3" >Professional Experience</h5>
+                <h5 class="experienceH5 mt-3" id="fontcolorExperience">Professional Experience</h5>
                 <div id="showResultSection"></div>
                 <!-- Academic Qualification -->
                 <div class="template2-education mt-4">
@@ -1209,12 +1205,25 @@
             <!-- content Center -->
           </div>
         </div>
+        <!-- Generating CV -->
+        <div class="container text-center mt-3">
+          <button onclick="generateCV()" class="btn btn-success btn_Generate">
+            Generate Cv
+          </button>
+          <button
+        id="downloadButton"
+        onclick="captureDivAndDownloadPdf()"
+        class="btn btn-warning btn_Generate">
+        Print CV
+      </button>
+        </div>
+        
       </div>
 
 
       <!-- Resume CV Template -->
       <section>
-        <div class="container template2-cv mt-5" id="cv-template" >
+        <div class="container template2-cv mt-5" id="cv-template" style="display: none;">
           <div class="template2-hero" id="cvTemplate">
             <div class="row">
               <div class="col-md-4 p-0">
@@ -1233,8 +1242,8 @@
                   <div class="asideBar-section">
                     <!-- Details -->
                     <div class="template2-details px-5 mt-5">
-                      <h5 id="fontClrContact">My Contact</h5>
-                      <div class="template-about mt-3">
+                      <h5 id="fontClrContactMain">My Contact</h5>
+                      <div class="template-about downloadFont mt-3">
                         <p class="fontColorChange">
                           <i class="fa-regular fa-user"></i>&nbsp;<span
                             id="nameT1">vikash kumar</span>
@@ -1266,7 +1275,7 @@
                     </div>
                     <!-- skills -->
                     <div class="template2-skills px-5 mt-4">
-                      <h5 id="fontClrSkills" class="fontColorChange">
+                      <h5 id="fontClrSkillsMain" class="fontColorChange">
                         Hard Skills
                       </h5>
                       <ul id="keySkills" class="fontColorChange">
@@ -1275,7 +1284,7 @@
                     </div>
                     <!-- important Links -->
                     <div class="template2-links px-5 mt-4">
-                      <h5 id="fontClrLinks">Important links</h5>
+                      <h5 id="fontClrLinksMain">Important links</h5>
                       <p class="fontColorChange">
                         <span style="font-weight: 600">GIT-HUB</span>&nbsp;
                         <i class="fa-brands fa-github"></i>&nbsp;
@@ -1300,14 +1309,14 @@
 
                     <!-- hobby -->
                     <div class="template2-hobby px-5 mt-4">
-                      <h5 id="fontClrHobby" class="fontColorChange">Hobbies</h5>
+                      <h5 id="fontClrHobbyMain" class="fontColorChange">Hobbies</h5>
                       <ul id="hobbys">
                         <li id="fontColor" class="fontColorChange"></li>
                       </ul>
                     </div>
                     <!-- intrests -->
                     <div class="template2-intrests px-5 mt-4">
-                      <h5 id="fontClrIntrst"
+                      <h5 id="fontClrIntrstMain"
                         class="fontColorChange">Intrest</h5>
                       <ul id="intrests">
                         <li id="fontColor" class="fontColorChange"></li>
@@ -1315,7 +1324,7 @@
                     </div>
                     <!-- languages -->
                     <div class="templatte2-languages px-5 mt-4">
-                      <h5 id="fontClrLang">Language</h5>
+                      <h5 id="fontClrLangMain">Language</h5>
                       <ul id="languages">
                         <li id="fontColor" class="fontColorChange"></li>
                       </ul>
@@ -1339,7 +1348,7 @@
                   </div>
                   <!-- about me -->
                   <div class="template2-aboutme px-5 mt-3">
-                    <h5 id="fontClrObjective">Objective</h5>
+                    <h5 id="fontClrObjectiveMain">Objective</h5>
                     <p id="objectiveT">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Quia esse, tempore, placeat consequatur voluptatum,
@@ -1351,12 +1360,12 @@
                   </div>
                   <!-- Work Experiencce -->
                   <div class="template2-experiences px-5 mt-3">
-                    <h5 id="fontClrExp">Professional Experience</h5>
+                    <h5 id="fontClrExpMain">Professional Experience</h5>
                     <div id="resultSection" class="mt-4"></div>
                   </div>
                   <!-- Education -->
                   <div class="template2-education px-5 mt-4">
-                    <h5 id="fontClrEdu">Education Background</h5>
+                    <h5 id="fontClrEduMain">Education Background</h5>
                     <ul id="aqT">
                       <li>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -1371,16 +1380,7 @@
         </div>
       </section>
     </div>
-    <!-- button print section -->
-    <div class="container mt-3 text-center">
-      <button
-        id="downloadButton"
-        onclick="captureDivAndDownloadPdf()"
-        class="btn background">
-        Print CV
-      </button>
-    </div>
-
+  
     <script src="./template2.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
