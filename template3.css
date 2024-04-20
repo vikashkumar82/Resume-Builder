@@ -234,7 +234,7 @@ div#cvTemplate {
     position: absolute;
     left: -48%;
     display: grid;
-    width: 1081px;
+    width: 1108px;
     bottom: 1222px;
 }
 
@@ -318,4 +318,104 @@ div#designProgress {
 div#projectProgress {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 29%, rgba(0,212,255,1) 100%);
+}
+
+
+.showAsideBar-content {
+    background: aqua;
+    position: relative;
+    left: 46px;
+}
+
+.showBlueSection {
+    background: antiquewhite;
+    position: relative;
+    width: 699px;
+    right: 228px;
+    /* height: 120px; */
+    padding: 26px 0 2px 78px;
+    top: 60px;
+}
+
+.showProfileImg img {
+    height: 165px;
+    width: 166px !important;
+    position: absolute;
+    bottom: -22px;
+}
+
+.showResumeNameT1 {
+    position: relative;
+    top: 188px;
+}
+.showContact-details {
+    margin-top: -35px;
+}
+.showSkillLoop h5 {
+    text-align: center;
+}
+
+.showSkillLoop {
+    border: 1px solid #0000FF;
+    padding: 4px 0 0 0;
+    border-radius: 19px;
+    width: 172px;
+    margin-left: -15px;
+}
+
+.showResumeNameT1 {
+    position: relative;
+    top: 188px;
+    height: 1183px;
+}
+
+.showLangHeading{
+    border: 1px solid #0000FF;
+    padding: 4px 0 0 0;
+    border-radius: 19px;
+    width: 172px;
+    margin-left: -15px;   
+}
+
+.showLangHeading h5{
+    text-align: center;
+}
+
+.showAside-aboutMe p {
+    font-size: 14px;
+}
+.inner-contact span {
+    font-size: 14px;
+}
+
+.showContact-details {
+    padding: 0px 3px 0 13px;
+}
+
+.showRight-main-content-details {
+    position: absolute;
+    top: 195px;
+    left: 23px;
+    padding: -13px;
+}
+.showDesignProgress p {
+    font-size: 15px;
+}
+.showProjectManagement p {
+    font-size: 15px;
+}
+
+.showProjectManagement {
+    gap: 19px;
+}
+.showDesignProgress {
+    gap: 47px;
+}
+.resumeGenerator-main {
+    position: relative;
+}
+
+.rightSection-showResume {
+    position: sticky;
+    top: 10px;
 }

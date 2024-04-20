@@ -9,21 +9,21 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous" />
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/8e1d3b8195.js"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <!-- resources -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
     <title>Resume-Builder</title>
   </head>
@@ -31,9 +31,14 @@
   <body>
     <div class="container-fluid" id="cv-form">
       <h1 class="text-center">Resume Generator</h1>
-      <div class="resumeGenerator-main" style="border: 1px solid lightslategray">
-        
-        <div class="colorChoice-Section justify-content-center" style="display: flex;">
+      <div
+        class="resumeGenerator-main"
+        style="border: 1px solid lightslategray"
+      >
+        <div
+          class="colorChoice-Section justify-content-center"
+          style="display: flex"
+        >
           <div class="colorChoice-templateColor">
             <div class="colorSelection-Section">
               <div id="color1" onclick="light1()">
@@ -57,9 +62,14 @@
             </div>
           </div>
           <div class="colorChoice-multipleColor">
-            <div class="multiColour" style="display: flex;">
+            <div class="multiColour" style="display: flex">
               <div>
-                <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+                <input
+                  type="color"
+                  id="favcolor"
+                  name="favcolor"
+                  value="#ff0000"
+                />
               </div>
               <div>
                 <button onclick="changeBackgroundColor()" class="btnApply">
@@ -73,22 +83,20 @@
               </div>
             </div>
           </div>
-          <div class="colorChoice-FontColor" style="display: flex; gap:5px">
-            <div id="Fcolor1" onclick="fontLight1()">
-            </div>
-            <div id="Fcolor2" onclick="fontDark()">
-            </div>
+          <div class="colorChoice-FontColor" style="display: flex; gap: 5px">
+            <div id="Fcolor1" onclick="fontLight1()"></div>
+            <div id="Fcolor2" onclick="fontDark()"></div>
           </div>
         </div>
-   
+
         <!-- Display resume section -->
-        <div class="row" >
+        <div class="row">
           <div class="col-md-6">
             <!-- Resume FORM -->
             <div class="resumeForm p-3">
               <!-- PRESONAL INFORMATION -->
               <div class="presonalInfo p-3">
-                <h3 style="text-align: center;">Presonal Information</h3>
+                <h3 style="text-align: center">Presonal Information</h3>
                 <div class="row">
                   <!-- image upload -->
                   <div class="form-group mt-3">
@@ -109,7 +117,8 @@
                           <select
                             name="countrycode"
                             id="countryCode"
-                            class="form-control">
+                            class="form-control"
+                          >
                             <option data-countryCode="AF" value="+93">
                               +93 - Afghanistan
                             </option>
@@ -413,7 +422,8 @@
                             <option
                               data-countryCode="IN"
                               value="+91"
-                              selected="selected">
+                              selected="selected"
+                            >
                               +91 - India
                             </option>
                             <option data-countryCode="ID" value="+62">
@@ -860,7 +870,8 @@
                           <input
                             type="text"
                             id="contactField"
-                            class="form-control" />
+                            class="form-control"
+                          />
                         </div>
                       </div>
                     </div>
@@ -877,7 +888,8 @@
                       <textarea
                         id="addressField"
                         class="form-control"
-                        rows="1"></textarea>
+                        rows="1"
+                      ></textarea>
                     </div>
                   </div>
                 </div>
@@ -885,7 +897,7 @@
 
               <!-- PROFESSIONAL INFORMATION -->
               <div class="professionalInfo p-3 mt-3">
-                <h3 style="text-align: center;">Professional Information</h3>
+                <h3 style="text-align: center">Professional Information</h3>
                 <!-- Job Title -->
                 <div class="Professional-jobtitle">
                   <label>Job Title</label>
@@ -893,7 +905,8 @@
                     type="text"
                     id="jobTitle"
                     placeholder="Enter Job-Title"
-                    class="form-control" />
+                    class="form-control"
+                  />
                 </div>
                 <!-- Objective -->
                 <div class="form-group mt-2">
@@ -902,14 +915,16 @@
                     class="form-control"
                     placeholder="Description"
                     rows="3"
-                    id="ObjectiveField"></textarea>
+                    id="ObjectiveField"
+                  ></textarea>
                 </div>
 
                 <!-- Work experience -->
                 <div
                   class="form-group mt-2"
                   id="weTemplate"
-                  style="display: none">
+                  style="display: none"
+                >
                   <label>Work Experience</label>
                   <div class="row">
                     <div class="col-md-6">
@@ -918,7 +933,8 @@
                         id
                         rows="1"
                         placeholder="From"
-                        class="form-control fromWorkField"></textarea>
+                        class="form-control fromWorkField"
+                      ></textarea>
                     </div>
                     <div class="col-md-6">
                       <textarea
@@ -926,7 +942,8 @@
                         id
                         rows="1"
                         placeholder="To"
-                        class="form-control toWorkField"></textarea>
+                        class="form-control toWorkField"
+                      ></textarea>
                     </div>
                   </div>
                   <textarea
@@ -934,22 +951,28 @@
                     id="expCompany"
                     rows="1"
                     placeholder="Company name"
-                    class="form-control workExpField mt-2"></textarea>
+                    class="form-control workExpField mt-2"
+                  ></textarea>
                   <textarea
                     class="form-control weField mt-2"
                     placeholder="Description"
-                    rows="2"></textarea>
+                    rows="2"
+                  ></textarea>
                 </div>
 
                 <!-- button showing adding -->
-                <h6 style="text-align: center;" class="mt-2">ADD EXPERIENCE</h6>
-                <div style="text-align: center;">
-                  <button class="btn btn-primary btn_addExperience"
-                    onclick="duplicateForm()">
+                <h6 style="text-align: center" class="mt-2">ADD EXPERIENCE</h6>
+                <div style="text-align: center">
+                  <button
+                    class="btn btn-primary btn_addExperience"
+                    onclick="duplicateForm()"
+                  >
                     ADD EXPERIENCE
                   </button>
-                  <button class="btn btn-success btn_showExperiene"
-                    onclick="showData()">
+                  <button
+                    class="btn btn-success btn_showExperiene"
+                    onclick="showData()"
+                  >
                     SHOW EXPERIENCE
                   </button>
                 </div>
@@ -957,16 +980,18 @@
 
                 <!-- Academic Qualification -->
                 <div class="form-group mt-2" id="eq">
-                  <h6 style="text-align: center;">ACADEMIC QUALIFICATION</h6>
+                  <h6 style="text-align: center">ACADEMIC QUALIFICATION</h6>
                   <textarea
                     class="form-control eqField"
                     placeholder="School / College"
-                    rows="1"></textarea>
+                    rows="1"
+                  ></textarea>
 
                   <div class="container text-center mt-2" id="eqAddButton">
                     <button
                       class="btn btn-primary btn-sm"
-                      onclick="addNewEqField()">
+                      onclick="addNewEqField()"
+                    >
                       Add
                     </button>
                   </div>
@@ -974,15 +999,17 @@
 
                 <!-- Technical Skills -->
                 <div class="form-group mt-2" id="techSkills">
-                  <h6 style="text-align: center;">Expertise</h6>
+                  <h6 style="text-align: center">Expertise</h6>
                   <textarea
                     class="form-control TechField"
                     placeholder="Ex java , asp.net"
-                    rows="1"></textarea>
+                    rows="1"
+                  ></textarea>
                   <div class="container text-center mt-2" id="techAddButton">
                     <button
                       onclick="addNewTechField()"
-                      class="btn btn-primary btn-sm">
+                      class="btn btn-primary btn-sm"
+                    >
                       Add
                     </button>
                   </div>
@@ -990,17 +1017,21 @@
 
                 <!-- Language -->
                 <div class="form-group mt-2" id="language">
-                  <h6 style="text-align: center;">LANGUAGES</h6>
+                  <h6 style="text-align: center">LANGUAGES</h6>
                   <textarea
                     class="form-control languageField"
                     placeholder="English / Hindi"
-                    rows="1"></textarea>
+                    rows="1"
+                  ></textarea>
 
-                  <div class="container text-center mt-2"
-                    id="languageAddButton">
+                  <div
+                    class="container text-center mt-2"
+                    id="languageAddButton"
+                  >
                     <button
                       onclick="addNewLanguageField()"
-                      class="btn btn-primary btn-sm">
+                      class="btn btn-primary btn-sm"
+                    >
                       Add
                     </button>
                   </div>
@@ -1010,51 +1041,55 @@
 
               <!-- SOCIAL MEDIA LINKS -->
               <div class="socialMediaLinks p-3 mt-3">
-                <h3 style="text-align: center;">Important links</h3>
+                <h3 style="text-align: center">Important links</h3>
                 <div class="form-group mt-2">
-                  <h6 style="text-align: center;">GITHUB</h6>
+                  <h6 style="text-align: center">GITHUB</h6>
                   <input type="text" id="fbField" class="form-control" />
                 </div>
                 <div class="form-group mt-2">
-                  <h6 style="text-align: center;">TWITTER</h6>
+                  <h6 style="text-align: center">TWITTER</h6>
                   <input type="text" id="twitterField" class="form-control" />
                 </div>
                 <div class="form-group mt-2">
-                  <h6 style="text-align: center;">LINKEDIN</h6>
+                  <h6 style="text-align: center">LINKEDIN</h6>
                   <input type="text" id="linkedinField" class="form-control" />
                 </div>
               </div>
 
               <!-- intrests -->
               <div class="intrests-tab mt-3 p-3">
-                <h3 style="text-align: center;">INTERESTS</h3>
+                <h3 style="text-align: center">INTERESTS</h3>
                 <div class="intrestForm">
-                  <h6 style="text-align: center;">INTERESTS</h6>
+                  <h6 style="text-align: center">INTERESTS</h6>
                   <textarea
                     class="form-control intrestField"
                     placeholder="Enter here"
-                    rows="1"></textarea>
+                    rows="1"
+                  ></textarea>
 
                   <div class="container text-center mt-2" id="intrestAddButton">
                     <button
                       onclick="addNewIntrestField()"
-                      class="btn btn-primary btn-sm">
+                      class="btn btn-primary btn-sm"
+                    >
                       Add
                     </button>
                   </div>
                 </div>
                 <!-- Hobbies -->
                 <div class="hobbyForm mt-2">
-                  <h6 style="text-align: center;">HOBBIES</h6>
+                  <h6 style="text-align: center">HOBBIES</h6>
                   <textarea
                     class="form-control hobbyField"
                     placeholder="Enter here"
-                    rows="1"></textarea>
+                    rows="1"
+                  ></textarea>
 
                   <div class="container text-center mt-2" id="hobbyAddButton">
                     <button
                       onclick="addNewHobbyField()"
-                      class="btn btn-primary btn-sm">
+                      class="btn btn-primary btn-sm"
+                    >
                       Add
                     </button>
                   </div>
@@ -1068,57 +1103,77 @@
             <div
               class="right-section-show"
               style="
-              border: 1px solid rgb(153, 149, 149);
-              box-shadow: 0px 0px 7px 5px #f5ebeb;
-              border-radius: 7px;
-              margin-top: 16px;
-              margin-bottom: 16px;
-            ">
+                border: 1px solid rgb(153, 149, 149);
+                box-shadow: 0px 0px 7px 5px #f5ebeb;
+                border-radius: 7px;
+                margin-top: 16px;
+                margin-bottom: 16px;
+              "
+            >
               <div class="row">
                 <div class="col-md-4">
-                  <div class
-                    style="border-radius: 7px;background: rgb(52 146 228);" id="showTemplateColorChange">
+                  <div
+                    class
+                    style="border-radius: 7px; background: rgb(52 146 228)"
+                    id="showTemplateColorChange"
+                  >
                     <!-- profile pic -->
                     <div class="showImageSection">
                       <img
                         src="./images/altImage.png"
                         class="img-fluid showMyImage"
-                        id="showImgTemplate2" />
+                        id="showImgTemplate2"
+                      />
                     </div>
                     <!-- Contact Centre -->
                     <div class="showTemplate-asidebar">
                       <div class="showTemplate-about mt-3">
                         <p class="fontColorChange" id="showNameChange">
                           <i class="fa-solid fa-user"></i>&nbsp;<span
-                            id="showNameT1">vikash kumar</span>
+                            id="showNameT1"
+                            >vikash kumar</span
+                          >
                         </p>
                         <p class="fontColorChange" id="showMailChange">
                           <i class="fa-solid fa-envelope"></i>&nbsp;<span
-                            id="showEmailT">avikashkumar82@gmail.com</span>
+                            id="showEmailT"
+                            >avikashkumar82@gmail.com</span
+                          >
                         </p>
-                        <div style="display: flex; margin-bottom: 11px" >
-                          <i class="fa-solid fa-phone"
-                            class="fontColorChange" id="showCountryIconChange"></i>&nbsp;
+                        <div style="display: flex; margin-bottom: 11px">
+                          <i
+                            class="fa-solid fa-phone"
+                            class="fontColorChange"
+                            id="showCountryIconChange"
+                          ></i
+                          >&nbsp;
                           <div>
-                            <span id="showCountryContactT"
-                              class="fontColorChange">+91</span>
+                            <span
+                              id="showCountryContactT"
+                              class="fontColorChange"
+                              >+91</span
+                            >
                           </div>
                           -
                           <div>
-                            <span id="showContactT"
-                              class="fontColorChange">9430722766</span>
+                            <span id="showContactT" class="fontColorChange"
+                              >9430722766</span
+                            >
                           </div>
                         </div>
                         <p id="hello" class="fontColorChange">
                           <i class="fa-solid fa-location-dot"></i>&nbsp;<span
-                            id="showAddressT">Bokaro steel city</span>
+                            id="showAddressT"
+                            >Bokaro steel city</span
+                          >
                         </p>
                       </div>
                       <hr />
                       <!-- Technical Skills -->
                       <div class="fluid">
-                        <h5 id="fontColor"
-                          class="fontColorChange">Expertise</h5>
+                        <h5 id="fontColor" class="fontColorChange">
+                          Expertise
+                        </h5>
                         <ul id="showKeySkills" class="fontColorChange">
                           <li id="showTechnicalChange"></li>
                         </ul>
@@ -1129,43 +1184,58 @@
                         <p class="fontColorChange" id="showGitChange">
                           <span style="font-weight: 600">GIT-HUB</span>&nbsp;
                           <i class="fa-brands fa-github"></i>&nbsp;
-                          <a href="#1" id="showGithubT"
-                            class="fontColorChange">https://www.youtube.com/</a>
+                          <a href="#1" id="showGithubT" class="fontColorChange"
+                            >https://www.youtube.com/</a
+                          >
                         </p>
                         <p class="fontColorChange" id="showTwitterChange">
                           <span style="font-weight: 600">TWITTER</span>&nbsp;
-                          <i
-                            class="fa-brands fa-x-twitter fontColorChange"></i>&nbsp;
-                          <a href="#1" id="showTwitterT"
-                            class="fontColorChange">https://www.youtube.com/</a>
+                          <i class="fa-brands fa-x-twitter fontColorChange"></i
+                          >&nbsp;
+                          <a href="#1" id="showTwitterT" class="fontColorChange"
+                            >https://www.youtube.com/</a
+                          >
                         </p>
                         <p class="fontColorChange" id="showlinkedChange">
                           <span style="font-weight: 600">LINKEDIN</span>&nbsp;
-                          <i
-                            class="fa-brands fa-linkedin fontColorChange"></i>&nbsp;
-                          <a href="#1" id="showLinkedinT"
-                            class="fontColorChange">https://www.youtube.com/</a>
+                          <i class="fa-brands fa-linkedin fontColorChange"></i
+                          >&nbsp;
+                          <a
+                            href="#1"
+                            id="showLinkedinT"
+                            class="fontColorChange"
+                            >https://www.youtube.com/</a
+                          >
                         </p>
                       </div>
 
                       <hr />
                       <!-- Language section -->
                       <div class="fluid">
-                        <h5 id="showLanguageFontColor" class="fontColorChange">Language</h5>
+                        <h5 id="showLanguageFontColor" class="fontColorChange">
+                          Language
+                        </h5>
                         <ul id="showLanguages">
-                          <li id="languageFontColor" class="fontColorChange"></li>
+                          <li
+                            id="languageFontColor"
+                            class="fontColorChange"
+                          ></li>
                         </ul>
                       </div>
                       <!-- INtrests -->
                       <div class="fluid">
-                        <h5 id="showIntrestFontColor" class="fontColorChange">Interest</h5>
+                        <h5 id="showIntrestFontColor" class="fontColorChange">
+                          Interest
+                        </h5>
                         <ul id="showIntrests">
                           <li id="fontColor" class="fontColorChange"></li>
                         </ul>
                       </div>
                       <!-- Hobbu -->
                       <div class="fluid">
-                        <h5 id="showHobbyesFontColor" class="fontColorChange">Hobbies</h5>
+                        <h5 id="showHobbyesFontColor" class="fontColorChange">
+                          Hobbies
+                        </h5>
                         <ul id="showHobbys">
                           <li id="fontColor" class="fontColorChange"></li>
                         </ul>
@@ -1177,14 +1247,18 @@
                   <div class="template-cv-description mr-3">
                     <!-- heading -->
                     <div class="heading-cv-template mt-3">
-                      <h2 class="text-center" style="font-weight: 800"
-                        id="showNameT2">
+                      <h2
+                        class="text-center"
+                        style="font-weight: 800"
+                        id="showNameT2"
+                      >
                         Vikash Kumar
                       </h2>
                       <p
                         class="text-center titleJob"
                         id="showjobTitleT"
-                        style="font-size: 25px; color: #666666">
+                        style="font-size: 25px; color: #666666"
+                      >
                         Software Engineer
                       </p>
                     </div>
@@ -1196,13 +1270,11 @@
                       <div class="card-body p-2">
                         <p id="showObjectiveT">
                           Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit.
-                          Quia esse, tempore, placeat consequatur voluptatum,
-                          repellendus tenetur excepturi doloremque aliquid
-                          temporibus odit! Possimus qui ad repudiandae atque
-                          tempore, incidunt quo et. Distinctio recusandae
-                          dolores
-                          adipisci maiores dolore.
+                          elit. Quia esse, tempore, placeat consequatur
+                          voluptatum, repellendus tenetur excepturi doloremque
+                          aliquid temporibus odit! Possimus qui ad repudiandae
+                          atque tempore, incidunt quo et. Distinctio recusandae
+                          dolores adipisci maiores dolore.
                         </p>
                       </div>
                     </div>
@@ -1220,8 +1292,7 @@
                         <ul id="showAqT">
                           <li>
                             Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit.
-                            Provident, neque.
+                            elit. Provident, neque.
                           </li>
                         </ul>
                       </div>
@@ -1240,57 +1311,69 @@
           <button
             id="downloadButton"
             onclick="captureDivAndDownloadPdf()"
-            class="btn btn-warning btn_Generate">
+            class="btn btn-warning btn_Generate"
+          >
             DOWNLOAD-CV
           </button>
         </div>
-
       </div>
 
-      
-
       <!-- Resume CV Template -->
-      <div class="container template-cv mt-5" id="cv-template"
-        style="display: none;">
+      <div
+        class="container template-cv mt-5"
+        id="cv-template"
+        style="display: none"
+      >
         <div class="template-cv-content" id="cvTemplate">
           <div class="row">
-            <div class="col-md-4 col-5 background blueSection" id="templateColourChange">
-              <div class="template-leftSection py-5 ">
+            <div
+              class="col-md-4 col-5 background blueSection"
+              id="templateColourChange"
+            >
+              <div class="template-leftSection py-5">
                 <!-- Image Section -->
                 <div class="template-img text-center">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/768px-Windows_10_Default_Profile_Picture.svg.png?20221210150350"
                     class="img-fluid myimg"
-                    id="imgTemplate" />
+                    id="imgTemplate"
+                  />
                 </div>
                 <!-- about Section -->
                 <div class="template-asidebar">
                   <div class="template-about mt-3">
                     <p class="fontColorChange">
-                      <i class="fa-solid fa-user"></i>&nbsp;<span
-                        id="nameT1">vikash kumar</span>
+                      <i class="fa-solid fa-user"></i>&nbsp;<span id="nameT1"
+                        >vikash kumar</span
+                      >
                     </p>
                     <p class="fontColorChange">
                       <i class="fa-solid fa-envelope"></i>&nbsp;<span
-                        id="emailT">avikashkumar82@gmail.com</span>
+                        id="emailT"
+                        >avikashkumar82@gmail.com</span
+                      >
                     </p>
                     <div style="display: flex">
-                      <i class="fa-solid fa-phone"
-                        class="fontColorChange"></i>&nbsp;
+                      <i class="fa-solid fa-phone" class="fontColorChange"></i
+                      >&nbsp;
                       <div>
-                        <span id="countryContactT"
-                          class="fontColorChange">+91</span>
+                        <span id="countryContactT" class="fontColorChange"
+                          >+91</span
+                        >
                       </div>
                       -
                       <div>
-                        <span id="contactT"
-                          class="fontColorChange">9430722766</span>
+                        <span id="contactT" class="fontColorChange"
+                          >9430722766</span
+                        >
                       </div>
                     </div>
                     <br />
                     <p id="hello" class="fontColorChange">
                       <i class="fa-solid fa-location-dot"></i>&nbsp;<span
-                        id="addressT">Bokaro steel city</span>
+                        id="addressT"
+                        >Bokaro steel city</span
+                      >
                     </p>
                   </div>
                   <hr />
@@ -1307,22 +1390,25 @@
                     <p class="fontColorChange">
                       <span style="font-weight: 600">GIT-HUB</span>&nbsp;
                       <i class="fa-brands fa-github"></i>&nbsp;
-                      <a href="#1" id="githubT"
-                        class="fontColorChange">https://www.youtube.com/</a>
+                      <a href="#1" id="githubT" class="fontColorChange"
+                        >https://www.youtube.com/</a
+                      >
                     </p>
                     <p class="fontColorChange">
                       <span style="font-weight: 600">TWITTER</span>&nbsp;
-                      <i
-                        class="fa-brands fa-x-twitter fontColorChange"></i>&nbsp;
-                      <a href="#1" id="twitterT"
-                        class="fontColorChange">https://www.youtube.com/</a>
+                      <i class="fa-brands fa-x-twitter fontColorChange"></i
+                      >&nbsp;
+                      <a href="#1" id="twitterT" class="fontColorChange"
+                        >https://www.youtube.com/</a
+                      >
                     </p>
                     <p class="fontColorChange">
                       <span style="font-weight: 600">LINKEDIN</span>&nbsp;
-                      <i
-                        class="fa-brands fa-linkedin fontColorChange"></i>&nbsp;
-                      <a href="#1" id="linkedinT"
-                        class="fontColorChange">https://www.youtube.com/</a>
+                      <i class="fa-brands fa-linkedin fontColorChange"></i
+                      >&nbsp;
+                      <a href="#1" id="linkedinT" class="fontColorChange"
+                        >https://www.youtube.com/</a
+                      >
                     </p>
                   </div>
 
@@ -1361,7 +1447,8 @@
                   <p
                     class="text-center titleJob"
                     id="jobTitleT"
-                    style="font-size: 25px; color: #666666">
+                    style="font-size: 25px; color: #666666"
+                  >
                     Software Engineer
                   </p>
                 </div>
@@ -1411,6 +1498,7 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
