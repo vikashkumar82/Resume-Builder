@@ -61,23 +61,22 @@ p#objectiveT {
 
 /* manually Colour Change */
 
-#color1{
-
+#color1 {
     background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-        border: 1px solid #b9bdb9;
-        border-radius: 59%;
-        padding: 17px;
-        height:30px;
-        width:30px;
+    border: 1px solid #b9bdb9;
+    border-radius: 59%;
+    padding: 9px;
+    height: 25px;
+    width: 25px;
 }
 
 #color2 {
     background-image: linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% );
         border: 1px solid #FFF8F4;
         border-radius: 59%;
-        padding: 17px;
-        height:30px;
-        width:30px;
+        padding: 9px;
+        height: 25px;
+        width: 25px;
 }
 
 #color3 {
@@ -85,9 +84,9 @@ p#objectiveT {
     background-image: radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% );
         border: 1px solid #D9E6EB;
         border-radius: 59%;
-        padding: 17px;
-        height:30px;
-        width:30px;
+        padding: 9px;
+        height: 25px;
+        width: 25px;
 }
 
 #color4{
@@ -95,9 +94,9 @@ p#objectiveT {
     background-image: linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% );
         border: 1px solid #8B3DFF;
         border-radius: 59%;
-        padding: 17px;
-        height:30px;
-        width:30px;
+        padding: 9px;
+        height: 25px;
+        width: 25px;
     
 }
 
@@ -105,18 +104,18 @@ p#objectiveT {
     background-image: linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% );
     border: 1px solid #6B9999;
     border-radius: 59%;
-    padding: 17px;
-    height:30px;
-    width:30px;
+    padding: 9px;
+    height: 25px;
+    width: 25px;
 }
 
 #color6{
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% );
     border: 1px solid #414143;
     border-radius: 59%;
-    padding: 17px;
-    height:30px;
-    width:30px;
+    padding: 9px;
+    height: 25px;
+    width: 25px;
 }
 
 /* for font */
@@ -125,9 +124,9 @@ p#objectiveT {
     background: black;
     border: 1px solid black;
     border-radius: 59%;
-    padding: 17px;
-    height:30px;
-    width:30px;
+    padding: 9px;
+    height: 25px;
+    width: 25px;
 }
 
 #Fcolor2 {
@@ -135,15 +134,31 @@ p#objectiveT {
     background: white;
     border: 1px solid rgb(113, 111, 111);
     border-radius: 59%;
-    padding: 17px;
-    height:30px;
-    width:30px;
+    padding: 9px;
+    height: 25px;
+    width: 25px;
 }
 
 
 .colorSelection-Section {
     display: flex;
     gap: 10px;
+    border: 1px solid #778899;
+    padding: 8px 15px 8px 15px;
+    border-radius: 0px 0px 0px 22px;
+}
+.colorSelection-Section-fonts{
+    display: flex;
+    gap: 10px;
+    border: 1px solid #778899;
+    padding: 8px 15px 8px 15px;
+    border-radius: 0px 0px 22px 0px;
+}
+
+.multiColour {
+    /* border: 1px solid; */
+    padding: 5px 12px 5px 12px;
+    border-bottom: 1px solid #778899;
 }
 /* colorpicker */
 body {
@@ -257,10 +272,7 @@ div#cvTemplate {
     border-radius: 50px;
     margin: 0px -13px 0 -12px;
 }
-.resumeForm {
-    border: 1px solid gray;
-    /* padding: 5px; */
-}
+
 
 h1#nameT2 {
     margin-top: 51px;
@@ -322,16 +334,17 @@ div#projectProgress {
 
 
 .showAsideBar-content {
-    background: aqua;
+    background: black;
     position: relative;
     left: 46px;
 }
 
 .showBlueSection {
-    background: antiquewhite;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 29%, rgba(0,212,255,1) 100%);
     position: relative;
-    width: 699px;
-    right: 228px;
+    width: 709px;
+    right: 231px;
     /* height: 120px; */
     padding: 26px 0 2px 78px;
     top: 60px;
@@ -418,4 +431,104 @@ div#projectProgress {
 .rightSection-showResume {
     position: sticky;
     top: 10px;
+}
+
+div#showDesignProgress {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 29%, rgba(0,212,255,1) 100%);
+}
+
+div#showProjectProgress {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 29%, rgba(0,212,255,1) 100%);
+}
+
+.resumeGenerator-main {
+    border: 1px solid #778899;
+}
+
+.presonalInfo.p-3 {
+    border: 1px solid #778899;
+    border-radius: 7px;
+    margin-top: -14px;
+    margin-right: -22px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+}
+.presonalInfo h3 {
+    text-align: center;
+}
+.professionalInfo {
+    border: 1px solid #778899;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+    margin-right: -21px;
+}
+.professionalInfo h3 {
+    text-align: center;
+}
+.intrestsSection {
+    border: 1px solid #778899;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+    margin-right: -21px;
+}
+.intrestsSection h3{
+    text-align: center;
+}
+.skillsSummary-form {
+    border: 1px solid #778899;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+    margin-right: -21px;
+}
+.skillsSummary-form h3{
+    text-align: center;
+}
+.showTemplate3-main {
+    border: 1px solid #778899;
+    border-radius: 7px;
+    margin-left: -11px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+}
+
+.btn_showExperiene {
+    width: 300px;
+}
+
+.btn_addExperience {
+    width: 300px;
+}
+.btn-sm {
+    width: 245px;
+    padding: 8px;
+}
+
+.btn_Generate {
+    width: 456px;
+    padding: 10px;
+}
+
+section.colorSelection-Hero {
+    display: flex;
+}
+
+section.colorSelection-Hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1px;
+    margin-bottom: 14px;
+}
+
+.aside-aboutMe p {
+    font-size: large;
+}
+.inner-contact span {
+    font-size: large;
+}
+.designProgress p {
+    font-size: large;
+}
+.projectManagement {
+    font-size: large;
 }

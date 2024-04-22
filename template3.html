@@ -31,1414 +31,1536 @@
     <div class="container-fluid" id="cv-form">
       <h1 class="text-center">Resume Generator</h1>
       <div class="resumeGenerator-main">
+
+ <!-- color section -->
+ <section class="colorSelection-Hero ">
+  <div class="colorSelection-Section">
+    <div id="color1" onclick="light1()">
+      <span id="spanCol1" style="visibility: hidden">#b9bdb9</span>
+    </div>
+    <div id="color2" onclick="light2()">
+      <span id="spanCol2" style="visibility: hidden">#FFF8F4</span>
+    </div>
+    <div id="color3" onclick="light3()">
+      <span id="spanCol3" style="visibility: hidden">#D9E6EB</span>
+    </div>
+    <div id="color4" onclick="Eucalyptus()">
+      <span id="spanCol4" style="visibility: hidden">#8B3DFF</span>
+    </div>
+    <div id="color5" onclick="LightBlue()">
+      <span id="spanCol5" style="visibility: hidden">#6B9999</span>
+    </div>
+    <div id="color6" onclick="dark()">
+      <span id="spanCol6" style="visibility: hidden">#414143</span>
+    </div>
+  </div>
+  <div class="multiColour" style="display: flex;">
+    <div>
+      <input type="color" id="favcolor" name="favcolor"
+        value="#ff0000" />
+    </div>
+    <div>
+      <button onclick="changeBackgroundColor()" class="btnApply">
+        Apply
+      </button>
+    </div>
+    <div>
+      <button onclick="resetBackgroundColor()" class="btnRemove">
+        Reset
+      </button>
+    </div>
+  </div>
+
+  <div class="colorSelection-Section-fonts" >
+    <div id="Fcolor1" onclick="fontLight1()">
+
+    </div>
+    <div id="Fcolor2" onclick="fontLight2()">
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
         <!-- display resume section -->
         <div class="row p-0">
           <div class="col-md-6">
             <!-- Resume FORM -->
-      <div class="resumeForm p-3">
-        <!-- PRESONAL INFORMATION -->
-        <div class="presonalInfo">
-          <h3>Presonal Information</h3>
-          <div class="row">
-            <!-- image upload -->
-            <div class="form-group mt-3">
-              <label for>Select your profile picture</label>
-              <input type="file" id="imgField" class="form-control" />
-            </div>
-            <div class="col-md-6">
-              <!-- name -->
-              <div class="form-group mt-2">
-                <label for="nameField">Your Name</label>
-                <input type="text" id="nameField" class="form-control" />
-              </div>
-              <!-- Contact -->
-              <div class="form-group mt-2">
-                <label for="contactField">Your Contact</label>
+            <div class="resumeForm p-3">
+              <!-- PRESONAL INFORMATION -->
+              <div class="presonalInfo p-3">
+                <h3>Presonal Information</h3>
                 <div class="row">
-                  <div class="col-md-4">
-                    <select
-                      name="countrycode"
-                      id="countryCode"
-                      class="form-control">
-                      <option data-countryCode="AF" value="+93">
-                        +93 - Afghanistan
-                      </option>
-                      <option data-countryCode="AX" value="+358">
-                        +358 - Åland Islands
-                      </option>
-                      <option data-countryCode="AL" value="+355">
-                        +355 - Albania
-                      </option>
-                      <option data-countryCode="DZ" value="+213">
-                        +213 - Algeria
-                      </option>
-                      <option data-countryCode="AS" value="+1684">
-                        +1684 - American Samoa
-                      </option>
-                      <option data-countryCode="AD" value="+376">
-                        +376 - Andorra
-                      </option>
-                      <option data-countryCode="AO" value="+244">
-                        +244 - Angola
-                      </option>
-                      <option data-countryCode="AI" value="+1264">
-                        +1264 - Anguilla
-                      </option>
-                      <option data-countryCode="AQ" value="+672">
-                        +672 - Antarctica
-                      </option>
-                      <option data-countryCode="AG" value="+1268">
-                        +1268 - Antigua and Barbuda
-                      </option>
-                      <option data-countryCode="AR" value="+54">
-                        +54 - Argentina
-                      </option>
-                      <option data-countryCode="AM" value="+374">
-                        +374 - Armenia
-                      </option>
-                      <option data-countryCode="AW" value="+297">
-                        +297 - Aruba
-                      </option>
-                      <option data-countryCode="AU" value="+61">
-                        +61 - Australia
-                      </option>
-                      <option data-countryCode="AT" value="+43">
-                        +43 - Austria
-                      </option>
-                      <option data-countryCode="AZ" value="+994">
-                        +994 - Azerbaijan
-                      </option>
-                      <option data-countryCode="BS" value="+1242">
-                        +1242 - Bahamas
-                      </option>
-                      <option data-countryCode="BH" value="+973">
-                        +973 - Bahrain
-                      </option>
-                      <option data-countryCode="BD" value="+880">
-                        +880 - Bangladesh
-                      </option>
-                      <option data-countryCode="BB" value="+1246">
-                        +1246 - Barbados
-                      </option>
-                      <option data-countryCode="BY" value="+375">
-                        +375 - Belarus
-                      </option>
-                      <option data-countryCode="BE" value="+32">
-                        +32 - Belgium
-                      </option>
-                      <option data-countryCode="BZ" value="+501">
-                        +501 - Belize
-                      </option>
-                      <option data-countryCode="BJ" value="+229">
-                        +229 - Benin
-                      </option>
-                      <option data-countryCode="BM" value="+1441">
-                        +1441 - Bermuda
-                      </option>
-                      <option data-countryCode="BT" value="+975">
-                        +975 - Bhutan
-                      </option>
-                      <option data-countryCode="BO" value="+591">
-                        +591 - Bolivia, Plurinational State of bolivia
-                      </option>
-                      <option data-countryCode="BA" value="+387">
-                        +387 - Bosnia and Herzegovina
-                      </option>
-                      <option data-countryCode="BW" value="+267">
-                        +267 - Botswana
-                      </option>
-                      <option data-countryCode="BV" value="+47">
-                        +47 - Bouvet Island
-                      </option>
-                      <option data-countryCode="BR" value="+55">
-                        +55 - Brazil
-                      </option>
-                      <option data-countryCode="IO" value="+246">
-                        +246 - British Indian Ocean Territory
-                      </option>
-                      <option data-countryCode="BN" value="+673">
-                        +673 - Brunei Darussalam
-                      </option>
-                      <option data-countryCode="BG" value="+359">
-                        +359 - Bulgaria
-                      </option>
-                      <option data-countryCode="BF" value="+226">
-                        +226 - Burkina Faso
-                      </option>
-                      <option data-countryCode="BI" value="+257">
-                        +257 - Burundi
-                      </option>
-                      <option data-countryCode="KH" value="+855">
-                        +855 - Cambodia
-                      </option>
-                      <option data-countryCode="CM" value="+237">
-                        +237 - Cameroon
-                      </option>
-                      <option data-countryCode="CA" value="+1">
-                        +1 - Canada
-                      </option>
-                      <option data-countryCode="CV" value="+238">
-                        +238 - Cape Verde
-                      </option>
-                      <option data-countryCode="KY" value="+ 345">
-                        + 345 - Cayman Islands
-                      </option>
-                      <option data-countryCode="CF" value="+236">
-                        +236 - Central African Republic
-                      </option>
-                      <option data-countryCode="TD" value="+235">
-                        +235 - Chad
-                      </option>
-                      <option data-countryCode="CL" value="+56">
-                        +56 - Chile
-                      </option>
-                      <option data-countryCode="CN" value="+86">
-                        +86 - China
-                      </option>
-                      <option data-countryCode="CX" value="+61">
-                        +61 - Christmas Island
-                      </option>
-                      <option data-countryCode="CC" value="+61">
-                        +61 - Cocos (Keeling) Islands
-                      </option>
-                      <option data-countryCode="CO" value="+57">
-                        +57 - Colombia
-                      </option>
-                      <option data-countryCode="KM" value="+269">
-                        +269 - Comoros
-                      </option>
-                      <option data-countryCode="CG" value="+242">
-                        +242 - Congo
-                      </option>
-                      <option data-countryCode="CD" value="+243">
-                        +243 - Congo, The Democratic Republic of the Congo
-                      </option>
-                      <option data-countryCode="CK" value="+682">
-                        +682 - Cook Islands
-                      </option>
-                      <option data-countryCode="CR" value="+506">
-                        +506 - Costa Rica
-                      </option>
-                      <option data-countryCode="CI" value="+225">
-                        +225 - Cote d'Ivoire
-                      </option>
-                      <option data-countryCode="HR" value="+385">
-                        +385 - Croatia
-                      </option>
-                      <option data-countryCode="CU" value="+53">
-                        +53 - Cuba
-                      </option>
-                      <option data-countryCode="CY" value="+357">
-                        +357 - Cyprus
-                      </option>
-                      <option data-countryCode="CZ" value="+420">
-                        +420 - Czech Republic
-                      </option>
-                      <option data-countryCode="DK" value="+45">
-                        +45 - Denmark
-                      </option>
-                      <option data-countryCode="DJ" value="+253">
-                        +253 - Djibouti
-                      </option>
-                      <option data-countryCode="DM" value="+1767">
-                        +1767 - Dominica
-                      </option>
-                      <option data-countryCode="DO" value="+1849">
-                        +1849 - Dominican Republic
-                      </option>
-                      <option data-countryCode="EC" value="+593">
-                        +593 - Ecuador
-                      </option>
-                      <option data-countryCode="EG" value="+20">
-                        +20 - Egypt
-                      </option>
-                      <option data-countryCode="SV" value="+503">
-                        +503 - El Salvador
-                      </option>
-                      <option data-countryCode="GQ" value="+240">
-                        +240 - Equatorial Guinea
-                      </option>
-                      <option data-countryCode="ER" value="+291">
-                        +291 - Eritrea
-                      </option>
-                      <option data-countryCode="EE" value="+372">
-                        +372 - Estonia
-                      </option>
-                      <option data-countryCode="ET" value="+251">
-                        +251 - Ethiopia
-                      </option>
-                      <option data-countryCode="FK" value="+500">
-                        +500 - Falkland Islands (Malvinas)
-                      </option>
-                      <option data-countryCode="FO" value="+298">
-                        +298 - Faroe Islands
-                      </option>
-                      <option data-countryCode="FJ" value="+679">
-                        +679 - Fiji
-                      </option>
-                      <option data-countryCode="FI" value="+358">
-                        +358 - Finland
-                      </option>
-                      <option data-countryCode="FR" value="+33">
-                        +33 - France
-                      </option>
-                      <option data-countryCode="GF" value="+594">
-                        +594 - French Guiana
-                      </option>
-                      <option data-countryCode="PF" value="+689">
-                        +689 - French Polynesia
-                      </option>
-                      <option data-countryCode="TF" value="+262">
-                        +262 - French Southern Territories
-                      </option>
-                      <option data-countryCode="GA" value="+241">
-                        +241 - Gabon
-                      </option>
-                      <option data-countryCode="GM" value="+220">
-                        +220 - Gambia
-                      </option>
-                      <option data-countryCode="GE" value="+995">
-                        +995 - Georgia
-                      </option>
-                      <option data-countryCode="DE" value="+49">
-                        +49 - Germany
-                      </option>
-                      <option data-countryCode="GH" value="+233">
-                        +233 - Ghana
-                      </option>
-                      <option data-countryCode="GI" value="+350">
-                        +350 - Gibraltar
-                      </option>
-                      <option data-countryCode="GR" value="+30">
-                        +30 - Greece
-                      </option>
-                      <option data-countryCode="GL" value="+299">
-                        +299 - Greenland
-                      </option>
-                      <option data-countryCode="GD" value="+1473">
-                        +1473 - Grenada
-                      </option>
-                      <option data-countryCode="GP" value="+590">
-                        +590 - Guadeloupe
-                      </option>
-                      <option data-countryCode="GU" value="+1671">
-                        +1671 - Guam
-                      </option>
-                      <option data-countryCode="GT" value="+502">
-                        +502 - Guatemala
-                      </option>
-                      <option data-countryCode="GG" value="+44">
-                        +44 - Guernsey
-                      </option>
-                      <option data-countryCode="GN" value="+224">
-                        +224 - Guinea
-                      </option>
-                      <option data-countryCode="GW" value="+245">
-                        +245 - Guinea-Bissau
-                      </option>
-                      <option data-countryCode="GY" value="+592">
-                        +592 - Guyana
-                      </option>
-                      <option data-countryCode="HT" value="+509">
-                        +509 - Haiti
-                      </option>
-                      <option data-countryCode="HM" value="+0">
-                        +0 - Heard Island and Mcdonald Islands
-                      </option>
-                      <option data-countryCode="VA" value="+379">
-                        +379 - Holy See (Vatican City State)
-                      </option>
-                      <option data-countryCode="HN" value="+504">
-                        +504 - Honduras
-                      </option>
-                      <option data-countryCode="HK" value="+852">
-                        +852 - Hong Kong
-                      </option>
-                      <option data-countryCode="HU" value="+36">
-                        +36 - Hungary
-                      </option>
-                      <option data-countryCode="IS" value="+354">
-                        +354 - Iceland
-                      </option>
-                      <option
-                        data-countryCode="IN"
-                        value="+91"
-                        selected="selected">
-                        +91 - India
-                      </option>
-                      <option data-countryCode="ID" value="+62">
-                        +62 - Indonesia
-                      </option>
-                      <option data-countryCode="IR" value="+98">
-                        +98 - Iran, Islamic Republic of Persian Gulf
-                      </option>
-                      <option data-countryCode="IQ" value="+964">
-                        +964 - Iraq
-                      </option>
-                      <option data-countryCode="IE" value="+353">
-                        +353 - Ireland
-                      </option>
-                      <option data-countryCode="IM" value="+44">
-                        +44 - Isle of Man
-                      </option>
-                      <option data-countryCode="IL" value="+972">
-                        +972 - Israel
-                      </option>
-                      <option data-countryCode="IT" value="+39">
-                        +39 - Italy
-                      </option>
-                      <option data-countryCode="JM" value="+1876">
-                        +1876 - Jamaica
-                      </option>
-                      <option data-countryCode="JP" value="+81">
-                        +81 - Japan
-                      </option>
-                      <option data-countryCode="JE" value="+44">
-                        +44 - Jersey
-                      </option>
-                      <option data-countryCode="JO" value="+962">
-                        +962 - Jordan
-                      </option>
-                      <option data-countryCode="KZ" value="+7">
-                        +7 - Kazakhstan
-                      </option>
-                      <option data-countryCode="KE" value="+254">
-                        +254 - Kenya
-                      </option>
-                      <option data-countryCode="KI" value="+686">
-                        +686 - Kiribati
-                      </option>
-                      <option data-countryCode="KP" value="+850">
-                        +850 - Korea, Democratic People's Republic of Korea
-                      </option>
-                      <option data-countryCode="KR" value="+82">
-                        +82 - Korea, Republic of South Korea
-                      </option>
-                      <option data-countryCode="XK" value="+383">
-                        +383 - Kosovo
-                      </option>
-                      <option data-countryCode="KW" value="+965">
-                        +965 - Kuwait
-                      </option>
-                      <option data-countryCode="KG" value="+996">
-                        +996 - Kyrgyzstan
-                      </option>
-                      <option data-countryCode="LA" value="+856">
-                        +856 - Laos
-                      </option>
-                      <option data-countryCode="LV" value="+371">
-                        +371 - Latvia
-                      </option>
-                      <option data-countryCode="LB" value="+961">
-                        +961 - Lebanon
-                      </option>
-                      <option data-countryCode="LS" value="+266">
-                        +266 - Lesotho
-                      </option>
-                      <option data-countryCode="LR" value="+231">
-                        +231 - Liberia
-                      </option>
-                      <option data-countryCode="LY" value="+218">
-                        +218 - Libyan Arab Jamahiriya
-                      </option>
-                      <option data-countryCode="LI" value="+423">
-                        +423 - Liechtenstein
-                      </option>
-                      <option data-countryCode="LT" value="+370">
-                        +370 - Lithuania
-                      </option>
-                      <option data-countryCode="LU" value="+352">
-                        +352 - Luxembourg
-                      </option>
-                      <option data-countryCode="MO" value="+853">
-                        +853 - Macao
-                      </option>
-                      <option data-countryCode="MK" value="+389">
-                        +389 - Macedonia
-                      </option>
-                      <option data-countryCode="MG" value="+261">
-                        +261 - Madagascar
-                      </option>
-                      <option data-countryCode="MW" value="+265">
-                        +265 - Malawi
-                      </option>
-                      <option data-countryCode="MY" value="+60">
-                        +60 - Malaysia
-                      </option>
-                      <option data-countryCode="MV" value="+960">
-                        +960 - Maldives
-                      </option>
-                      <option data-countryCode="ML" value="+223">
-                        +223 - Mali
-                      </option>
-                      <option data-countryCode="MT" value="+356">
-                        +356 - Malta
-                      </option>
-                      <option data-countryCode="MH" value="+692">
-                        +692 - Marshall Islands
-                      </option>
-                      <option data-countryCode="MQ" value="+596">
-                        +596 - Martinique
-                      </option>
-                      <option data-countryCode="MR" value="+222">
-                        +222 - Mauritania
-                      </option>
-                      <option data-countryCode="MU" value="+230">
-                        +230 - Mauritius
-                      </option>
-                      <option data-countryCode="YT" value="+262">
-                        +262 - Mayotte
-                      </option>
-                      <option data-countryCode="MX" value="+52">
-                        +52 - Mexico
-                      </option>
-                      <option data-countryCode="FM" value="+691">
-                        +691 - Micronesia, Federated States of Micronesia
-                      </option>
-                      <option data-countryCode="MD" value="+373">
-                        +373 - Moldova
-                      </option>
-                      <option data-countryCode="MC" value="+377">
-                        +377 - Monaco
-                      </option>
-                      <option data-countryCode="MN" value="+976">
-                        +976 - Mongolia
-                      </option>
-                      <option data-countryCode="ME" value="+382">
-                        +382 - Montenegro
-                      </option>
-                      <option data-countryCode="MS" value="+1664">
-                        +1664 - Montserrat
-                      </option>
-                      <option data-countryCode="MA" value="+212">
-                        +212 - Morocco
-                      </option>
-                      <option data-countryCode="MZ" value="+258">
-                        +258 - Mozambique
-                      </option>
-                      <option data-countryCode="MM" value="+95">
-                        +95 - Myanmar
-                      </option>
-                      <option data-countryCode="NA" value="+264">
-                        +264 - Namibia
-                      </option>
-                      <option data-countryCode="NR" value="+674">
-                        +674 - Nauru
-                      </option>
-                      <option data-countryCode="NP" value="+977">
-                        +977 - Nepal
-                      </option>
-                      <option data-countryCode="NL" value="+31">
-                        +31 - Netherlands
-                      </option>
-                      <option data-countryCode="AN" value="+599">
-                        +599 - Netherlands Antilles
-                      </option>
-                      <option data-countryCode="NC" value="+687">
-                        +687 - New Caledonia
-                      </option>
-                      <option data-countryCode="NZ" value="+64">
-                        +64 - New Zealand
-                      </option>
-                      <option data-countryCode="NI" value="+505">
-                        +505 - Nicaragua
-                      </option>
-                      <option data-countryCode="NE" value="+227">
-                        +227 - Niger
-                      </option>
-                      <option data-countryCode="NG" value="+234">
-                        +234 - Nigeria
-                      </option>
-                      <option data-countryCode="NU" value="+683">
-                        +683 - Niue
-                      </option>
-                      <option data-countryCode="NF" value="+672">
-                        +672 - Norfolk Island
-                      </option>
-                      <option data-countryCode="MP" value="+1670">
-                        +1670 - Northern Mariana Islands
-                      </option>
-                      <option data-countryCode="NO" value="+47">
-                        +47 - Norway
-                      </option>
-                      <option data-countryCode="OM" value="+968">
-                        +968 - Oman
-                      </option>
-                      <option data-countryCode="PK" value="+92">
-                        +92 - Pakistan
-                      </option>
-                      <option data-countryCode="PW" value="+680">
-                        +680 - Palau
-                      </option>
-                      <option data-countryCode="PS" value="+970">
-                        +970 - Palestinian Territory, Occupied
-                      </option>
-                      <option data-countryCode="PA" value="+507">
-                        +507 - Panama
-                      </option>
-                      <option data-countryCode="PG" value="+675">
-                        +675 - Papua New Guinea
-                      </option>
-                      <option data-countryCode="PY" value="+595">
-                        +595 - Paraguay
-                      </option>
-                      <option data-countryCode="PE" value="+51">
-                        +51 - Peru
-                      </option>
-                      <option data-countryCode="PH" value="+63">
-                        +63 - Philippines
-                      </option>
-                      <option data-countryCode="PN" value="+64">
-                        +64 - Pitcairn
-                      </option>
-                      <option data-countryCode="PL" value="+48">
-                        +48 - Poland
-                      </option>
-                      <option data-countryCode="PT" value="+351">
-                        +351 - Portugal
-                      </option>
-                      <option data-countryCode="PR" value="+1939">
-                        +1939 - Puerto Rico
-                      </option>
-                      <option data-countryCode="QA" value="+974">
-                        +974 - Qatar
-                      </option>
-                      <option data-countryCode="RO" value="+40">
-                        +40 - Romania
-                      </option>
-                      <option data-countryCode="RU" value="+7">
-                        +7 - Russia
-                      </option>
-                      <option data-countryCode="RW" value="+250">
-                        +250 - Rwanda
-                      </option>
-                      <option data-countryCode="RE" value="+262">
-                        +262 - Reunion
-                      </option>
-                      <option data-countryCode="BL" value="+590">
-                        +590 - Saint Barthelemy
-                      </option>
-                      <option data-countryCode="SH" value="+290">
-                        +290 - Saint Helena, Ascension and Tristan Da Cunha
-                      </option>
-                      <option data-countryCode="KN" value="+1869">
-                        +1869 - Saint Kitts and Nevis
-                      </option>
-                      <option data-countryCode="LC" value="+1758">
-                        +1758 - Saint Lucia
-                      </option>
-                      <option data-countryCode="MF" value="+590">
-                        +590 - Saint Martin
-                      </option>
-                      <option data-countryCode="PM" value="+508">
-                        +508 - Saint Pierre and Miquelon
-                      </option>
-                      <option data-countryCode="VC" value="+1784">
-                        +1784 - Saint Vincent and the Grenadines
-                      </option>
-                      <option data-countryCode="WS" value="+685">
-                        +685 - Samoa
-                      </option>
-                      <option data-countryCode="SM" value="+378">
-                        +378 - San Marino
-                      </option>
-                      <option data-countryCode="ST" value="+239">
-                        +239 - Sao Tome and Principe
-                      </option>
-                      <option data-countryCode="SA" value="+966">
-                        +966 - Saudi Arabia
-                      </option>
-                      <option data-countryCode="SN" value="+221">
-                        +221 - Senegal
-                      </option>
-                      <option data-countryCode="RS" value="+381">
-                        +381 - Serbia
-                      </option>
-                      <option data-countryCode="SC" value="+248">
-                        +248 - Seychelles
-                      </option>
-                      <option data-countryCode="SL" value="+232">
-                        +232 - Sierra Leone
-                      </option>
-                      <option data-countryCode="SG" value="+65">
-                        +65 - Singapore
-                      </option>
-                      <option data-countryCode="SK" value="+421">
-                        +421 - Slovakia
-                      </option>
-                      <option data-countryCode="SI" value="+386">
-                        +386 - Slovenia
-                      </option>
-                      <option data-countryCode="SB" value="+677">
-                        +677 - Solomon Islands
-                      </option>
-                      <option data-countryCode="SO" value="+252">
-                        +252 - Somalia
-                      </option>
-                      <option data-countryCode="ZA" value="+27">
-                        +27 - South Africa
-                      </option>
-                      <option data-countryCode="SS" value="+211">
-                        +211 - South Sudan
-                      </option>
-                      <option data-countryCode="GS" value="+500">
-                        +500 - South Georgia and the South Sandwich Islands
-                      </option>
-                      <option data-countryCode="ES" value="+34">
-                        +34 - Spain
-                      </option>
-                      <option data-countryCode="LK" value="+94">
-                        +94 - Sri Lanka
-                      </option>
-                      <option data-countryCode="SD" value="+249">
-                        +249 - Sudan
-                      </option>
-                      <option data-countryCode="SR" value="+597">
-                        +597 - Suriname
-                      </option>
-                      <option data-countryCode="SJ" value="+47">
-                        +47 - Svalbard and Jan Mayen
-                      </option>
-                      <option data-countryCode="SZ" value="+268">
-                        +268 - Swaziland
-                      </option>
-                      <option data-countryCode="SE" value="+46">
-                        +46 - Sweden
-                      </option>
-                      <option data-countryCode="CH" value="+41">
-                        +41 - Switzerland
-                      </option>
-                      <option data-countryCode="SY" value="+963">
-                        +963 - Syrian Arab Republic
-                      </option>
-                      <option data-countryCode="TW" value="+886">
-                        +886 - Taiwan
-                      </option>
-                      <option data-countryCode="TJ" value="+992">
-                        +992 - Tajikistan
-                      </option>
-                      <option data-countryCode="TZ" value="+255">
-                        +255 - Tanzania, United Republic of Tanzania
-                      </option>
-                      <option data-countryCode="TH" value="+66">
-                        +66 - Thailand
-                      </option>
-                      <option data-countryCode="TL" value="+670">
-                        +670 - Timor-Leste
-                      </option>
-                      <option data-countryCode="TG" value="+228">
-                        +228 - Togo
-                      </option>
-                      <option data-countryCode="TK" value="+690">
-                        +690 - Tokelau
-                      </option>
-                      <option data-countryCode="TO" value="+676">
-                        +676 - Tonga
-                      </option>
-                      <option data-countryCode="TT" value="+1868">
-                        +1868 - Trinidad and Tobago
-                      </option>
-                      <option data-countryCode="TN" value="+216">
-                        +216 - Tunisia
-                      </option>
-                      <option data-countryCode="TR" value="+90">
-                        +90 - Turkey
-                      </option>
-                      <option data-countryCode="TM" value="+993">
-                        +993 - Turkmenistan
-                      </option>
-                      <option data-countryCode="TC" value="+1649">
-                        +1649 - Turks and Caicos Islands
-                      </option>
-                      <option data-countryCode="TV" value="+688">
-                        +688 - Tuvalu
-                      </option>
-                      <option data-countryCode="UG" value="+256">
-                        +256 - Uganda
-                      </option>
-                      <option data-countryCode="UA" value="+380">
-                        +380 - Ukraine
-                      </option>
-                      <option data-countryCode="AE" value="+971">
-                        +971 - United Arab Emirates
-                      </option>
-                      <option data-countryCode="GB" value="+44">
-                        +44 - United Kingdom
-                      </option>
-                      <option data-countryCode="US" value="+1">
-                        +1 - United States
-                      </option>
-                      <option data-countryCode="UY" value="+598">
-                        +598 - Uruguay
-                      </option>
-                      <option data-countryCode="UZ" value="+998">
-                        +998 - Uzbekistan
-                      </option>
-                      <option data-countryCode="VU" value="+678">
-                        +678 - Vanuatu
-                      </option>
-                      <option data-countryCode="VE" value="+58">
-                        +58 - Venezuela, Bolivarian Republic of Venezuela
-                      </option>
-                      <option data-countryCode="VN" value="+84">
-                        +84 - Vietnam
-                      </option>
-                      <option data-countryCode="VG" value="+1284">
-                        +1284 - Virgin Islands, British
-                      </option>
-                      <option data-countryCode="VI" value="+1340">
-                        +1340 - Virgin Islands, U.S.
-                      </option>
-                      <option data-countryCode="WF" value="+681">
-                        +681 - Wallis and Futuna
-                      </option>
-                      <option data-countryCode="YE" value="+967">
-                        +967 - Yemen
-                      </option>
-                      <option data-countryCode="ZM" value="+260">
-                        +260 - Zambia
-                      </option>
-                      <option data-countryCode="ZW" value="+263">
-                        +263 - Zimbabwe
-                      </option>
-                    </select>
+                  <!-- image upload -->
+                  <div class="form-group mt-3">
+                    <label for>Select your profile picture</label>
+                    <input type="file" id="imgField" class="form-control" />
                   </div>
-                  <div class="col-md-8">
-                    <input type="text" id="contactField" class="form-control" />
+                  <div class="col-md-6">
+                    <!-- name -->
+                    <div class="form-group mt-2">
+                      <label for="nameField">Your Name</label>
+                      <input type="text" id="nameField" class="form-control" />
+                    </div>
+                    <!-- Contact -->
+                    <div class="form-group mt-2">
+                      <label for="contactField">Your Contact</label>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <select
+                            name="countrycode"
+                            id="countryCode"
+                            class="form-control">
+                            <option data-countryCode="AF" value="+93">
+                              +93 - Afghanistan
+                            </option>
+                            <option data-countryCode="AX" value="+358">
+                              +358 - Åland Islands
+                            </option>
+                            <option data-countryCode="AL" value="+355">
+                              +355 - Albania
+                            </option>
+                            <option data-countryCode="DZ" value="+213">
+                              +213 - Algeria
+                            </option>
+                            <option data-countryCode="AS" value="+1684">
+                              +1684 - American Samoa
+                            </option>
+                            <option data-countryCode="AD" value="+376">
+                              +376 - Andorra
+                            </option>
+                            <option data-countryCode="AO" value="+244">
+                              +244 - Angola
+                            </option>
+                            <option data-countryCode="AI" value="+1264">
+                              +1264 - Anguilla
+                            </option>
+                            <option data-countryCode="AQ" value="+672">
+                              +672 - Antarctica
+                            </option>
+                            <option data-countryCode="AG" value="+1268">
+                              +1268 - Antigua and Barbuda
+                            </option>
+                            <option data-countryCode="AR" value="+54">
+                              +54 - Argentina
+                            </option>
+                            <option data-countryCode="AM" value="+374">
+                              +374 - Armenia
+                            </option>
+                            <option data-countryCode="AW" value="+297">
+                              +297 - Aruba
+                            </option>
+                            <option data-countryCode="AU" value="+61">
+                              +61 - Australia
+                            </option>
+                            <option data-countryCode="AT" value="+43">
+                              +43 - Austria
+                            </option>
+                            <option data-countryCode="AZ" value="+994">
+                              +994 - Azerbaijan
+                            </option>
+                            <option data-countryCode="BS" value="+1242">
+                              +1242 - Bahamas
+                            </option>
+                            <option data-countryCode="BH" value="+973">
+                              +973 - Bahrain
+                            </option>
+                            <option data-countryCode="BD" value="+880">
+                              +880 - Bangladesh
+                            </option>
+                            <option data-countryCode="BB" value="+1246">
+                              +1246 - Barbados
+                            </option>
+                            <option data-countryCode="BY" value="+375">
+                              +375 - Belarus
+                            </option>
+                            <option data-countryCode="BE" value="+32">
+                              +32 - Belgium
+                            </option>
+                            <option data-countryCode="BZ" value="+501">
+                              +501 - Belize
+                            </option>
+                            <option data-countryCode="BJ" value="+229">
+                              +229 - Benin
+                            </option>
+                            <option data-countryCode="BM" value="+1441">
+                              +1441 - Bermuda
+                            </option>
+                            <option data-countryCode="BT" value="+975">
+                              +975 - Bhutan
+                            </option>
+                            <option data-countryCode="BO" value="+591">
+                              +591 - Bolivia, Plurinational State of bolivia
+                            </option>
+                            <option data-countryCode="BA" value="+387">
+                              +387 - Bosnia and Herzegovina
+                            </option>
+                            <option data-countryCode="BW" value="+267">
+                              +267 - Botswana
+                            </option>
+                            <option data-countryCode="BV" value="+47">
+                              +47 - Bouvet Island
+                            </option>
+                            <option data-countryCode="BR" value="+55">
+                              +55 - Brazil
+                            </option>
+                            <option data-countryCode="IO" value="+246">
+                              +246 - British Indian Ocean Territory
+                            </option>
+                            <option data-countryCode="BN" value="+673">
+                              +673 - Brunei Darussalam
+                            </option>
+                            <option data-countryCode="BG" value="+359">
+                              +359 - Bulgaria
+                            </option>
+                            <option data-countryCode="BF" value="+226">
+                              +226 - Burkina Faso
+                            </option>
+                            <option data-countryCode="BI" value="+257">
+                              +257 - Burundi
+                            </option>
+                            <option data-countryCode="KH" value="+855">
+                              +855 - Cambodia
+                            </option>
+                            <option data-countryCode="CM" value="+237">
+                              +237 - Cameroon
+                            </option>
+                            <option data-countryCode="CA" value="+1">
+                              +1 - Canada
+                            </option>
+                            <option data-countryCode="CV" value="+238">
+                              +238 - Cape Verde
+                            </option>
+                            <option data-countryCode="KY" value="+ 345">
+                              + 345 - Cayman Islands
+                            </option>
+                            <option data-countryCode="CF" value="+236">
+                              +236 - Central African Republic
+                            </option>
+                            <option data-countryCode="TD" value="+235">
+                              +235 - Chad
+                            </option>
+                            <option data-countryCode="CL" value="+56">
+                              +56 - Chile
+                            </option>
+                            <option data-countryCode="CN" value="+86">
+                              +86 - China
+                            </option>
+                            <option data-countryCode="CX" value="+61">
+                              +61 - Christmas Island
+                            </option>
+                            <option data-countryCode="CC" value="+61">
+                              +61 - Cocos (Keeling) Islands
+                            </option>
+                            <option data-countryCode="CO" value="+57">
+                              +57 - Colombia
+                            </option>
+                            <option data-countryCode="KM" value="+269">
+                              +269 - Comoros
+                            </option>
+                            <option data-countryCode="CG" value="+242">
+                              +242 - Congo
+                            </option>
+                            <option data-countryCode="CD" value="+243">
+                              +243 - Congo, The Democratic Republic of the Congo
+                            </option>
+                            <option data-countryCode="CK" value="+682">
+                              +682 - Cook Islands
+                            </option>
+                            <option data-countryCode="CR" value="+506">
+                              +506 - Costa Rica
+                            </option>
+                            <option data-countryCode="CI" value="+225">
+                              +225 - Cote d'Ivoire
+                            </option>
+                            <option data-countryCode="HR" value="+385">
+                              +385 - Croatia
+                            </option>
+                            <option data-countryCode="CU" value="+53">
+                              +53 - Cuba
+                            </option>
+                            <option data-countryCode="CY" value="+357">
+                              +357 - Cyprus
+                            </option>
+                            <option data-countryCode="CZ" value="+420">
+                              +420 - Czech Republic
+                            </option>
+                            <option data-countryCode="DK" value="+45">
+                              +45 - Denmark
+                            </option>
+                            <option data-countryCode="DJ" value="+253">
+                              +253 - Djibouti
+                            </option>
+                            <option data-countryCode="DM" value="+1767">
+                              +1767 - Dominica
+                            </option>
+                            <option data-countryCode="DO" value="+1849">
+                              +1849 - Dominican Republic
+                            </option>
+                            <option data-countryCode="EC" value="+593">
+                              +593 - Ecuador
+                            </option>
+                            <option data-countryCode="EG" value="+20">
+                              +20 - Egypt
+                            </option>
+                            <option data-countryCode="SV" value="+503">
+                              +503 - El Salvador
+                            </option>
+                            <option data-countryCode="GQ" value="+240">
+                              +240 - Equatorial Guinea
+                            </option>
+                            <option data-countryCode="ER" value="+291">
+                              +291 - Eritrea
+                            </option>
+                            <option data-countryCode="EE" value="+372">
+                              +372 - Estonia
+                            </option>
+                            <option data-countryCode="ET" value="+251">
+                              +251 - Ethiopia
+                            </option>
+                            <option data-countryCode="FK" value="+500">
+                              +500 - Falkland Islands (Malvinas)
+                            </option>
+                            <option data-countryCode="FO" value="+298">
+                              +298 - Faroe Islands
+                            </option>
+                            <option data-countryCode="FJ" value="+679">
+                              +679 - Fiji
+                            </option>
+                            <option data-countryCode="FI" value="+358">
+                              +358 - Finland
+                            </option>
+                            <option data-countryCode="FR" value="+33">
+                              +33 - France
+                            </option>
+                            <option data-countryCode="GF" value="+594">
+                              +594 - French Guiana
+                            </option>
+                            <option data-countryCode="PF" value="+689">
+                              +689 - French Polynesia
+                            </option>
+                            <option data-countryCode="TF" value="+262">
+                              +262 - French Southern Territories
+                            </option>
+                            <option data-countryCode="GA" value="+241">
+                              +241 - Gabon
+                            </option>
+                            <option data-countryCode="GM" value="+220">
+                              +220 - Gambia
+                            </option>
+                            <option data-countryCode="GE" value="+995">
+                              +995 - Georgia
+                            </option>
+                            <option data-countryCode="DE" value="+49">
+                              +49 - Germany
+                            </option>
+                            <option data-countryCode="GH" value="+233">
+                              +233 - Ghana
+                            </option>
+                            <option data-countryCode="GI" value="+350">
+                              +350 - Gibraltar
+                            </option>
+                            <option data-countryCode="GR" value="+30">
+                              +30 - Greece
+                            </option>
+                            <option data-countryCode="GL" value="+299">
+                              +299 - Greenland
+                            </option>
+                            <option data-countryCode="GD" value="+1473">
+                              +1473 - Grenada
+                            </option>
+                            <option data-countryCode="GP" value="+590">
+                              +590 - Guadeloupe
+                            </option>
+                            <option data-countryCode="GU" value="+1671">
+                              +1671 - Guam
+                            </option>
+                            <option data-countryCode="GT" value="+502">
+                              +502 - Guatemala
+                            </option>
+                            <option data-countryCode="GG" value="+44">
+                              +44 - Guernsey
+                            </option>
+                            <option data-countryCode="GN" value="+224">
+                              +224 - Guinea
+                            </option>
+                            <option data-countryCode="GW" value="+245">
+                              +245 - Guinea-Bissau
+                            </option>
+                            <option data-countryCode="GY" value="+592">
+                              +592 - Guyana
+                            </option>
+                            <option data-countryCode="HT" value="+509">
+                              +509 - Haiti
+                            </option>
+                            <option data-countryCode="HM" value="+0">
+                              +0 - Heard Island and Mcdonald Islands
+                            </option>
+                            <option data-countryCode="VA" value="+379">
+                              +379 - Holy See (Vatican City State)
+                            </option>
+                            <option data-countryCode="HN" value="+504">
+                              +504 - Honduras
+                            </option>
+                            <option data-countryCode="HK" value="+852">
+                              +852 - Hong Kong
+                            </option>
+                            <option data-countryCode="HU" value="+36">
+                              +36 - Hungary
+                            </option>
+                            <option data-countryCode="IS" value="+354">
+                              +354 - Iceland
+                            </option>
+                            <option
+                              data-countryCode="IN"
+                              value="+91"
+                              selected="selected">
+                              +91 - India
+                            </option>
+                            <option data-countryCode="ID" value="+62">
+                              +62 - Indonesia
+                            </option>
+                            <option data-countryCode="IR" value="+98">
+                              +98 - Iran, Islamic Republic of Persian Gulf
+                            </option>
+                            <option data-countryCode="IQ" value="+964">
+                              +964 - Iraq
+                            </option>
+                            <option data-countryCode="IE" value="+353">
+                              +353 - Ireland
+                            </option>
+                            <option data-countryCode="IM" value="+44">
+                              +44 - Isle of Man
+                            </option>
+                            <option data-countryCode="IL" value="+972">
+                              +972 - Israel
+                            </option>
+                            <option data-countryCode="IT" value="+39">
+                              +39 - Italy
+                            </option>
+                            <option data-countryCode="JM" value="+1876">
+                              +1876 - Jamaica
+                            </option>
+                            <option data-countryCode="JP" value="+81">
+                              +81 - Japan
+                            </option>
+                            <option data-countryCode="JE" value="+44">
+                              +44 - Jersey
+                            </option>
+                            <option data-countryCode="JO" value="+962">
+                              +962 - Jordan
+                            </option>
+                            <option data-countryCode="KZ" value="+7">
+                              +7 - Kazakhstan
+                            </option>
+                            <option data-countryCode="KE" value="+254">
+                              +254 - Kenya
+                            </option>
+                            <option data-countryCode="KI" value="+686">
+                              +686 - Kiribati
+                            </option>
+                            <option data-countryCode="KP" value="+850">
+                              +850 - Korea, Democratic People's Republic of
+                              Korea
+                            </option>
+                            <option data-countryCode="KR" value="+82">
+                              +82 - Korea, Republic of South Korea
+                            </option>
+                            <option data-countryCode="XK" value="+383">
+                              +383 - Kosovo
+                            </option>
+                            <option data-countryCode="KW" value="+965">
+                              +965 - Kuwait
+                            </option>
+                            <option data-countryCode="KG" value="+996">
+                              +996 - Kyrgyzstan
+                            </option>
+                            <option data-countryCode="LA" value="+856">
+                              +856 - Laos
+                            </option>
+                            <option data-countryCode="LV" value="+371">
+                              +371 - Latvia
+                            </option>
+                            <option data-countryCode="LB" value="+961">
+                              +961 - Lebanon
+                            </option>
+                            <option data-countryCode="LS" value="+266">
+                              +266 - Lesotho
+                            </option>
+                            <option data-countryCode="LR" value="+231">
+                              +231 - Liberia
+                            </option>
+                            <option data-countryCode="LY" value="+218">
+                              +218 - Libyan Arab Jamahiriya
+                            </option>
+                            <option data-countryCode="LI" value="+423">
+                              +423 - Liechtenstein
+                            </option>
+                            <option data-countryCode="LT" value="+370">
+                              +370 - Lithuania
+                            </option>
+                            <option data-countryCode="LU" value="+352">
+                              +352 - Luxembourg
+                            </option>
+                            <option data-countryCode="MO" value="+853">
+                              +853 - Macao
+                            </option>
+                            <option data-countryCode="MK" value="+389">
+                              +389 - Macedonia
+                            </option>
+                            <option data-countryCode="MG" value="+261">
+                              +261 - Madagascar
+                            </option>
+                            <option data-countryCode="MW" value="+265">
+                              +265 - Malawi
+                            </option>
+                            <option data-countryCode="MY" value="+60">
+                              +60 - Malaysia
+                            </option>
+                            <option data-countryCode="MV" value="+960">
+                              +960 - Maldives
+                            </option>
+                            <option data-countryCode="ML" value="+223">
+                              +223 - Mali
+                            </option>
+                            <option data-countryCode="MT" value="+356">
+                              +356 - Malta
+                            </option>
+                            <option data-countryCode="MH" value="+692">
+                              +692 - Marshall Islands
+                            </option>
+                            <option data-countryCode="MQ" value="+596">
+                              +596 - Martinique
+                            </option>
+                            <option data-countryCode="MR" value="+222">
+                              +222 - Mauritania
+                            </option>
+                            <option data-countryCode="MU" value="+230">
+                              +230 - Mauritius
+                            </option>
+                            <option data-countryCode="YT" value="+262">
+                              +262 - Mayotte
+                            </option>
+                            <option data-countryCode="MX" value="+52">
+                              +52 - Mexico
+                            </option>
+                            <option data-countryCode="FM" value="+691">
+                              +691 - Micronesia, Federated States of Micronesia
+                            </option>
+                            <option data-countryCode="MD" value="+373">
+                              +373 - Moldova
+                            </option>
+                            <option data-countryCode="MC" value="+377">
+                              +377 - Monaco
+                            </option>
+                            <option data-countryCode="MN" value="+976">
+                              +976 - Mongolia
+                            </option>
+                            <option data-countryCode="ME" value="+382">
+                              +382 - Montenegro
+                            </option>
+                            <option data-countryCode="MS" value="+1664">
+                              +1664 - Montserrat
+                            </option>
+                            <option data-countryCode="MA" value="+212">
+                              +212 - Morocco
+                            </option>
+                            <option data-countryCode="MZ" value="+258">
+                              +258 - Mozambique
+                            </option>
+                            <option data-countryCode="MM" value="+95">
+                              +95 - Myanmar
+                            </option>
+                            <option data-countryCode="NA" value="+264">
+                              +264 - Namibia
+                            </option>
+                            <option data-countryCode="NR" value="+674">
+                              +674 - Nauru
+                            </option>
+                            <option data-countryCode="NP" value="+977">
+                              +977 - Nepal
+                            </option>
+                            <option data-countryCode="NL" value="+31">
+                              +31 - Netherlands
+                            </option>
+                            <option data-countryCode="AN" value="+599">
+                              +599 - Netherlands Antilles
+                            </option>
+                            <option data-countryCode="NC" value="+687">
+                              +687 - New Caledonia
+                            </option>
+                            <option data-countryCode="NZ" value="+64">
+                              +64 - New Zealand
+                            </option>
+                            <option data-countryCode="NI" value="+505">
+                              +505 - Nicaragua
+                            </option>
+                            <option data-countryCode="NE" value="+227">
+                              +227 - Niger
+                            </option>
+                            <option data-countryCode="NG" value="+234">
+                              +234 - Nigeria
+                            </option>
+                            <option data-countryCode="NU" value="+683">
+                              +683 - Niue
+                            </option>
+                            <option data-countryCode="NF" value="+672">
+                              +672 - Norfolk Island
+                            </option>
+                            <option data-countryCode="MP" value="+1670">
+                              +1670 - Northern Mariana Islands
+                            </option>
+                            <option data-countryCode="NO" value="+47">
+                              +47 - Norway
+                            </option>
+                            <option data-countryCode="OM" value="+968">
+                              +968 - Oman
+                            </option>
+                            <option data-countryCode="PK" value="+92">
+                              +92 - Pakistan
+                            </option>
+                            <option data-countryCode="PW" value="+680">
+                              +680 - Palau
+                            </option>
+                            <option data-countryCode="PS" value="+970">
+                              +970 - Palestinian Territory, Occupied
+                            </option>
+                            <option data-countryCode="PA" value="+507">
+                              +507 - Panama
+                            </option>
+                            <option data-countryCode="PG" value="+675">
+                              +675 - Papua New Guinea
+                            </option>
+                            <option data-countryCode="PY" value="+595">
+                              +595 - Paraguay
+                            </option>
+                            <option data-countryCode="PE" value="+51">
+                              +51 - Peru
+                            </option>
+                            <option data-countryCode="PH" value="+63">
+                              +63 - Philippines
+                            </option>
+                            <option data-countryCode="PN" value="+64">
+                              +64 - Pitcairn
+                            </option>
+                            <option data-countryCode="PL" value="+48">
+                              +48 - Poland
+                            </option>
+                            <option data-countryCode="PT" value="+351">
+                              +351 - Portugal
+                            </option>
+                            <option data-countryCode="PR" value="+1939">
+                              +1939 - Puerto Rico
+                            </option>
+                            <option data-countryCode="QA" value="+974">
+                              +974 - Qatar
+                            </option>
+                            <option data-countryCode="RO" value="+40">
+                              +40 - Romania
+                            </option>
+                            <option data-countryCode="RU" value="+7">
+                              +7 - Russia
+                            </option>
+                            <option data-countryCode="RW" value="+250">
+                              +250 - Rwanda
+                            </option>
+                            <option data-countryCode="RE" value="+262">
+                              +262 - Reunion
+                            </option>
+                            <option data-countryCode="BL" value="+590">
+                              +590 - Saint Barthelemy
+                            </option>
+                            <option data-countryCode="SH" value="+290">
+                              +290 - Saint Helena, Ascension and Tristan Da
+                              Cunha
+                            </option>
+                            <option data-countryCode="KN" value="+1869">
+                              +1869 - Saint Kitts and Nevis
+                            </option>
+                            <option data-countryCode="LC" value="+1758">
+                              +1758 - Saint Lucia
+                            </option>
+                            <option data-countryCode="MF" value="+590">
+                              +590 - Saint Martin
+                            </option>
+                            <option data-countryCode="PM" value="+508">
+                              +508 - Saint Pierre and Miquelon
+                            </option>
+                            <option data-countryCode="VC" value="+1784">
+                              +1784 - Saint Vincent and the Grenadines
+                            </option>
+                            <option data-countryCode="WS" value="+685">
+                              +685 - Samoa
+                            </option>
+                            <option data-countryCode="SM" value="+378">
+                              +378 - San Marino
+                            </option>
+                            <option data-countryCode="ST" value="+239">
+                              +239 - Sao Tome and Principe
+                            </option>
+                            <option data-countryCode="SA" value="+966">
+                              +966 - Saudi Arabia
+                            </option>
+                            <option data-countryCode="SN" value="+221">
+                              +221 - Senegal
+                            </option>
+                            <option data-countryCode="RS" value="+381">
+                              +381 - Serbia
+                            </option>
+                            <option data-countryCode="SC" value="+248">
+                              +248 - Seychelles
+                            </option>
+                            <option data-countryCode="SL" value="+232">
+                              +232 - Sierra Leone
+                            </option>
+                            <option data-countryCode="SG" value="+65">
+                              +65 - Singapore
+                            </option>
+                            <option data-countryCode="SK" value="+421">
+                              +421 - Slovakia
+                            </option>
+                            <option data-countryCode="SI" value="+386">
+                              +386 - Slovenia
+                            </option>
+                            <option data-countryCode="SB" value="+677">
+                              +677 - Solomon Islands
+                            </option>
+                            <option data-countryCode="SO" value="+252">
+                              +252 - Somalia
+                            </option>
+                            <option data-countryCode="ZA" value="+27">
+                              +27 - South Africa
+                            </option>
+                            <option data-countryCode="SS" value="+211">
+                              +211 - South Sudan
+                            </option>
+                            <option data-countryCode="GS" value="+500">
+                              +500 - South Georgia and the South Sandwich
+                              Islands
+                            </option>
+                            <option data-countryCode="ES" value="+34">
+                              +34 - Spain
+                            </option>
+                            <option data-countryCode="LK" value="+94">
+                              +94 - Sri Lanka
+                            </option>
+                            <option data-countryCode="SD" value="+249">
+                              +249 - Sudan
+                            </option>
+                            <option data-countryCode="SR" value="+597">
+                              +597 - Suriname
+                            </option>
+                            <option data-countryCode="SJ" value="+47">
+                              +47 - Svalbard and Jan Mayen
+                            </option>
+                            <option data-countryCode="SZ" value="+268">
+                              +268 - Swaziland
+                            </option>
+                            <option data-countryCode="SE" value="+46">
+                              +46 - Sweden
+                            </option>
+                            <option data-countryCode="CH" value="+41">
+                              +41 - Switzerland
+                            </option>
+                            <option data-countryCode="SY" value="+963">
+                              +963 - Syrian Arab Republic
+                            </option>
+                            <option data-countryCode="TW" value="+886">
+                              +886 - Taiwan
+                            </option>
+                            <option data-countryCode="TJ" value="+992">
+                              +992 - Tajikistan
+                            </option>
+                            <option data-countryCode="TZ" value="+255">
+                              +255 - Tanzania, United Republic of Tanzania
+                            </option>
+                            <option data-countryCode="TH" value="+66">
+                              +66 - Thailand
+                            </option>
+                            <option data-countryCode="TL" value="+670">
+                              +670 - Timor-Leste
+                            </option>
+                            <option data-countryCode="TG" value="+228">
+                              +228 - Togo
+                            </option>
+                            <option data-countryCode="TK" value="+690">
+                              +690 - Tokelau
+                            </option>
+                            <option data-countryCode="TO" value="+676">
+                              +676 - Tonga
+                            </option>
+                            <option data-countryCode="TT" value="+1868">
+                              +1868 - Trinidad and Tobago
+                            </option>
+                            <option data-countryCode="TN" value="+216">
+                              +216 - Tunisia
+                            </option>
+                            <option data-countryCode="TR" value="+90">
+                              +90 - Turkey
+                            </option>
+                            <option data-countryCode="TM" value="+993">
+                              +993 - Turkmenistan
+                            </option>
+                            <option data-countryCode="TC" value="+1649">
+                              +1649 - Turks and Caicos Islands
+                            </option>
+                            <option data-countryCode="TV" value="+688">
+                              +688 - Tuvalu
+                            </option>
+                            <option data-countryCode="UG" value="+256">
+                              +256 - Uganda
+                            </option>
+                            <option data-countryCode="UA" value="+380">
+                              +380 - Ukraine
+                            </option>
+                            <option data-countryCode="AE" value="+971">
+                              +971 - United Arab Emirates
+                            </option>
+                            <option data-countryCode="GB" value="+44">
+                              +44 - United Kingdom
+                            </option>
+                            <option data-countryCode="US" value="+1">
+                              +1 - United States
+                            </option>
+                            <option data-countryCode="UY" value="+598">
+                              +598 - Uruguay
+                            </option>
+                            <option data-countryCode="UZ" value="+998">
+                              +998 - Uzbekistan
+                            </option>
+                            <option data-countryCode="VU" value="+678">
+                              +678 - Vanuatu
+                            </option>
+                            <option data-countryCode="VE" value="+58">
+                              +58 - Venezuela, Bolivarian Republic of Venezuela
+                            </option>
+                            <option data-countryCode="VN" value="+84">
+                              +84 - Vietnam
+                            </option>
+                            <option data-countryCode="VG" value="+1284">
+                              +1284 - Virgin Islands, British
+                            </option>
+                            <option data-countryCode="VI" value="+1340">
+                              +1340 - Virgin Islands, U.S.
+                            </option>
+                            <option data-countryCode="WF" value="+681">
+                              +681 - Wallis and Futuna
+                            </option>
+                            <option data-countryCode="YE" value="+967">
+                              +967 - Yemen
+                            </option>
+                            <option data-countryCode="ZM" value="+260">
+                              +260 - Zambia
+                            </option>
+                            <option data-countryCode="ZW" value="+263">
+                              +263 - Zimbabwe
+                            </option>
+                          </select>
+                        </div>
+                        <div class="col-md-8">
+                          <input type="text" id="contactField"
+                            class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <!-- email -->
+                    <div class="form-group mt-2">
+                      <label for>Email</label>
+                      <input type="text" id="emailField" class="form-control" />
+                    </div>
+                    <!-- Address -->
+                    <div class="form-group mt-2">
+                      <label for="addressField">Your Address</label>
+                      <textarea
+                        id="addressField"
+                        class="form-control"
+                        rows="1"></textarea>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <!-- email -->
-              <div class="form-group mt-2">
-                <label for>Email</label>
-                <input type="text" id="emailField" class="form-control" />
+
+              <!-- PROFESSIONAL INFORMATION -->
+              <div class="professionalInfo p-3 mt-3">
+                <h3>Professional Information</h3>
+                <!-- Job Title -->
+                <div class="Professional-jobtitle">
+                  <label>Job Title</label>
+                  <input
+                    type="text"
+                    id="jobTitle"
+                    placeholder="Enter Job-Title"
+                    class="form-control" />
+                </div>
+                <!-- Objective -->
+                <div class="form-group mt-2">
+                  <label for>Objective</label>
+                  <textarea
+                    class="form-control"
+                    placeholder="Enter here"
+                    rows="3"
+                    id="ObjectiveField"></textarea>
+                </div>
+
+                <!-- Work experience -->
+                <div class="form-group mt-2" id="weTemplate"
+                  style="display: none">
+                  <label>Work Experience</label>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <textarea
+                        name
+                        id
+                        rows="1"
+                        placeholder="From"
+                        class="form-control fromWorkField"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                      <textarea
+                        name
+                        id
+                        rows="1"
+                        placeholder="To"
+                        class="form-control toWorkField"></textarea>
+                    </div>
+                  </div>
+                  <textarea
+                    name
+                    id="expCompany"
+                    rows="1"
+                    placeholder="Company name"
+                    class="form-control workExpField mt-2"></textarea>
+                  <textarea
+                    class="form-control weField mt-2"
+                    placeholder="Description"
+                    rows="2"></textarea>
+                </div>
+
+                <!-- button showing adding -->
+                <label>Add Work Experience</label><br />
+                <button class="btn btn-primary btn_addExperience"
+                  onclick="duplicateForm()">
+                  ADD EXPERIENCE
+                </button>
+                <button class="btn btn-success btn_showExperiene"
+                  onclick="showData()">
+                  SHOW EXPERIENCE
+                </button>
+                <div id="formClone"></div>
+
+                <!-- Academic Qualification -->
+                <div class="form-group mt-2" id="eq">
+                  <label for>Academic Qualification</label>
+                  <textarea
+                    class="form-control eqField"
+                    placeholder="Enter here"
+                    rows="1"></textarea>
+
+                  <div class="container text-center mt-2" id="eqAddButton">
+                    <button class="btn btn-primary btn-sm"
+                      onclick="addNewEqField()">
+                      Add
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="form-group mt-2" id="techSkills">
+                  <label for>Expertise</label>
+                  <textarea
+                    class="form-control TechField"
+                    placeholder="Enter here"
+                    rows="1"></textarea>
+                  <div class="container text-center mt-2" id="techAddButton">
+                    <button
+                      onclick="addNewTechField()"
+                      class="btn btn-primary btn-sm">
+                      Add
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Language -->
+                <div class="form-group mt-2" id="language">
+                  <label for>Language</label>
+                  <textarea
+                    class="form-control languageField"
+                    placeholder="Enter here"
+                    rows="1"></textarea>
+
+                  <div class="container text-center mt-2"
+                    id="languageAddButton">
+                    <button
+                      onclick="addNewLanguageField()"
+                      class="btn btn-primary btn-sm">
+                      Add
+                    </button>
+                  </div>
+                </div>
               </div>
-              <!-- Address -->
-              <div class="form-group mt-2">
-                <label for="addressField">Your Address</label>
-                <textarea
-                  id="addressField"
-                  class="form-control"
-                  rows="1"></textarea>
+              <!-- intrests -->
+              <div class="intrestsSection p-3 mt-3">
+                <h3>Interests</h3>
+                <div class="intrestForm">
+                  <label for>Interests</label>
+                  <textarea
+                    class="form-control intrestField"
+                    placeholder="Enter here"
+                    rows="1"></textarea>
+
+                  <div class="container text-center mt-2" id="intrestAddButton">
+                    <button
+                      onclick="addNewIntrestField()"
+                      class="btn btn-primary btn-sm">
+                      Add
+                    </button>
+                  </div>
+                </div>
+                <!-- Hobbies -->
+                <div class="hobbyForm">
+                  <label for>Hobbies</label>
+                  <textarea
+                    class="form-control hobbyField"
+                    placeholder="Enter here"
+                    rows="1"></textarea>
+
+                  <div class="container text-center mt-2" id="hobbyAddButton">
+                    <button onclick="addNewHobbyField()"
+                      class="btn btn-primary btn-sm">
+                      Add
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROFESSIONAL INFORMATION -->
-        <div class="professionalInfo">
-          <h3>Professional Information</h3>
-          <!-- Job Title -->
-          <div class="Professional-jobtitle">
-            <label>Job Title</label>
-            <input
-              type="text"
-              id="jobTitle"
-              placeholder="Enter Job-Title"
-              class="form-control" />
-          </div>
-          <!-- Objective -->
-          <div class="form-group mt-2">
-            <label for>Objective</label>
-            <textarea
-              class="form-control"
-              placeholder="Enter here"
-              rows="3"
-              id="ObjectiveField"></textarea>
-          </div>
-
-          <!-- Work experience -->
-          <div class="form-group mt-2" id="weTemplate" style="display: none">
-            <label>Work Experience</label>
-            <div class="row">
-              <div class="col-md-6">
-                <textarea
-                  name
-                  id
-                  rows="1"
-                  placeholder="From"
-                  class="form-control fromWorkField"></textarea>
+              <!-- Skill Summary -->
+              <div class="skillsSummary-form mt-3 p-3">
+                <h3>Skill Summary</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div style="display: flex; gap: 40px;">
+                      <p>Design Process</p>
+                      <input type="range" class="form-range" min="0" max="100"
+                        style="width: 180px;" id="designRange"
+                        onchange="updateDesign()">
+                      <label id="designLabel">0</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div style="display: flex; gap: 40px;">
+                      <p>Project Management</p>
+                      <input type="range" class="form-range" min="0" max="100"
+                        id="projectManagementRange" style="width: 180px;"
+                        onchange="updateProject()">
+                      <label id="projectManagementLabel">0</label>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-6">
-                <textarea
-                  name
-                  id
-                  rows="1"
-                  placeholder="To"
-                  class="form-control toWorkField"></textarea>
-              </div>
+
             </div>
-            <textarea
-              name
-              id="expCompany"
-              rows="1"
-              placeholder="Company name"
-              class="form-control workExpField mt-2"></textarea>
-            <textarea
-              class="form-control weField mt-2"
-              placeholder="Description"
-              rows="2"></textarea>
-          </div>
-
-          <!-- button showing adding -->
-          <label>Add Work Experience</label><br />
-          <button class="btn btn-primary" onclick="duplicateForm()">
-            Duplicate Form
-          </button>
-          <button class="btn btn-success mt-2" onclick="showData()">
-            Show Data
-          </button>
-          <div id="formClone"></div>
-
-          <!-- Academic Qualification -->
-          <div class="form-group mt-2" id="eq">
-            <label for>Academic Qualification</label>
-            <textarea
-              class="form-control eqField"
-              placeholder="Enter here"
-              rows="1"></textarea>
-
-            <div class="container text-center mt-2" id="eqAddButton">
-              <button class="btn btn-primary btn-sm" onclick="addNewEqField()">
-                Add
-              </button>
-            </div>
-          </div>
-
-          <!-- Technical Skills -->
-          <div class="form-group mt-2" id="techSkills">
-            <label for>Expertise</label>
-            <textarea
-              class="form-control TechField"
-              placeholder="Enter here"
-              rows="1"></textarea>
-            <div class="container text-center mt-2" id="techAddButton">
-              <button
-                onclick="addNewTechField()"
-                class="btn btn-primary btn-sm">
-                Add
-              </button>
-            </div>
-          </div>
-
-          <!-- Language -->
-          <div class="form-group mt-2" id="language">
-            <label for>Language</label>
-            <textarea
-              class="form-control languageField"
-              placeholder="Enter here"
-              rows="1"></textarea>
-
-            <div class="container text-center mt-2" id="languageAddButton">
-              <button
-                onclick="addNewLanguageField()"
-                class="btn btn-primary btn-sm">
-                Add
-              </button>
-            </div>
-          </div>
-        </div>
-        <hr />
-
-        <!-- intrests -->
-        <div class="intrestForm">
-          <label for>Intrest</label>
-          <textarea
-            class="form-control intrestField"
-            placeholder="Enter here"
-            rows="1"></textarea>
-
-          <div class="container text-center mt-2" id="intrestAddButton">
-            <button
-              onclick="addNewIntrestField()"
-              class="btn btn-primary btn-sm">
-              Add
-            </button>
-          </div>
-        </div>
-        <!-- Hobbies -->
-        <div class="hobbyForm">
-          <label for>Hobbies</label>
-          <textarea
-            class="form-control hobbyField"
-            placeholder="Enter here"
-            rows="1"></textarea>
-
-          <div class="container text-center mt-2" id="hobbyAddButton">
-            <button onclick="addNewHobbyField()" class="btn btn-primary btn-sm">
-              Add
-            </button>
-          </div>
-        </div>
-        <!-- Skill Summary -->
-        <div class="skillsSummary-form mt-3">
-          <div class="row">
-            <div class="col-md-6">
-              <div style="display: flex; gap: 40px;">
-                <p>Design Process</p>
-                <input type="range" class="form-range" min="0" max="100"
-                  style="width: 180px;" id="designRange"
-                  onchange="updateDesign()">
-                <label id="designLabel">0</label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div style="display: flex; gap: 40px;">
-                <p>Project Management</p>
-                <input type="range" class="form-range" min="0" max="100"
-                  id="projectManagementRange" style="width: 180px;"
-                  onchange="updateProject()">
-                <label id="projectManagementLabel">0</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Generating CV -->
-        <div class="container text-center mt-3">
-          <button onclick="generateCV()" class="btn btn-primary">
-            Generate Cv
-          </button>
-        </div>
-      </div>
           </div>
           <div class="col-md-6">
             <div class="rightSection-showResume">
-             <!-- Resume CV Template -->
-      <section>
-        <div class="container showTemplate2-cv">
-          <div class="showTemplate2-hero" id="cvTemplate">
-            <div class="showTemplate3-main">
-              <!-- <div class="blueSection" style="background: blue; color: white;">blue</div>
+              <!-- Show Resume CV Template -->
+              <section>
+                <div class="container showTemplate2-cv">
+                  <div class="showTemplate2-hero" id="show-cvTemplate">
+                    <div class="showTemplate3-main">
+                      <!-- <div class="blueSection" style="background: blue; color: white;">blue</div>
             <div class="blackSection" style="background: black; color: white;">
             </div> -->
-              <div class="row align-itms-center">
-                <div class="col-md-4 p-0">
-                  <div class="showResume-sideBar">
-                    <div class="showAsideBar-content">
-                      <div class="showResumeNameT1">
-                        <!-- About me -->
-                        <div class="showAside-aboutMe p-4">
-                          <h4 class="text-center">About Me</h4>
-                          <p id="objectiveT">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Excepturi mollitia commodi minima! Doloremque
-                            reprehenderit id aut vero expedita fugiat incidunt.
-                          </p>
-                        </div>
-                        <!-- contact -->
-                        <div class="showContact-details">
-                          <div class="contacts">
-                            <div class="inner-contact">
-                              <span class="cont-icon" id="iconContact"><i
-                                  class="fa-solid fa-phone"></i></span>
-                              <span id="countryContactT"
-                                class="fontColorChange">
-                                <span id="countryContactT"> +91</span>
-                                <span id="contactT" class="fontColorChange">
-                                  -9430722766
-                                </span>
-                              </div>
-                            </div>
-                            <div class="contacts">
-                              <div class="inner-contact">
-                                <span class="cont-icon" id="iconEmail"> <i
-                                    class="fa-solid fa-envelope"></i></span>
-                                <span id="emailT">
-                                  avikashkumar82@gmail.com</span>
-                              </div>
-                            </div>
-                            <div class="contacts">
-                              <div class="inner-contact">
-                                <span class="cont-iconn" id="iconAddress"> <i
-                                    class="fa-solid fa-location-dot"></i></span>
-                                <span id="addressT"> Bokaro steel city</span>
-                              </div>
-                            </div>
-                          </div>
+                      <div class="row align-itms-center">
+                        <div class="col-md-4 p-0">
+                          <div class="showResume-sideBar">
+                            <div class="showAsideBar-content">
+                              <div class="showResumeNameT1">
+                                <!-- About me -->
+                                <div class="showAside-aboutMe p-4">
+                                  <h4 class="text-center"
+                                    style="color: white;">About Me</h4>
+                                  <p id="showObjectiveT"
+                                    style="color: white;text-align: center;">
+                                    Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Excepturi mollitia commodi minima!
+                                    Doloremque
+                                    reprehenderit id aut vero expedita fugiat
+                                    incidunt.
+                                  </p>
+                                </div>
+                                <!-- contact -->
+                                <div class="showContact-details mt-2">
+                                  <div class="contacts">
+                                    <div class="inner-contact">
+                                      <span class="cont-icon"
+                                        id="showIconContact"><i
+                                          class="fa-solid fa-phone"
+                                          style="color: white;"></i></span>
+                                      <span id="countryContactT"
+                                        class="fontColorChange">
+                                        <span id="showCountryContactT"
+                                          style="color: white;"> +91</span>
+                                        <span id="showContactT"
+                                          class="fontColorChange"
+                                          style="color: white;">
+                                          -9430722766
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div class="contacts">
+                                      <div class="inner-contact">
+                                        <span class="cont-icon"
+                                          id="showIconEmail"> <i
+                                            class="fa-solid fa-envelope"
+                                            style="color: white;"></i></span>
+                                        <span id="showEmailT"
+                                          style="color: white;">
+                                          avikashkumar82@gmail.com</span>
+                                      </div>
+                                    </div>
+                                    <div class="contacts">
+                                      <div class="inner-contact">
+                                        <span class="cont-iconn"
+                                          id="showIconAddress"> <i
+                                            class="fa-solid fa-location-dot"
+                                            style="color: white;"></i></span>
+                                        <span id="showAddressT"
+                                          style="color: white;"> Bokaro steel
+                                          city</span>
+                                      </div>
+                                    </div>
+                                  </div>
 
-                          <!-- skills -->
-                          <div class="showTemplate2-skills px-5 mt-4"
-                            id="skillsDiv">
-                            <div class="showSkillLoop" id="tabSkillColor"><h5
-                                id="fontClrSkills" class="fontColorChange">
-                                Hard Skills
-                              </h5></div>
-                            <ul id="keySkills" class="fontColorChange">
-                              <li id="fontColor"></li>
-                            </ul>
-                          </div>
-                          <!-- Language -->
-                          <div class="templatte2-languages px-5 mt-4"
-                            id="languageDiv">
-                            <div class="showLangHeading" id="tabLanguageColor"><h5
-                                id="fontClrLang">Language</h5></div>
-                            <ul id="languages">
-                              <li id="fontColor" class="fontColorChange"></li>
-                            </ul>
-                          </div>
-                          <!-- Intrests -->
-                          <div class="template2-intrests px-5 mt-4" id>
-                            <div class="showLangHeading" id="tabIntrestColor"><h5
-                                id="fontClrLang">Intrests</h5></div>
-                            <div class="intrests-content">
-                              <ul id="intrests">
-                                <li id="fontColor" class="fontColorChange"></li>
-                              </ul>
+                                  <!-- skills -->
+                                  <div class="showTemplate2-skills px-5 mt-4"
+                                    id="skillsDiv">
+                                    <div class="showSkillLoop"
+                                      id="showTabSkillColor"><h5
+                                        id="fontClrSkills"
+                                        class="fontColorChange"
+                                        style="color: white;">
+                                        Hard Skills
+                                      </h5></div>
+                                    <ul id="showKeySkills"
+                                      class="fontColorChange"
+                                      style="font-size: small;">
+                                      <li id="fontColor"
+                                        style="color: white;">Java</li>
+                                      <li id="fontColor"
+                                        style="color: white;">HTML/CSS/Bootetrap</li>
+                                      <li id="fontColor"
+                                        style="color: white;">Java Script</li>
+                                    </ul>
+                                  </div>
+                                  <!-- Language -->
+                                  <div class="templatte2-languages px-5 mt-4"
+                                    id="languageDiv">
+                                    <div class="showLangHeading"
+                                      id="showTabLanguageColor"><h5
+                                        id="fontClrLang"
+                                        style="color: white;">Language</h5></div>
+                                    <ul id="showLanguages"
+                                      style="font-size: small;">
+                                      <li id="fontColor" class="fontColorChange"
+                                        style="color: white;">English</li>
+                                      <li id="fontColor" class="fontColorChange"
+                                        style="color: white;">Hindi</li>
+                                    </ul>
+                                  </div>
+                                  <!-- Intrests -->
+                                  <div class="template2-intrests px-5 mt-4" id>
+                                    <div class="showLangHeading"
+                                      id="showTabIntrestColor"><h5
+                                        id="fontClrLang"
+                                        style="color: white;">Interests</h5></div>
+                                    <div class="intrests-content">
+                                      <ul id="showIntrests"
+                                        style="font-size: small;">
+                                        <li id="fontColor"
+                                          class="fontColorChange"
+                                          style="color: white;">Internet Of
+                                          Things</li>
+                                        <li id="fontColor"
+                                          class="fontColorChange"
+                                          style="color: white;">Artificial
+                                          Intelligence</li>
+                                        <li id="fontColor"
+                                          class="fontColorChange"
+                                          style="color: white;">Machine
+                                          Learning</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <!-- Hobby -->
+                                  <div class="template2-hobbies px-5 mt-4">
+                                    <div class="showLangHeading"
+                                      id="showTabHobbiesColor"><h5
+                                        id="fontClrLang"
+                                        style="color: white;">Hobbies</h5></div>
+                                    <div class="achivements-content">
+                                      <ul id="showHobbys"
+                                        style="font-size: small;">
+                                        <li id="fontColor"
+                                          class="fontColorChange"
+                                          style="color: white;">Cooking</li>
+                                        <li id="fontColor"
+                                          class="fontColorChange"
+                                          style="color: white;">Travelling</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                          <!-- Hobby -->
-                          <div class="template2-hobbies px-5 mt-4">
-                            <div class="showLangHeading" id="tabHobbiesColor"><h5
-                                id="fontClrLang">Hobbies</h5></div>
-                            <div class="achivements-content">
-                              <ul id="hobbys">
-                                <li id="fontColor" class="fontColorChange"></li>
-                              </ul>
+                          <div class="col-md-8 p-0">
+                            <div class="rightSection-contentTemplate3">
+                              <div class="showBlueSection"
+                                id="showChangeBlueColor">
+                                <!-- image -->
+                                <div
+                                  class="template-img text-center showProfileImg">
+                                  <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/768px-Windows_10_Default_Profile_Picture.svg.png?20221210150350"
+                                    class="img-fluid myimg"
+                                    id="showImgTemplate3" />
+                                </div>
+                                <h2 class="text-center" id="showNameT2"
+                                  style="color: white;">Vikash Kumar</h2>
+                                <p class="titleJob text-center"
+                                  id="showJobTitleT"
+                                  style="font-size: 25px; color: white">Software
+                                  Engineer</p>
+                              </div>
+                              <div class="showRight-main-content-details">
+                                <!-- Work Experiencce -->
+                                <div class="template2-experiences px-5 mt-3">
+                                  <div class="rightHeading"
+                                    style="padding: 2px 54px 1px 52px;"
+                                    id="showExperiencecolorChange"><h5
+                                      id="showClrExp">Experience</h5></div>
+                                  <div id="showResultSection" class="mt-4">
+
+                                    <div class="card" id="dummyExperience">
+                                      <div class="card-header">
+                                        <h6 id="workExpLabel">Infosys</h6>
+                                        <div class="dateSection"
+                                          style="display: flex; gap:5px">
+                                          <div><span>July 2021</span></div> -
+                                          <div><span>July 2022</span></div>
+                                        </div>
+                                      </div>
+                                      <div class="card-body">
+                                        <p
+                                          style="text-align:justify;font-size: small;">Lorem
+                                          ipsum dolor sit amet, consectetur
+                                          adipisicing elit. Aliquam nemo
+                                          deleniti quia placeat ratione neque
+                                          tempore veritatis, perferendis dolorum
+                                          blanditiis, fugit id ab accusamus quam
+                                          ipsam beatae odit incidunt, atque
+                                          maiores. Earum aut, eos, quibusdam
+                                          sunt neque dolore aspernatur iusto
+                                          quae, accusamus voluptatum inventore
+                                          possimus sint rem non quas molestias?
+                                          Vero expedita officiis aspernatur
+                                          quam! Explicabo, aspernatur. Rem,
+                                          adipisci. Sint.</p>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                                <!-- Education -->
+                                <div class="template2-education px-5 mt-4">
+                                  <div class="rightHeading"
+                                    style="padding: 1px 58px 1px 58px;"
+                                    id="showEducationColorChange"><h5
+                                      id="showClrEdu">Education</h5></div>
+                                  <ul id="showAqT" style="font-size: 14px;">
+                                    <li>
+                                      Lorem ipsum dolor sit amet consectetur
+                                      adipisicing
+                                      elit.
+                                      Provident, neque.
+                                    </li>
+                                  </ul>
+                                </div>
+                                <!-- skills summary -->
+                                <div class="template2-skillsSummary px-5 mt-4">
+                                  <div class="rightHeading"
+                                    style="padding: 2px 38px 1px 38px;"
+                                    id="showSkillsColorChange"><h5
+                                      id="showClrSkills">Skills
+                                      Summary</h5></div>
+                                  <div style="display: flex;gap:40px"
+                                    class="DesignProgress mt-3">
+                                    <div>
+                                      <p>Design Progress</p>
+
+                                    </div>
+                                    <div>
+                                      <div class="progress mt-1"
+                                        style="width: 180px;">
+                                        <div class="progress-bar"
+                                          role="progressbar"
+                                          style="width: 90%;" aria-valuenow="25"
+                                          aria-valuemin="0" aria-valuemax="100"
+                                          id="showDesignProgress">25%</div>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                  <div style="display: flex;"
+                                    class="showProjectManagement mt-3">
+                                    <div>
+                                      <p>Project Management</p>
+
+                                    </div>
+                                    <div>
+                                      <div class="progress mt-1"
+                                        style="width: 180px;">
+                                        <div class="progress-bar"
+                                          role="progressbar"
+                                          style="width: 25%;" aria-valuenow="25"
+                                          aria-valuemin="0" aria-valuemax="100"
+                                          id="showProjectProgress">25%</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-8 p-0">
-                    <div class="rightSection-contentTemplate3">
-                      <div class="showBlueSection" id="changeBlueColor">
-                        <!-- image -->
-                        <div class="template-img text-center showProfileImg">
-                          <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/768px-Windows_10_Default_Profile_Picture.svg.png?20221210150350"
-                            class="img-fluid myimg"
-                            id="imgTemplate3" />
-                        </div>
-                        <h2 class="text-center" id="nameT2"
-                          style="color: white;">Vikash Kumar</h2>
-                        <p class="titleJob text-center" id="jobTitleT"
-                          style="font-size: 25px; color: white">Software
-                          Engineer</p>
-                      </div>
-                      <div class="showRight-main-content-details">
-                        <!-- Work Experiencce -->
-                        <div class="template2-experiences px-5 mt-3">
-                          <div class="rightHeading"
-                            style="padding: 2px 54px 1px 52px;"
-                            id="experiencecolorChange"><h5
-                              id="fontClrEdu">Experience</h5></div>
-                          <div id="resultSection" class="mt-4"></div>
-                        </div>
-                        <!-- Education -->
-                        <div class="template2-education px-5 mt-4">
-                          <div class="rightHeading"
-                            style="padding: 1px 58px 1px 58px;"
-                            id="educationColorChange"><h5
-                              id="fontClrEdu">Education</h5></div>
-                          <ul id="aqT" style="font-size: 14px;">
-                            <li>
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit.
-                              Provident, neque.
-                            </li>
-                          </ul>
-                        </div>
-                        <!-- skills summary -->
-                        <div class="template2-skillsSummary px-5 mt-4">
-                          <div class="rightHeading"
-                            style="padding: 2px 38px 1px 38px;"
-                            id="skillsColorChange"><h5 id="fontClrEdu">Skills
-                              Summary</h5></div>
-                          <div style="display: flex;"
-                            class="showDesignProgress mt-3">
-                            <div>
-                              <p>Design Progress</p>
-
-                            </div>
-                            <div>
-                              <div class="progress mt-1" style="width: 180px;">
-                                <div class="progress-bar" role="progressbar"
-                                  style="width: 90%;" aria-valuenow="25"
-                                  aria-valuemin="0" aria-valuemax="100"
-                                  id="designProgress">25%</div>
-                              </div>
-
-                            </div>
-                          </div>
-                          <div style="display: flex;"
-                            class="showProjectManagement mt-3">
-                            <div>
-                              <p>Project Management</p>
-
-                            </div>
-                            <div>
-                              <div class="progress mt-1" style="width: 180px;">
-                                <div class="progress-bar" role="progressbar"
-                                  style="width: 25%;" aria-valuenow="25"
-                                  aria-valuemin="0" aria-valuemax="100"
-                                  id="projectProgress">25%</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                </section>
               </div>
             </div>
-          </div>
-        </section>
-            </div>
-          </div>
-        </div>
-      </div>
-     
-
-      <section class="colorSelection-Hero mt-3">
-        <div class="colorSelection-Section">
-          <div id="color1" onclick="light1()">
-            <span id="spanCol1" style="visibility: hidden">#b9bdb9</span>
-          </div>
-          <div id="color2" onclick="light2()">
-            <span id="spanCol2" style="visibility: hidden">#FFF8F4</span>
-          </div>
-          <div id="color3" onclick="light3()">
-            <span id="spanCol3" style="visibility: hidden">#D9E6EB</span>
-          </div>
-          <div id="color4" onclick="Eucalyptus()">
-            <span id="spanCol4" style="visibility: hidden">#8B3DFF</span>
-          </div>
-          <div id="color5" onclick="LightBlue()">
-            <span id="spanCol5" style="visibility: hidden">#6B9999</span>
-          </div>
-          <div id="color6" onclick="dark()">
-            <span id="spanCol6" style="visibility: hidden">#414143</span>
-          </div>
-        </div>
-        <div class="multiColour mt-3">
-          <div>
-            <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
-          </div>
-          <div>
-            <button onclick="changeBackgroundColor()" class="btnApply">
-              Apply
-            </button>
-          </div>
-          <div>
-            <button onclick="resetBackgroundColor()" class="btnRemove">
-              Reset
-            </button>
-          </div>
-        </div>
-
-        <div class="colorSelection-Section">
-          <div id="Fcolor1" onclick="fontLight1()">
-
-          </div>
-          <div id="Fcolor2" onclick="fontLight2()">
-
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Resume CV Template -->
-      <section>
-        <div class="container template2-cv mt-5" id="cv-template">
-          <div class="template2-hero" id="cvTemplate">
-            <div class="template3-main">
-              <!-- <div class="blueSection" style="background: blue; color: white;">blue</div>
-            <div class="blackSection" style="background: black; color: white;">
-            </div> -->
-              <div class="row align-itms-center">
-                <div class="col-md-4 p-0">
-                  <div class="asideBar">
-                    <div class="asideBar-content">
-                      <div class="aside-content-info">
-                        <!-- About me -->
-                        <div class="aside-aboutMe p-4">
-                          <h4 class="text-center">About Me</h4>
-                          <p id="objectiveT">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Excepturi mollitia commodi minima! Doloremque
-                            reprehenderit id aut vero expedita fugiat incidunt.
-                          </p>
-                        </div>
-                        <!-- contact -->
-                        <div class="contact-details p-4">
-                          <div class="contacts">
-                            <div class="inner-contact">
-                              <span class="cont-icon" id="iconContact"><i
-                                  class="fa-solid fa-phone"></i></span>
-                              <span id="countryContactT"
-                                class="fontColorChange">
-                                <span id="countryContactT"> +91</span>
-                                <span id="contactT" class="fontColorChange">
-                                  -9430722766
-                                </span>
-                              </div>
-                            </div>
-                            <div class="contacts">
-                              <div class="inner-contact">
-                                <span class="cont-icon" id="iconEmail"> <i
-                                    class="fa-solid fa-envelope"></i></span>
-                                <span id="emailT">
-                                  avikashkumar82@gmail.com</span>
-                              </div>
-                            </div>
-                            <div class="contacts">
-                              <div class="inner-contact">
-                                <span class="cont-iconn" id="iconAddress"> <i
-                                    class="fa-solid fa-location-dot"></i></span>
-                                <span id="addressT"> Bokaro steel city</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- skills -->
-                          <div class="template2-skills px-5 mt-4"
-                            id="skillsDiv">
-                            <div class="skillLoop" id="tabSkillColor"><h5
-                                id="fontClrSkills" class="fontColorChange">
-                                Hard Skills
-                              </h5></div>
-                            <ul id="keySkills" class="fontColorChange">
-                              <li id="fontColor"></li>
-                            </ul>
-                          </div>
-                          <!-- Language -->
-                          <div class="templatte2-languages px-5 mt-4"
-                            id="languageDiv">
-                            <div class="langHeading" id="tabLanguageColor"><h5
-                                id="fontClrLang">Language</h5></div>
-                            <ul id="languages">
-                              <li id="fontColor" class="fontColorChange"></li>
-                            </ul>
-                          </div>
-                          <!-- Intrests -->
-                          <div class="template2-intrests px-5 mt-4" id>
-                            <div class="langHeading" id="tabIntrestColor"><h5
-                                id="fontClrLang">Intrests</h5></div>
-                            <div class="intrests-content">
-                              <ul id="intrests">
-                                <li id="fontColor" class="fontColorChange"></li>
-                              </ul>
-                            </div>
-                          </div>
-                          <!-- Hobby -->
-                          <div class="template2-hobbies px-5 mt-4">
-                            <div class="langHeading" id="tabHobbiesColor"><h5
-                                id="fontClrLang">Hobbies</h5></div>
-                            <div class="achivements-content">
-                              <ul id="hobbys">
-                                <li id="fontColor" class="fontColorChange"></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-8 p-0">
-                    <div class="rightSection-contentTemplate3">
-                      <div class="blueSection" id="changeBlueColor">
-                        <!-- image -->
-                        <div class="template-img text-center">
-                          <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/768px-Windows_10_Default_Profile_Picture.svg.png?20221210150350"
-                            class="img-fluid myimg"
-                            id="imgTemplate3" />
-                        </div>
-                        <h1 class="text-center" id="nameT2"
-                          style="color: white;">Vikash Kumar</h1>
-                        <p class="titleJob text-center" id="jobTitleT"
-                          style="font-size: 25px; color: white">Software
-                          Engineer</p>
-                      </div>
-                      <div class="right-main-content-details">
-                        <!-- Work Experiencce -->
-                        <div class="template2-experiences px-5 mt-3">
-                          <div class="rightHeading"
-                            style="padding: 2px 78px 2px 69px;"
-                            id="experiencecolorChange"><h5
-                              id="fontClrEdu">Experience</h5></div>
-                          <div id="resultSection" class="mt-4"></div>
-                        </div>
-                        <!-- Education -->
-                        <div class="template2-education px-5 mt-4">
-                          <div class="rightHeading"
-                            style="padding: 2px 80px 2px 80px;"
-                            id="educationColorChange"><h5
-                              id="fontClrEdu">Education</h5></div>
-                          <ul id="aqT">
-                            <li>
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit.
-                              Provident, neque.
-                            </li>
-                          </ul>
-                        </div>
-                        <!-- skills summary -->
-                        <div class="template2-skillsSummary px-5 mt-4">
-                          <div class="rightHeading"
-                            style="padding: 2px 56px 2px 56px;"
-                            id="skillsColorChange"><h5 id="fontClrEdu">Skills
-                              Summary</h5></div>
-                          <div style="display: flex;"
-                            class="designProgress mt-3">
-                            <div>
-                              <p>Design Progress</p>
-
-                            </div>
-                            <div>
-                              <div class="progress mt-1" style="width: 180px;">
-                                <div class="progress-bar" role="progressbar"
-                                  style="width: 90%;" aria-valuenow="25"
-                                  aria-valuemin="0" aria-valuemax="100"
-                                  id="designProgress">25%</div>
-                              </div>
-
-                            </div>
-                          </div>
-                          <div style="display: flex;"
-                            class="projectManagement mt-3">
-                            <div>
-                              <p>Project Management</p>
-
-                            </div>
-                            <div>
-                              <div class="progress mt-1" style="width: 180px;">
-                                <div class="progress-bar" role="progressbar"
-                                  style="width: 25%;" aria-valuenow="25"
-                                  aria-valuemin="0" aria-valuemax="100"
-                                  id="projectProgress">25%</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- button print section -->
-      <div class="container mt-3 text-center">
-        <button
+            <!-- Generating CV -->
+        <div class="container text-center mt-3" style="margin-bottom: 14px;">
+          <button onclick="generateCV()" class="btn btn-primary btn_Generate">
+            GENERATE-CV
+          </button>
+          <button
           id="downloadButton"
           onclick="captureDivAndDownloadPdf()"
-          class="btn background">
-          Print CV
+          class="btn btn-warning btn_Generate">
+          DOWNLOAD-CV
         </button>
-      </div>
+        </div>
+          </div>
+        </div>
+       
 
-      <script src="./template3.js"></script>
+        <!-- Resume CV Template -->
+        <section>
+          <div class="container template2-cv mt-5" id="cv-template" style="display: none;">
+            <div class="template2-hero" id="cvTemplate">
+              <div class="template3-main">
+                <!-- <div class="blueSection" style="background: blue; color: white;">blue</div>
+            <div class="blackSection" style="background: black; color: white;">
+            </div> -->
+                <div class="row align-itms-center">
+                  <div class="col-md-4 p-0">
+                    <div class="asideBar">
+                      <div class="asideBar-content">
+                        <div class="aside-content-info">
+                          <!-- About me -->
+                          <div class="aside-aboutMe p-4">
+                            <h4 class="text-center">About Me</h4>
+                            <p id="objectiveT" style="text-align: justify;">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Perspiciatis sequi laboriosam temporibus
+                              voluptatibus corrupti et ex amet fugiat rem nisi.
+                              Perferendis nesciunt architecto modi? Nobis
+                              ratione et aliquam sit quos rerum perspiciatis,
+                              deleniti deserunt, minima quas temporibus dicta
+                              aperiam illo, nemo dolore cumque at tenetur
+                              accusamus cupiditate! Corrupti, adipisci
+                              perspiciatis?
+                            </p>
+                          </div>
+                          <!-- contact -->
+                          <div class="contact-details p-4">
+                            <div class="contacts">
+                              <div class="inner-contact">
+                                <span class="cont-icon" id="iconContact"><i
+                                    class="fa-solid fa-phone"></i></span>
+                                <span id="countryContactT"
+                                  class="fontColorChange">
+                                  <span id="countryContactTs"> +91</span>
+                                  <span id="contactT" class="fontColorChange">
+                                    -9430722766
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="contacts">
+                                <div class="inner-contact">
+                                  <span class="cont-icon" id="iconEmail"> <i
+                                      class="fa-solid fa-envelope"></i></span>
+                                  <span id="emailT">
+                                    avikashkumar82@gmail.com</span>
+                                </div>
+                              </div>
+                              <div class="contacts">
+                                <div class="inner-contact">
+                                  <span class="cont-iconn" id="iconAddress"> <i
+                                      class="fa-solid fa-location-dot"></i></span>
+                                  <span id="addressT"> Bokaro steel city</span>
+                                </div>
+                              </div>
+                            </div>
 
-      <script>
+                            <!-- skills -->
+                            <div class="template2-skills px-5 mt-4"
+                              id="skillsDiv">
+                              <div class="skillLoop" id="tabSkillColor"><h5
+                                  id="fontClrSkills" class="fontColorChange">
+                                  Hard Skills
+                                </h5></div>
+                              <ul id="keySkills" class="fontColorChange" style="font-size: large;">
+                                <li id="fontColor"></li>
+                              </ul>
+                            </div>
+                            <!-- Language -->
+                            <div class="templatte2-languages px-5 mt-4"
+                              id="languageDiv">
+                              <div class="langHeading" id="tabLanguageColor"><h5
+                                  id="fontClrLang">Language</h5></div>
+                              <ul id="languages" style="font-size: large;">
+                                <li id="fontColor" class="fontColorChange"></li>
+                              </ul>
+                            </div>
+                            <!-- Intrests -->
+                            <div class="template2-intrests px-5 mt-4" id>
+                              <div class="langHeading" id="tabIntrestColor"><h5
+                                  id="fontClrLang">Interests</h5></div>
+                              <div class="intrests-content">
+                                <ul id="intrests" style="font-size: large;">
+                                  <li id="fontColor"
+                                    class="fontColorChange"></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!-- Hobby -->
+                            <div class="template2-hobbies px-5 mt-4">
+                              <div class="langHeading" id="tabHobbiesColor"><h5
+                                  id="fontClrLang">Hobbies</h5></div>
+                              <div class="achivements-content">
+                                <ul id="hobbys" style="font-size: large;">
+                                  <li id="fontColor"
+                                    class="fontColorChange"></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8 p-0">
+                      <div class="rightSection-contentTemplate3">
+                        <div class="blueSection" id="changeBlueColor">
+                          <!-- image -->
+                          <div class="template-img text-center">
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/768px-Windows_10_Default_Profile_Picture.svg.png?20221210150350"
+                              class="img-fluid myimg"
+                              id="imgTemplate3" />
+                          </div>
+                          <h1 class="text-center" id="nameT2"
+                            style="color: white;">Vikash Kumar</h1>
+                          <p class="titleJob text-center" id="jobTitleT"
+                            style="font-size: 25px; color: white">Software
+                            Engineer</p>
+                        </div>
+                        <div class="right-main-content-details">
+                          <!-- Work Experiencce -->
+                          <div class="template2-experiences px-5 mt-3">
+                            <div class="rightHeading"
+                              style="padding: 2px 78px 2px 69px;"
+                              id="experiencecolorChange"><h5
+                                id="fontClrEdu">Experience</h5></div>
+                            <div id="resultSection" class="mt-4"></div>
+                          </div>
+                          <!-- Education -->
+                          <div class="template2-education px-5 mt-4">
+                            <div class="rightHeading"
+                              style="padding: 2px 80px 2px 80px;"
+                              id="educationColorChange"><h5
+                                id="fontClrEdu">Education</h5></div>
+                            <ul id="aqT" style="font-size: large;">
+                              <li>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit.
+                                Provident, neque.
+                              </li>
+                            </ul>
+                          </div>
+                          <!-- skills summary -->
+                          <div class="template2-skillsSummary px-5 mt-4">
+                            <div class="rightHeading"
+                              style="padding: 2px 56px 2px 56px;"
+                              id="skillsColorChange"><h5 id="fontClrEdu">Skills
+                                Summary</h5></div>
+                            <div style="display: flex;"
+                              class="designProgress mt-3">
+                              <div>
+                                <p>Design Progress</p>
+
+                              </div>
+                              <div>
+                                <div class="progress mt-1"
+                                  style="width: 180px;">
+                                  <div class="progress-bar" role="progressbar"
+                                    style="width: 90%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"
+                                    id="designProgress">25%</div>
+                                </div>
+
+                              </div>
+                            </div>
+                            <div style="display: flex;"
+                              class="projectManagement mt-3">
+                              <div>
+                                <p>Project Management</p>
+
+                              </div>
+                              <div>
+                                <div class="progress mt-1"
+                                  style="width: 180px;">
+                                  <div class="progress-bar" role="progressbar"
+                                    style="width: 25%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"
+                                    id="projectProgress">25%</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <script src="./template3.js"></script>
+
+        <script>
       
       function updateDesign(){
         const designValue=document.getElementById("designRange").value;
@@ -1450,9 +1572,9 @@
         document.getElementById("projectManagementLabel").textContent=projectValue+"%";
       }
     </script>
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    </body>
-  </html>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+      </body>
+    </html>

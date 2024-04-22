@@ -15,7 +15,7 @@ function addNewWeField() {
   weOb.insertBefore(newNode, weAddButtonOb);
 }
 
-// dynamically Qualification textaea
+// dynamically Qualification textarea
 function addNewEqField() {
   let newNode = document.createElement("textarea");
   newNode.classList.add("form-control");
@@ -104,41 +104,70 @@ function generateCV() {
 
   // Code For Setting Image
   let file = document.getElementById("imgField").files[0];
+  let file2 = document.getElementById("imgField").files[0];
 
-  console.log(file);
+  console.log(file2);
 
   let reader = new FileReader();
   reader.readAsDataURL(file);
   console.log(reader.result);
+  
+
+  let reader2 = new FileReader();
+  reader2.readAsDataURL(file2);
+  console.log(reader2.result);
+
 
   // Set The Image To Template
   reader.onloadend = function () {
     document.getElementById("imgTemplate3").src = reader.result;
   };
 
+  // Set The Image To Template
+  reader2.onloadend = function () {
+    document.getElementById("showImgTemplate3").src = reader.result;
+  };
+
+
   // name
   let nameField = document.getElementById("nameField").value;
   document.getElementById("nameT2").innerHTML = nameField;
+  document.getElementById("showNameT2").innerHTML = nameField;
+  
+  
+  
   // Email
   document.getElementById("emailT").innerHTML =
+    document.getElementById("emailField").value;
+  document.getElementById("showEmailT").innerHTML =
     document.getElementById("emailField").value;
   
   // contact
   document.getElementById("contactT").innerHTML =
     document.getElementById("contactField").value;
-    //  document.getElementById("countryContactT").innerHTML =
-    // document.getElementById("countryCode").value;
+
+    document.getElementById("showCountryContactT").innerText=document.getElementById("countryCode").value
+    document.getElementById("countryContactTs").innerText=document.getElementById("countryCode").value
+    
+    document.getElementById("showContactT").innerHTML =
+      document.getElementById("contactField").value;
   
   // Address
   document.getElementById("addressT").innerHTML =
+    document.getElementById("addressField").value;
+  document.getElementById("showAddressT").innerHTML =
     document.getElementById("addressField").value;
    
       // Objective
   document.getElementById("objectiveT").innerHTML =
   document.getElementById("ObjectiveField").value;
+  document.getElementById("showObjectiveT").innerHTML =
+  document.getElementById("ObjectiveField").value;
 
   //  Job Title
   document.getElementById("jobTitleT").innerHTML =
+  document.getElementById("jobTitle").value;
+  document.getElementById("showJobTitleT").innerHTML =
   document.getElementById("jobTitle").value;
 
      //Expertise
@@ -148,6 +177,7 @@ function generateCV() {
        techSkills = techSkills + `<li>${e.value}</li>`;
      }
      document.getElementById("keySkills").innerHTML = techSkills;
+     document.getElementById("showKeySkills").innerHTML = techSkills;
 
        //Language
   let language = document.getElementsByClassName("languageField");
@@ -156,6 +186,7 @@ function generateCV() {
     lang = lang + `<li>${e.value}</li>`;
   }
   document.getElementById("languages").innerHTML = lang;
+  document.getElementById("showLanguages").innerHTML = lang;
 
     // Qe (QUALIFICATION)
     let aqs = document.getElementsByClassName("eqField");
@@ -166,6 +197,7 @@ function generateCV() {
     }
   
     document.getElementById("aqT").innerHTML = str1;
+    document.getElementById("showAqT").innerHTML = str1;
 
     //Intrest
   let intrest = document.getElementsByClassName("intrestField");
@@ -174,6 +206,7 @@ function generateCV() {
     intrst = intrst + `<li>${e.value}</li>`;
   }
   document.getElementById("intrests").innerHTML = intrst;
+  document.getElementById("showIntrests").innerHTML = intrst;
 
 
     //hobby
@@ -183,16 +216,21 @@ function generateCV() {
         hobby = hobby + `<li>${e.value}</li>`;
     }
     document.getElementById("hobbys").innerHTML = hobby;
+    document.getElementById("showHobbys").innerHTML = hobby;
 
 
      // label update
      const designRange=document.getElementById("designRange").value;
      document.getElementById("designProgress").style.width=designRange+"%";
+     document.getElementById("showDesignProgress").style.width=designRange+"%";
      document.getElementById("designProgress").innerHTML=designRange+"%";
+     document.getElementById("showDesignProgress").innerHTML=designRange+"%";
 
      const projectRange=document.getElementById("projectManagementRange").value;
      document.getElementById("projectProgress").style.width=projectRange+"%";
+     document.getElementById("showProjectProgress").style.width=projectRange+"%";
      document.getElementById("projectProgress").innerHTML=projectRange+"%";
+     document.getElementById("showProjectProgress").innerHTML=projectRange+"%";
 
 
   
@@ -211,8 +249,10 @@ function duplicateForm() {
 }
 
 function showData() {
+  document.getElementById("dummyExperience").style.display="none";
   const forms = document.querySelectorAll(".form-group:not(#weTemplate)"); // Exclude the template
   const resultSection = document.getElementById("resultSection");
+  const showResultSection = document.getElementById("showResultSection"); // Ensure this ID exists in your HTML
 
   forms.forEach((form, index) => {
     const fromField = form.querySelector(".fromWorkField");
@@ -243,12 +283,18 @@ function showData() {
                 </div>
             `;
 
+      // Append to first section
       resultSection.appendChild(resultDiv);
+
+      // Clone the resultDiv and append to second section
+      const resultDivClone = resultDiv.cloneNode(true); // true means deep clone including all children
+      showResultSection.appendChild(resultDivClone);
     } else {
       console.error("One or more fields are missing in the form.");
     }
   });
 }
+
 
 // --------------------------------------------------------------------------------------------
 
@@ -271,6 +317,22 @@ function dark() {
   document.getElementById("iconAddress").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
   document.getElementById("iconEmail").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
   document.getElementById("iconContact").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+
+  // show template
+  document.getElementById("showIconAddress").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("showIconContact").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("showIconEmail").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("showTabSkillColor").style.borderColor= "#297FF7";
+  document.getElementById("showTabHobbiesColor").style.borderColor= "#297FF7";
+  document.getElementById("showTabLanguageColor").style.borderColor= "#297FF7";
+  document.getElementById("showTabIntrestColor").style.borderColor= "#297FF7";
+  document.getElementById("showChangeBlueColor").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("showSkillsColorChange").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("showExperiencecolorChange").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("showEducationColorChange").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("showDesignProgress").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+  document.getElementById("showProjectProgress").style.background= "radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,221,214,1) 0%, rgba(51,102,255,1) 90% )";
+
 }
 function LightBlue() {
   
@@ -288,6 +350,22 @@ function LightBlue() {
   document.getElementById("iconAddress").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
   document.getElementById("iconEmail").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
   document.getElementById("iconContact").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+
+  // show template
+  document.getElementById("showIconAddress").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("showIconContact").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("showIconEmail").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("showTabSkillColor").style.borderColor= "#611446";
+  document.getElementById("showTabHobbiesColor").style.borderColor= "#611446";
+  document.getElementById("showTabLanguageColor").style.borderColor= "#611446";
+  document.getElementById("showTabIntrestColor").style.borderColor= "#611446";
+  document.getElementById("showChangeBlueColor").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("showSkillsColorChange").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("showExperiencecolorChange").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("showEducationColorChange").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("showDesignProgress").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+  document.getElementById("showProjectProgress").style.background= "linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% )";
+
 }
 function Eucalyptus() {
   
@@ -305,6 +383,22 @@ function Eucalyptus() {
   document.getElementById("iconAddress").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
   document.getElementById("iconEmail").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
   document.getElementById("iconContact").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  
+  // show template
+  document.getElementById("showIconAddress").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("showIconContact").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("showIconEmail").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("showTabSkillColor").style.borderColor="#51297A";
+  document.getElementById("showTabHobbiesColor").style.borderColor="#51297A";
+  document.getElementById("showTabLanguageColor").style.borderColor= "#51297A";
+  document.getElementById("showTabIntrestColor").style.borderColor= "#51297A";
+  document.getElementById("showChangeBlueColor").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("showSkillsColorChange").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("showExperiencecolorChange").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("showEducationColorChange").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("showDesignProgress").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+  document.getElementById("showProjectProgress").style.background= "linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% )";
+
 }
 function light3() {
   document.getElementById("changeBlueColor").style.background = "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
@@ -321,6 +415,22 @@ function light3() {
   document.getElementById("iconAddress").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
   document.getElementById("iconEmail").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
   document.getElementById("iconContact").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  
+  // show template
+  document.getElementById("showIconAddress").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("showIconContact").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("showIconEmail").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("showTabSkillColor").style.borderColor="#980707";
+  document.getElementById("showTabHobbiesColor").style.borderColor="#980707";
+  document.getElementById("showTabLanguageColor").style.borderColor= "#980707";
+  document.getElementById("showTabIntrestColor").style.borderColor= "#980707";
+  document.getElementById("showChangeBlueColor").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("showSkillsColorChange").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("showExperiencecolorChange").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("showEducationColorChange").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("showDesignProgress").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+  document.getElementById("showProjectProgress").style.background= "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )";
+
 }
 function light2() {
   document.getElementById("changeBlueColor").style.background = "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
@@ -337,7 +447,26 @@ function light2() {
   document.getElementById("iconAddress").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
   document.getElementById("iconEmail").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
   document.getElementById("iconContact").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+
+  // show template
+  document.getElementById("showIconAddress").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("showIconContact").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("showIconEmail").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("showTabSkillColor").style.borderColor="#A3E6FF";
+  document.getElementById("showTabHobbiesColor").style.borderColor="#A3E6FF";
+  document.getElementById("showTabLanguageColor").style.borderColor= "#A3E6FF";
+  document.getElementById("showTabIntrestColor").style.borderColor= "#A3E6FF";
+  document.getElementById("showChangeBlueColor").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("showSkillsColorChange").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("showExperiencecolorChange").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("showEducationColorChange").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("showDesignProgress").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+  document.getElementById("showProjectProgress").style.background= "linear-gradient( 109.6deg,  rgba(254,253,205,1) 11.2%, rgba(163,230,255,1) 91.1% )";
+
+ 
 }
+
+
 function light1() {
   document.getElementById("changeBlueColor").style.background ="linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
   document.getElementById("imgTemplate3").style.borderColor  ="#DAE4E9";
@@ -353,6 +482,22 @@ function light1() {
   document.getElementById("iconAddress").style.background= "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
   document.getElementById("iconEmail").style.background="linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
   document.getElementById("iconContact").style.background="linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+
+  // show template
+  document.getElementById("showIconAddress").style.background= "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("showIconContact").style.background= "#DAE4E9";
+  document.getElementById("showIconEmail").style.background= "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("showTabSkillColor").style.borderColor="#DAE4E9";
+  document.getElementById("showTabHobbiesColor").style.borderColor="#DAE4E9";
+  document.getElementById("showTabLanguageColor").style.borderColor= "#DAE4E9";
+  document.getElementById("showTabIntrestColor").style.borderColor= "#DAE4E9";
+  document.getElementById("showChangeBlueColor").style.background= "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("showSkillsColorChange").style.background= "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("showExperiencecolorChange").style.background= "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("showEducationColorChange").style.background= "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("showDesignProgress").style.background= "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+  document.getElementById("showProjectProgress").style.background= "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+
 }
 
 function changeBackgroundColor() {
@@ -371,6 +516,25 @@ function changeBackgroundColor() {
   document.getElementById("iconAddress").style.background= input;
   document.getElementById("iconEmail").style.background= input;
   document.getElementById("iconContact").style.background= input;
+
+  
+  
+
+  // show template
+  document.getElementById("showIconAddress").style.background= input;
+  document.getElementById("showIconContact").style.background= input;
+  document.getElementById("showIconEmail").style.background= input;
+  document.getElementById("showTabSkillColor").style.borderColor=input;
+  document.getElementById("showTabHobbiesColor").style.borderColor=input;
+  document.getElementById("showTabLanguageColor").style.borderColor= input;
+  document.getElementById("showTabIntrestColor").style.borderColor= input;
+  document.getElementById("showChangeBlueColor").style.background= input;
+  document.getElementById("showSkillsColorChange").style.background= input;
+  document.getElementById("showExperiencecolorChange").style.background= input;
+  document.getElementById("showEducationColorChange").style.background= input;
+  document.getElementById("showDesignProgress").style.background= input;
+  document.getElementById("showProjectProgress").style.background= input;
+
 }
 function resetBackgroundColor() {
 
@@ -398,6 +562,38 @@ function resetBackgroundColor() {
   document.getElementById("experiencecolorChange").style.color = "white";
   document.getElementById("educationColorChange").style.color = "white";
   document.getElementById("designProgress").style.color = "white";
+  document.getElementById("showIconAddress").style.color = "white";
+  document.getElementById("showIconEmail").style.color = "white";
+  document.getElementById("showIconContact").style.color = "white";
+
+
+  
+  // show template
+  document.getElementById("showIconAddress").style.background= "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("showIconContact").style.background= "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("showIconEmail").style.background= "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("showTabSkillColor").style.borderColor="#0000FF";
+  document.getElementById("showTabHobbiesColor").style.borderColor="#0000FF";
+  document.getElementById("showTabLanguageColor").style.borderColor= "#0000FF";
+  document.getElementById("showTabSkillColor").style.borderColor= "#0000FF";
+  document.getElementById("showChangeBlueColor").style.background= "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("showSkillsColorChange").style.background= "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("showExperiencecolorChange").style.background= "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("showEducationColorChange").style.background= "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("showDesignProgress").style.background= "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+  document.getElementById("showProjectProgress").style.background= "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%)";
+
+  document.getElementById("showIconAddress").style.color = "white";
+  document.getElementById("showIconEmail").style.color = "white";
+  document.getElementById("showIconContact").style.color = "white";
+  document.getElementById("showDesignProgress").style.color = "white";
+  document.getElementById("showProjectProgress").style.color = "white";
+  document.getElementById("showClrExp").style.color = "white";
+  document.getElementById("showClrSkills").style.color = "white";
+  document.getElementById("showProjectProgress").style.color = "white";
+  document.getElementById("showClrEdu").style.color = "white";
+
+
 }
 
 // for template fontC colour
@@ -414,6 +610,20 @@ function fontLight2() {
   document.getElementById("experiencecolorChange").style.color = "white";
   document.getElementById("educationColorChange").style.color = "white";
   document.getElementById("designProgress").style.color = "white";
+
+
+  document.getElementById("showIconAddress").style.color = "white";
+  document.getElementById("showIconEmail").style.color = "white";
+  document.getElementById("showIconContact").style.color = "white";
+  document.getElementById("showDesignProgress").style.color = "white";
+  document.getElementById("showProjectProgress").style.color = "white";
+  document.getElementById("showClrExp").style.color = "white";
+  document.getElementById("showClrSkills").style.color = "white";
+  document.getElementById("showProjectProgress").style.color = "white";
+  document.getElementById("showClrEdu").style.color = "white";
+
+
+
 }
 function fontLight1() {
  
@@ -427,14 +637,26 @@ function fontLight1() {
   document.getElementById("experiencecolorChange").style.color = "black";
   document.getElementById("educationColorChange").style.color = "black";
   document.getElementById("designProgress").style.color = "black";
+
+  document.getElementById("showIconAddress").style.color = "black";
+  document.getElementById("showIconEmail").style.color = "black";
+  document.getElementById("showIconContact").style.color = "black";
+  document.getElementById("showDesignProgress").style.color = "black";
+  document.getElementById("showProjectProgress").style.color = "black";
+  document.getElementById("showClrExp").style.color = "black";
+  document.getElementById("showClrSkills").style.color = "black";
+  document.getElementById("showProjectProgress").style.color = "black";
+  document.getElementById("showClrEdu").style.color = "black";
 }
 
 // --------------------------------------------------------------------------------------------
 
 async function captureDivAndDownloadPdf() {
+  document.getElementById("cv-template").style.display="block";
   const content = document.getElementById("cvTemplate");
   if (!content) {
     console.error("Content element not found");
+    document.getElementById("cv-template").style.display="none";
     return;
   }
 
@@ -504,8 +726,10 @@ async function captureDivAndDownloadPdf() {
 
     // Save the PDF
     pdf.save("cv_template.pdf");
+    document.getElementById("cv-template").style.display="none";
   } catch (error) {
     console.error("Error capturing content or generating PDF:", error);
+    document.getElementById("cv-template").style.display="none";
   }
 }
 
