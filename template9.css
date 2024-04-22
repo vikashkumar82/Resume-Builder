@@ -62,74 +62,8 @@ p#objectiveT {
     text-align: justify;
 }
 
-/* manually Colour Change */
-
-#color1 {
-
-    background: #b9bdb9;
-    border: 1px solid #b9bdb9;
-    border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
-}
-
-#color2 {
-
-    background: #FFF8F4;
-    border: 1px solid #FFF8F4;
-    border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
-}
-
-#color3 {
-
-    background: #D9E6EB;
-    border: 1px solid #D9E6EB;
-    border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
-}
-
-#color4 {
-
-    background: #8B3DFF;
-    border: 1px solid #8B3DFF;
-    border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
-
-}
-
-#color5 {
-    background: #6B9999;
-    border: 1px solid #6B9999;
-    border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
-}
-
-#color6 {
-    background: #414143;
-    border: 1px solid #414143;
-    border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
-}
-
-/* for font */
 
 
-.colorSelection-Section {
-    display: flex;
-    gap: 10px;
-}
 
 /* colorpicker */
 body {
