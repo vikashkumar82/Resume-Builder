@@ -322,3 +322,27 @@ h1#nameT2 {
 .contact-section div p {
     margin-bottom: 6px;
 }
+
+.headerSection-showResume {
+    padding: 27px;
+}
+
+img#showImgTemplate2 {
+    width: 130px;
+    height: 130px !important;
+}
+
+.profileNameSection-nameTitle {
+    line-height: 5px;
+    margin-top: 29px;
+}
+.showTemplate-contact {
+    display: flex;
+}
+.showTemplate-contact {
+    display: flex;
+    font-size: small;
+    gap: 18px;
+    justify-content: center;
+    background-color: #D3CECE;
+}
