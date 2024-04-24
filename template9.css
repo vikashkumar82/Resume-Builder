@@ -2,7 +2,7 @@
 
 
 .img-fluid {
-    max-width: 106px !important;
+    max-width: 84px !important;
     height: 106px !important;
     background: aliceblue;
     object-fit: cover;
@@ -202,6 +202,5 @@ button.btnApply {
 
 img#showImgTemplate2 {
     width: 130px;
-    height: 130px !important;
+    height: 83px !important;
 }
-
