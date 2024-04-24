@@ -201,6 +201,18 @@ button.btnApply {
 }
 
 img#showImgTemplate2 {
-    width: 130px;
+    width: 130px !important;
     height: 83px !important;
+}
+.tem9-section{
+    border: 1px solid lightslategray; 
+     position: relative;
+}
+
+.right-section-show{
+    border: 1px solid rgb(153, 149, 149);
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+    border-radius: 7px;
+     position: sticky;
+     top: 5px;
 }
