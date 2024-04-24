@@ -490,47 +490,7 @@ function light3() {
   document.getElementById("showIconSummaryColor").style.background=colo3r;
   document.getElementById("showHeaderSection").style.background=colo3r;
 }
-function light2() {
-  const color4 = document.getElementById("spanCol2").innerHTML;
-  document.getElementById("headingColourChange").style.background = colo3r;
-  document.getElementById("iconSummaryColor").style.background=colo3r;
-  document.getElementById("iconProjectColor").style.background=colo3r;
-  document.getElementById("iconEducationColor").style.background=colo3r;
-  document.getElementById("iconSkillsColor").style.background=colo3r;
-  document.getElementById("iconLanguageColor").style.background=colo3r;
-  document.getElementById("iconHobbiesColor").style.background=colo3r;
-  document.getElementById("iconAchivementsColor").style.background=colo3r;
-  document.getElementById("iconExperienceColor").style.background=colo3r;
 
-  document.getElementById("achivementsHeading").style.borderBottomColor = colo3r;
-  document.getElementById("hobbiesHeading").style.borderBottomColor = colo3r;
-  document.getElementById("languageHeading").style.borderBottomColor = colo3r;
-  document.getElementById("skillsHeading").style.borderBottomColor = colo3r;
-  document.getElementById("educationHeading").style.borderBottomColor = colo3r;
-  document.getElementById("projectHeading").style.borderBottomColor = colo3r;
-  document.getElementById("experienceHeading").style.borderBottomColor = colo3r;
-  document.getElementById("summaryHeading").style.borderBottomColor = colo3r;
-
-  document.getElementById("showSummaryHeading").style.borderBottomColor = colo3r
-  document.getElementById("showExperienceHeading").style.borderBottomColor=colo3r
-  document.getElementById("showEducationHeading").style.borderBottomColor=colo3r
-  document.getElementById("showSkillsHeading").style.borderBottomColor = colo3r
-  document.getElementById("showlanguageHeading").style.borderBottomColor = colo3r
-  document.getElementById("showHobbiesHeading").style.borderBottomColor = colo3r
-  document.getElementById("showAchivementsHeading").style.borderBottomColor = colo3r
-  document.getElementById("showProjectHeading").style.borderBottomColor = colo3r
-
-  document.getElementById("showIconAchivementsColor").style.background = colo3r;
-  document.getElementById("showIconHobbiesColor").style.background=colo3r;
-  document.getElementById("showIconLanguageColor").style.background=colo3r;
-  document.getElementById("showIconSkillsColor").style.background=colo3r;
-  document.getElementById("showIconEducationColor").style.background=colo3r;
-  document.getElementById("showIconProjectColor").style.background=colo3r;
-  document.getElementById("showIconExperienceColor").style.background=colo3r;
-  document.getElementById("showIconExperienceColor").style.background=colo3r;
-  document.getElementById("showIconSummaryColor").style.background=colo3r;
-  document.getElementById("showHeaderSection").style.background=colo3r;
-}
 function light1() {
   const color5 = document.getElementById("spanCol1").innerHTML;
   document.getElementById("headingColourChange").style.background = color5;
