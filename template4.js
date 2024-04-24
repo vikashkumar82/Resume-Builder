@@ -674,9 +674,11 @@ function fontLight1() {
 // --------------------------------------------------------------------------------------------
 
 async function captureDivAndDownloadPdf() {
+  document.getElementById("cv-template").style.display="block";
   const content = document.getElementById("cvTemplate");
   if (!content) {
     console.error("Content element not found");
+    document.getElementById("cv-template").style.display="none";
     return;
   }
 
@@ -746,8 +748,10 @@ async function captureDivAndDownloadPdf() {
 
     // Save the PDF
     pdf.save("cv_template.pdf");
+    document.getElementById("cv-template").style.display="none";
   } catch (error) {
     console.error("Error capturing content or generating PDF:", error);
+    document.getElementById("cv-template").style.display="none";
   }
 }
 
