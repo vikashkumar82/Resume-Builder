@@ -67,9 +67,9 @@ p#objectiveT {
     background: #b9bdb9;
     border: 1px solid #b9bdb9;
     border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
+    padding: 9px;
+    height: 25px;
+    width: 25px;
 }
 
 #color2 {
@@ -77,9 +77,9 @@ p#objectiveT {
     background: #FFF8F4;
     border: 1px solid #FFF8F4;
     border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
+    padding: 9px;
+    height: 25px;
+    width: 25px;
 }
 
 #color3 {
@@ -87,9 +87,9 @@ p#objectiveT {
     background: #D9E6EB;
     border: 1px solid #D9E6EB;
     border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
+    padding: 9px;
+    height: 25px;
+    width: 25px;
 }
 
 #color4 {
@@ -97,9 +97,9 @@ p#objectiveT {
     background: #8B3DFF;
     border: 1px solid #8B3DFF;
     border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
+    padding: 9px;
+    height: 25px;
+    width: 25px;
 
 }
 
@@ -107,83 +107,47 @@ p#objectiveT {
     background: #6B9999;
     border: 1px solid #6B9999;
     border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
+    padding: 9px;
+    height: 25px;
+    width: 25px;
 }
 
 #color6 {
     background: #414143;
     border: 1px solid #414143;
     border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
+    padding: 9px;
+    height: 25px;
+    width: 25px;
 }
 
 /* for font */
 #Fcolor1 {
 
-    background: #b9bdb9;
-    border: 1px solid #b9bdb9;
+    background: white;
+    border: 1px solid #a8aba8;
     border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
+    padding: 9px;
+    height: 25px;
+    width: 25px;
 }
 
 #Fcolor2 {
 
-    background: #FFF8F4;
-    border: 1px solid #FFF8F4;
+    background: black;
     border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
+    padding: 9px;
+    height: 25px;
+    width: 25px;
 }
 
-#Fcolor3 {
 
-    background: #D9E6EB;
-    border: 1px solid #D9E6EB;
-    border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
-}
 
-#Fcolor4 {
 
-    background: #8B3DFF;
-    border: 1px solid #8B3DFF;
-    border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
-
-}
-
-#Fcolor5 {
-    background: #6B9999;
-    border: 1px solid #6B9999;
-    border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
-}
-
-#Fcolor6 {
-    background: #414143;
-    border: 1px solid #414143;
-    border-radius: 59%;
-    padding: 17px;
-    height: 30px;
-    width: 30px;
-}
 
 .colorSelection-Section {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 /* colorpicker */
@@ -283,10 +247,7 @@ h1#nameT2 {
 
 /* Template 2 ends */
 
-.resumeForm {
-    border: 1px solid gray;
-    /* padding: 5px; */
-}
+
 
 .contact-section {
     display: flex;
@@ -324,12 +285,14 @@ h1#nameT2 {
 }
 
 .headerSection-showResume {
-    padding: 27px;
+    padding: 12px;
+    background: #c200ff;
+    border-radius: 7px;
 }
-
 img#showImgTemplate2 {
-    width: 130px;
-    height: 130px !important;
+    width: 123px;
+    height: 119px !important;
+    margin-left: 19px;
 }
 
 .profileNameSection-nameTitle {
@@ -345,4 +308,146 @@ img#showImgTemplate2 {
     gap: 18px;
     justify-content: center;
     background-color: #D3CECE;
+}
+
+p.fontColorChange {
+    margin-bottom: 5px;
+    padding: 2px;
+}
+.resumeGenerator-main {
+    border: 1px solid #778899;
+    position: relative;
+}
+
+.showResFontSize {
+    font-size: 14px;
+}
+.showIconSection {
+    background: #c200ff;
+    margin-top: 5px;
+    padding: 7px 12px 0px 12px;
+    color: white;
+}
+
+div#iconProjectColor i {
+    padding: 0 3px 0px 3px;
+}
+div#iconEducationColor i {
+    font-size: 21px;
+}
+.showHeading-title {
+    margin-top: 12px;
+}
+
+.profileNameSection-nameTitle h2 {
+    color: white;
+}
+.profileNameSection-nameTitle p {
+    color: white;
+}
+
+.presonalInfo {
+    border: 1px solid #778899;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+}
+
+.professionalInfo{
+    border: 1px solid #778899;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+}
+.socialMediaLinks{
+    border: 1px solid #778899;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+}
+.intrestsForm-section{
+    border: 1px solid #778899;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+}
+
+.showResume-template {
+    border: 1px solid #778899;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px 5px #f5ebeb;
+    position: sticky;
+    top: 10px;
+}
+.showHeading-title h4 {
+    font-size: 21px;
+}
+
+div#showIconProjectColor i {
+    padding: 3px;
+}
+
+.presonalInfo h3 {
+    text-align: center;
+}
+.professionalInfo h3 {
+    text-align: center;
+}
+.socialMediaLinks h3 {
+    text-align: center;
+}
+.intrestsForm-section {
+    text-align: center;
+}
+
+.btn_Generate {
+    width: 456px;
+    padding: 10px;
+}
+
+.btn-sm {
+    width: 245px;
+    padding: 8px;
+}
+
+.btn_showExperiene {
+    width: 300px;
+}
+
+.btn_addExperience {
+    width: 300px;
+}
+
+.btn_showProject{
+    width: 300px;
+}
+
+.btn_addProject{
+    width: 300px;
+}
+.chooseColour {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.colorSelection-Section {
+    display: flex;
+    gap: 5px;
+    padding: 7px 18px 7px 17px;
+    border: 1px solid #778899;
+    margin-bottom: 6px;
+    margin-top: -1px;
+    border-radius: 0px 0px 0px 19px;
+}
+
+.fontSelection-Section{
+    display: flex;
+    gap: 5px;
+    padding: 7px 18px 7px 17px;
+    border: 1px solid #778899;
+    margin-bottom: 6px;
+    margin-top: -1px;
+    border-radius: 0px 0px 19px 0px;
+}
+.multiColour {
+    border-bottom: 1px solid #778899;
+    padding: 1px 11px 0px 9px;
+    margin-top: 0px;
 }
