@@ -82,28 +82,43 @@ function addNewHobbyField() {
 function generateCV() {
   // Code For Setting Image
   let file = document.getElementById("imgField").files[0];
+  let file2 = document.getElementById("imgField").files[0];
 
   console.log(file);
+  console.log(file2);
 
   let reader = new FileReader();
   reader.readAsDataURL(file);
   console.log(reader.result);
 
+  let reader2 = new FileReader();
+  reader2.readAsDataURL(file2);
+  console.log(reader2.result);
+
   // Set The Image To Template
   reader.onloadend = function () {
     document.getElementById("imgTemplate2").src = reader.result;
+  };
+  // Set The Image To Template
+  reader2.onloadend = function () {
+    document.getElementById("ShowImgTemplate2").src = reader2.result;
   };
 
   // name
   let nameField = document.getElementById("nameField").value;
   document.getElementById("nameT2").innerText = nameField;
+  document.getElementById("showNameT2").innerText = nameField;
 
   //  Job Title
   document.getElementById("jobTitleT").innerHTML =
     document.getElementById("jobTitle").value;
+  document.getElementById("showJobTitleT").innerHTML =
+    document.getElementById("jobTitle").value;
 
   // Email
   document.getElementById("emailT").innerHTML =
+    document.getElementById("emailField").value;
+  document.getElementById("showEmailT").innerHTML =
     document.getElementById("emailField").value;
 
   // contact
@@ -111,13 +126,21 @@ function generateCV() {
     document.getElementById("countryCode").value;
   document.getElementById("contactT").innerHTML =
     document.getElementById("contactField").value;
+  document.getElementById("showountryContactT").innerHTML =
+    document.getElementById("countryCode").value;
+  document.getElementById("showContactT").innerHTML =
+    document.getElementById("contactField").value;
 
   // Address
   document.getElementById("addressT").innerHTML =
     document.getElementById("addressField").value;
+  document.getElementById("showAddressT").innerHTML =
+    document.getElementById("addressField").value;
 
   // Objective
   document.getElementById("objectiveT").innerHTML =
+    document.getElementById("ObjectiveField").value;
+  document.getElementById("showObjectiveT").innerHTML =
     document.getElementById("ObjectiveField").value;
 
   // Qe (QUALIFICATION)
@@ -129,12 +152,17 @@ function generateCV() {
   }
 
   document.getElementById("aqT").innerHTML = str1;
+  document.getElementById("showEducation").innerHTML = str1;
 
 
   //  Social media Links
   document.getElementById("githubT").href =
     document.getElementById("gitField").value;
     document.getElementById("githubT").innerText =
+    document.getElementById("gitField").value;
+  document.getElementById("showGithubT").href =
+    document.getElementById("gitField").value;
+    document.getElementById("showGithubT").innerText =
     document.getElementById("gitField").value;
   
 
@@ -145,6 +173,7 @@ function generateCV() {
     techSkills = techSkills + `<li>${e.value}</li>`;
   }
   document.getElementById("keySkills").innerHTML = techSkills;
+  document.getElementById("showSkills").innerHTML = techSkills;
 
 
   //hobby
@@ -154,6 +183,7 @@ function generateCV() {
     hobby = hobby + `<li>${e.value}</li>`;
   }
   document.getElementById("hobbys").innerHTML = hobby;
+  document.getElementById("showHobbies").innerHTML = hobby;
 }
 
 // --------------------------------------------------------------------------------------------
@@ -270,6 +300,14 @@ function dark() {
   document.getElementById("SkillsColorSection").style.borderTopColor=dark;
   document.getElementById("HobbiesColorSection").style.borderTopColor=dark;
   document.getElementById("ExperienceColorSection").style.borderTopColor=dark;
+
+  document.getElementById("showResumeHeader").style.background = dark;
+  document.getElementById("showSummary").style.borderTopColor=dark;
+  document.getElementById("showExperiences").style.borderTopColor=dark;
+  document.getElementById("showEducation").style.borderTopColor=dark;
+  document.getElementById("showSkills").style.borderTopColor=dark;
+  document.getElementById("showProject").style.borderTopColor=dark;
+  document.getElementById("showHobbies").style.borderTopColor=dark;
  }
 function LightBlue() {
   const blue = document.getElementById("spanCol5").innerHTML;
@@ -280,6 +318,14 @@ function LightBlue() {
   document.getElementById("SkillsColorSection").style.borderTopColor=blue;
   document.getElementById("HobbiesColorSection").style.borderTopColor=blue;
   document.getElementById("ExperienceColorSection").style.borderTopColor=blue;
+
+  document.getElementById("showResumeHeader").style.background = blue;
+  document.getElementById("showSummary").style.borderTopColor=blue;
+  document.getElementById("showExperiences").style.borderTopColor=blue;
+  document.getElementById("showEducation").style.borderTopColor=blue;
+  document.getElementById("showSkills").style.borderTopColor=blue;
+  document.getElementById("showProject").style.borderTopColor=blue;
+  document.getElementById("showHobbies").style.borderTopColor=blue;
 }
 function Eucalyptus() {
   const eucalyptus = document.getElementById("spanCol4").innerHTML;
@@ -290,6 +336,14 @@ function Eucalyptus() {
   document.getElementById("SkillsColorSection").style.borderTopColor=eucalyptus;
   document.getElementById("HobbiesColorSection").style.borderTopColor=eucalyptus;
   document.getElementById("ExperienceColorSection").style.borderTopColor=eucalyptus;
+
+  document.getElementById("showResumeHeader").style.background = eucalyptus;
+  document.getElementById("showSummary").style.borderTopColor=eucalyptus;
+  document.getElementById("showExperiences").style.borderTopColor=eucalyptus;
+  document.getElementById("showEducation").style.borderTopColor=eucalyptus;
+  document.getElementById("showSkills").style.borderTopColor=eucalyptus;
+  document.getElementById("showProject").style.borderTopColor=eucalyptus;
+  document.getElementById("showHobbies").style.borderTopColor=eucalyptus;
 }
 function light3() {
   const colo3r = document.getElementById("spanCol3").innerHTML;
@@ -300,6 +354,14 @@ function light3() {
   document.getElementById("SkillsColorSection").style.borderTopColor=colo3r;
   document.getElementById("HobbiesColorSection").style.borderTopColor=colo3r;
   document.getElementById("ExperienceColorSection").style.borderTopColor=colo3r;
+
+  document.getElementById("showResumeHeader").style.background = colo3r;
+  document.getElementById("showSummary").style.borderTopColor=colo3r;
+  document.getElementById("showExperiences").style.borderTopColor=colo3r;
+  document.getElementById("showEducation").style.borderTopColor=colo3r;
+  document.getElementById("showSkills").style.borderTopColor=colo3r;
+  document.getElementById("showProject").style.borderTopColor=colo3r;
+  document.getElementById("showHobbies").style.borderTopColor=colo3r;
 }
 function light2() {
   const color4 = document.getElementById("spanCol2").innerHTML;
@@ -310,6 +372,14 @@ function light2() {
   document.getElementById("SkillsColorSection").style.borderTopColor=color4;
   document.getElementById("HobbiesColorSection").style.borderTopColor=color4;
   document.getElementById("ExperienceColorSection").style.borderTopColor=color4;
+
+  document.getElementById("showResumeHeader").style.background = color4;
+  document.getElementById("showSummary").style.borderTopColor=color4;
+  document.getElementById("showExperiences").style.borderTopColor=color4;
+  document.getElementById("showEducation").style.borderTopColor=color4;
+  document.getElementById("showSkills").style.borderTopColor=color4;
+  document.getElementById("showProject").style.borderTopColor=color4;
+  document.getElementById("showHobbies").style.borderTopColor=color4;
 }
 function light1() {
   const color5 = document.getElementById("spanCol1").innerHTML;
@@ -321,6 +391,14 @@ function light1() {
   document.getElementById("SkillsColorSection").style.borderTopColor=color5;
   document.getElementById("HobbiesColorSection").style.borderTopColor=color5;
   document.getElementById("ExperienceColorSection").style.borderTopColor = color5;
+
+  document.getElementById("showResumeHeader").style.background = color5;
+  document.getElementById("showSummary").style.borderTopColor=color5;
+  document.getElementById("showExperiences").style.borderTopColor=color5;
+  document.getElementById("showEducation").style.borderTopColor=color5;
+  document.getElementById("showSkills").style.borderTopColor=color5;
+  document.getElementById("showProject").style.borderTopColor=color5;
+  document.getElementById("showHobbies").style.borderTopColor=color5;
 }
 
 function changeBackgroundColor() {
@@ -333,6 +411,14 @@ function changeBackgroundColor() {
   document.getElementById("SkillsColorSection").style.borderTopColor=input;
   document.getElementById("HobbiesColorSection").style.borderTopColor=input;
   document.getElementById("ExperienceColorSection").style.borderTopColor=input;
+
+  document.getElementById("showResumeHeader").style.background = input;
+  document.getElementById("showSummary").style.borderTopColor=input;
+  document.getElementById("showExperiences").style.borderTopColor=input;
+  document.getElementById("showEducation").style.borderTopColor=input;
+  document.getElementById("showSkills").style.borderTopColor=input;
+  document.getElementById("showProject").style.borderTopColor=input;
+  document.getElementById("showHobbies").style.borderTopColor=input;
 }
 function resetBackgroundColor() {
   document.getElementById("headingColourChange").style.background = "#00FFFF";
@@ -344,38 +430,33 @@ function resetBackgroundColor() {
   document.getElementById("ExperienceColorSection").style.borderTopColor="#00FFFF";
   document.getElementById("nameT2").style.color = "#C0C0C0";
   document.getElementById("jobTitleT").style.color ="#C0C0C0";
+
+
+document.getElementById("showJobTitleT").style.color ="#C0C0C0";
+  document.getElementById("showNameT2").style.color = "#C0C0C0";
+
+  document.getElementById("showResumeHeader").style.background = "#00FFFF";
+  document.getElementById("showSummary").style.borderTopColor="#00FFFF";
+  document.getElementById("showExperiences").style.borderTopColor="#00FFFF";
+  document.getElementById("showEducation").style.borderTopColor="#00FFFF";
+  document.getElementById("showSkills").style.borderTopColor="#00FFFF";
+  document.getElementById("showProject").style.borderTopColor="#00FFFF";
+  document.getElementById("showHobbies").style.borderTopColor="#00FFFF";
 }
 
 // for template fontC colour
-function fontdark() {
-  const dark = document.getElementById("fontSpanCol6").innerHTML;
-  document.getElementById("nameT2").style.color = dark;
-  document.getElementById("jobTitleT").style.color = dark;
-}
-function fontLightBlue() {
-  const blue = document.getElementById("fontSpanCol5").innerHTML;
-  document.getElementById("nameT2").style.color = blue;
-  document.getElementById("jobTitleT").style.color = blue;
-}
-function fontEucalyptus() {
-  const eucalyptus = document.getElementById("fontSpanCol4").innerHTML;
-  document.getElementById("nameT2").style.color = eucalyptus;
-  document.getElementById("jobTitleT").style.color = eucalyptus;
-}
-function fontLight3() {
-  const colo3r = document.getElementById("fontSpanCol3").innerHTML;
-  document.getElementById("nameT2").style.color = colo3r;
-  document.getElementById("jobTitleT").style.color = colo3r;
-}
+
 function fontLight2() {
-  const color4 = document.getElementById("fontSpanCol2").innerHTML;
-  document.getElementById("nameT2").style.color = color4;
-  document.getElementById("jobTitleT").style.color = color4;
+  document.getElementById("nameT2").style.color = "white";
+  document.getElementById("jobTitleT").style.color = "white";
+  document.getElementById("showJobTitleT").style.color = "white";
+  document.getElementById("showNameT2").style.color = "white";
 }
 function fontLight1() {
-  const color5 = document.getElementById("fontSpanCol1").innerHTML;
-  document.getElementById("nameT2").style.color = color5;
-  document.getElementById("jobTitleT").style.color = color5;
+  document.getElementById("nameT2").style.color = "black";
+  document.getElementById("jobTitleT").style.color = "black";
+  document.getElementById("showJobTitleT").style.color = "black";
+  document.getElementById("showNameT2").style.color = "black";
 }
 // --------------------------------------------------------------------------------------------
 

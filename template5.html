@@ -29,13 +29,71 @@
     <title>Resume-Builder</title>
   </head>
   <body>
-    <div class="container" id="cv-form">
+    <div class="container-fluid" id="cv-form">
       <h1 class="text-center">Resume Generator</h1>
+      <div class="template5-mainHero" >
 
-      <!-- Resume FORM -->
-      <div class="resumeForm p-3">
+
+        <!-- color section -->
+      <section class="colorSelection-Hero">
+        <div class="chooseColor-section" style="display: flex; justify-content: center;">
+          <div class="colorSelection-Section">
+            <div id="color1" onclick="light1()">
+              <span id="spanCol1" style="visibility: hidden">#b9bdb9</span>
+            </div>
+            <div id="color2" onclick="light2()">
+              <span id="spanCol2" style="visibility: hidden">#FFF8F4</span>
+            </div>
+            <div id="color3" onclick="light3()">
+              <span id="spanCol3" style="visibility: hidden">#D9E6EB</span>
+            </div>
+            <div id="color4" onclick="Eucalyptus()">
+              <span id="spanCol4" style="visibility: hidden">#8B3DFF</span>
+            </div>
+            <div id="color5" onclick="LightBlue()">
+              <span id="spanCol5" style="visibility: hidden">#6B9999</span>
+            </div>
+            <div id="color6" onclick="dark()">
+              <span id="spanCol6" style="visibility: hidden">#414143</span>
+            </div>
+          </div>
+          <div class="multiColour" style="display: flex;">
+            <div>
+              <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+            </div>
+            <div>
+              <button onclick="changeBackgroundColor()" class="btnApply">
+                Apply
+              </button>
+            </div>
+            <div>
+              <button onclick="resetBackgroundColor()" class="btnRemove">
+                Reset
+              </button>
+            </div>
+          </div>
+  
+          <div class="colorSelection-fontSection">
+            <div id="Fcolor1" onclick="fontLight1()">
+              <span id="fontSpanCol1" style="visibility: hidden">#b9bdb9</span>
+            </div>
+            <div id="Fcolor2" onclick="fontLight2()">
+              <span id="fontSpanCol2" style="visibility: hidden">#FFF8F4</span>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+
+
+
+        <div class="row">
+          <div class="col-md-6">
+              <!-- Resume FORM -->
+      <div class="resumeForm">
         <!-- PRESONAL INFORMATION -->
-        <div class="presonalInfo">
+        <div class="presonalInfo p-3">
           <h3>Presonal Information</h3>
           <div class="row">
             <!-- image upload -->
@@ -829,7 +887,7 @@
         </div>
 
         <!-- PROFESSIONAL INFORMATION -->
-        <div class="professionalInfo">
+        <div class="professionalInfo p-3 mt-3">
           <h3>Professional Information</h3>
           <!-- Job Title -->
           <div class="Professional-jobtitle">
@@ -1007,7 +1065,7 @@
         <hr />
 
         <!-- SOCIAL MEDIA LINKS -->
-        <div class="socialMediaLinks">
+        <div class="socialMediaLinks p-3 mt-3">
           <h3>Important links</h3>
           <div class="form-group mt-2">
             <label for="fbField">GitHub</label>
@@ -1015,26 +1073,9 @@
           </div>
         </div>
 
-        <!-- intrests -->
-        <div class="intrestForm">
-          <label for>Acchivements</label>
-          <textarea
-            class="form-control intrestField"
-            placeholder="Enter here"
-            rows="1"
-          ></textarea>
-
-          <div class="container text-center mt-2" id="intrestAddButton">
-            <button
-              onclick="addNewIntrestField()"
-              class="btn btn-primary btn-sm"
-            >
-              Add
-            </button>
-          </div>
-        </div>
+       
         <!-- Hobbies -->
-        <div class="hobbyForm">
+        <div class="hobbyForm mt-3 p-3">
           <label for>Hobbies</label>
           <textarea
             class="form-control hobbyField"
@@ -1056,66 +1097,200 @@
           </button>
         </div>
       </div>
+          </div>
+          <div class="col-md-6">
+            <div class="showTemplate-rightResumeSection">
+              <div class="showResume-Hero">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="showTemplate-leftSection mt-4 py-4 px-3" style="background-color: cyan; border-radius: 0px 50px 50px 0px;" id="showResumeHeader">
+                      <div class="showTemplate5-namePic" style="display: flex;">
+                        <div>
+                           <!-- profile pic -->
+                        <div class="imageSection">
+                          <img
+                            src="./images/altImage.png"
+                            class="img-fluid showMyImg"
+                            id="ShowImgTemplate2"
+                          />
+                        </div>
+                        </div>
+                        <div class="mt-3">
+                          <h4 style="font-weight: 700 ; color: #c0c0c0;" id="showNameT2">Vikash Kumar</h4>
+                      <p
+                        class="titleJob"
+                        id="showJobTitleT"
+                        style="font-size: 16px; color: #c0c0c0"
+                      >
+                        Software Engineer
+                      </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="templateShowResume-rightSection">
+                      <div class="showResume-contactDetails">
+                        <p class="fontColorChange">
+                          <span id="showEmailT">avikashkumar82@gmail.com</span>&nbsp;<i class="fa-regular fa-envelope"></i>
+                        </p>
+                        <p>
+                          <span id="showountryContactT" class="fontColorChange">+91</span><span>&nbsp;-&nbsp;</span><span id="showContactT" class="fontColorChange">9430722766</span>&nbsp;<i class="fa-solid fa-phone" class="fontColorChange"></i>
+                        </p>
+                        <p id="hello" class="fontColorChange">
+                          <span id="showAddressT">Bokaro steel city</span>&nbsp;<i class="fa-solid fa-location-dot"></i>
+                        </p>
+                        <p id="hello" class="fontColorChange">
+                          <span><a href="#1" id="showGithubT" class="fontColorChange">https://www.youtube.com/</a></span>&nbsp;<i class="fa-brands fa-github"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-      <!-- color section -->
-      <section class="colorSelection-Hero mt-3">
-        <div class="colorSelection-Section">
-          <div id="color1" onclick="light1()">
-            <span id="spanCol1" style="visibility: hidden">#b9bdb9</span>
-          </div>
-          <div id="color2" onclick="light2()">
-            <span id="spanCol2" style="visibility: hidden">#FFF8F4</span>
-          </div>
-          <div id="color3" onclick="light3()">
-            <span id="spanCol3" style="visibility: hidden">#D9E6EB</span>
-          </div>
-          <div id="color4" onclick="Eucalyptus()">
-            <span id="spanCol4" style="visibility: hidden">#8B3DFF</span>
-          </div>
-          <div id="color5" onclick="LightBlue()">
-            <span id="spanCol5" style="visibility: hidden">#6B9999</span>
-          </div>
-          <div id="color6" onclick="dark()">
-            <span id="spanCol6" style="visibility: hidden">#414143</span>
+                <div class="showTemplate5-mainContent mt-2 p-4">
+                  <!-- summary -->
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="showMainContent-objective">
+                        <div class="showSummary-section px1" style="border-top: 3px solid violet;" id="showSummary">
+                          <h5 style="float: right;">SUMMARY</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <p id="showObjectiveT">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Quia esse, tempore, placeat consequatur
+                        voluptatum, repellendus tenetur excepturi doloremque
+                        aliquid temporibus odit! Possimus qui ad repudiandae
+                        atque tempore, incidunt quo et. Distinctio recusandae
+                        dolores adipisci maiores dolore.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Experience -->
+                  <div class="row mt-3">
+                    <div class="col-md-4">
+                      <div class="showMainContent-experience">
+                        <div class="showSummary-section px1" style="border-top: 3px solid violet;" id="showExperiences">
+                          <h5 style="float: right;">EXPERIENCE</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-header">
+                        <h6 id="workExpLabel" style="font-size: large;">Infosys</h6>
+                        <div class="dateSection" style="display: flex; gap:5px; margin-top: -10px;">
+                            <div><span style="font-size: small;margin-top: -8px;">July 2021</span></div> -
+                            <div><span style="font-size: small;margin-top: -8px;">Current</span></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p style="text-align:justify; font-size: 13px; margin-top: -8px;">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Quia esse, tempore, placeat consequatur
+                          voluptatum, repellendus tenetur excepturi doloremque
+                          aliquid temporibus odit! Possimus qui ad repudiandae
+                          atque tempore, incidunt quo et. Distinctio recusandae
+                          dolores adipisci maiores dolore.
+                        </p>
+                    </div>
+                    </div>
+                  </div>
+                  <!-- Education -->
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="showMainContent-education">
+                        <div class="showSummary-section px1" style="border-top: 3px solid violet;" id="showEducation">
+                          <h5 style="float: right;">EDUCATION</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="showEducation-dummyData">
+                        <ul style="font-size: 13px;" id="showEducation">
+                          <li>B-Tech - Silicon Institute Of Technology</li>
+                          <li>Diploma - Padmanava Institute Of Technology</li>
+                          <li>Mactriculation - JAC Ranchi</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- SKills -->
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="showMainContent-skills">
+                        <div class="showSummary-section px1" style="border-top: 3px solid violet;" id="showSkills">
+                          <h5 style="float: right;">SKILLS</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="showSkills-dummyData">
+                        <ul style="font-size: 13px;" id="showSkills">
+                          <li>ASP.NET</li>
+                          <li>Java</li>
+                          <li>HTMl/CSS/BootStrap</li>
+                          <li>Angular</li>
+                          <li>My Sql</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Project -->
+                  <div class="row mt-3">
+                    <div class="col-md-4">
+                      <div class="showMainContent-project">
+                        <div class="showSummary-section px1" style="border-top: 3px solid violet;" id="showProject">
+                          <h5 style="float: right;">PROJECT</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="showProject-dummyData">
+                        <h4 style="font-size: larger;">Air Tickting</h4>
+                        <div style="display:flex;">
+                        <span style="font-size: 14px;"><strong st>Associate Software Engineer</strong></span>&nbsp;<span style="color: rgb(82, 82, 82); font-size: x-small;margin-top: 3px;"> &nbsp;<i><span>${proFrom}</span> - <span>${proTo}</span></i> </span>
+                        </div>
+                        <p style="text-align:justify; font-size: 13px;">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Quia esse, tempore, placeat consequatur
+                          voluptatum, repellendus tenetur excepturi doloremque
+                          aliquid temporibus odit! Possimus qui ad repudiandae
+                          atque tempore, incidunt quo et. Distinctio recusandae
+                          dolores adipisci maiores dolore.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Hobbies -->
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="showMainContent-hobbies">
+                        <div class="showSummary-section px1" style="border-top: 3px solid violet;" id="showHobbies">
+                          <h5 style="float: right;">HOBBIES</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                     <div class="showHobbies-dummyData">
+                      <ul style="font-size: 13px;" id="showHobbies">
+                        <li>Playing Cricket</li>
+                        <li>Cooking</li>
+                        <li>Travelling</li>
+                      </ul>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="multiColour mt-3">
-          <div>
-            <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
-          </div>
-          <div>
-            <button onclick="changeBackgroundColor()" class="btnApply">
-              Apply
-            </button>
-          </div>
-          <div>
-            <button onclick="resetBackgroundColor()" class="btnRemove">
-              Reset
-            </button>
-          </div>
-        </div>
+      </div>
 
-        <div class="colorSelection-Section">
-          <div id="Fcolor1" onclick="fontLight1()">
-            <span id="fontSpanCol1" style="visibility: hidden">#b9bdb9</span>
-          </div>
-          <div id="Fcolor2" onclick="fontLight2()">
-            <span id="fontSpanCol2" style="visibility: hidden">#FFF8F4</span>
-          </div>
-          <div id="Fcolor3" onclick="fontLight3()">
-            <span id="fontSpanCol3" style="visibility: hidden">#D9E6EB</span>
-          </div>
-          <div id="Fcolor4" onclick="fontEucalyptus()">
-            <span id="fontSpanCol4" style="visibility: hidden">#8B3DFF</span>
-          </div>
-          <div id="Fcolor5" onclick="fontLightBlue()">
-            <span id="fontSpanCol5" style="visibility: hidden">#6B9999</span>
-          </div>
-          <div id="Fcolor6" onclick="fontdark()">
-            <span id="fontSpanCol6" style="visibility: hidden">#414143</span>
-          </div>
-        </div>
-      </section>
+      
 
       <!-- Resume CV Template -->
       <section>
@@ -1137,7 +1312,7 @@
                         </div>
                       </div>
                       <div>
-                        <h1 style="font-weight: 700 ; color: #c0c0c0;" id="nameT2">Vikash Kumar</h1>
+                        <h2 style="font-weight: 700 ; color: #c0c0c0;" id="nameT2">Vikash Kumar</h2>
                       <p
                         class="titleJob"
                         id="jobTitleT"
