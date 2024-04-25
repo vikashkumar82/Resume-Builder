@@ -949,16 +949,19 @@
 
           <!-- button showing adding for work Experience -->
           <label>Add Work Experience</label><br />
-          <button class="btn btn-primary" onclick="duplicateForm()">
-            Duplicate Form
-          </button>
-          <button class="btn btn-success mt-2" onclick="showData()">
-            Show Data
-          </button>
+          <div class="btn-experienceSection mb-3" style="display: flex;gap:10px;">
+            <button class="btn btn-primary btn_Generate " onclick="duplicateForm()">
+              Duplicate Form
+            </button>
+            <button class="btn btn-success btn_Generate " onclick="showData()">
+              Show Data
+            </button>
+          </div>
+          
           <div id="formClone"></div>
 
           <!-- Project -->
-          <div class="form-group mt-2" id="proTemplate" style="display: none">
+          <div class="form-group mt-2" id="proTemplate" style="display: none;">
             <label>Project</label>
             <div class="row">
               <div class="col-md-6">
@@ -1001,12 +1004,15 @@
           </div>
           <!-- button showing adding for Project -->
           <label>Add Project</label><br />
-          <button class="btn btn-primary" onclick="duplicateProjectForm()">
-            Duplicate Form
-          </button>
-          <button class="btn btn-success mt-2" onclick="showProjectData()">
-            Show Data
-          </button>
+          <div class="projectButtonSection" style="display: flex; gap: 10px;">
+            <button class="btn btn-primary btn_Generate " onclick="duplicateProjectForm()">
+              Duplicate Form
+            </button>
+            <button class="btn btn-success btn_Generate " onclick="showProjectData()">
+              Show Data
+            </button>
+          </div>
+         
           <div id="formProjectClone"></div>
 
           <!-- Academic Qualification -->

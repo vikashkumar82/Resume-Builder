@@ -332,3 +332,7 @@ border: 1px solid rgb(153, 149, 149);
 .professionalInfo h3 {
     text-align: center;
 }
+.btn_Generate {
+    width: 430px;
+    padding: 10px;
+}
